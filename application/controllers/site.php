@@ -1,65 +1,62 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
 
 class Site extends CI_Controller {
-
-	public function index()
-	{
-            $this->load->view("view_topnav");
-            $this->load->view("view_slogan");
-            $this->load->view("view_home");
-            $this->load->view("view_footer");
-	}
-        
-        public function error()
-        {
-            $this->load->view("view_topnav");
-            $this->load->view("view_error");
-            $this->load->view("view_footer");
-        }
-        
-        public function about()
-        {
-            $this->load->view("view_topnav");
-            $this->load->view("view_slogan");
-            $this->load->view("view_footer");
-        }
-        
-        public function verein($vorstand)
-        {
-            switch ($vorstand) {
-                case "vorstand":
-                    $this->load->view("view_topnav");
-                    $this->load->view("view_slogan");
-                    $this->load->view("view_vorstand");
-                    $this->load->view("view_footer");
-                    break;
-                case "clubhaus":
-                    $this->load->view("view_topnav");
-                    $this->load->view("view_slogan");
-                    $this->load->view("view_clubhaus");
-                    $this->load->view("view_footer");
-                    break;
-            }
-        }
-
-        public function aktuelles()
-        {
-            $this->load->view("view_topnav");
-            $this->load->view("view_slogan");
-            $this->load->view("view_aktuelles");
-            $this->load->view("view_footer");
-        }
-        
-        public function login() 
-        {
+    
+    protected function drawWrapper($pageTitle, $view, $excludeSlogan = false, $excludeFooter = false) {
+        $data ['page_title'] = $pageTitle;
+        $this->load->view("meta/metadata", $data);
         $this->load->view("view_topnav");
-        $this->load->view("view_login");
-        $this->load->view("view_footer");
+        if (!$excludeSlogan) {
+            $this->load->view("view_slogan");
         }
-        
-        public function testing($first, $second) {
-            echo $first;
-            echo $second;
+        $this->load->view($view);
+        if (!$excludeFooter) {
+            $this->load->view("view_footer");
         }
-        
+    }
+    
+    public function hello() {
+        $this->drawWrapper("Das sollte klappen", "view_home");
+    }
+
+    public function index() {
+        $this->drawWrapper("Willkommen", "view_home");
+    }
+
+    public function error() {
+        $this->drawWrapper("Fehler!", "view_error");
+    }
+
+    public function about() {
+        $this->drawWrapper("About", "view_home");
+    }
+
+    public function verein($vorstand) {
+        switch ($vorstand) {
+            case "vorstand":
+                $this->drawWrapper("Vorstand", "view_vorstand");
+                break;
+            case "clubhaus":
+                $this->drawWrapper("Clubhaus", "view_clubhaus");
+                break;
+        }
+    }
+
+    public function aktuelles() {
+        $this->drawWrapper("Aktuelles", "view_aktuelles");
+    }
+
+    public function login() {
+        $this->drawWrapper("Bitte einloggen", "view_login");
+    }
+
+    public function testing($first, $second) {
+        if (empty($hallo)) {
+            echo "empty";
+        }
+    }
+
 }

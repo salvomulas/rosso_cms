@@ -11,7 +11,7 @@ echo doctype('html5');
 <html>
 <head>
 
-<title>AC Rossoneri | <?php echo $page_title;?></title>
+<title>AC Rossoneri<?php if(!empty($page_title)) { echo ' | '.$page_title; } ?></title>
 
 <?php
 
@@ -31,17 +31,16 @@ echo meta($meta);
 
 // Dynamic stylesheet implementation
 $css = array(
-          'href' => base_url().'assets/css/bootstrap.css',
+          'href' => base_url().'assets/css/bootstrap.dark.css',
           'rel' => 'stylesheet',
           'type' => 'text/css',
           'media' => 'screen'
 );
 
 $css_responsive = array(
-          'href' => base_url().'assets/css/bootstrap_responsive.css',
+          'href' => base_url().'assets/css/bootstrap-responsive.css',
           'rel' => 'stylesheet',
           'type' => 'text/css',
-          'media' => 'screen'
 );
 
 echo link_tag($css);
@@ -50,3 +49,8 @@ echo link_tag($css_responsive);
 ?>
 
 </head>
+
+<body>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>

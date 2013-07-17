@@ -53,10 +53,10 @@ class Site extends CI_Controller {
         $this->drawWrapper("Bitte einloggen", "view_login");
     }
 
-    public function testing($first, $second) {
-        if (empty($hallo)) {
-            echo "empty";
-        }
+    public function testing() {
+        $this->load->model('ranking');
+        $this->drawWrapper("Tabelle erste Mannschaft", "view_home");
+        $this->ranking->getRanking(1);
     }
 
 }

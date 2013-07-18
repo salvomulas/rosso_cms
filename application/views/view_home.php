@@ -156,15 +156,14 @@
                 <div class="tabbable">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
-                        <li><a href="#tab2" data-toggle="tab">5. Liga</a></li>
-                        <li><a href="#tab3" data-toggle="tab">Senioren</a></li>
+                        <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
+                        <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
 
                             <?php
-                                //$this->load->model('ranking');
-                                //$this->ranking->getRanking(1);
+                                $this->load->view('elements/rankingTable');
                             ?>
 
                         </div>

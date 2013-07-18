@@ -18,12 +18,24 @@ class Site extends CI_Controller {
         }
     }
     
+    protected function fillData ($array) {
+        
+    }
+    
     public function hello() {
         $this->drawWrapper("Das sollte klappen", "view_home");
     }
 
     public function index() {
-        $this->drawWrapper("Willkommen", "view_home");
+        $this->load->model('ranking');
+        $data ['page_title'] = "Willkommen";
+        $data ['ranking'] = $this->ranking->getTable(1);
+        // $this->drawWrapper("Willkommen", "view_home");
+        $this->load->view('meta/metadata', $data);
+        $this->load->view('view_topnav');
+        $this->load->view('view_slogan');
+        $this->load->view('view_home', $data);
+        $this->load->view('view_footer');
     }
 
     public function error() {

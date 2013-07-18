@@ -162,77 +162,10 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
 
-                            <table class="table table-condensed table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Team</th>
-                                        <th>P</th>
-                                        <th>Diff</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="success">
-                                        <td>SV Sissach a</td>
-                                        <td>36</td>
-                                        <td>+19</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Wallbach</td>
-                                        <td>32</td>
-                                        <td>+15</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Gelterkinden b</td>
-                                        <td>31</td>
-                                        <td>+14</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Rheinfelden</td>
-                                        <td>28</td>
-                                        <td>+11</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Laufenburg-Kaisten a</td>
-                                        <td>37</td>
-                                        <td>+10</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Frenkendorf</td>
-                                        <td>24</td>
-                                        <td>+7</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Stein a</td>
-                                        <td>21</td>
-                                        <td>+4</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Eiken</td>
-                                        <td>20</td>
-                                        <td>+3</td>
-                                    </tr>
-                                    <tr class="info">
-                                        <td>AC Rossoneri</td>
-                                        <td>17</td>
-                                        <td>0</td>
-                                    </tr>
-                                    <tr>
-                                        <td>FC Moehlin-Riburg/ACLI</td>
-                                        <td>12</td>
-                                        <td>-5</td>
-                                    </tr>
-                                    <tr class="error">
-                                        <td>FC Kaiseraugst</td>
-                                        <td>5</td>
-                                        <td>-12</td>
-                                    </tr>
-                                    <tr class="error">
-                                        <td>FC Pratteln</td>
-                                        <td>0</td>
-                                        <td>-17</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <?php
+                                //$this->load->model('ranking');
+                                //$this->ranking->getRanking(1);
+                            ?>
 
                         </div>
                         <div class="tab-pane" id="tab2">

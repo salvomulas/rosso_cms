@@ -158,19 +158,29 @@
                         <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
                         <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
                         <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
+                        <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
                     </ul>
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
 
                             <?php
-                                $this->load->view('elements/rankingTable');
+                                $data['rankTable'] = $ranking;
+                                $this->load->view('elements/rankingTable', $data);
                             ?>
 
                         </div>
                         <div class="tab-pane" id="tab2">
-                            <p>Howdy, I'm in Section 2.</p>
+
+                            <?php
+                                $data['$rankTable'] = $ranking2;
+                                $this->load->view('elements/rankingTable', $data);
+                            ?>
+
                         </div>
                         <div class="tab-pane" id="tab3">
+                            <p>Howdy, I'm in Section 3.</p>
+                        </div>
+                        <div class="tab-pane" id="tab4">
                             <p>Howdy, I'm in Section 3.</p>
                         </div>
                     </div>

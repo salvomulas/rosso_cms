@@ -28,8 +28,10 @@ class Site extends CI_Controller {
 
     public function index() {
         $this->load->model('ranking');
+        $this->load->library('parser');
         $data ['page_title'] = "Willkommen";
         $data ['ranking'] = $this->ranking->getTable(1);
+        $data ['ranking2'] = $this->ranking->getTable(2);
         // $this->drawWrapper("Willkommen", "view_home");
         $this->load->view('meta/metadata', $data);
         $this->load->view('view_topnav');

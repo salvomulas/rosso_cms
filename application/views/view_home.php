@@ -171,8 +171,8 @@
                         <div class="tab-pane" id="tab2">
 
                             <?php
-                                $data['$ranking'] = $ranking2;
-                                $this->load->view('elements/rankingTable', $data);
+                            $ranking2 = $ranking;
+                                $this->load->view('elements/rankingTable', $ranking);
                             ?>
 
                         </div>

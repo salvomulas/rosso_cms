@@ -3,20 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Site extends CI_Controller {
-    
-    protected function drawWrapper($pageTitle, $view, $excludeSlogan = false, $excludeFooter = false) {
-        $data ['page_title'] = $pageTitle;
-        $this->load->view("meta/metadata", $data);
-        $this->load->view("view_topnav");
-        if (!$excludeSlogan) {
-            $this->load->view("view_slogan");
-        }
-        $this->load->view($view);
-        if (!$excludeFooter) {
-            $this->load->view("view_footer");
-        }
-    }
+class Site extends MY_Controller {
     
     protected function fillData ($array) {
         
@@ -27,6 +14,10 @@ class Site extends CI_Controller {
     }
 
     public function index() {
+        $this->home();
+    }
+
+    public function home() {
         $this->load->model('ranking');
         $this->load->library('parser');
         $data ['page_title'] = "Willkommen";

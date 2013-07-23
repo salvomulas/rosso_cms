@@ -164,15 +164,14 @@
                         <div class="tab-pane active" id="tab1">
 
                             <?php
-                                $data['rankTable'] = $ranking;
-                                $this->load->view('elements/rankingTable', $data);
+                                $this->load->view('elements/rankingTable', $ranking);
                             ?>
 
                         </div>
                         <div class="tab-pane" id="tab2">
 
                             <?php
-                                $data['$rankTable'] = $ranking2;
+                                $data['$ranking'] = $ranking2;
                                 $this->load->view('elements/rankingTable', $data);
                             ?>
 

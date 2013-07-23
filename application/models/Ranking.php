@@ -5,16 +5,36 @@ if (!defined('BASEPATH'))
 
 class Ranking extends CI_Model {
 
+    function __construct() {
+
+        parent::__construct();
+
+    }
+
     public function getTeamScore ($teamID) {
+
         $this->db->select('points')->from('team_'.$teamID.'_ranking')->like('team','Rossoneri');
         $query = $this->db->get();
-        return $query->result();
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return NULL;
+        }
+
     }
 
     public function getTable ($teamID) {
+
         $this->db->select('*')->from('team_'.$teamID.'_ranking')->order_by('points','desc');
         $query = $this->db->get();
-        return $query->result();
+
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return NULL;
+        }
+
     }
     
     public function getTableColors ($teamID, $up, $down) {

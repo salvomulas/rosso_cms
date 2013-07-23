@@ -9,7 +9,7 @@
     <tbody>
 
         <?php
-        foreach ($rankTable as $row) {
+        foreach ($ranking as $row) {
             $diffPoints = ($row->points - 0);
             echo '<tr>';
             echo '<td>' . $row->team . '</td>';

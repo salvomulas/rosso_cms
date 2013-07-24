@@ -2,26 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/verein.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/main.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/controllers/welcome.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Ranking.php" afterPath="$PROJECT_DIR$/application/models/Ranking.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/error.php" afterPath="$PROJECT_DIR$/application/controllers/error.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/elements/rankingTable.php" afterPath="$PROJECT_DIR$/application/views/elements/rankingTable.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/site.php" afterPath="$PROJECT_DIR$/application/controllers/site.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/team.php" afterPath="$PROJECT_DIR$/application/controllers/team.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/view_home.php" afterPath="$PROJECT_DIR$/application/views/view_home.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/view_topnav.php" afterPath="$PROJECT_DIR$/application/views/view_topnav.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rosso_cms.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374621717075" ignored="false" />
+    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374622961522" ignored="false" />
     <file path="/.htaccess" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372967668883" ignored="false" />
     <file path="/404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981779302" ignored="false" />
     <file path="/view_404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981808609" ignored="false" />
     <file path="/a.dummy" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981728084" ignored="false" />
     <file path="/Member.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374016386129" ignored="false" />
-    <file path="/Ranking.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374621077452" ignored="false" />
-    <file path="/site.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374622763450" ignored="false" />
-    <file path="/view_home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374622387718" ignored="false" />
-    <file path="/rankingTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374621285987" ignored="false" />
+    <file path="/Ranking.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629452911" ignored="false" />
+    <file path="/site.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374627844154" ignored="false" />
+    <file path="/view_home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629233397" ignored="false" />
+    <file path="/rankingTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629269460" ignored="false" />
     <file path="/admin.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374251016165" ignored="false" />
-    <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374251113032" ignored="false" />
+    <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623220978" ignored="false" />
     <file path="/MY_Controller.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374622694786" ignored="false" />
+    <file path="/verein.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623086659" ignored="false" />
+    <file path="/team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623254132" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,53 +55,7 @@
     <favorites_list name="rosso_cms" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="site.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="50" selection-start="718" selection-end="718" vertical-scroll-proportion="-16.25">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view_home.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/view_home.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="173" column="48" selection-start="7595" selection-end="7595" vertical-scroll-proportion="-39.208332">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ranking.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Ranking.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="16" selection-start="758" selection-end="758" vertical-scroll-proportion="-20.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rankingTable.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/elements/rankingTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MY_Controller.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="5" selection-start="667" selection-end="667" vertical-scroll-proportion="0.2853598">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -109,22 +73,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/.htaccess" />
-        <option value="$PROJECT_DIR$/application/controllers/404.php" />
-        <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/views/view_404.php" />
         <option value="$PROJECT_DIR$/application/models/Member.php" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
         <option value="dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..member_Active" />
         <option value="dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..team_1_ranking" />
-        <option value="$PROJECT_DIR$/application/controllers/error.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
-        <option value="$PROJECT_DIR$/application/models/Ranking.php" />
-        <option value="$PROJECT_DIR$/application/views/elements/rankingTable.php" />
-        <option value="$PROJECT_DIR$/application/views/view_home.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/controllers/site.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/application/views/view_topnav.php" />
+        <option value="$PROJECT_DIR$/application/controllers/verein.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/application/controllers/error.php" />
+        <option value="$PROJECT_DIR$/application/controllers/team.php" />
+        <option value="$PROJECT_DIR$/application/controllers/site.php" />
+        <option value="$PROJECT_DIR$/application/views/view_home.php" />
+        <option value="$PROJECT_DIR$/application/views/elements/rankingTable.php" />
+        <option value="$PROJECT_DIR$/application/models/Ranking.php" />
       </list>
     </option>
   </component>
@@ -496,7 +460,11 @@
       <created>1374621720513</created>
       <updated>1374621720513</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Extended the core of CodeIgniter with an own Controller.">
+      <created>1374622966391</created>
+      <updated>1374622966391</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -508,7 +476,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13325378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15314241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15314241" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -565,7 +533,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes to the MVC structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Extended the core of CodeIgniter with an own Controller." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -583,26 +551,12 @@
     <MESSAGE value="Prepared functions for printing ranking." />
     <MESSAGE value="Adjusted some controllers for metadata generation" />
     <MESSAGE value="Minor changes to the MVC structure" />
+    <MESSAGE value="Extended the core of CodeIgniter with an own Controller." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="44" selection-start="1477" selection-end="1477" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/view_404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system/core/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="8" selection-start="985" selection-end="985" vertical-scroll-proportion="0.45348838">
@@ -636,34 +590,6 @@
         <state line="53" column="39" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.61627907" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="43" selection-start="193" selection-end="193" vertical-scroll-proportion="0.061932288">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="492" selection-end="492" vertical-scroll-proportion="0.22295624">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Ranking.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="16" selection-start="758" selection-end="758" vertical-scroll-proportion="-20.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/view_home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="173" column="48" selection-start="7595" selection-end="7595" vertical-scroll-proportion="-39.208332">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="32" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.34656742">
@@ -671,16 +597,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/elements/rankingTable.php">
+    <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="11" column="66" selection-start="748" selection-end="748" vertical-scroll-proportion="0.13647643">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/verein.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="50" selection-start="718" selection-end="718" vertical-scroll-proportion="-16.25">
+        <state line="15" column="1" selection-start="312" selection-end="312" vertical-scroll-proportion="0.18610422">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="22" selection-start="98" selection-end="98" vertical-scroll-proportion="0.024813896">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="327" selection-end="327" vertical-scroll-proportion="0.16129032">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="228" selection-end="228" vertical-scroll-proportion="0.14888337">
           <folding />
         </state>
       </provider>
@@ -688,6 +635,37 @@
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="5" selection-start="667" selection-end="667" vertical-scroll-proportion="0.2853598">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/rankingTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="8" selection-start="544" selection-end="544" vertical-scroll-proportion="-13.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Ranking.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="603" selection-end="603" vertical-scroll-proportion="0.37220845">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/view_home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="55" selection-start="7723" selection-end="7723" vertical-scroll-proportion="0.6666667">
+          <folding>
+            <marker date="1374629251000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1374629251000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="48" selection-start="498" selection-end="498" vertical-scroll-proportion="0.235732">
           <folding />
         </state>
       </provider>

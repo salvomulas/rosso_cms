@@ -8,8 +8,8 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Verein<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url(); ?>site/verein/vorstand">Vorstand</a></li>
-                            <li><a href="<?php echo base_url(); ?>site/verein/clubhaus">Clubhaus</a></li>
+                            <li><a href="<?php echo base_url(); ?>verein/vorstand">Vorstand</a></li>
+                            <li><a href="<?php echo base_url(); ?>verein/clubhaus">Clubhaus</a></li>
                             <li><a href="#">Statuten</a></li>
                         </ul>
                         </ll>

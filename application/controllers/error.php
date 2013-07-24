@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Error extends CI_Controller {
+class Error extends MY_Controller {
 
     public function PageNotFound() {
         $this->load->view("meta/metadata");

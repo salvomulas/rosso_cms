@@ -9,5 +9,13 @@ class Error extends MY_Controller {
         $this->load->view("view_footer");
     }
 
+    public function ValidationFailed() {
+
+    }
+
+    public function PermissionDenied() {
+
+    }
+
 }
 

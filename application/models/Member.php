@@ -1,19 +1,40 @@
 <?php
 
-class Member extends CI_Model {
+class Model_users extends CI_Model {
 
-    private $firstName;
-    private $lastName;
-    private $type;
+    public function can_log_in() {
 
-    private static $totCounter;
-    private static $actCounter;
-    private static $psvCounter;
+        $this->db->where('username', $this->input->post('username'));
+        $this->db->where('password', sha1($this->input->post('password')));
 
-    public function __construct() {
+        $query = $this->db->get('member_Management');
+
+        if ($query->num_rows() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function add_Management($key) {
+
+        $data = array(
+            'username' => $this->input->post('username'),
+            'firstName' => $this->input->post('firstName'),
+            'lastName' => $this->input->post('lastName'),
+            'password' => sha1($this->input->post('password')),
+            'email' => $this->input->post('email'),
+        );
+
+        $query = $this->db->insert('temp_users', $data);
+        if ($query) {
+            return true;
+        } else {
+            return false;
+        }
 
     }
 
-
-
 }
+
+?>

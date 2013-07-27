@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3941606990">
+  <component name="DataSourceManagerImpl" format="xml" hash="3244759964">
     <data-source source="LOCAL" name="RossoCMS Database" product="MySQL" version="5.1.44" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="a920b378-3f04-4bfc-938c-9684540df332">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>

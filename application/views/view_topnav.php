@@ -15,15 +15,14 @@ function menuObject ($name, $url) {
         <div class="container">
             <div class="masthead">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="<?php echo base_url(); ?>">Home</a></li>
-                    <li><a href="<?php echo base_url(); ?>site/aktuelles">Aktuelles</a></li>
+                    <?php menuObject("Home",""); ?>
+                    <?php menuObject("Aktuelles","site/aktuelles"); ?>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Verein<b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url(); ?>verein/vorstand">Vorstand</a></li>
-                            <?php menuObject("Test","verein/vorstand"); ?>
-                            <li><a href="<?php echo base_url(); ?>verein/clubhaus">Clubhaus</a></li>
-                            <li><a href="#">Statuten</a></li>
+                            <?php menuObject("Vorstand","verein/vorstand"); ?>
+                            <?php menuObject("Clubhaus","verein/clubhaus"); ?>
+                            <?php menuObject("Statuten","verein/statuten"); ?>
                         </ul>
                         </li>
                     <li class="dropdown">

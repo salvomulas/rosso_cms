@@ -2963,13 +2963,13 @@ table th[class*="span"],
   color: #ffffff;
   text-decoration: none;
   background-color: #2ab2e4;
-  background-image: -moz-linear-gradient(top, #bf1508, #1dade2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bf1508), to(#1dade2));
-  background-image: -webkit-linear-gradient(top, #bf1508, #1dade2);
-  background-image: -o-linear-gradient(top, #bf1508, #1dade2);
-  background-image: linear-gradient(to bottom, #bf1508, #1dade2);
+  background-image: -moz-linear-gradient(top, #bf1508, #A00D0D);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bf1508), to(#A00D0D));
+  background-image: -webkit-linear-gradient(top, #bf1508, #A00D0D);
+  background-image: -o-linear-gradient(top, #bf1508, #A00D0D);
+  background-image: linear-gradient(to bottom, #bf1508, #A00D0D);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbf1508', endColorstr='#ff1dade2', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbf1508', endColorstr='#ffA00D0D', GradientType=0);
 }
 
 .dropdown-menu > .active > a,
@@ -2977,15 +2977,15 @@ table th[class*="span"],
 .dropdown-menu > .active > a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: #2ab2e4;
-  background-image: -moz-linear-gradient(top, #bf1508, #1dade2);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bf1508), to(#1dade2));
-  background-image: -webkit-linear-gradient(top, #bf1508, #1dade2);
-  background-image: -o-linear-gradient(top, #bf1508, #1dade2);
-  background-image: linear-gradient(to bottom, #bf1508, #1dade2);
+  background-color: #A00D0D;
+  background-image: -moz-linear-gradient(top, #bf1508, #A00D0D);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bf1508), to(#A00D0D));
+  background-image: -webkit-linear-gradient(top, #bf1508, #A00D0D);
+  background-image: -o-linear-gradient(top, #bf1508, #A00D0D);
+  background-image: linear-gradient(to bottom, #bf1508, #A00D0D);
   background-repeat: repeat-x;
   outline: 0;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbf1508', endColorstr='#ff1dade2', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbf1508', endColorstr='#ffA00D0D', GradientType=0);
 }
 
 .dropdown-menu > .disabled > a,

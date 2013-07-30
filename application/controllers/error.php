@@ -14,6 +14,7 @@ class Error extends MY_Controller {
     }
 
     public function PermissionDenied() {
+        echo "Permission denied";
 
     }
 

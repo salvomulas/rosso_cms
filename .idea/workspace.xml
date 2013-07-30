@@ -3,15 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Member.php" afterPath="$PROJECT_DIR$/application/models/Member.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/error.php" afterPath="$PROJECT_DIR$/application/controllers/error.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/view_topnav.php" afterPath="$PROJECT_DIR$/application/views/view_topnav.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rosso_cms.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374943500490" ignored="false" />
+    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375204084249" ignored="false" />
     <file path="/.htaccess" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372967668883" ignored="false" />
     <file path="/404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981779302" ignored="false" />
     <file path="/view_404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981808609" ignored="false" />
@@ -22,10 +21,11 @@
     <file path="/view_home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629233397" ignored="false" />
     <file path="/rankingTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629269460" ignored="false" />
     <file path="/admin.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374946040237" ignored="false" />
-    <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374947031136" ignored="false" />
+    <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374967025302" ignored="false" />
     <file path="/MY_Controller.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374962718839" ignored="false" />
     <file path="/verein.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623086659" ignored="false" />
     <file path="/team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623254132" ignored="false" />
+    <file path="/view_topnav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375204641162" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +50,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MY_Controller.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MY_Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="9" selection-start="1361" selection-end="1361" vertical-scroll-proportion="0.5">
+            <state line="28" column="5" selection-start="779" selection-end="779" vertical-scroll-proportion="-17.5">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="site.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="50" selection-start="558" selection-end="558" vertical-scroll-proportion="-12.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view_topnav.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="57" selection-start="229" selection-end="229" vertical-scroll-proportion="0.074318744">
+              <folding>
+                <marker date="1375204753000" expanded="false" signature="5423:5458" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,7 +82,7 @@
       <file leaf-file-name="admin.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="5" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-26.875">
+            <state line="46" column="50" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-28.75">
               <folding />
             </state>
           </provider>
@@ -71,7 +91,7 @@
       <file leaf-file-name="Member.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="-23.75">
+            <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,7 +100,7 @@
       <file leaf-file-name="error.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="423" selection-end="423" vertical-scroll-proportion="-11.875">
+            <state line="16" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -108,18 +128,18 @@
         <option value="dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..member_Active" />
         <option value="dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..team_1_ranking" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
-        <option value="$PROJECT_DIR$/application/views/view_topnav.php" />
         <option value="$PROJECT_DIR$/application/controllers/verein.php" />
         <option value="$PROJECT_DIR$/application/controllers/team.php" />
-        <option value="$PROJECT_DIR$/application/controllers/site.php" />
         <option value="$PROJECT_DIR$/application/views/view_home.php" />
         <option value="$PROJECT_DIR$/application/views/elements/rankingTable.php" />
         <option value="$PROJECT_DIR$/application/models/Ranking.php" />
-        <option value="$PROJECT_DIR$/application/controllers/error.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
         <option value="$PROJECT_DIR$/application/models/Member.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
+        <option value="$PROJECT_DIR$/application/controllers/error.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/application/controllers/site.php" />
+        <option value="$PROJECT_DIR$/application/views/view_topnav.php" />
       </list>
     </option>
   </component>
@@ -131,8 +151,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="y" value="22" />
     <option name="width" value="2560" />
-    <option name="height" value="1440" />
+    <option name="height" value="1381" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -212,28 +233,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="rosso_cms">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,6 +294,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rosso_cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rosso_cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meta" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -394,6 +415,28 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="rosso_cms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -409,13 +452,13 @@
     <property name="JdbcConsole.Extract.ClosingQuote" value="\&quot;" />
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="JdbcConsole.Extract.QuoteEverything" value="false" />
     <property name="JdbcConsole.Extract.IncludeHeader" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="JdbcConsole.Extract.QuoteEverything" value="false" />
+    <property name="FullScreen" value="false" />
     <property name="JdbcConsole.Extract.IncludeRowNumbers" value="false" />
-    <property name="options.searchVisible" value="true" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="http://localhost" serverId="909e25f1-818d-4f8e-870d-ff44e4ccb6cb">
     <servers>
@@ -498,18 +541,22 @@
       <created>1374629529956</created>
       <updated>1374629529956</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Preparations for admin login">
+      <created>1374962897029</created>
+      <updated>1374962897029</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="2560" height="1440" extended-state="6" />
+    <frame x="0" y="22" width="2560" height="1381" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13325378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15552904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15672235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -567,7 +614,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed output of multiple ranking tables within the same controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparations for admin login" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -587,25 +634,26 @@
     <MESSAGE value="Minor changes to the MVC structure" />
     <MESSAGE value="Extended the core of CodeIgniter with an own Controller." />
     <MESSAGE value="Fixed output of multiple ranking tables within the same controller" />
+    <MESSAGE value="Preparations for admin login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="dbDummy://dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..member_Active">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..team_1_ranking">
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
@@ -616,11 +664,6 @@
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="32" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.34656742" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="66" selection-start="748" selection-end="748" vertical-scroll-proportion="0.13647643" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/verein.php">
@@ -648,45 +691,52 @@
         <state line="175" column="55" selection-start="7723" selection-end="7723" vertical-scroll-proportion="0.6666667" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="48" selection-start="498" selection-end="498" vertical-scroll-proportion="0.22058824">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="5" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-26.875">
-          <folding />
-        </state>
+        <state line="54" column="68" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.627907" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="423" selection-end="423" vertical-scroll-proportion="-11.875">
+        <state line="16" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="-23.75">
+        <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="68" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.627907">
+        <state line="46" column="50" selection-start="1379" selection-end="1379" vertical-scroll-proportion="-28.75">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="50" selection-start="558" selection-end="558" vertical-scroll-proportion="-12.5">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="9" selection-start="1361" selection-end="1361" vertical-scroll-proportion="0.5">
+        <state line="28" column="5" selection-start="779" selection-end="779" vertical-scroll-proportion="-17.5">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="229" selection-end="229" vertical-scroll-proportion="0.074318744">
+          <folding>
+            <marker date="1375204753000" expanded="false" signature="5423:5458" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -28,22 +28,6 @@ class MY_Controller extends CI_Controller {
         redirect("site/home");
     }
 
-    protected function validate_login() {
-        $this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean|callback_validate_credentials');
-        $this->form_validation->set_rules('password', 'Password', 'required|sha1');
-
-        if ($this->form_validation->run()) {
-            $data = array(
-                'username' => $this->input->post('username'),
-                'is_logged_in' => 1,
-            );
-            $this->session->set_userdata($data);
-            redirect('home/logged_in');
-        } else {
-            $this->login();
-        }
-    }
-
     public function newuser_validation() {
         $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[users.username]');
         $this->form_validation->set_rules('firstName', 'First Name', 'required|trim');

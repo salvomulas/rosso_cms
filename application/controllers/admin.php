@@ -6,7 +6,33 @@ class Admin extends MY_Controller {
     {
         $this->my_profile();
     }
-    
+
+    public function login_validation() {
+
+        $this->form_validation->set_rules('username', 'Username', 'required|trim|xss_clean|callback_validate_credentials');
+        $this->form_validation->set_rules('password', 'Password', 'required|sha1');
+
+        if ($this->form_validation->run()) {
+            $data = array(
+                'username' => $this->input->post('username'),
+                'is_logged_in' => 1,
+            );
+            $this->session->set_userdata($data);
+            redirect('home/logged_in');
+        } else {
+            $this->login();
+        }
+    }
+
+    public function logged_in() {
+        if ($this->session->userdata('is_logged_in')) {
+            $this->login();
+            print_r($this->session->all_userdata());
+        } else {
+            redirect('home/restricted');
+        }
+    }
+
     public function my_profile()
     {
         $data['page_title'] = "Mein Profil";

@@ -180,7 +180,13 @@
 
                         </div>
                         <div class="tab-pane" id="tab3">
-                            <p>Howdy, I'm in Section 3.</p>
+
+                            <?php
+                            $data['teamNumber'] = 3;
+                            $data['rankTables'] = $rankTables;
+                            $this->load->view('elements/rankingTable', $data);
+                            ?>
+
                         </div>
                         <div class="tab-pane" id="tab4">
                             <p>Howdy, I'm in Section 3.</p>

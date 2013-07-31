@@ -40,15 +40,18 @@ function menuObject ($name, $url) {
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Spielbetrieb<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
 
-                                    <li class="nav-header">Mannschaften</li>
+                                    <li class="nav-header">Aktive</li>
                                     <li><a href="#">Erste Mannschaft</a></li>
                                     <li><a href="#">Zweite Mannschaft</a></li>
+                                    <li><a href="#">Dritte Mannschaft</a></li>
                                     <li><a href="#">Senioren</a></li>
                                     <li><a href="#">Frauen</a></li>
                                     <li class="divider"></li>
 
                                     <li class="nav-header">Kinderfussball</li>
-                                    <li><a href="#">Junioren G</a></li>
+                                    <li><a href="#">Junioren Ga</a></li>
+                                    <li><a href="#">Junioren Gb</a></li>
+                                    <li><a href="#">Junioren F</a></li>
                                     <li class="divider"></li>
                                     <li class="nav-header">Diverses</li>
                                     <li><a href="#">Schiedsrichter</a></li>

@@ -10,10 +10,10 @@ class MY_Controller extends CI_Controller {
 
     // Print Metadata, Header, Slogan and Footer directly
 
-    protected function drawWrapper($pageTitle, $view, $excludeSlogan = false, $excludeFooter = false) {
+    protected function drawWrapper($pageTitle, $view, $excludeSlogan = true, $excludeFooter = false) {
         $data ['page_title'] = $pageTitle;
         $this->load->view("meta/metadata", $data);
-        $this->load->view("view_topnav");
+        $this->load->view("elements/topNav");
         if (!$excludeSlogan) {
             $this->load->view("view_slogan");
         }

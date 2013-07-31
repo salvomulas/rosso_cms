@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/elements/topNav.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/view_topnav.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.dark.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/view_topnav.php" afterPath="$PROJECT_DIR$/application/views/view_topnav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/site.php" afterPath="$PROJECT_DIR$/application/controllers/site.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rosso_cms.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375204838196" ignored="false" />
+    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375220798289" ignored="false" />
     <file path="/.htaccess" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372967668883" ignored="false" />
     <file path="/404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981779302" ignored="false" />
     <file path="/view_404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981808609" ignored="false" />
@@ -20,10 +23,12 @@
     <file path="/rankingTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629269460" ignored="false" />
     <file path="/admin.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374946040237" ignored="false" />
     <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374967025302" ignored="false" />
-    <file path="/MY_Controller.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374962718839" ignored="false" />
+    <file path="/MY_Controller.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375229074780" ignored="false" />
     <file path="/verein.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623086659" ignored="false" />
     <file path="/team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623254132" ignored="false" />
-    <file path="/view_topnav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375204641162" ignored="false" />
+    <file path="/view_topnav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375229149699" ignored="false" />
+    <file path="/bootstrap.dark.css" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375231167875" ignored="false" />
+    <file path="/topNav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375232377416" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +56,7 @@
       <file leaf-file-name="MY_Controller.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="5" selection-start="779" selection-end="779" vertical-scroll-proportion="-17.5">
+            <state line="15" column="42" selection-start="453" selection-end="453" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -60,27 +65,27 @@
       <file leaf-file-name="site.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="50" selection-start="558" selection-end="558" vertical-scroll-proportion="-12.5">
+            <state line="24" column="41" selection-start="737" selection-end="737" vertical-scroll-proportion="-15.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view_topnav.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
+      <file leaf-file-name="topNav.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/elements/topNav.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="46" selection-start="491" selection-end="491" vertical-scroll-proportion="-10.625">
+            <state line="45" column="39" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.55831265">
               <folding>
-                <marker date="1375205005000" expanded="false" signature="5262:5297" placeholder="..." />
+                <marker date="1375232422000" expanded="true" signature="6140:6175" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.dark.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bootstrap.dark.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.dark.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2947" column="0" selection-start="51779" selection-end="51779" vertical-scroll-proportion="0.20273738">
+            <state line="6209" column="22" selection-start="128366" selection-end="128366" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +103,7 @@
       <file leaf-file-name="Member.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
+            <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="-23.75">
               <folding />
             </state>
           </provider>
@@ -107,7 +112,7 @@
       <file leaf-file-name="error.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+            <state line="16" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="-10.0">
               <folding />
             </state>
           </provider>
@@ -131,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..member_Active" />
-        <option value="dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..team_1_ranking" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
         <option value="$PROJECT_DIR$/application/controllers/verein.php" />
         <option value="$PROJECT_DIR$/application/controllers/team.php" />
@@ -141,12 +144,14 @@
         <option value="$PROJECT_DIR$/application/models/Ranking.php" />
         <option value="$PROJECT_DIR$/application/models/Member.php" />
         <option value="$PROJECT_DIR$/application/config/autoload.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/application/controllers/error.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin.php" />
+        <option value="$PROJECT_DIR$/application/views/view_slogan.php" />
         <option value="$PROJECT_DIR$/application/controllers/site.php" />
+        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
         <option value="$PROJECT_DIR$/application/views/view_topnav.php" />
         <option value="$PROJECT_DIR$/assets/css/bootstrap.dark.css" />
+        <option value="$PROJECT_DIR$/application/views/elements/topNav.php" />
       </list>
     </option>
   </component>
@@ -283,6 +288,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rosso_cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rosso_cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -588,7 +611,11 @@
       <created>1375204843045</created>
       <updated>1375204843045</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adjustments to the CSS gradient functions">
+      <created>1375220804390</created>
+      <updated>1375220804390</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -598,7 +625,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13325378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13245824" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15672235" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -657,7 +684,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dynamic navigation view preparation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjustments to the CSS gradient functions" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -679,29 +706,12 @@
     <MESSAGE value="Fixed output of multiple ranking tables within the same controller" />
     <MESSAGE value="Preparations for admin login" />
     <MESSAGE value="Dynamic navigation view preparation" />
+    <MESSAGE value="Adjustments to the CSS gradient functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/rosso_cms..team_1_ranking">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="39" selection-start="2740" selection-end="2740" vertical-scroll-proportion="0.61627907" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="32" selection-start="3511" selection-end="3511" vertical-scroll-proportion="0.34656742" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/verein.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="1" selection-start="312" selection-end="312" vertical-scroll-proportion="0.18610422" />
@@ -732,16 +742,30 @@
         <state line="54" column="68" selection-start="1698" selection-end="1698" vertical-scroll-proportion="0.627907" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
+    <entry file="file://$PROJECT_DIR$/application/views/meta/metadata.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Member.php">
+    <entry file="file://$PROJECT_DIR$/application/views/view_slogan.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.0">
+        <state line="37" column="6" selection-start="1417" selection-end="1417" vertical-scroll-proportion="-23.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="42" selection-start="453" selection-end="453" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="41" selection-start="737" selection-end="737" vertical-scroll-proportion="-15.0">
           <folding />
         </state>
       </provider>
@@ -753,33 +777,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
+    <entry file="file://$PROJECT_DIR$/application/models/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="50" selection-start="558" selection-end="558" vertical-scroll-proportion="-12.5">
+        <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="-23.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="779" selection-end="779" vertical-scroll-proportion="-17.5">
+        <state line="16" column="33" selection-start="447" selection-end="447" vertical-scroll-proportion="-10.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/view_topnav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="491" selection-end="491" vertical-scroll-proportion="-10.625">
-          <folding>
-            <marker date="1375205005000" expanded="false" signature="5262:5297" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.dark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2947" column="0" selection-start="51779" selection-end="51779" vertical-scroll-proportion="0.20273738">
+        <state line="6209" column="22" selection-start="128366" selection-end="128366" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/topNav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="39" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.55831265">
+          <folding>
+            <marker date="1375232422000" expanded="true" signature="6140:6175" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

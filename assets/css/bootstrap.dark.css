@@ -223,6 +223,12 @@ textarea {
   }
 }
 
+header {
+  background: url("../img/header-bg.png");
+  padding-top: 35px;
+  min-height: 170px;
+}
+
 body {
   margin: 0;
   font-family: 'Droid Sans', sans-serif;
@@ -2284,7 +2290,7 @@ table th[class*="span"],
   *margin-right: .3em;
   line-height: 14px;
   vertical-align: text-top;
-  background-image: url("../img/glyphicons-halflings.png");
+  background-image: url("../img/glyphicons-halflings-white.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;
 }
@@ -4097,7 +4103,6 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   color: #ffffff;
-  background-color: #bf1508;
 }
 
 .nav-stacked > li {
@@ -4202,7 +4207,6 @@ input[type="submit"].btn.btn-mini {
 .nav > li.dropdown.open.active > a:focus {
   color: #ffffff;
   background-color: #adafae;
-  border-color: #adafae;
 }
 
 .nav li.dropdown.open .caret,
@@ -4606,7 +4610,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 15px 15px 15px;
-  color: #adafae;
+  color: #dfdfdf;
   text-decoration: none;
   text-shadow: 0 1px 0 #020202;
 }
@@ -4619,7 +4623,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: transparent;
+  background-color: rgba(3, 3, 3, 0.4);
 }
 
 .navbar .nav > .active > a,
@@ -4627,7 +4631,6 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: #020202;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
      -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
           box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -4739,7 +4742,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   color: #ffffff;
-  background-color: #020202;
+  background-color: rgba(3, 3, 3, 0.4);
 }
 
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
@@ -6111,7 +6114,7 @@ a.badge:focus {
 }
 
 .hero-unit {
-  padding: 60px;
+  padding: 3px;
   margin-bottom: 30px;
   font-size: 18px;
   font-weight: 200;
@@ -6232,7 +6235,6 @@ hr {
 .navbar .nav > li > a:hover,
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover {
-  border-bottom: 1px solid #bf1508;
 }
 
 .navbar .nav > .active > a,
@@ -6241,6 +6243,7 @@ hr {
   -webkit-box-shadow: none;
      -moz-box-shadow: none;
           box-shadow: none;
+    background-color: #131517;
 }
 
 .navbar .navbar-text {

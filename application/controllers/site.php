@@ -19,8 +19,8 @@ class Site extends MY_Controller {
         $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
         // $this->drawWrapper("Willkommen", "view_home");
         $this->load->view('meta/metadata', $data);
-        $this->load->view('view_topnav');
-        $this->load->view('view_slogan');
+        $this->load->view('elements/topNav');
+        //$this->load->view('view_slogan');
         $this->load->view('view_home', $data);
         $this->load->view('view_footer');
     }

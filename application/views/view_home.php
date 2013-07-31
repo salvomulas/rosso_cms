@@ -149,6 +149,18 @@
 
         </div>
         <div class="span4">
+
+            <div class="well-small text-center">
+            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/facebook.png"></a>
+            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/twitter.png"></a>
+            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/gplus.png"></a>
+            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/youtube.png"></a>
+            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/rss.png"></a>
+
+            <hr>
+
+            </div>
+
             <div class="well">
 
                 <h4>Tabelle</h4>

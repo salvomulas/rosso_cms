@@ -109,6 +109,12 @@ img {
   -ms-interpolation-mode: bicubic;
 }
 
+img.social {
+  width: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 #map_canvas img,
 .google-maps img {
   max-width: none;
@@ -3143,6 +3149,7 @@ table th[class*="span"],
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+  margin-bottom: 10px;
 }
 
 .fade {

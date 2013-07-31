@@ -15,11 +15,11 @@ class MY_Controller extends CI_Controller {
         $this->load->view("meta/metadata", $data);
         $this->load->view("elements/topNav");
         if (!$excludeSlogan) {
-            $this->load->view("view_slogan");
+            $this->load->view("elements/heroUnit");
         }
         $this->load->view($view);
         if (!$excludeFooter) {
-            $this->load->view("view_footer");
+            $this->load->view("elements/footer");
         }
     }
 

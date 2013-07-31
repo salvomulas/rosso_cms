@@ -22,7 +22,7 @@ class Site extends MY_Controller {
         $this->load->view('elements/topNav');
         //$this->load->view('view_slogan');
         $this->load->view('view_home', $data);
-        $this->load->view('view_footer');
+        $this->load->view('elements/footer');
     }
 
     public function _loadRanking() {

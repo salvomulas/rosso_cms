@@ -16,7 +16,12 @@ class Error extends MY_Controller {
     }
 
     public function ValidationFailed() {
-
+        $data['page_title'] = "Error";
+        $data['err_title'] = "Ein Fehler ist aufgetreten";
+        $data['err_message'] = "Some fields have not been entered correctly!";
+        $this->load->view("meta/metadata", $data);
+        $this->load->view("elements/topNav");
+        $this->load->view("meta/error", $data);
     }
 
     public function PermissionDenied() {

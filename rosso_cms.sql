@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 27. Jul 2013 um 16:45
+-- Erstellungszeit: 31. Jul 2013 um 01:46
 -- Server Version: 5.1.44
 -- PHP-Version: 5.3.1
 
@@ -145,6 +145,29 @@ INSERT INTO `member_Active` (`id`, `lastName`, `firstName`, `bDay`, `toTeam`, `t
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `member_Management`
+--
+
+CREATE TABLE IF NOT EXISTS `member_Management` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `eMail` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Daten für Tabelle `member_Management`
+--
+
+INSERT INTO `member_Management` (`id`, `username`, `firstName`, `lastName`, `eMail`, `password`) VALUES
+(1, 'salvo', 'Salvatore', 'Mulas', 'marketing@acrossoneri.ch', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `team_1_ranking`
 --
 
@@ -160,7 +183,7 @@ CREATE TABLE IF NOT EXISTS `team_1_ranking` (
 --
 
 INSERT INTO `team_1_ranking` (`id`, `team`, `points`) VALUES
-(1, 'SC M&uuml;nchenstein', 20),
+(1, 'SC M&uuml;nchenstein', 0),
 (2, 'FC Arisdorf', 0),
 (3, 'FC Diegten Eptingen', 0),
 (4, 'SV Muttenz b', 0),
@@ -203,6 +226,37 @@ INSERT INTO `team_2_ranking` (`id`, `team`, `points`) VALUES
 (3, 'FC Gelterkinden', 0),
 (2, 'FC Diegten Eptingen', 0),
 (1, 'FC Bubendorf', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `team_3_ranking`
+--
+
+CREATE TABLE IF NOT EXISTS `team_3_ranking` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `team` varchar(255) NOT NULL,
+  `points` int(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+
+--
+-- Daten für Tabelle `team_3_ranking`
+--
+
+INSERT INTO `team_3_ranking` (`id`, `team`, `points`) VALUES
+(12, 'CD Espanol Basel a', 0),
+(11, 'SC Basel Nord a', 0),
+(10, 'FC Ferad a', 0),
+(9, 'AC Virtus Liestal a', 0),
+(8, 'FC Telegraph BS', 0),
+(7, 'FC Birsfelden', 0),
+(6, 'FC Schwarz-Weiss', 0),
+(5, 'FC Amicitia Riehen', 0),
+(4, 'FK Srbija Basel', 0),
+(3, 'FC Pratteln', 0),
+(2, 'AC Rossoneri b', 0),
+(1, 'FC Xalko', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

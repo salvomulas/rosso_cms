@@ -21,7 +21,7 @@
 <!-- BLOGPOST BEGIN -->
             <div class="row">
                 <div class="span8">
-                    <h4><strong><a href="#">Drei Punkte in Gelterkinden f&uuml;r unsere erste Mannschaft</a></strong></h4>
+                    <h4><strong><a href="#">Neue Webseite ist online!</a></strong></h4>
                 </div>
             </div>
             <div class="row">
@@ -34,22 +34,28 @@
                     <p>
                         Lorem ipsum dolor sit amet, id nec conceptam conclusionemque. Et eam tation option. Utinam salutatus ex eum. Ne mea dicit tibique facilisi, ea mei omittam explicari conclusionemque, ad nobis propriae quaerendum sea.
                     </p>
-                    <p><a class="btn" href="#">Read more</a></p>
+                    <a href="">Weiterlesen...</a>
                 </div>
             </div>
             <div class="row">
                 <div class="span8">
                     <p></p>
                     <p>
-                        <i class="icon-user"></i> von <a href="#">Salvatore Mulas</a> 
-                        | <i class="icon-calendar"></i> 20. M&auml;rz 2013
-                        | <i class="icon-share"></i> <a href="#">39 Shares</a>
-                        | <i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">Matchbericht</span></a> 
+                        <i class="icon-user"></i> von Salvatore Mulas
+                        | <i class="icon-calendar"></i> 01. August 2013
+                        | <i class="icon-share"></i> 0 Shares
+                        | <i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">News</span></a>
                     </p>
                     </div>
             </div>
             <hr>
 <!-- BLOGPOST END -->
+
+
+<?php
+
+/*
+
 <!-- BLOGPOST BEGIN -->
             <div class="row">
                 <div class="span8">
@@ -124,6 +130,9 @@
     </ul>
 </div>
 
+*/
+?>
+
         </div>
         <div class="span3">
             <div class="well">
@@ -142,9 +151,6 @@
                 <ul class="nav nav-list">
                     <li class="active"><a href="#">alle</a></li>
                     <li><a href="#">Salvatore Mulas</a></li>
-                    <li><a href="#">Philippe Feller</a></li>
-                    <li><a href="#">Deila Santo</a></li>
-                    <li><a href="#">Luca Mulas</a></li>
                 </ul>
             </div>
 

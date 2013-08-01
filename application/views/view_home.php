@@ -71,28 +71,8 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>23.02.2013</td>
-                                    <td>Neuer Webautritt fertig</td>
-                                    <td><i class="icon-play"></td>
-                                </tr>
-                                <tr>
-                                    <td>27.02.2013</td>
-                                    <td>Generalversammlung am 11.07</td>
-                                    <td><i class="icon-play"></td>
-                                </tr>
-                                <tr>
-                                    <td>04.03.2013</td>
-                                    <td>Brief des Pr&auml;sidenten</td>
-                                    <td><i class="icon-play"></td>
-                                </tr>
-                                <tr>
-                                    <td>10.03.2013</td>
-                                    <td>Ein tolles Fest</td>
-                                    <td><i class="icon-play"></td>
-                                </tr>
-                                <tr>
-                                    <td>29.03.2013</td>
-                                    <td>R&uuml;ckblick auf das letzte...</td>
+                                    <td>01.08.2013</td>
+                                    <td>Neue Webseite ist online!</td>
                                     <td><i class="icon-play"></td>
                                 </tr>
                             </tbody>
@@ -104,6 +84,10 @@
                 <div class="span4">
                     <div class="well">
                         <h4>Letzte Matchberichte</h4>
+                        <p>Es wurden noch keine Matchberichte verfasst</p>
+
+                        <?php
+                        /*
 
                         <table class="table table-condensed table-hover">
                             <thead>
@@ -142,6 +126,9 @@
                             </tbody>
                         </table>
 
+                        */
+                        ?>
+
                     </div>
                 </div>
 
@@ -151,9 +138,9 @@
         <div class="span4">
 
             <div class="well-small text-center">
-            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/facebook.png"></a>
-            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/twitter.png"></a>
-            <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/gplus.png"></a>
+            <a href="https://www.facebook.com/pages/AC-Rossoneri/238296652947602" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/facebook.png"></a>
+            <a href="https://twitter.com/ACRossoneri" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/twitter.png"></a>
+            <a href="https://plus.google.com/103733298786436902225" rel="publisher" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/gplus.png"></a>
             <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/youtube.png"></a>
             <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/rss.png"></a>
 
@@ -210,6 +197,7 @@
 
             <div class="well">
                 <h4>N&auml;chstes Spiel</h4>
+                <p>Im Moment sind keine Spiele angesetzt</p>
             </div>
 
 

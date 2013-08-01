@@ -27,7 +27,7 @@ function menuObject ($name, $url) {
                     <div class="nav-collapse collapse">
                         <ul class="nav navbar-static-top nav-pills pull-right">
                             <?php menuObject("Home",""); ?>
-                            <?php menuObject("Aktuelles","site/aktuelles"); ?>
+                            <?php menuObject("Aktuelles","aktuelles"); ?>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Verein<b class="caret"></b></a>
                                 <ul class="dropdown-menu">

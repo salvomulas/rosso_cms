@@ -21,7 +21,7 @@ class Site extends MY_Controller {
         $this->load->view('meta/metadata', $data);
         $this->load->view('elements/topNav');
         //$this->load->view('view_slogan');
-        $this->load->view('view_home', $data);
+        $this->load->view('pages/home', $data);
         $this->load->view('elements/footer');
     }
 

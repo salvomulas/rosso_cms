@@ -6,7 +6,7 @@ if (!defined('BASEPATH'))
 class Aktuelles extends MY_Controller {
 
     public function index() {
-        $this->drawWrapper("Aktuelles", "view_aktuelles");
+        $this->drawWrapper("Aktuelles", "pages/aktuelles");
     }
 
 }

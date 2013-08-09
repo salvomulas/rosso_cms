@@ -12,6 +12,10 @@ class Team extends MY_Controller {
     public function sandbox() {
         $this->load->model('teams');
         $this->load->model('player');
+        $this->load->model('ranking');
+
+        $data ['showTeams'] = array(1);
+        $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
 
         $data['teamName'] = $this->teams->getTeamName(1);
         $data['spieler'] = $this->player->getPlayers(1);

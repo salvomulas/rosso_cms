@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/elements/playerTable.php" afterPath="$PROJECT_DIR$/application/views/elements/playerTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/bootstrap.dark.css" afterPath="$PROJECT_DIR$/assets/css/bootstrap.dark.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/team.php" afterPath="$PROJECT_DIR$/application/views/pages/team.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/elements/teamUnit.php" afterPath="$PROJECT_DIR$/application/views/elements/teamUnit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rosso_cms.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376061403568" ignored="false" />
+    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376323940963" ignored="false" />
     <file path="/.htaccess" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372967668883" ignored="false" />
     <file path="/404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981779302" ignored="false" />
     <file path="/view_404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981808609" ignored="false" />
@@ -22,7 +23,7 @@
     <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375295131805" ignored="false" />
     <file path="/MY_Controller.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375229074780" ignored="false" />
     <file path="/verein.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623086659" ignored="false" />
-    <file path="/team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376073893836" ignored="false" />
+    <file path="/team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376335861957" ignored="false" />
     <file path="/view_topnav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375229149699" ignored="false" />
     <file path="/bootstrap.dark.css" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375982299073" ignored="false" />
     <file path="/topNav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375234120859" ignored="false" />
@@ -33,7 +34,7 @@
     <file path="/home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375642658429" ignored="false" />
     <file path="/Team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375812124725" ignored="false" />
     <file path="/Player.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375812249097" ignored="false" />
-    <file path="/teamUnit.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375983354818" ignored="false" />
+    <file path="/teamUnit.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376335884830" ignored="false" />
     <file path="/playerTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376069780767" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +59,58 @@
     <favorites_list name="rosso_cms" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="team.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/pages/team.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="38" selection-start="7942" selection-end="7942" vertical-scroll-proportion="-49.458332">
+              <folding>
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="teamUnit.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/elements/teamUnit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="38" selection-start="676" selection-end="676" vertical-scroll-proportion="0.21666667">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.dark.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.dark.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6147" column="0" selection-start="127399" selection-end="127399" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -87,11 +139,11 @@
         <option value="$PROJECT_DIR$/application/models/Team.php" />
         <option value="$PROJECT_DIR$/application/models/Teams.php" />
         <option value="$PROJECT_DIR$/application/models/Player.php" />
-        <option value="$PROJECT_DIR$/assets/css/bootstrap.dark.css" />
         <option value="$PROJECT_DIR$/application/controllers/team.php" />
-        <option value="$PROJECT_DIR$/application/views/elements/teamUnit.php" />
         <option value="$PROJECT_DIR$/application/views/elements/playerTable.php" />
+        <option value="$PROJECT_DIR$/assets/css/bootstrap.dark.css" />
         <option value="$PROJECT_DIR$/application/views/pages/team.php" />
+        <option value="$PROJECT_DIR$/application/views/elements/teamUnit.php" />
       </list>
     </option>
   </component>
@@ -479,13 +531,13 @@
     <property name="JdbcConsole.Extract.ClosingQuote" value="\&quot;" />
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="JdbcConsole.Extract.IncludeHeader" value="false" />
     <property name="JdbcConsole.Extract.QuoteEverything" value="false" />
+    <property name="JdbcConsole.Extract.IncludeHeader" value="false" />
     <property name="FullScreen" value="true" />
     <property name="JdbcConsole.Extract.IncludeRowNumbers" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PublishConfig" serverName="http://localhost" serverId="909e25f1-818d-4f8e-870d-ff44e4ccb6cb">
     <servers>
@@ -609,19 +661,22 @@
       <created>1376061410222</created>
       <updated>1376061410222</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Minor MVC adjustments">
+      <created>1376144274214</created>
+      <updated>1376144274214</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16585067" sideWeight="0.67016804" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22154222" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22460221" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -631,6 +686,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -678,7 +734,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparations done for the &quot;Kader&quot; view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor MVC adjustments" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -707,6 +763,7 @@
     <MESSAGE value="Added Player and Team model" />
     <MESSAGE value="Adjusted Player and Team model. Minor changes to the views" />
     <MESSAGE value="Preparations done for the &quot;Kader&quot; view" />
+    <MESSAGE value="Minor MVC adjustments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -714,139 +771,109 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/application/views/pages/aktuelles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="57" selection-start="6389" selection-end="6389" vertical-scroll-proportion="-24.375">
-          <folding>
-            <element signature="e#2060#6163#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="140" column="57" selection-start="6389" selection-end="6389" vertical-scroll-proportion="-24.375" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.6333333">
-          <folding />
-        </state>
+        <state line="38" column="0" selection-start="945" selection-end="945" vertical-scroll-proportion="0.6333333" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Ranking.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="996" selection-end="996" vertical-scroll-proportion="-27.5">
-          <folding />
-        </state>
+        <state line="44" column="0" selection-start="996" selection-end="996" vertical-scroll-proportion="-27.5" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="56" selection-start="206" selection-end="206" vertical-scroll-proportion="0.1368301">
-          <folding />
-        </state>
+        <state line="8" column="56" selection-start="206" selection-end="206" vertical-scroll-proportion="0.1368301" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.1860203">
-          <folding />
-        </state>
+        <state line="11" column="0" selection-start="213" selection-end="213" vertical-scroll-proportion="0.1860203" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/elements/heroUnit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="103" selection-end="103" vertical-scroll-proportion="0.06666667">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="103" selection-end="103" vertical-scroll-proportion="0.06666667" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="26" selection-start="7281" selection-end="7281" vertical-scroll-proportion="0.5069444">
-          <folding>
-            <element signature="e#3383#5115#0" expanded="true" />
-            <element signature="e#6165#6574#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="177" column="26" selection-start="7281" selection-end="7281" vertical-scroll-proportion="0.5069444" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.23333333">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="283" selection-end="283" vertical-scroll-proportion="0.23333333" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/elements/rankingTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="8" selection-start="198" selection-end="521" vertical-scroll-proportion="0.17103763">
-          <folding />
-        </state>
+        <state line="10" column="8" selection-start="198" selection-end="521" vertical-scroll-proportion="0.17103763" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="20" selection-start="464" selection-end="464" vertical-scroll-proportion="0.31666666" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Teams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="0.16666667" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Player.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="16" selection-start="432" selection-end="432" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/playerTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="13" selection-start="894" selection-end="894" vertical-scroll-proportion="0.45" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.dark.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4132" column="28" selection-start="78778" selection-end="78778" vertical-scroll-proportion="0.0">
+        <state line="6147" column="0" selection-start="127399" selection-end="127399" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/team.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="110" selection-start="8904" selection-end="8904" vertical-scroll-proportion="0.7722661">
+        <state line="124" column="38" selection-start="7942" selection-end="7942" vertical-scroll-proportion="-49.458332">
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#5;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#2;n#div#6;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="20" selection-start="464" selection-end="464" vertical-scroll-proportion="0.31666666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Teams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="172" selection-end="172" vertical-scroll-proportion="0.16666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="432" selection-end="432" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/elements/playerTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="894" selection-end="894" vertical-scroll-proportion="0.45">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/elements/teamUnit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="39" selection-start="286" selection-end="286" vertical-scroll-proportion="0.13333334">
+        <state line="13" column="38" selection-start="676" selection-end="676" vertical-scroll-proportion="0.21666667">
           <folding />
         </state>
       </provider>

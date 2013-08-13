@@ -33,4 +33,15 @@ class Teams extends CI_Model {
 
     }
 
+    public function getTeamInfo($teamID) {
+
+        $this->db->select('*')->from('teams')->where('id', $teamID);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0 ) {
+            return $query;
+        }
+
+    }
+
 }

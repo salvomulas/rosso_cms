@@ -132,43 +132,27 @@
 
             <div class="well">
                 <h4>Staff</h4>
-                <div class="row-fluid">
-                    <div class="span2">
-                        <img class="img-rounded" src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="height: 60px;">
-                    </div>
-                    <div class="span10">
-                        <h5>Trainer</h5>
-                        <p>Roberti Alessandro</p>
-                    </div>
-                </div>
                 <hr>
-                <div class="row-fluid">
-                    <div class="span2">
-                        <img class="img-rounded" src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="height: 60px;">
-                    </div>
-                    <div class="span10">
-                        <h5>Co-Trainer</h5>
-                        <p>Schreiber Pascal</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="row-fluid">
-                    <div class="span2">
-                        <img class="img-rounded" src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="height: 60px;">
-                    </div>
-                    <div class="span10">
-                        <h5>Torwart-Trainer</h5>
-                        <p>Mazza Antonio</p>
-                    </div>
-                </div>
+
+                <?php
+
+                $data ['staff'] = $staff;
+                $this->load->view('elements/staffTable', $data);
+
+                ?>
+
+
             </div>
             <div class="well">
                 <h4>Tabelle</h4>
+
                 <?php
+
                 $data['teamNumber'] = 1;
                 $data['rankTables'] = $rankTables;
                 $this->load->view('elements/rankingTable', $data);
                 ?>
+
             </div>
             <div class="well">
                 <h4>N&auml;chstes Spiel</h4>

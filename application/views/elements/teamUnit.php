@@ -1,12 +1,24 @@
+<?php
+
+$row = $teamInfo->row();
+
+?>
+
 <div class="hero-unit">
     <div class="container">
         <div class="row">
             <div class="span8 pull-right">
-                <img src="<?php echo base_url(); ?>assets/img/mannschaft.jpg">
+                <?php
+                    if ($row->pictureURL != NULL) {
+                        echo '<img src="'.base_url().'assets/img/team/'.$row->pictureURL.'">';
+                    } else {
+                        echo "Leider ist noch kein Bild vorhanden";
+                    }
+                ?>
             </div>
             <div class="span4">
-                <h3>Erste Mannschaft</h3>
-                <p>4. Liga - Gruppe 2</p>
+                <h3><?php echo $row->name; ?></h3>
+                <p><?php echo $row->ligaDesc; ?></p>
                 <ul class="nav nav-tabs nav-stacked">
                     <li class="active"><a href="#tab1" data-toggle="tab">Kader</a></li>
                     <li><a href="#tab2" data-toggle="tab">Spielerliste</a></li>

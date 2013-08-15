@@ -26,7 +26,11 @@
                 break;
                 default: echo '<td></td>';
             }
-            echo '<td>' . $row->bDay . '</td>';
+            if ($row->bDay == 0) {
+                echo '<td></td>';
+            } else {
+                echo '<td>' . $row->bDay . '</td>';
+            }
             echo '</tr>';
         }
         ?>

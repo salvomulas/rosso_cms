@@ -13,7 +13,7 @@ class MY_Controller extends CI_Controller {
     protected function drawWrapper($pageTitle, $view, $excludeSlogan = true, $excludeFooter = false) {
         $data ['page_title'] = $pageTitle;
         $this->load->view("meta/metadata", $data);
-        $this->load->view("elements/topNav");
+        $this->drawNavigation();
         if (!$excludeSlogan) {
             $this->load->view("elements/heroUnit");
         }

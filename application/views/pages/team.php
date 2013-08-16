@@ -57,7 +57,7 @@
 
                 <?php
 
-                $data['teamNumber'] = 1;
+                $data['teamNumber'] = $teamID;
                 $data['rankTables'] = $rankTables;
                 $this->load->view('elements/rankingTable', $data);
                 ?>

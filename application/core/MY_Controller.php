@@ -23,6 +23,13 @@ class MY_Controller extends CI_Controller {
         }
     }
 
+    protected function drawNavigation () {
+        $this->load->model('teams');
+        $data ['teamsActive'] = $this->teams->getTeamsType(1);
+        $data ['teamsKifu'] = $this->teams->getTeamsType(2);
+        $this->load->view('elements/topNav', $data);
+    }
+
     protected function logout() {
         $this->session->sess_destroy();
         redirect("site/home");

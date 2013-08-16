@@ -37,4 +37,30 @@ class Player extends CI_Model {
 
     }
 
+    public function getPlayer ($playerID) {
+
+        $this->db->select('*')->from('member_Active')->where('id', $playerID);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query;
+        } else {
+            return NULL;
+        }
+
+    }
+
+    public function getPlayerName ($playerID) {
+
+        $this->db->select('firstName, lastName')->from('member_Active')->where('id', $playerID);
+        $query = $this->db->get();
+
+        $query = $query->row();
+
+        $name = $query->firstName.' '.$query->lastName;
+
+        return $name;
+
+    }
+
 }

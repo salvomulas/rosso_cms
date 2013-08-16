@@ -41,17 +41,19 @@ function menuObject ($name, $url) {
                                 <ul class="dropdown-menu">
 
                                     <li class="nav-header">Aktive</li>
-                                    <li><a href="#">Erste Mannschaft</a></li>
-                                    <li><a href="#">Zweite Mannschaft</a></li>
-                                    <li><a href="#">Dritte Mannschaft</a></li>
-                                    <li><a href="#">Senioren</a></li>
-                                    <li><a href="#">Frauen</a></li>
+                                    <?php
+                                    foreach ($teamsActive->result() as $row) {
+                                        echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
+                                    }
+                                    ?>
                                     <li class="divider"></li>
 
                                     <li class="nav-header">Kinderfussball</li>
-                                    <li><a href="#">Junioren Ga</a></li>
-                                    <li><a href="#">Junioren Gb</a></li>
-                                    <li><a href="#">Junioren F</a></li>
+                                    <?php
+                                    foreach ($teamsKifu->result() as $row) {
+                                        echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
+                                    }
+                                    ?>
                                     <li class="divider"></li>
                                     <li class="nav-header">Diverses</li>
                                     <li><a href="#">Schiedsrichter</a></li>

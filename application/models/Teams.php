@@ -17,7 +17,18 @@ class Teams extends CI_Model {
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
-            return $query->result();
+            return $query;
+        }
+
+    }
+
+    public function getTeamsType($type) {
+
+        $this->db->select('*')->from('teams')->where('type',$type);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            return $query;
         }
 
     }

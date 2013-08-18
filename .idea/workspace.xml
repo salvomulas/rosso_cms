@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/Articles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/core/MY_Controller.php" afterPath="$PROJECT_DIR$/application/core/MY_Controller.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/error.php" afterPath="$PROJECT_DIR$/application/controllers/error.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/site.php" afterPath="$PROJECT_DIR$/application/controllers/site.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/spieler.php" afterPath="$PROJECT_DIR$/application/controllers/spieler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/img/mannschaft.jpg" afterPath="$PROJECT_DIR$/assets/img/mannschaft.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/aktuelles.php" afterPath="$PROJECT_DIR$/application/controllers/aktuelles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/aktuelles.php" afterPath="$PROJECT_DIR$/application/views/pages/aktuelles.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rosso_cms.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376657685561" ignored="false" />
+    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376660087468" ignored="false" />
     <file path="/.htaccess" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372967668883" ignored="false" />
     <file path="/404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981779302" ignored="false" />
     <file path="/view_404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981808609" ignored="false" />
@@ -31,7 +29,7 @@
     <file path="/topNav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376657504996" ignored="false" />
     <file path="/view_footer.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375233369218" ignored="false" />
     <file path="/footer.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375291033492" ignored="false" />
-    <file path="/aktuelles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375309796823" ignored="false" />
+    <file path="/aktuelles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376661516113" ignored="false" />
     <file path="/view_aktuelles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375312036279" ignored="false" />
     <file path="/home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375642658429" ignored="false" />
     <file path="/Team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375812124725" ignored="false" />
@@ -83,15 +81,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="team.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="35" selection-start="468" selection-end="468" vertical-scroll-proportion="-12.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Teams.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Teams.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Articles.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Articles.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/Articles.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="24" selection-start="426" selection-end="426" vertical-scroll-proportion="0.35">
+            <state line="21" column="24" selection-start="426" selection-end="426" vertical-scroll-proportion="-12.5">
               <folding />
             </state>
           </provider>
@@ -123,6 +112,24 @@
         <entry file="file://$PROJECT_DIR$/application/models/Player.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="58" column="0" selection-start="1369" selection-end="1369" vertical-scroll-proportion="-36.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aktuelles.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/pages/aktuelles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="45" column="28" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-28.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aktuelles.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.35">
               <folding />
             </state>
           </provider>
@@ -146,15 +153,12 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/meta/metadata.php" />
-        <option value="$PROJECT_DIR$/application/views/elements/playerTable.php" />
         <option value="$PROJECT_DIR$/application/controllers/player.php" />
         <option value="$PROJECT_DIR$/application/models/Player.php" />
         <option value="$PROJECT_DIR$/application/views/elements/playerUnit.php" />
         <option value="$PROJECT_DIR$/application/views/pages/player.php" />
         <option value="$PROJECT_DIR$/application/views/pages/team.php" />
         <option value="$PROJECT_DIR$/application/views/elements/kaderTable.php" />
-        <option value="$PROJECT_DIR$/application/controllers/team.php" />
         <option value="$PROJECT_DIR$/application/models/Teams.php" />
         <option value="$PROJECT_DIR$/application/views/elements/topNav.php" />
         <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
@@ -162,6 +166,9 @@
         <option value="$PROJECT_DIR$/application/controllers/site.php" />
         <option value="$PROJECT_DIR$/application/controllers/spieler.php" />
         <option value="$PROJECT_DIR$/application/models/Articles.php" />
+        <option value="$PROJECT_DIR$/application/controllers/team.php" />
+        <option value="$PROJECT_DIR$/application/views/pages/aktuelles.php" />
+        <option value="$PROJECT_DIR$/application/controllers/aktuelles.php" />
       </list>
     </option>
   </component>
@@ -699,7 +706,11 @@
       <created>1376657690821</created>
       <updated>1376657690821</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Created Articles model">
+      <created>1376660092943</created>
+      <updated>1376660092943</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,7 +722,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16585067" sideWeight="0.67016804" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22460221" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22460221" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -768,7 +779,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flexible Top Navigation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created Articles model" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -802,39 +813,13 @@
     <MESSAGE value="Preparation of dynamic Kader view" />
     <MESSAGE value="Finalized KaderTable" />
     <MESSAGE value="Flexible Top Navigation" />
+    <MESSAGE value="Created Articles model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/pages/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="48" selection-start="720" selection-end="720" vertical-scroll-proportion="6.875">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1376601702000" expanded="true" signature="640:701" placeholder="..." />
-            <marker date="1376601702000" expanded="true" signature="953:989" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/elements/topNav.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="2004" selection-end="2004" vertical-scroll-proportion="-26.875">
-          <folding>
-            <marker date="1376657506000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -876,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="468" selection-end="468" vertical-scroll-proportion="-12.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Teams.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-5.0">
@@ -918,9 +896,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="38" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.6157355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="48" selection-start="720" selection-end="720" vertical-scroll-proportion="6.875">
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1376601702000" expanded="true" signature="640:701" placeholder="..." />
+            <marker date="1376601702000" expanded="true" signature="953:989" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/aktuelles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="28" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-28.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Articles.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="24" selection-start="426" selection-end="426" vertical-scroll-proportion="0.35">
+        <state line="21" column="24" selection-start="426" selection-end="426" vertical-scroll-proportion="-12.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="514" selection-end="514" vertical-scroll-proportion="0.35">
           <folding />
         </state>
       </provider>

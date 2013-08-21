@@ -14,10 +14,10 @@ class Articles extends CI_Model {
     public function getArticle ($id) {
 
         $this->db->select('*')->from('news')->where('id', $id);
-        $query = $this->db-get();
+        $query = $this->db->get();
 
         if ($query->num_rows > 0) {
-            return $query;
+            return $query->result();
         } else {
             return NULL;
         }
@@ -32,6 +32,20 @@ class Articles extends CI_Model {
             return $query;
         } else {
             return NULL;
+        }
+
+    }
+
+    public function getArticleTitle ($id) {
+
+        $this->db->select('title')->from('news')->where('id', $id);
+        $query = $this->db->get();
+
+        if ($query->num_rows() > 0) {
+            $query = $query->row();
+            return $query->title;
+        } else {
+            return NuLL;
         }
 
     }

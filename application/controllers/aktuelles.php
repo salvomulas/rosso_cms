@@ -21,6 +21,26 @@ class Aktuelles extends MY_Controller {
         $this->drawNavigation();
         $this->load->view("pages/aktuelles");
         $this->load->view("elements/footer");
+
+    }
+
+    public function article($articleID) {
+
+        // Load models
+        $this->load->model('articles');
+
+        // Load aritcle
+        $data ['article'] = $this->articles->getArticle($articleID);
+        $data ['articleTitle'] = $this->articles->getArticleTitle($articleID);
+
+        // Set Controller properties
+        $data['page_title'] = $data['articleTitle'];
+
+        // Load views with all the loaded data
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("elements/footer");
+
     }
 
 }

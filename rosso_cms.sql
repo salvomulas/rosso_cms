@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 10. Aug 2013 um 14:18
+-- Erstellungszeit: 21. Aug 2013 um 23:37
 -- Server Version: 5.1.44
 -- PHP-Version: 5.3.1
 
@@ -33,116 +33,122 @@ CREATE TABLE IF NOT EXISTS `member_Active` (
   `trikot` int(11) NOT NULL,
   `lastName` varchar(255) NOT NULL,
   `firstName` varchar(255) NOT NULL,
+  `nickName` varchar(255) NOT NULL,
   `bDay` date NOT NULL,
+  `nat` varchar(255) NOT NULL,
   `toTeam` int(11) NOT NULL,
   `toPosition` int(11) NOT NULL,
-  `picURL` varchar(255) NOT NULL,
+  `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=99 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105 ;
 
 --
 -- Daten für Tabelle `member_Active`
 --
 
-INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `bDay`, `toTeam`, `toPosition`, `picURL`) VALUES
-(1, 0, 'Apostolo', 'Ilaria', '1996-08-09', 4, 0, ''),
-(2, 0, 'Apostolo', 'Martina', '1993-08-18', 4, 0, ''),
-(3, 0, 'Aquilino', 'Marilena', '1993-03-03', 4, 0, ''),
-(4, 0, 'Bachschi', 'Davud', '1976-04-23', 5, 0, ''),
-(5, 0, 'Barca', 'Daniel', '1978-09-15', 5, 0, ''),
-(6, 0, 'Baretincic', 'Manuel', '1985-02-19', 2, 0, ''),
-(7, 0, 'Batista', 'Vedran', '1986-06-23', 2, 2, ''),
-(8, 20, 'Branca', 'Alessandro', '1988-06-14', 1, 3, '00113.jpg'),
-(9, 10, 'Branca', 'Davide', '1994-03-05', 1, 3, '00109.jpg'),
-(10, 0, 'Branca', 'Sara', '1992-12-12', 4, 0, ''),
-(11, 0, 'Buchholz', 'Thomas', '1993-07-31', 2, 0, ''),
-(12, 0, 'Caldaralo', 'Laetitia', '1993-09-22', 4, 0, ''),
-(13, 0, 'Carlen', 'Nicolas', '1991-10-23', 2, 2, ''),
-(14, 0, 'Catozza', 'Francesco', '1975-02-23', 5, 0, ''),
-(15, 16, 'Chiriaco', 'Domenico', '1983-11-16', 1, 2, '00110.jpg'),
-(16, 0, 'Ciliberto', 'Fabrizio', '1973-12-30', 5, 0, ''),
-(17, 12, 'Ciraolo', 'Gaetano', '1984-06-27', 1, 1, '00101.jpg'),
-(18, 0, 'Concepcion', 'Hanna', '1989-10-20', 4, 0, ''),
-(19, 9, 'Cordeiro', 'Danilo', '1991-04-22', 1, 3, '00108.jpg'),
-(20, 0, 'Cubaixo', 'David', '1985-02-01', 2, 2, ''),
-(21, 0, 'Cuzzocrea', 'Alessia', '1994-07-08', 4, 0, ''),
-(22, 0, 'De Nuccio', 'Francesca', '1989-10-07', 4, 0, ''),
-(23, 0, 'De Sousa', 'Jose', '1965-01-18', 5, 0, ''),
-(24, 0, 'Demir', 'Murat Serg', '1983-03-09', 5, 0, ''),
-(25, 0, 'Di Stefano', 'Rocco', '1957-04-09', 5, 0, ''),
-(26, 0, 'Eggli', 'Kevin', '1986-09-17', 2, 0, ''),
-(27, 0, 'Elma', 'Halil', '1976-12-30', 5, 0, ''),
-(28, 0, 'Faga', 'Antonio', '1970-11-16', 5, 0, ''),
-(29, 0, 'FagaValerio', 'Giuseppe', '1967-11-11', 5, 0, ''),
-(30, 0, 'Fankhauser', 'Patrick', '1988-02-06', 2, 0, ''),
-(31, 0, 'Feller', 'Philippe', '1988-09-17', 2, 0, ''),
-(32, 0, 'Galizia', 'Andrea Domenico', '1976-03-11', 5, 0, ''),
-(33, 21, 'Gatti', 'Alessandro', '1992-06-22', 1, 2, ''),
-(34, 0, 'Gonzalez Saez', 'Matias', '1990-12-07', 1, 2, ''),
-(35, 1, 'Gubser', 'Stefan', '1990-12-26', 1, 1, '00100.jpg'),
-(36, 0, 'Haas', 'Alejandra', '1988-12-18', 4, 0, ''),
-(37, 0, 'Herrero', 'Alberto', '1983-03-03', 1, 2, ''),
-(38, 0, 'Inguscio', 'Sara', '1990-03-27', 4, 0, ''),
-(39, 0, 'Job', 'Claudio', '1969-03-12', 5, 0, ''),
-(40, 0, 'Kaiser', 'Benjamin', '1986-08-21', 2, 0, ''),
-(41, 0, 'Kaiser', 'Roman', '1988-09-27', 2, 0, ''),
-(42, 0, 'Kaufmann', 'Pierre', '1988-04-27', 2, 0, ''),
-(43, 0, 'Kiener', 'Roman', '1985-03-09', 2, 0, ''),
-(44, 0, 'Kull', 'Nicolas', '1993-07-12', 2, 0, ''),
-(45, 0, 'La Grassa', 'Francesco', '1965-04-16', 5, 0, ''),
-(46, 0, 'La Ianca', 'Giuseppe', '1978-07-21', 5, 0, ''),
-(47, 0, 'Leanza', 'Salvatore', '1970-11-30', 5, 0, ''),
-(48, 0, 'Leone', 'Aron', '1993-04-23', 1, 2, ''),
-(49, 0, 'Lupo', 'Michael', '1991-05-22', 2, 0, ''),
-(50, 0, 'Luruena Rivera', 'Santos', '1975-05-24', 5, 0, ''),
-(51, 0, 'Maglio', 'Claudio', '1972-02-08', 5, 0, ''),
-(52, 0, 'Malgir', 'Mehmet', '1991-02-25', 5, 0, ''),
-(53, 0, 'Martin Rodriguez', 'Agustin', '1978-07-28', 5, 0, ''),
-(54, 0, 'Martins', 'Liliana', '1993-08-30', 4, 0, ''),
-(55, 0, 'Mazza', 'Antonio', '1976-10-17', 5, 0, ''),
-(56, 0, 'Mmojekwu', 'Samuel', '1992-04-15', 5, 0, ''),
-(57, 5, 'Mulas', 'Andrea', '1993-04-11', 1, 2, '00102.jpg'),
-(58, 0, 'Mulas', 'Dario', '1968-04-04', 5, 0, ''),
-(59, 18, 'Mulas', 'Salvatore', '1988-08-22', 1, 4, '00112.jpg'),
-(60, 0, 'M', 'Yves', '1987-04-10', 2, 0, ''),
-(61, 0, 'Oberle', 'Marco', '1987-06-09', 2, 0, ''),
-(62, 0, 'Palmieri', 'Angelo', '1967-02-11', 5, 0, ''),
-(63, 0, 'Paoletti', 'Fabio', '1980-05-08', 5, 0, ''),
-(64, 0, 'Paoletti', 'Gianluca', '1972-10-03', 5, 0, ''),
-(65, 0, 'Parlato', 'Gerard', '1975-09-23', 5, 0, ''),
-(66, 0, 'Pezzo', 'Stefania', '1989-08-11', 4, 0, ''),
-(67, 13, 'Pilia', 'Stefano', '1990-04-03', 1, 2, '00105.jpg'),
-(68, 0, 'Piras', 'Fabrizio', '1978-07-01', 5, 0, ''),
-(69, 15, 'Rickenbacher', 'Lukas', '1992-03-17', 1, 2, '00106.jpg'),
-(70, 0, 'Rieder', 'Yves', '1989-10-04', 2, 0, ''),
-(71, 0, 'Rosamilia', 'Nicola', '1975-04-07', 5, 0, ''),
-(72, 7, 'Rüedi', 'Flavio', '1993-03-30', 1, 3, '00107.jpg'),
-(73, 17, 'Sahin', 'Denis', '1986-08-17', 1, 3, '00111.jpg'),
-(74, 0, 'Sahin', 'Serdal', '1979-09-12', 5, 0, ''),
-(75, 0, 'Sahin', 'Utku', '1981-07-08', 5, 0, ''),
-(76, 0, 'Salfinger', 'Fabian', '1988-11-03', 2, 4, ''),
-(77, 0, 'Salvadori', 'Ilaria', '1995-02-05', 4, 0, ''),
-(78, 0, 'Santo', 'Deila', '1989-12-25', 4, 0, ''),
-(79, 6, 'Santoni', 'Fabrizio', '1984-05-30', 1, 2, '00103.jpg'),
-(80, 0, 'Santoro', 'Annarita', '1993-05-03', 4, 0, ''),
-(81, 0, 'Sappracone', 'Elena', '1989-01-11', 4, 0, ''),
-(82, 0, 'Schreiber', 'Pascal', '1979-01-17', 5, 0, ''),
-(83, 0, 'Shala', 'Nure', '1988-11-15', 2, 3, ''),
-(84, 0, 'Stasolla', 'Manuela', '1990-11-22', 4, 0, ''),
-(85, 0, 'Strano', 'Giuseppe', '1970-06-28', 5, 0, ''),
-(86, 0, 'Tanner', 'Lukas', '1991-06-02', 2, 0, ''),
-(87, 0, 'Tanner', 'Michael', '1987-03-24', 2, 0, ''),
-(88, 0, 'Teotino', 'Daniele', '1978-05-22', 5, 0, ''),
-(89, 0, 'Tielke', 'Tobias', '1992-05-03', 2, 0, ''),
-(90, 0, 'Unutulmaz', 'Selcuk', '1977-12-12', 5, 0, ''),
-(91, 0, 'Valente', 'Katia', '1989-09-12', 4, 0, ''),
-(92, 0, 'Weibel', 'Stefan', '1990-11-23', 2, 4, ''),
-(93, 8, 'Werisch', 'Sebastian', '1984-10-04', 1, 2, '00104.jpg'),
-(94, 0, 'Yalcin', 'Sinan', '1973-05-01', 5, 0, ''),
-(95, 0, 'Yildiz', 'Dogan', '1976-04-05', 5, 0, ''),
-(96, 22, 'Zimmermann', 'Stefan', '1986-01-07', 1, 3, ''),
-(97, 0, 'Zollinger', 'Sandro', '1988-04-28', 2, 4, ''),
-(98, 0, 'Zwicky', 'Tobias', '1986-11-21', 2, 0, '');
+INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`, `bDay`, `nat`, `toTeam`, `toPosition`, `pictureURL`) VALUES
+(1, 0, 'Apostolo', 'Ilaria', '', '1996-08-09', '', 4, 0, ''),
+(2, 0, 'Apostolo', 'Martina', '', '1993-08-18', '', 4, 0, ''),
+(3, 0, 'Aquilino', 'Marilena', '', '1993-03-03', '', 4, 0, ''),
+(4, 0, 'Bachschi', 'Davud', '', '1976-04-23', '', 5, 0, ''),
+(5, 0, 'Barca', 'Daniel', '', '1978-09-15', '', 5, 0, ''),
+(6, 0, 'Baretincic', 'Manuel', 'Maki', '1985-02-19', '', 2, 4, ''),
+(7, 0, 'Batista', 'Vedran', 'Vedi', '1986-06-23', '', 2, 2, ''),
+(8, 20, 'Branca', 'Alessandro', '', '1988-06-14', '', 1, 3, '00113.jpg'),
+(9, 10, 'Branca', 'Davide', '', '1994-03-05', '', 1, 3, '00109.jpg'),
+(10, 0, 'Branca', 'Sara', '', '1992-12-12', '', 4, 0, ''),
+(11, 0, 'Buchholz', 'Thomas', '', '1993-07-31', '', 2, 0, ''),
+(12, 0, 'Caldaralo', 'Laetitia', '', '1993-09-22', '', 4, 0, ''),
+(13, 0, 'Carlen', 'Nicolas', '', '1991-10-23', '', 2, 2, ''),
+(14, 0, 'Catozza', 'Francesco', '', '1975-02-23', '', 5, 0, ''),
+(15, 16, 'Chiriaco', 'Domenico', '', '1983-11-16', '', 1, 2, '00110.jpg'),
+(16, 0, 'Ciliberto', 'Fabrizio', '', '1973-12-30', '', 5, 0, ''),
+(17, 12, 'Ciraolo', 'Gaetano', '', '1984-06-27', '', 1, 1, '00101.jpg'),
+(18, 0, 'Concepcion', 'Hanna', '', '1989-10-20', '', 4, 0, ''),
+(19, 9, 'Cordeiro', 'Danilo', '', '1991-04-22', '', 1, 3, '00108.jpg'),
+(20, 0, 'Cubaixo', 'David', 'Cubi', '1985-02-01', '', 2, 2, ''),
+(21, 0, 'Cuzzocrea', 'Alessia', '', '1994-07-08', '', 4, 0, ''),
+(22, 0, 'De Nuccio', 'Francesca', '', '1989-10-07', '', 4, 0, ''),
+(23, 0, 'De Sousa', 'Jose', '', '1965-01-18', '', 5, 0, ''),
+(24, 0, 'Demir', 'Murat Serg', '', '1983-03-09', '', 5, 0, ''),
+(25, 0, 'Di Stefano', 'Rocco', '', '1957-04-09', '', 5, 0, ''),
+(26, 0, 'Eggli', 'Kevin', '', '1986-09-17', '', 2, 3, ''),
+(27, 0, 'Elma', 'Halil', '', '1976-12-30', '', 5, 0, ''),
+(28, 0, 'Faga', 'Antonio', '', '1970-11-16', '', 5, 0, ''),
+(29, 0, 'FagaValerio', 'Giuseppe', '', '1967-11-11', '', 5, 0, ''),
+(30, 0, 'Fankhauser', 'Patrick', 'Büsi', '1988-02-06', '', 2, 3, ''),
+(31, 0, 'Feller', 'Philippe', '', '1988-09-17', '', 2, 3, ''),
+(32, 0, 'Galizia', 'Andrea Domenico', '', '1976-03-11', '', 5, 0, ''),
+(33, 21, 'Gatti', 'Alessandro', '', '1992-06-22', '', 1, 2, ''),
+(35, 1, 'Gubser', 'Stefan', 'Gubsi', '1990-12-26', '', 1, 1, '00100.jpg'),
+(36, 0, 'Haas', 'Alejandra', '', '1988-12-18', '', 4, 0, ''),
+(99, 2, 'Colangelo', 'Giuseppe', 'Giusi', '0000-00-00', '', 1, 3, ''),
+(38, 0, 'Inguscio', 'Sara', '', '1990-03-27', '', 4, 0, ''),
+(39, 0, 'Job', 'Claudio', '', '1969-03-12', '', 5, 0, ''),
+(40, 0, 'Kaiser', 'Benjamin', '', '1986-08-21', '', 2, 4, ''),
+(41, 0, 'Kaiser', 'Roman', '', '1988-09-27', '', 2, 1, ''),
+(42, 0, 'Kaufmann', 'Pierre', '', '1988-04-27', '', 2, 3, ''),
+(43, 0, 'Kiener', 'Roman', '', '1985-03-09', '', 2, 2, ''),
+(44, 0, 'Kull', 'Nicolas', '', '1993-07-12', '', 2, 3, ''),
+(45, 0, 'La Grassa', 'Francesco', '', '1965-04-16', '', 5, 0, ''),
+(46, 0, 'La Ianca', 'Giuseppe', '', '1978-07-21', '', 5, 0, ''),
+(47, 0, 'Leanza', 'Salvatore', '', '1970-11-30', '', 5, 0, ''),
+(48, 3, 'Leone', 'Aron', '', '1993-04-23', '', 1, 2, ''),
+(49, 0, 'Lupo', 'Michael', '', '1991-05-22', '', 2, 3, ''),
+(50, 0, 'Luruena Rivera', 'Santos', '', '1975-05-24', '', 5, 0, ''),
+(51, 0, 'Maglio', 'Claudio', '', '1972-02-08', '', 5, 0, ''),
+(52, 0, 'Malgir', 'Mehmet', '', '1991-02-25', '', 5, 0, ''),
+(53, 0, 'Martin Rodriguez', 'Agustin', '', '1978-07-28', '', 5, 0, ''),
+(54, 0, 'Martins', 'Liliana', '', '1993-08-30', '', 4, 0, ''),
+(55, 0, 'Mazza', 'Antonio', '', '1976-10-17', '', 5, 0, ''),
+(56, 0, 'Mmojekwu', 'Samuel', '', '1992-04-15', '', 5, 0, ''),
+(57, 5, 'Mulas', 'Andrea', 'Thiago Silva', '1993-04-11', '', 1, 2, '00102.jpg'),
+(58, 0, 'Mulas', 'Dario', '', '1968-04-04', '', 5, 0, ''),
+(59, 18, 'Mulas', 'Salvatore', 'FantAntonio', '1988-08-22', '', 1, 4, '00112.jpg'),
+(60, 0, 'M', 'Yves', '', '1987-04-10', '', 2, 2, ''),
+(61, 0, 'Oberle', 'Marco', '', '1987-06-09', '', 2, 2, ''),
+(62, 0, 'Palmieri', 'Angelo', '', '1967-02-11', '', 5, 0, ''),
+(63, 0, 'Paoletti', 'Fabio', '', '1980-05-08', '', 5, 0, ''),
+(64, 0, 'Paoletti', 'Gianluca', '', '1972-10-03', '', 5, 0, ''),
+(65, 0, 'Parlato', 'Gerard', '', '1975-09-23', '', 5, 0, ''),
+(66, 0, 'Pezzo', 'Stefania', '', '1989-08-11', '', 4, 0, ''),
+(67, 13, 'Pilia', 'Stefano', '', '1990-04-03', '', 1, 2, '00105.jpg'),
+(68, 0, 'Piras', 'Fabrizio', '', '1978-07-01', '', 5, 0, ''),
+(69, 15, 'Rickenbacher', 'Lukas', '', '1992-03-17', '', 1, 2, '00106.jpg'),
+(70, 0, 'Rieder', 'Yves', '', '1989-10-04', '', 2, 4, ''),
+(71, 0, 'Rosamilia', 'Nicola', '', '1975-04-07', '', 5, 0, ''),
+(72, 7, 'Rüedi', 'Flavio', '', '1993-03-30', '', 1, 3, '00107.jpg'),
+(73, 17, 'Sahin', 'Denis', '', '1986-08-17', '', 1, 3, '00111.jpg'),
+(74, 0, 'Sahin', 'Serdal', '', '1979-09-12', '', 5, 0, ''),
+(75, 0, 'Sahin', 'Utku', '', '1981-07-08', '', 5, 0, ''),
+(76, 10, 'Salfinger', 'Fabian', '', '1988-11-03', '', 2, 4, ''),
+(77, 0, 'Salvadori', 'Ilaria', '', '1995-02-05', '', 4, 0, ''),
+(78, 0, 'Santo', 'Deila', '', '1989-12-25', '', 4, 0, ''),
+(79, 6, 'Santoni', 'Fabrizio', '', '1984-05-30', '', 1, 2, '00103.jpg'),
+(80, 0, 'Santoro', 'Annarita', '', '1993-05-03', '', 4, 0, ''),
+(81, 0, 'Sappracone', 'Elena', '', '1989-01-11', '', 4, 0, ''),
+(82, 0, 'Schreiber', 'Pascal', '', '1979-01-17', '', 5, 0, ''),
+(83, 0, 'Shala', 'Nure', '', '1988-11-15', '', 2, 3, ''),
+(84, 0, 'Stasolla', 'Manuela', '', '1990-11-22', '', 4, 0, ''),
+(85, 0, 'Strano', 'Giuseppe', '', '1970-06-28', '', 5, 0, ''),
+(86, 0, 'Tanner', 'Lukas', '', '1991-06-02', '', 2, 3, ''),
+(87, 0, 'Tanner', 'Michael', '', '1987-03-24', '', 2, 3, ''),
+(88, 0, 'Teotino', 'Daniele', '', '1978-05-22', '', 5, 0, ''),
+(89, 0, 'Tielke', 'Tobias', '', '1992-05-03', '', 2, 2, ''),
+(90, 0, 'Unutulmaz', 'Selcuk', '', '1977-12-12', '', 5, 0, ''),
+(91, 0, 'Valente', 'Katia', '', '1989-09-12', '', 4, 0, ''),
+(92, 0, 'Weibel', 'Stefan', '', '1990-11-23', '', 2, 4, ''),
+(93, 8, 'Werisch', 'Sebastian', 'Basti', '1984-10-04', '', 1, 2, '00104.jpg'),
+(94, 0, 'Yalcin', 'Sinan', '', '1973-05-01', '', 5, 0, ''),
+(95, 0, 'Yildiz', 'Dogan', '', '1976-04-05', '', 5, 0, ''),
+(96, 22, 'Zimmermann', 'Stefan', 'Zimmi', '1986-01-07', '', 1, 3, '00114.jpg'),
+(97, 14, 'Zollinger', 'Sandro', '', '1988-04-28', '', 2, 4, ''),
+(98, 0, 'Zwicky', 'Tobias', '', '1986-11-21', '', 2, 2, ''),
+(100, 23, 'Calabrese', 'Gerardo', 'Gerry', '0000-00-00', '', 1, 3, ''),
+(101, 11, 'Tettey', 'David', 'Dave', '0000-00-00', '', 1, 3, ''),
+(102, 3, 'Lo Presti', 'Luca', '', '0000-00-00', '', 1, 2, ''),
+(103, 14, 'Argun', 'Berat', '', '0000-00-00', '', 1, 3, ''),
+(104, 19, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, '');
 
 -- --------------------------------------------------------
 
@@ -152,20 +158,67 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `bDay`, `t
 
 CREATE TABLE IF NOT EXISTS `member_Management` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) NOT NULL,
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
-  `eMail` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `function` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
 
 --
--- Daten für Tabelle `member_Management`
+-- Tabellenstruktur für Tabelle `member_Staff`
 --
 
-INSERT INTO `member_Management` (`id`, `username`, `firstName`, `lastName`, `eMail`, `password`) VALUES
-(1, 'salvo', 'Salvatore', 'Mulas', 'marketing@acrossoneri.ch', '5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8');
+CREATE TABLE IF NOT EXISTS `member_Staff` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `bDay` date NOT NULL,
+  `function` varchar(255) NOT NULL,
+  `toTeam` int(11) NOT NULL,
+  `pictureURL` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Daten für Tabelle `member_Staff`
+--
+
+INSERT INTO `member_Staff` (`id`, `firstName`, `lastName`, `bDay`, `function`, `toTeam`, `pictureURL`) VALUES
+(1, 'Alessandro', 'Roberti', '0000-00-00', 'Trainer', 1, ''),
+(2, 'Pascal', 'Schreiber', '0000-00-00', 'Co-Trainer', 1, ''),
+(3, 'Antonio', 'Mazza', '0000-00-00', 'Torwart-Trainer', 1, ''),
+(4, 'Romano', 'Branca', '0000-00-00', 'Trainer', 2, ''),
+(5, 'Luca', 'Mulas', '0000-00-00', 'Trainer', 3, ''),
+(6, 'Luca', 'Severo', '0000-00-00', 'Co-Trainer', 3, '');
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `news`
+--
+
+CREATE TABLE IF NOT EXISTS `news` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `article` longtext NOT NULL,
+  `pictureURL` varchar(255) NOT NULL,
+  `autor` int(11) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `category` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Daten für Tabelle `news`
+--
+
+INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`) VALUES
+(1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '', 0, '2013-08-16 13:24:49', 0),
+(2, 'Mausi isch toll', 'Mausi isch super', '', 0, '2013-08-16 13:59:19', 0);
 
 -- --------------------------------------------------------
 
@@ -177,6 +230,8 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `type` int(11) NOT NULL,
+  `ligaDesc` varchar(255) NOT NULL,
+  `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -184,15 +239,15 @@ CREATE TABLE IF NOT EXISTS `teams` (
 -- Daten für Tabelle `teams`
 --
 
-INSERT INTO `teams` (`id`, `name`, `type`) VALUES
-(1, 'Erste Mannschaft', 1),
-(2, 'Zweite Mannschaft', 1),
-(3, 'Dritte Mannschaft', 1),
-(10, 'Senioren', 1),
-(15, 'Frauen', 1),
-(20, 'Junioren Ga', 2),
-(21, 'Junioren Gb', 2),
-(22, 'Junioren F', 2);
+INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`) VALUES
+(1, 'Erste Mannschaft', 1, '4. Liga - Gruppe 2', '00100.jpg'),
+(2, 'Zweite Mannschaft', 1, '5. Liga - Gruppe 1', '00101.jpg'),
+(3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', ''),
+(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', ''),
+(15, 'Frauen', 1, 'Frauen - 4. Liga', ''),
+(20, 'Junioren Ga', 2, '', ''),
+(21, 'Junioren Gb', 2, '', ''),
+(22, 'Junioren F', 2, '', '');
 
 -- --------------------------------------------------------
 

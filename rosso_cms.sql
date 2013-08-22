@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 21. Aug 2013 um 23:37
--- Server Version: 5.1.44
--- PHP-Version: 5.3.1
+-- Erstellungszeit: 22. Aug 2013 um 11:52
+-- Server Version: 5.5.16
+-- PHP-Version: 5.3.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,16 +19,14 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
-CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `member_Active`
+-- Tabellenstruktur für Tabelle `member_active`
 --
 
-CREATE TABLE IF NOT EXISTS `member_Active` (
+CREATE TABLE IF NOT EXISTS `member_active` (
   `id` int(255) NOT NULL AUTO_INCREMENT,
   `trikot` int(11) NOT NULL,
   `lastName` varchar(255) NOT NULL,
@@ -40,35 +38,33 @@ CREATE TABLE IF NOT EXISTS `member_Active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=105 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=108 ;
 
 --
--- Daten für Tabelle `member_Active`
+-- Daten für Tabelle `member_active`
 --
 
-INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`, `bDay`, `nat`, `toTeam`, `toPosition`, `pictureURL`) VALUES
-(1, 0, 'Apostolo', 'Ilaria', '', '1996-08-09', '', 4, 0, ''),
-(2, 0, 'Apostolo', 'Martina', '', '1993-08-18', '', 4, 0, ''),
-(3, 0, 'Aquilino', 'Marilena', '', '1993-03-03', '', 4, 0, ''),
+INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`, `bDay`, `nat`, `toTeam`, `toPosition`, `pictureURL`) VALUES
+(1, 17, 'Apostolo', 'Ilaria', '', '1996-08-09', '', 4, 3, ''),
+(2, 19, 'Apostolo', 'Martina', '', '1993-08-18', '', 4, 2, ''),
+(3, 13, 'Aquilino', 'Marilena', '', '1993-03-03', '', 4, 2, ''),
 (4, 0, 'Bachschi', 'Davud', '', '1976-04-23', '', 5, 0, ''),
 (5, 0, 'Barca', 'Daniel', '', '1978-09-15', '', 5, 0, ''),
 (6, 0, 'Baretincic', 'Manuel', 'Maki', '1985-02-19', '', 2, 4, ''),
 (7, 0, 'Batista', 'Vedran', 'Vedi', '1986-06-23', '', 2, 2, ''),
 (8, 20, 'Branca', 'Alessandro', '', '1988-06-14', '', 1, 3, '00113.jpg'),
 (9, 10, 'Branca', 'Davide', '', '1994-03-05', '', 1, 3, '00109.jpg'),
-(10, 0, 'Branca', 'Sara', '', '1992-12-12', '', 4, 0, ''),
+(10, 11, 'Branca', 'Sara', '', '1992-12-12', '', 4, 3, ''),
 (11, 0, 'Buchholz', 'Thomas', '', '1993-07-31', '', 2, 0, ''),
-(12, 0, 'Caldaralo', 'Laetitia', '', '1993-09-22', '', 4, 0, ''),
 (13, 0, 'Carlen', 'Nicolas', '', '1991-10-23', '', 2, 2, ''),
 (14, 0, 'Catozza', 'Francesco', '', '1975-02-23', '', 5, 0, ''),
 (15, 16, 'Chiriaco', 'Domenico', '', '1983-11-16', '', 1, 2, '00110.jpg'),
 (16, 0, 'Ciliberto', 'Fabrizio', '', '1973-12-30', '', 5, 0, ''),
 (17, 12, 'Ciraolo', 'Gaetano', '', '1984-06-27', '', 1, 1, '00101.jpg'),
-(18, 0, 'Concepcion', 'Hanna', '', '1989-10-20', '', 4, 0, ''),
+(18, 1, 'Concepcion', 'Hanna', '', '1989-10-20', '', 4, 1, ''),
 (19, 9, 'Cordeiro', 'Danilo', '', '1991-04-22', '', 1, 3, '00108.jpg'),
 (20, 0, 'Cubaixo', 'David', 'Cubi', '1985-02-01', '', 2, 2, ''),
-(21, 0, 'Cuzzocrea', 'Alessia', '', '1994-07-08', '', 4, 0, ''),
-(22, 0, 'De Nuccio', 'Francesca', '', '1989-10-07', '', 4, 0, ''),
+(107, 18, 'Feller', 'Celine', '', '0000-00-00', '', 4, 3, ''),
 (23, 0, 'De Sousa', 'Jose', '', '1965-01-18', '', 5, 0, ''),
 (24, 0, 'Demir', 'Murat Serg', '', '1983-03-09', '', 5, 0, ''),
 (25, 0, 'Di Stefano', 'Rocco', '', '1957-04-09', '', 5, 0, ''),
@@ -81,9 +77,9 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (32, 0, 'Galizia', 'Andrea Domenico', '', '1976-03-11', '', 5, 0, ''),
 (33, 21, 'Gatti', 'Alessandro', '', '1992-06-22', '', 1, 2, ''),
 (35, 1, 'Gubser', 'Stefan', 'Gubsi', '1990-12-26', '', 1, 1, '00100.jpg'),
-(36, 0, 'Haas', 'Alejandra', '', '1988-12-18', '', 4, 0, ''),
+(36, 27, 'Haas', 'Alejandra', '', '1988-12-18', '', 4, 4, ''),
 (99, 2, 'Colangelo', 'Giuseppe', 'Giusi', '0000-00-00', '', 1, 3, ''),
-(38, 0, 'Inguscio', 'Sara', '', '1990-03-27', '', 4, 0, ''),
+(38, 16, 'Inguscio', 'Sara', '', '1990-03-27', '', 4, 2, ''),
 (39, 0, 'Job', 'Claudio', '', '1969-03-12', '', 5, 0, ''),
 (40, 0, 'Kaiser', 'Benjamin', '', '1986-08-21', '', 2, 4, ''),
 (41, 0, 'Kaiser', 'Roman', '', '1988-09-27', '', 2, 1, ''),
@@ -99,7 +95,6 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (51, 0, 'Maglio', 'Claudio', '', '1972-02-08', '', 5, 0, ''),
 (52, 0, 'Malgir', 'Mehmet', '', '1991-02-25', '', 5, 0, ''),
 (53, 0, 'Martin Rodriguez', 'Agustin', '', '1978-07-28', '', 5, 0, ''),
-(54, 0, 'Martins', 'Liliana', '', '1993-08-30', '', 4, 0, ''),
 (55, 0, 'Mazza', 'Antonio', '', '1976-10-17', '', 5, 0, ''),
 (56, 0, 'Mmojekwu', 'Samuel', '', '1992-04-15', '', 5, 0, ''),
 (57, 5, 'Mulas', 'Andrea', 'Thiago Silva', '1993-04-11', '', 1, 2, '00102.jpg'),
@@ -111,7 +106,7 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (63, 0, 'Paoletti', 'Fabio', '', '1980-05-08', '', 5, 0, ''),
 (64, 0, 'Paoletti', 'Gianluca', '', '1972-10-03', '', 5, 0, ''),
 (65, 0, 'Parlato', 'Gerard', '', '1975-09-23', '', 5, 0, ''),
-(66, 0, 'Pezzo', 'Stefania', '', '1989-08-11', '', 4, 0, ''),
+(66, 6, 'Pezzo', 'Stefania', '', '1989-08-11', '', 4, 2, ''),
 (67, 13, 'Pilia', 'Stefano', '', '1990-04-03', '', 1, 2, '00105.jpg'),
 (68, 0, 'Piras', 'Fabrizio', '', '1978-07-01', '', 5, 0, ''),
 (69, 15, 'Rickenbacher', 'Lukas', '', '1992-03-17', '', 1, 2, '00106.jpg'),
@@ -122,21 +117,20 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (74, 0, 'Sahin', 'Serdal', '', '1979-09-12', '', 5, 0, ''),
 (75, 0, 'Sahin', 'Utku', '', '1981-07-08', '', 5, 0, ''),
 (76, 10, 'Salfinger', 'Fabian', '', '1988-11-03', '', 2, 4, ''),
-(77, 0, 'Salvadori', 'Ilaria', '', '1995-02-05', '', 4, 0, ''),
-(78, 0, 'Santo', 'Deila', '', '1989-12-25', '', 4, 0, ''),
+(77, 5, 'Salvadori', 'Ilaria', '', '1995-02-05', '', 4, 2, ''),
+(78, 10, 'Santo', 'Deila', '', '1989-12-25', '', 4, 4, ''),
 (79, 6, 'Santoni', 'Fabrizio', '', '1984-05-30', '', 1, 2, '00103.jpg'),
-(80, 0, 'Santoro', 'Annarita', '', '1993-05-03', '', 4, 0, ''),
-(81, 0, 'Sappracone', 'Elena', '', '1989-01-11', '', 4, 0, ''),
+(106, 8, 'Apostolo', 'Naomi', '', '0000-00-00', '', 4, 3, ''),
+(81, 21, 'Sappracone', 'Elena', '', '1989-01-11', '', 4, 2, ''),
 (82, 0, 'Schreiber', 'Pascal', '', '1979-01-17', '', 5, 0, ''),
 (83, 0, 'Shala', 'Nure', '', '1988-11-15', '', 2, 3, ''),
-(84, 0, 'Stasolla', 'Manuela', '', '1990-11-22', '', 4, 0, ''),
 (85, 0, 'Strano', 'Giuseppe', '', '1970-06-28', '', 5, 0, ''),
 (86, 0, 'Tanner', 'Lukas', '', '1991-06-02', '', 2, 3, ''),
 (87, 0, 'Tanner', 'Michael', '', '1987-03-24', '', 2, 3, ''),
 (88, 0, 'Teotino', 'Daniele', '', '1978-05-22', '', 5, 0, ''),
 (89, 0, 'Tielke', 'Tobias', '', '1992-05-03', '', 2, 2, ''),
 (90, 0, 'Unutulmaz', 'Selcuk', '', '1977-12-12', '', 5, 0, ''),
-(91, 0, 'Valente', 'Katia', '', '1989-09-12', '', 4, 0, ''),
+(105, 2, 'Calabrese', 'Valeria', '', '0000-00-00', '', 4, 2, ''),
 (92, 0, 'Weibel', 'Stefan', '', '1990-11-23', '', 2, 4, ''),
 (93, 8, 'Werisch', 'Sebastian', 'Basti', '1984-10-04', '', 1, 2, '00104.jpg'),
 (94, 0, 'Yalcin', 'Sinan', '', '1973-05-01', '', 5, 0, ''),
@@ -145,7 +139,7 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (97, 14, 'Zollinger', 'Sandro', '', '1988-04-28', '', 2, 4, ''),
 (98, 0, 'Zwicky', 'Tobias', '', '1986-11-21', '', 2, 2, ''),
 (100, 23, 'Calabrese', 'Gerardo', 'Gerry', '0000-00-00', '', 1, 3, ''),
-(101, 11, 'Tettey', 'David', 'Dave', '0000-00-00', '', 1, 3, ''),
+(101, 11, 'Tettey', 'David Prince', 'Dave', '0000-00-00', '', 1, 3, ''),
 (102, 3, 'Lo Presti', 'Luca', '', '0000-00-00', '', 1, 2, ''),
 (103, 14, 'Argun', 'Berat', '', '0000-00-00', '', 1, 3, ''),
 (104, 19, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, '');
@@ -153,10 +147,10 @@ INSERT INTO `member_Active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `member_Management`
+-- Tabellenstruktur für Tabelle `member_management`
 --
 
-CREATE TABLE IF NOT EXISTS `member_Management` (
+CREATE TABLE IF NOT EXISTS `member_management` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
@@ -169,10 +163,10 @@ CREATE TABLE IF NOT EXISTS `member_Management` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `member_Staff`
+-- Tabellenstruktur für Tabelle `member_staff`
 --
 
-CREATE TABLE IF NOT EXISTS `member_Staff` (
+CREATE TABLE IF NOT EXISTS `member_staff` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
@@ -184,10 +178,10 @@ CREATE TABLE IF NOT EXISTS `member_Staff` (
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
 
 --
--- Daten für Tabelle `member_Staff`
+-- Daten für Tabelle `member_staff`
 --
 
-INSERT INTO `member_Staff` (`id`, `firstName`, `lastName`, `bDay`, `function`, `toTeam`, `pictureURL`) VALUES
+INSERT INTO `member_staff` (`id`, `firstName`, `lastName`, `bDay`, `function`, `toTeam`, `pictureURL`) VALUES
 (1, 'Alessandro', 'Roberti', '0000-00-00', 'Trainer', 1, ''),
 (2, 'Pascal', 'Schreiber', '0000-00-00', 'Co-Trainer', 1, ''),
 (3, 'Antonio', 'Mazza', '0000-00-00', 'Torwart-Trainer', 1, ''),

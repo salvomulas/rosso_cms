@@ -22,7 +22,7 @@
                     </div>
                     <div class="tab-pane" id="tab2">
                         <?php
-                        $data['teamNumber'] = 1;
+                        $data['teamNumber'] = $teamID;
                         $data['spieler'] = $spieler;
                         $this->load->view('elements/playerTable', $data);
                         ?>

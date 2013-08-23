@@ -27,7 +27,7 @@ class Team extends MY_Controller {
         $data['teamName'] = $this->teams->getTeamName($teamID);
 
         // Load player information
-        $data['spieler'] = $this->player->getPlayers(1);
+        $data['spieler'] = $this->player->getPlayers($teamID);
         $data['goalkeeper'] = $this->player->getPlayersPosition($teamID,1);
         $data['defense'] = $this->player->getPlayersPosition($teamID,2);
         $data['midfield'] = $this->player->getPlayersPosition($teamID,3);

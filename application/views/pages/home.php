@@ -154,20 +154,13 @@
 
             <div class="tabbable">
 
-                <?php /*
-                <ul class="nav nav-tabs">
+                <ul class="nav nav-pills">
                     <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
                     <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
                     <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
                     <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
                 </ul>
-                */
-                ?>
-                <select name="DropDownGroups" id="DropDownGroup" class="input-xlarge">
-                    <option data-toggle="tab" href="#tab1">4. Liga</option>
-                    <option data-toggle="tab" href="#tab2">5. Liga a</option>
-                    <option data-toggle="tab" href="#tab3">5. Liga b</option>
-                </select>
+
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab1">
 

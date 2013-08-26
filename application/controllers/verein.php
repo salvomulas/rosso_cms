@@ -11,7 +11,6 @@ class Verein extends MY_Controller {
         $this->load->model('management');
         $data ['page_title'] = "Vorstand";
         $data ['management'] = $this->management->getManagement();
-        var_dump($data ['management']->result());
 
         // Load views with all the loaded data
         $this->load->view("meta/metadata", $data);

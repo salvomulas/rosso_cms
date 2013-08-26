@@ -30,23 +30,7 @@
                     <img src="<?php echo base_url(); ?>assets/img/mannschaft.jpg" alt="Mannschaftsfoto">
                     <div class="carousel-caption">
                         <h4>Herzlich willkommen</h4>
-                        <p>Dies ist ein Test des Carousels über Twitter Bootstrap</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>assets/img/frauen.jpg" alt="Mannschaftsfoto">
-                    <div class="carousel-caption">
-                        <h4>Herzlich willkommen</h4>
-                        <p>Dies ist ein Test des Carousels über Twitter Bootstrap</p>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <img src="<?php echo base_url(); ?>assets/img/zwei.jpg" alt="Mannschaftsfoto">
-                    <div class="carousel-caption">
-                        <h4>Herzlich willkommen</h4>
-                        <p>Dies ist ein Test des Carousels über Twitter Bootstrap</p>
+                        <p>Herzlich willkommen auf der neuen Webseite der AC Rossoneri!</p>
                     </div>
                 </div>
             </div>
@@ -60,7 +44,9 @@
             <div class="span4">
                 <div class="well">
                     <h4>Letzte News</h4>
+                    <p>Es wurden noch keine Artikel verfasst</p>
 
+                    <!--
                     <table class="table table-condensed table-hover">
                         <thead>
                         <tr>
@@ -77,6 +63,7 @@
                         </tr>
                         </tbody>
                     </table>
+                    -->
 
                 </div>
             </div>
@@ -190,7 +177,13 @@
 
                     </div>
                     <div class="tab-pane" id="tab4">
-                        <p>Howdy, I'm in Section 3.</p>
+                        
+                        <?php
+                        $data['teamNumber'] = 10;
+                        $data['rankTables'] = $rankTables;
+                        $this->load->view('elements/rankingTable', $data);
+                        ?>
+                        
                     </div>
                 </div>
             </div>

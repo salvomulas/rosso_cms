@@ -32,8 +32,6 @@ function menuObject ($name, $url) {
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Verein<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <?php menuObject("Vorstand","verein/vorstand"); ?>
-                                    <?php menuObject("Clubhaus","verein/clubhaus"); ?>
-                                    <?php menuObject("Statuten","verein/statuten"); ?>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -46,21 +44,26 @@ function menuObject ($name, $url) {
                                         echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
                                     }
                                     ?>
+                                    <!--
                                     <li class="divider"></li>
-
                                     <li class="nav-header">Kinderfussball</li>
+                                    -->
                                     <?php
+                                    /*
                                     foreach ($teamsKifu->result() as $row) {
                                         echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
                                     }
+                                    */
                                     ?>
+                                    <!--
                                     <li class="divider"></li>
                                     <li class="nav-header">Diverses</li>
                                     <li><a href="#">Schiedsrichter</a></li>
                                     <li><a href="#">Sportanlagen</a></li>
-
+                                    -->
                                 </ul>
                             </li>
+                            <!--
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interaktiv<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -68,6 +71,7 @@ function menuObject ($name, $url) {
                                     <li><a href="#">G&auml;stebuch</a></li>
                                 </ul>
                             </li>
+                            -->
                             <?php
 
                             if ($this->session->userdata('is_logged_in')) {

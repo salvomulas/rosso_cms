@@ -15,7 +15,7 @@ class Site extends MY_Controller {
 
         $data ['page_title'] = "Willkommen";
 
-        $data ['showTeams'] = array(1,2,3);
+        $data ['showTeams'] = array(1,2,3,10);
         $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
         // $this->drawWrapper("Willkommen", "view_home");
         $this->load->view('meta/metadata', $data);

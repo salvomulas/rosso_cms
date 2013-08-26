@@ -28,10 +28,10 @@
                         ?>
                     </div>
                     <div class="tab-pane" id="tab3">
-                        <p>Howdy, I'm in Section 2.</p>
+                        <p>Noch kein Spielkalender vorhanden.</p>
                     </div>
                     <div class="tab-pane" id="tab4">
-                        <p>Hello 4</p>
+                        <p>Es wurden noch keine Matchberichte verfasst.</p>
                     </div>
                 </div>
             </div>
@@ -71,6 +71,8 @@
                         <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 150px;">
                     </div>
                     <div class="span9">
+                        <p>Zur Zeit sind noch keine Spieldaten hinterlegt.</p>
+                        <!--
                         <h5>Erste Mannschaft</h5>
 
                         <p><strong>vs</strong> FC Bubendorf a</p>
@@ -78,6 +80,7 @@
                         <p>Sportplatz Bifang, Lausen</p>
 
                         <p>Dienstag, 25. August 2013 um 10:00Uhr</p>
+                        -->
                     </div>
                 </div>
 

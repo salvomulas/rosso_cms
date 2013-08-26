@@ -2,6 +2,13 @@
 
 $row = $playerInfo->row();
 
+function get_age($birth_date){
+
+    return floor((time() - strtotime($birth_date))/31556926);
+
+}
+
+
 ?>
 
 <div class="container">
@@ -30,19 +37,19 @@ $row = $playerInfo->row();
                     </tr>
                     <tr>
                         <td><strong>Geburtsdatum</strong></td>
-                        <td><? echo $row->bDay; ?></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sternzeichen</strong></td>
-                        <td></td>
+                        <td><? if ($row->bDay != 0) { echo $row->bDay; } else { echo ""; } ?></td>
                     </tr>
                     <tr>
                         <td><strong>Alter</strong></td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Nationalit&auml;t</strong></td>
-                        <td><? echo $row->nat; ?></td>
+                        <td>
+                            <?php
+                            if ($row->bDay != 0) {
+                                echo get_age($row->bDay);
+                            } else {
+                                echo "";
+                            }
+                            ?>
+                        </td>
                     </tr>
 
                 </table>
@@ -56,15 +63,15 @@ $row = $playerInfo->row();
 
                     <tr>
                         <td><strong>Lieblingsspieler</strong></td>
-                        <td>Antonio Cassano</td>
+                        <td>(keine Angabe)</td>
                     </tr>
                     <tr>
                         <td><strong>Lieblingsverein</strong></td>
-                        <td>AC Mailand</td>
+                        <td>(keine Angabe)</td>
                     </tr>
                     <tr>
                         <td><strong>Lieblingsposition</strong></td>
-                        <td>Mittelst&uuml;rmer</td>
+                        <td>(keine Angabe)</td>
                     </tr>
 
                 </table>
@@ -74,7 +81,7 @@ $row = $playerInfo->row();
             <div class="well">
 
                 <h4>Bisherige Vereine</h4>
-                <p>Keine Angaben</p>
+                <p>(keine Angabe)</p>
 
             </div>
 
@@ -89,7 +96,7 @@ $row = $playerInfo->row();
 
                 <tr>
                     <td><strong>Beim AC Rossoneri seit</strong></td>
-                    <td>September 2010</td>
+                    <td>(keine Angabe)</td>
                 </tr>
                 <tr>
                     <td><strong>Eins&auml;tze (seit Saison 13/14)</strong></td>
@@ -105,11 +112,11 @@ $row = $playerInfo->row();
                 </tr>
                 <tr>
                     <td><strong>Gelbe Karten</strong></td>
-                    <td></td>
+                    <td>0</td>
                 </tr>
                 <tr>
                     <td><strong>Rote Karten</strong></td>
-                    <td></td>
+                    <td>0</td>
                 </tr>
 
             </table>
@@ -118,6 +125,9 @@ $row = $playerInfo->row();
 
             <h4><?php echo $row->firstName.' '.$row->lastName.' im Einsatz' ?></h4>
             <hr>
+            <p><?php echo $row->firstName. ' '.$row->lastName.' ist zur Zeit auf keinem Foto zu sehen' ?></p>
+            
+            <!--
             <div class="row-fluid">
 
                 <div class="span4">
@@ -153,7 +163,7 @@ $row = $playerInfo->row();
             </div>
 
             <hr>
-
+-->
         </div>
 
     </div>

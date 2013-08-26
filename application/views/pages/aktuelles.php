@@ -2,9 +2,9 @@
 
     <div class="row">
         <div class="span9">
-
+            <p>Es wurden noch keine Artikel verfasst.</p>
             <?php
-
+            /*
             foreach ($articles->result() as $row) {
 
                 // Print article title
@@ -46,7 +46,7 @@
                 echo '<hr>';
 
             }
-
+*/
             ?>
 
         </div>

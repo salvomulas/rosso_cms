@@ -6,10 +6,18 @@ if (!defined('BASEPATH'))
 class Verein extends MY_Controller {
 
     public function vorstand() {
+
+        // Initialize models and load content from the database
         $this->load->model('management');
+        $data ['page_title'] = "Vorstand";
         $data ['management'] = $this->management->getManagement();
-        $this->drawWrapper("Vorstand", "view_vorstand");
         var_dump($data ['management']->result());
+
+        // Load views with all the loaded data
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/vorstand");
+        $this->load->view("elements/footer");
     }
 
     public function clubhaus() {

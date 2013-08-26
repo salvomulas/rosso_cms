@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 23. Aug 2013 um 17:26
--- Server Version: 5.5.16
--- PHP-Version: 5.3.8
+-- Erstellungszeit: 26. Aug 2013 um 10:58
+-- Server Version: 5.1.44
+-- PHP-Version: 5.3.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
+CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -38,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `member_active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=109 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=114 ;
 
 --
 -- Daten für Tabelle `member_active`
@@ -79,7 +81,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (33, 21, 'Gatti', 'Alessandro', '', '1992-06-22', '', 1, 2, ''),
 (35, 1, 'Gubser', 'Stefan', 'Gubsi', '1990-12-26', '', 1, 1, '00100.jpg'),
 (36, 27, 'Haas', 'Alejandra', '', '1988-12-18', '', 4, 4, ''),
-(99, 2, 'Colangelo', 'Giuseppe', 'Giusi', '0000-00-00', '', 1, 3, ''),
+(99, 2, 'Colangelo', 'Giuseppe', 'Giusi', '0000-00-00', '', 1, 3, '00122.jpg'),
 (38, 16, 'Inguscio', 'Sara', '', '1990-03-27', '', 4, 2, ''),
 (39, 0, 'Job', 'Claudio', '', '1969-03-12', '', 5, 0, ''),
 (40, 0, 'Kaiser', 'Benjamin', '', '1986-08-21', '', 2, 4, ''),
@@ -90,7 +92,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (45, 0, 'La Grassa', 'Francesco', '', '1965-04-16', '', 5, 0, ''),
 (46, 0, 'La Ianca', 'Giuseppe', '', '1978-07-21', '', 5, 0, ''),
 (47, 0, 'Leanza', 'Salvatore', '', '1970-11-30', '', 5, 0, ''),
-(48, 3, 'Leone', 'Aron', '', '1993-04-23', '', 1, 2, ''),
+(48, 33, 'Leone', 'Aron', '', '1993-04-23', '', 1, 2, '00121.jpg'),
 (49, 0, 'Lupo', 'Michael', '', '1991-05-22', '', 2, 3, ''),
 (50, 0, 'Luruena Rivera', 'Santos', '', '1975-05-24', '', 5, 0, ''),
 (51, 0, 'Maglio', 'Claudio', '', '1972-02-08', '', 5, 0, ''),
@@ -133,17 +135,22 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (90, 0, 'Unutulmaz', 'Selcuk', '', '1977-12-12', '', 5, 0, ''),
 (105, 2, 'Calabrese', 'Valeria', '', '0000-00-00', '', 4, 2, ''),
 (92, 0, 'Weibel', 'Stefan', '', '1990-11-23', '', 2, 4, ''),
-(93, 8, 'Werisch', 'Sebastian', 'Basti', '1984-10-04', '', 1, 2, '00104.jpg'),
+(93, 31, 'Werisch', 'Sebastian', 'Basti', '1984-10-04', '', 1, 2, '00104.jpg'),
 (94, 0, 'Yalcin', 'Sinan', '', '1973-05-01', '', 5, 0, ''),
 (95, 0, 'Yildiz', 'Dogan', '', '1976-04-05', '', 5, 0, ''),
 (96, 22, 'Zimmermann', 'Stefan', 'Zimmi', '1986-01-07', '', 1, 3, '00114.jpg'),
 (97, 14, 'Zollinger', 'Sandro', '', '1988-04-28', '', 2, 4, ''),
 (98, 0, 'Zwicky', 'Tobias', '', '1986-11-21', '', 2, 2, ''),
 (100, 23, 'Calabrese', 'Gerardo', 'Gerry', '0000-00-00', '', 1, 3, ''),
-(101, 11, 'Tettey', 'David Prince', 'Dave', '0000-00-00', '', 1, 3, ''),
-(102, 3, 'Lo Presti', 'Luca', '', '0000-00-00', '', 1, 2, ''),
-(103, 14, 'Argun', 'Berat', '', '0000-00-00', '', 1, 3, ''),
-(104, 19, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, '');
+(101, 11, 'Tettey', 'David Prince', 'Dave', '0000-00-00', '', 1, 3, '00118.jpg'),
+(102, 3, 'Lo Presti', 'Luca', '', '0000-00-00', '', 1, 2, '00120.jpg'),
+(103, 14, 'Argun', 'Berat', '', '0000-00-00', '', 1, 3, '00119.jpg'),
+(104, 8, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, ''),
+(109, 19, 'Hofacker', 'Sven', '', '0000-00-00', '', 1, 2, '00115.jpg'),
+(110, 4, 'Özdemir', 'Recep', '', '0000-00-00', '', 1, 2, '00123.jpg'),
+(111, 7, 'Schmid', 'Melanie', '', '0000-00-00', '', 4, 4, ''),
+(112, 32, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
+(113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg');
 
 -- --------------------------------------------------------
 
@@ -264,8 +271,7 @@ INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`) VALUES
 (3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', ''),
 (10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', ''),
 (15, 'Frauen', 1, 'Frauen - 4. Liga', ''),
-(20, 'Junioren Ga', 2, '', ''),
-(21, 'Junioren Gb', 2, '', ''),
+(20, 'Junioren G', 2, '', ''),
 (22, 'Junioren F', 2, '', '');
 
 -- --------------------------------------------------------

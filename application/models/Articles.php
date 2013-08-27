@@ -35,6 +35,19 @@ class Articles extends CI_Model {
         }
 
     }
+    
+    public function getArticlesLimit ($limit, $start) {
+        
+        $this->db->select('*')->from('news')->order_by('date','asc')->limit($limit, $start);
+        $query = $this->db->get();
+        
+        if ($query->num_rows > 0) {
+            return $query;
+        } else {
+            return NULL;
+        }
+        
+    }
 
     public function getArticleTitle ($id) {
 
@@ -74,6 +87,12 @@ class Articles extends CI_Model {
             return NULL;
         }
 
+    }
+    
+    public function countArticles () {
+        
+        return $this->db->count_all('news');
+        
     }
 
 }

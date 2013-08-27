@@ -2,9 +2,21 @@
 
     <div class="row">
         <div class="span9">
-            <p>Es wurden noch keine Artikel verfasst.</p>
+
             <?php
-            /*
+
+            function shortenString ($string, $width) {
+                if (strlen($string) > $width)
+                {
+                    $string = wordwrap($string, $width);
+                    $i = strpos($string, "\n");
+                    if ($i) {
+                        $string = substr($string, 0, $i);
+                    }
+                }
+                return $string;
+            }
+            
             foreach ($articles->result() as $row) {
 
                 // Print article title
@@ -24,7 +36,7 @@
 
                 echo '<div class="span6">';
                 echo '<p>';
-                echo $row->article;
+                echo shortenString($row->article, 300);
                 echo '</p>';
                 echo '<a href="">Weiterlesen...</a>';
                 echo '</div>';
@@ -46,7 +58,12 @@
                 echo '<hr>';
 
             }
-*/
+            
+            echo $links;
+            if ($links) {
+                echo '<hr>';
+            }
+
             ?>
 
         </div>

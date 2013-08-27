@@ -38,8 +38,11 @@ class Player extends CI_Model {
     }
 
     public function getPlayer ($playerID) {
-
-        $this->db->select('*')->from('member_active')->where('id', $playerID);
+        
+        $this->db->select('*');
+        $this->db->select("DATE_FORMAT(bDay, '%e. %M %Y') AS bDay", FALSE);
+        $this->db->from("member_active");
+        $this->db->where('id', $playerID);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {

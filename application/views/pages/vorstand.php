@@ -19,12 +19,12 @@
                 echo '<li class="span3">';
                 echo '<div class="thumbnail">';
                 if ($row->picURL != NULL) {
-                    echo '<img href="#'.$row->firstName.' data-toggle="modal" src="'.base_url().'assets/img/management'.$row->picURL.'" style="width: 300px; height: 200px;">';
+                    echo '<img href="#" data-toggle="modal" src="'.base_url().'assets/img/management'.$row->picURL.'" style="width: 300px; height: 200px;">';
                 } else {
-                    echo '<img href="#'.$row->firstName.' data-toggle="modal" src="'.base_url().'assets/img/dummy_person.jpg" style="width: 300px; height: 200px;">';
+                    echo '<img href="#" data-toggle="modal" src="'.base_url().'assets/img/dummy_person.jpg" style="width: 300px; height: 200px;">';
                 }
                 echo '<div class="caption">';
-                echo '<h4><a href="#'.$row->firstName.'" data-toggle="modal">'.$row->firstName.' '.$row->lastName.'</a></h4>';
+                echo '<h4><a href="#'.$row->firstName.'-'.$row->lastName.'" data-toggle="modal">'.$row->firstName.' '.$row->lastName.'</a></h4>';
                 echo '<p>'.$row->function.'</p>';
                 echo '</div>';
                 echo '</div>';
@@ -61,7 +61,7 @@
 
 foreach ($management->result() as $row) {
     
-    echo '<div id="'.$row->firstName.'" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+    echo '<div id="'.$row->firstName.'-'.$row->lastName.'" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
     echo '<div class="modal-header">';
     echo '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>';
     echo '<h3 id="myModalLabel">'.$row->firstName.' '.$row->lastName.'</h3>';

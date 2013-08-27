@@ -13,7 +13,7 @@ class Staff extends CI_Model {
 
     public function getStaff() {
 
-        $this->db->select('*')->from('member_Staff')->order_by('id','asc');
+        $this->db->select('*')->from('member_staff')->order_by('id','asc');
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -24,7 +24,7 @@ class Staff extends CI_Model {
 
     public function getTeamStaff($teamID) {
 
-        $this->db->select('*')->from('member_Staff')->where('toTeam', $teamID);
+        $this->db->select('*')->from('member_staff')->where('toTeam', $teamID);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0 ) {

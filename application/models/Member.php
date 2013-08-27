@@ -7,7 +7,7 @@ class Model_users extends CI_Model {
         $this->db->where('username', $this->input->post('username'));
         $this->db->where('password', sha1($this->input->post('password')));
 
-        $query = $this->db->get('member_Management');
+        $query = $this->db->get('member_management');
 
         if ($query->num_rows() == 1) {
             return true;

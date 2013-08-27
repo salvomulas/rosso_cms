@@ -13,7 +13,7 @@ class Player extends CI_Model {
 
     public function getPlayers ($teamID) {
 
-        $this->db->select('*')->from('member_Active')->where('toTeam',$teamID)->order_by('trikot', 'asc');
+        $this->db->select('*')->from('member_active')->where('toTeam',$teamID)->order_by('trikot', 'asc');
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -26,7 +26,7 @@ class Player extends CI_Model {
 
     public function getPlayersPosition ($teamID, $positionID) {
 
-        $this->db->select('*')->from('member_Active')->where('toTeam', $teamID)->where('toPosition', $positionID)->order_by('trikot', 'asc');
+        $this->db->select('*')->from('member_active')->where('toTeam', $teamID)->where('toPosition', $positionID)->order_by('trikot', 'asc');
         $query =$this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -39,7 +39,7 @@ class Player extends CI_Model {
 
     public function getPlayer ($playerID) {
 
-        $this->db->select('*')->from('member_Active')->where('id', $playerID);
+        $this->db->select('*')->from('member_active')->where('id', $playerID);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -52,7 +52,7 @@ class Player extends CI_Model {
 
     public function getPlayerName ($playerID) {
 
-        $this->db->select('firstName, lastName')->from('member_Active')->where('id', $playerID);
+        $this->db->select('firstName, lastName')->from('member_active')->where('id', $playerID);
         $query = $this->db->get();
 
         $query = $query->row();

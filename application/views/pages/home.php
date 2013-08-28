@@ -46,24 +46,40 @@
                     <h4>Letzte News</h4>
                     <p>Es wurden noch keine Artikel verfasst</p>
 
-                    <!--
-                    <table class="table table-condensed table-hover">
-                        <thead>
-                        <tr>
-                            <th>Datum</th>
-                            <th>Titel</th>
-                            <th></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>01.08.2013</td>
-                            <td>Neue Webseite ist online!</td>
-                            <td><i class="icon-play"></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    -->
+                    <?php
+                    
+                    if ($articles->num_rows > 0) {
+                    
+                        echo '<table class="table table-condensed table-hover">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo '<th>Datum</th>';
+                        echo '<th>Titel</th>';
+                        echo '<th></th>';
+                        echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+
+                        foreach ($articles->result() as $row) {
+
+                            echo '<tr>';
+                            echo '<td>'.$row->date.'</td>';
+                            echo '<td>'.$row->title.'</td>';
+                            echo '<td><i class="icon-play"></td>';
+                            echo '</tr>';
+
+                        }
+
+                        echo '</tbody>';
+                        echo '</table>';
+                        
+                    } else {
+                        
+                        echo '<p>Es wurden noch keine News verfasst';
+                        
+                    }
+                    
+                    ?>
 
                 </div>
             </div>

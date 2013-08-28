@@ -10,17 +10,21 @@ class Site extends MY_Controller {
     }
 
     public function home() {
+        
+        // Load models
         $this->load->model('ranking');
+        $this->load->model('articles');
+        
+        // Load libraries
         $this->load->library('parser');
 
         $data ['page_title'] = "Willkommen";
-
         $data ['showTeams'] = array(1,2,3,10);
         $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
-        // $this->drawWrapper("Willkommen", "view_home");
+        $data ['articles'] = $this->articles->getArticlesHome(5);
+        
         $this->load->view('meta/metadata', $data);
         $this->drawNavigation();
-        //$this->load->view('view_slogan');
         $this->load->view('pages/home', $data);
         $this->load->view('elements/footer');
     }

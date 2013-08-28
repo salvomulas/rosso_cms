@@ -22,14 +22,14 @@
                 // Print article title
                 echo '<div class="row">';
                 echo '<div class="span8">';
-                echo '<h4><strong><a href="#">'.$row->title.'</a></strong></h4>';
+                echo '<h4><strong><a href="'.base_url().'aktuelles/article/'.$row->id.'">'.$row->title.'</a></strong></h4>';
                 echo '</div>';
                 echo '</div>';
 
                 // Print article body
                 echo '<div class="row">';
                 echo '<div class="span2">';
-                echo '<a href="#" class="thumbnail">';
+                echo '<a href="'.base_url().'aktuelles/article/'.$row->id.'" class="thumbnail">';
                 echo '<img src="http://placehold.it/260x180" alt="">';
                 echo '</a>';
                 echo '</div>';
@@ -38,20 +38,19 @@
                 echo '<p>';
                 echo shortenString($row->article, 300);
                 echo '</p>';
-                echo '<a href="">Weiterlesen...</a>';
+                echo '<a href="'.base_url().'aktuelles/article/'.$row->id.'">Weiterlesen...</a>';
                 echo '</div>';
                 echo '</div>';
 
                 // Print article information
-
                 echo '<div class="row">';
                 echo '<div class="span8">';
                 echo '<p></p>';
                 echo '<p>';
                 echo '<i class="icon-user"></i> von Salvatore Mulas';
-                echo '<i class="icon-calendar"></i> '.$row->date;
-                echo '<i class="icon-share"></i> 0 Shares';
-                echo '<i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">News</span></a>';
+                echo ' | <i class="icon-calendar"></i> '.$row->date;
+                echo ' | <i class="icon-share"></i> 0 Shares';
+                echo ' | <i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">News</span></a>';
                 echo '</p>';
                 echo '</div>';
                 echo '</div>';

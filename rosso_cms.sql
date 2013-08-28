@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 27. Aug 2013 um 17:57
+-- Erstellungszeit: 28. Aug 2013 um 14:42
 -- Server Version: 5.5.16
 -- PHP-Version: 5.3.8
 
@@ -218,7 +218,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `category` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Daten für Tabelle `news`
@@ -227,7 +227,11 @@ CREATE TABLE IF NOT EXISTS `news` (
 INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`) VALUES
 (1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '', 0, '2013-08-16 13:24:49', 0),
 (2, 'Erste Mannschaft siegt wieder!', 'Endlich wieder ein Sieg!', '', 0, '2013-08-22 13:36:26', 0),
-(3, 'Erste Mannschaft siegt wieder!', 'Endlich wieder ein Sieg!', '', 0, '2013-08-22 13:36:26', 0);
+(3, 'Erste Mannschaft siegt wieder!', 'Endlich wieder ein Sieg!', '', 0, '2013-08-23 16:36:26', 0),
+(4, 'Test', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 09:16:24', 0),
+(5, 'Nochmals', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 09:16:24', 0),
+(6, 'Und erneut', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 09:16:24', 0),
+(7, 'Und schon wieder einer...', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 09:16:24', 0);
 
 -- --------------------------------------------------------
 
@@ -259,150 +263,76 @@ INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `team_1_ranking`
+-- Tabellenstruktur für Tabelle `teams_ranking`
 --
 
-CREATE TABLE IF NOT EXISTS `team_1_ranking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `teams_ranking` (
+  `id` int(11) NOT NULL,
   `team` varchar(255) NOT NULL,
-  `points` int(255) NOT NULL,
+  `points` int(11) NOT NULL,
+  `fairplay` int(11) NOT NULL,
+  `teamID` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `team_1_ranking`
+-- Daten für Tabelle `teams_ranking`
 --
 
-INSERT INTO `team_1_ranking` (`id`, `team`, `points`) VALUES
-(1, 'SC M&uuml;nchenstein', 3),
-(2, 'FC Arisdorf', 0),
-(3, 'FC Diegten Eptingen', 3),
-(4, 'SV Muttenz b', 0),
-(5, 'FC Oberdorf', 4),
-(6, 'AC Rossoneri', 3),
-(7, 'FC Stein b', 4),
-(8, 'SV Sissach a', 0),
-(9, 'FC Lausen 72', 0),
-(10, 'FC Gelterkinden b', 0),
-(11, 'FC Laufenburg-Kaisten b', 6),
-(12, 'FC Bubendorf', 6);
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `team_2_ranking`
---
-
-CREATE TABLE IF NOT EXISTS `team_2_ranking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `team` varchar(255) NOT NULL,
-  `points` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
-
---
--- Daten für Tabelle `team_2_ranking`
---
-
-INSERT INTO `team_2_ranking` (`id`, `team`, `points`) VALUES
-(12, 'FC Lausen 72', 3),
-(11, 'Pratteln United', 6),
-(10, 'FC Eiken', 3),
-(9, 'NK Pajde', 6),
-(8, 'FC Liestal', 0),
-(7, 'FC Wallbach', 0),
-(6, 'AC Virtus Liestal b', 6),
-(5, 'FC Zeiningen', 0),
-(4, 'AC Rossoneri a', 6),
-(3, 'FC Gelterkinden', 0),
-(2, 'FC Diegten Eptingen', 0),
-(1, 'FC Bubendorf', 6);
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `team_3_ranking`
---
-
-CREATE TABLE IF NOT EXISTS `team_3_ranking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `team` varchar(255) NOT NULL,
-  `points` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
-
---
--- Daten für Tabelle `team_3_ranking`
---
-
-INSERT INTO `team_3_ranking` (`id`, `team`, `points`) VALUES
-(12, 'CD Espanol Basel a', 3),
-(11, 'SC Basel Nord a', 1),
-(10, 'FC Ferad a', 3),
-(9, 'AC Virtus Liestal a', 6),
-(8, 'FC Telegraph BS', 3),
-(7, 'FC Birsfelden', 4),
-(6, 'FC Schwarz-Weiss', 1),
-(5, 'FC Amicitia Riehen', 3),
-(4, 'FK Srbija Basel', 3),
-(3, 'FC Pratteln', 1),
-(2, 'AC Rossoneri b', 0),
-(1, 'FC Xalko', 6);
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `team_10_ranking`
---
-
-CREATE TABLE IF NOT EXISTS `team_10_ranking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `team` varchar(255) NOT NULL,
-  `points` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
-
---
--- Daten für Tabelle `team_10_ranking`
---
-
-INSERT INTO `team_10_ranking` (`id`, `team`, `points`) VALUES
-(1, 'FC Dardania', 6),
-(2, 'FC Birlik', 3),
-(3, 'FC Rheinfelden', 3),
-(4, 'AC Rossoneri', 3),
-(5, 'FC Bubendorf', 3),
-(6, 'FC Laufenburg-Kaisten', 3),
-(7, 'US Olympia 1963', 0),
-(8, 'US Bottecchia BS', 0),
-(9, 'FC Türkgücü Basel', 0),
-(10, 'FC Birsfelden', 0);
-
--- --------------------------------------------------------
-
---
--- Tabellenstruktur für Tabelle `team_15_ranking`
---
-
-CREATE TABLE IF NOT EXISTS `team_15_ranking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `team` varchar(255) NOT NULL,
-  `points` int(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
-
---
--- Daten für Tabelle `team_15_ranking`
---
-
-INSERT INTO `team_15_ranking` (`id`, `team`, `points`) VALUES
-(1, 'FC Allschwil', 6),
-(2, 'FC Concordia Basel', 6),
-(3, 'FC Nordstern BS', 3),
-(4, 'FC Reinach', 3),
-(5, 'FC Telegraph BS', 0),
-(6, 'AC Rossoneri', 0),
-(7, 'FC Laufenburg-Kaisten', 0);
+INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUES
+(1, 'SC M&uuml;nchenstein', 3, 4, 1),
+(2, 'FC Arisdorf', 0, 1, 1),
+(3, 'FC Diegten Eptingen', 3, 1, 1),
+(4, 'SV Muttenz b', 0, 10, 1),
+(5, 'FC Oberdorf', 4, 8, 1),
+(6, 'AC Rossoneri', 6, 3, 1),
+(7, 'FC Stein b', 4, 13, 1),
+(8, 'SV Sissach a', 0, 4, 1),
+(9, 'FC Lausen 72', 0, 4, 1),
+(10, 'FC Gelterkinden b', 0, 2, 1),
+(11, 'FC Laufenburg-Kaisten b', 6, 4, 1),
+(12, 'FC Bubendorf', 6, 4, 1),
+(13, 'FC Lausen 72', 3, 1, 2),
+(14, 'Pratteln United', 6, 5, 2),
+(15, 'FC Eiken', 3, 3, 2),
+(16, 'NK Pajde', 6, 1, 2),
+(17, 'FC Liestal', 0, 2, 2),
+(18, 'FC Wallbach', 0, 10, 2),
+(19, 'AC Virtus Liestal b', 6, 1, 2),
+(20, 'FC Zeiningen', 0, 2, 2),
+(21, 'AC Rossoneri a', 6, 3, 2),
+(22, 'FC Gelterkinden', 0, 6, 2),
+(23, 'FC Diegten Eptingen', 0, 6, 2),
+(24, 'FC Bubendorf', 6, 1, 2),
+(25, 'CD Espanol Basel a', 3, 2, 3),
+(26, 'SC Basel Nord a', 1, 2, 3),
+(27, 'FC Ferad a', 3, 2, 3),
+(28, 'AC Virtus Liestal a', 6, 1, 3),
+(29, 'FC Telegraph BS', 3, 7, 3),
+(30, 'FC Birsfelden', 4, 3, 3),
+(31, 'FC Schwarz-Weiss', 1, 1, 3),
+(32, 'FC Amicitia Riehen', 3, 5, 3),
+(33, 'FK Srbija Basel', 3, 5, 3),
+(34, 'FC Pratteln', 1, 12, 3),
+(35, 'AC Rossoneri b', 0, 3, 3),
+(36, 'FC Xalko', 6, 6, 3),
+(37, 'FC Dardania', 6, 0, 10),
+(38, 'FC Birlik', 3, 2, 10),
+(39, 'FC Rheinfelden', 3, 0, 10),
+(40, 'AC Rossoneri', 3, 2, 10),
+(41, 'FC Bubendorf', 3, 1, 10),
+(42, 'FC Laufenburg-Kaisten', 3, 2, 10),
+(43, 'US Olympia 1963', 0, 0, 10),
+(44, 'US Bottecchia BS', 0, 2, 10),
+(45, 'FC T', 0, 2, 10),
+(46, 'FC Birsfelden', 0, 8, 10),
+(47, 'FC Allschwil', 6, 0, 15),
+(48, 'FC Concordia Basel', 6, 0, 15),
+(49, 'FC Nordstern BS', 3, 0, 15),
+(50, 'FC Reinach', 3, 0, 15),
+(51, 'FC Telegraph BS', 0, 0, 15),
+(52, 'AC Rossoneri', 0, 0, 15),
+(53, 'FC Laufenburg-Kaisten', 0, 0, 15);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

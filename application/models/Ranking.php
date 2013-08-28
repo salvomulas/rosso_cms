@@ -16,7 +16,7 @@ class Ranking extends CI_Model {
         $rankTables = array();
 
         foreach ($teamIDArray as $teamID) {
-            $this->db->select('*')->from('team_'.$teamID.'_ranking')->order_by('points','desc');
+            $this->db->select('*')->from('teams_ranking')->where('teamID', $teamID)->order_by('points','desc')->order_by('fairplay','asc');
             $query = $this->db->get();
 
             if ($query->num_rows() > 0) {
@@ -34,7 +34,7 @@ class Ranking extends CI_Model {
         $teamScores = array();
 
         foreach ($teamIDArray as $teamID) {
-            $this->db->select('points')->from('team_'.$teamID.'_ranking')->like('team','Rossoneri');
+            $this->db->select('points')->from('teams_ranking')->where('teamID', $teamID)->like('team','Rossoneri');
             $query = $this->db->get();
 
             if ($query->num_rows() > 0) {
@@ -49,7 +49,7 @@ class Ranking extends CI_Model {
 
     public function getTeamScore ($teamID) {
 
-        $this->db->select('points')->from('team_'.$teamID.'_ranking')->like('team','Rossoneri');
+        $this->db->select('points')->from('teams_ranking')->where('teamID', $teamID)->like('team','Rossoneri');
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -62,7 +62,7 @@ class Ranking extends CI_Model {
 
     public function getTable ($teamID) {
 
-        $this->db->select('*')->from('team_'.$teamID.'_ranking')->order_by('points','desc');
+        $this->db->select('*')->from('teams_ranking')->where('teamID', $teamID)->order_by('points','desc')->order_by('fairplay','asc');
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {

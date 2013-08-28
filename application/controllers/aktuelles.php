@@ -52,11 +52,37 @@ class Aktuelles extends MY_Controller {
         // Set Controller properties
         $data['page_title'] = $data['articleTitle'];
 
-        // Load views with all the loaded data
-        $this->load->view("meta/metadata", $data);
-        $this->drawNavigation();
-        $this->load->view("pages/article", $data);
-        $this->load->view("elements/footer");
+        if ($data['article']->category == 1) {
+            // Load views with all the loaded data
+            $this->load->view("meta/metadata", $data);
+            $this->drawNavigation();
+            $this->load->view("pages/article", $data);
+            $this->load->view("elements/footer");
+        } else {
+            redirect ("error/PageNotFound");
+        }
+
+    }
+
+    public function match($articleID) {
+
+        // Load aritcle
+        $data ['article'] = $this->articles->getArticle($articleID);
+        $data ['articleTitle'] = $this->articles->getArticleTitle($articleID);
+
+        // Set Controller properties
+        $data['page_title'] = $data['articleTitle'];
+
+        if ($data['article']->category == 2) {
+            // Load views with all the loaded data
+            $this->load->view("meta/metadata", $data);
+            $this->drawNavigation();
+            $this->load->view("pages/article", $data);
+            $this->load->view("elements/footer");
+        } else {
+            redirect ("error/PageNotFound");
+        }
+
 
     }
 

@@ -19,17 +19,25 @@
             
             foreach ($articles->result() as $row) {
 
+                switch ($row->category) {
+                    case 1: $link = base_url().'aktuelles/article/'.$row->id;
+                    break;
+                    case 2: $link = base_url().'aktuelles/match/'.$row->id;
+                    break;
+                    default: $link = NULL;
+                }
+
                 // Print article title
                 echo '<div class="row">';
                 echo '<div class="span8">';
-                echo '<h4><strong><a href="'.base_url().'aktuelles/article/'.$row->id.'">'.$row->title.'</a></strong></h4>';
+                echo '<h4><strong><a href="'.$link.'">'.$row->title.'</a></strong></h4>';
                 echo '</div>';
                 echo '</div>';
 
                 // Print article body
                 echo '<div class="row">';
                 echo '<div class="span2">';
-                echo '<a href="'.base_url().'aktuelles/article/'.$row->id.'" class="thumbnail">';
+                echo '<a href="'.$link.'" class="thumbnail">';
                 echo '<img src="http://placehold.it/260x180" alt="">';
                 echo '</a>';
                 echo '</div>';
@@ -38,7 +46,7 @@
                 echo '<p>';
                 echo shortenString($row->article, 300);
                 echo '</p>';
-                echo '<a href="'.base_url().'aktuelles/article/'.$row->id.'">Weiterlesen...</a>';
+                echo '<a href="'.$link.'">Weiterlesen...</a>';
                 echo '</div>';
                 echo '</div>';
 

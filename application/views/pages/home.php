@@ -44,7 +44,6 @@
             <div class="span4">
                 <div class="well">
                     <h4>Letzte News</h4>
-                    <p>Es wurden noch keine Artikel verfasst</p>
 
                     <?php
                     
@@ -170,6 +169,7 @@
                         <?php
                         $data['teamNumber'] = 1;
                         $data['rankTables'] = $rankTables;
+                        $data['teamScores'] = $teamScores;
                         $this->load->view('elements/rankingTable', $data);
                         ?>
 
@@ -179,6 +179,7 @@
                         <?php
                         $data['teamNumber'] = 2;
                         $data['rankTables'] = $rankTables;
+                        $data['teamScores'] = $teamScores;
                         $this->load->view('elements/rankingTable', $data);
                         ?>
 
@@ -188,6 +189,7 @@
                         <?php
                         $data['teamNumber'] = 3;
                         $data['rankTables'] = $rankTables;
+                        $data['teamScores'] = $teamScores;
                         $this->load->view('elements/rankingTable', $data);
                         ?>
 
@@ -197,6 +199,7 @@
                         <?php
                         $data['teamNumber'] = 10;
                         $data['rankTables'] = $rankTables;
+                        $data['teamScores'] = $teamScores;
                         $this->load->view('elements/rankingTable', $data);
                         ?>
                         

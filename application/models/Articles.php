@@ -13,11 +13,14 @@ class Articles extends CI_Model {
 
     public function getArticle ($id) {
 
-        $this->db->select('*')->from('news')->where('id', $id);
+        $this->db->select('*')
+                ->select("DATE_FORMAT(date, '%e. %M %Y') AS date", FALSE)
+                ->select("DATE_FORMAT(date, '%H:%i') AS time", FALSE)
+                ->from('news')->where('id', $id);
         $query = $this->db->get();
 
         if ($query->num_rows > 0) {
-            return $query->result();
+            return $query->row();
         } else {
             return NULL;
         }

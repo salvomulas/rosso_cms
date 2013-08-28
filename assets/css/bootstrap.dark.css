@@ -2289,7 +2289,7 @@ table th[class*="span"],
 }
 
 .table-hover tbody tr.info:hover > td {
-  background-color: #e1e1e1;
+  background-color: #8D0F05;
 }
 
 [class^="icon-"],

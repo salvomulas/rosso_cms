@@ -18,9 +18,10 @@ class Team extends MY_Controller {
         $this->load->model('staff');
 
         // Load Ranking Tables
-        $data ['teamID'] = $teamID;
-        $data ['showTeams'] = array($teamID);
-        $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
+        $data['teamID'] = $teamID;
+        $data['showTeams'] = array($teamID);
+        $data['rankTables'] = $this->ranking->getTables($data['showTeams']);
+        $data['teamScores'] = $this->ranking->getTeamScores($data['showTeams']);
 
         // Load team-specific information
         $data['teamInfo'] = $this->teams->getTeamInfo($teamID);
@@ -37,7 +38,7 @@ class Team extends MY_Controller {
         $data['staff'] = $this->staff->getTeamStaff($teamID);
 
         // Set Page Title
-        $data ['page_title'] = $data['teamName'];
+        $data['page_title'] = $data['teamName'];
 
         // Load views with all the loaded data
         $this->load->view("meta/metadata", $data);

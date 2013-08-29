@@ -21,10 +21,13 @@
 
                 switch ($row->category) {
                     case 1: $link = base_url().'aktuelles/article/'.$row->id;
+                            $cat = "News";
                     break;
                     case 2: $link = base_url().'aktuelles/match/'.$row->id;
+                            $cat = "Matchbericht";
                     break;
                     default: $link = NULL;
+                             $cat = NULL;
                 }
 
                 // Print article title
@@ -58,7 +61,7 @@
                 echo '<i class="icon-user"></i> von Salvatore Mulas';
                 echo ' | <i class="icon-calendar"></i> '.$row->date;
                 echo ' | <i class="icon-share"></i> 0 Shares';
-                echo ' | <i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">News</span></a>';
+                echo ' | <i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">'.$cat.'</span></a>';
                 echo '</p>';
                 echo '</div>';
                 echo '</div>';

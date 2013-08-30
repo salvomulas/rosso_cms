@@ -106,7 +106,7 @@
                             echo '<tr>';
                             echo '<td>'.$row->date.'</td>';
                             echo '<td>'.$row->title.'</td>';
-                            echo '<td><a href="'.base_url().'aktuelles/article/'.$row->id.'"><i class="icon-play"></a></td>';
+                            echo '<td><a href="'.base_url().'aktuelles/match/'.$row->id.'"><i class="icon-play"></a></td>';
                             echo '</tr>';
 
                         }

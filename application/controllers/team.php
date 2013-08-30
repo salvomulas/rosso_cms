@@ -16,6 +16,7 @@ class Team extends MY_Controller {
         $this->load->model('player');
         $this->load->model('ranking');
         $this->load->model('staff');
+        $this->load->model('match');
 
         // Load Ranking Tables
         $data['teamID'] = $teamID;
@@ -37,6 +38,9 @@ class Team extends MY_Controller {
         // Load staff members
         $data['staff'] = $this->staff->getTeamStaff($teamID);
 
+        // Load team calendar
+        $data['match'] = $this->match->getTeamCalendar($teamID);
+        
         // Set Page Title
         $data['page_title'] = $data['teamName'];
 

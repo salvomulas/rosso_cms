@@ -64,7 +64,7 @@
                             echo '<tr>';
                             echo '<td>'.$row->date.'</td>';
                             echo '<td>'.$row->title.'</td>';
-                            echo '<td><i class="icon-play"></td>';
+                            echo '<td><a href="'.base_url().'aktuelles/article/'.$row->id.'"><i class="icon-play"></a></td>';
                             echo '</tr>';
 
                         }
@@ -86,49 +86,40 @@
             <div class="span4">
                 <div class="well">
                     <h4>Letzte Matchberichte</h4>
-                    <p>Es wurden noch keine Matchberichte verfasst</p>
 
                     <?php
-                    /*
+                    
+                    if ($matchReport->num_rows > 0) {
+                    
+                        echo '<table class="table table-condensed table-hover">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo '<th>Datum</th>';
+                        echo '<th>Titel</th>';
+                        echo '<th></th>';
+                        echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
 
-                    <table class="table table-condensed table-hover">
-                        <thead>
-                            <tr>
-                                <th>Datum</th>
-                                <th>Titel</th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>23.02.2013</td>
-                                <td>Erste Mannschaft gewinnt in...</td>
-                                <td><i class="icon-play"></td>
-                            </tr>
-                            <tr>
-                                <td>27.02.2013</td>
-                                <td>Hoffnungsfunken Dersim reicht...</td>
-                                <td><i class="icon-play"></td>
-                            </tr>
-                            <tr>
-                                <td>04.03.2013</td>
-                                <td>Davide Branca Show in Basel</td>
-                                <td><i class="icon-play"></td>
-                            </tr>
-                            <tr>
-                                <td>10.03.2013</td>
-                                <td>Zweite Mannschaft kurz vor...</td>
-                                <td><i class="icon-play"></td>
-                            </tr>
-                            <tr>
-                                <td>29.03.2013</td>
-                                <td>Neuer Trainer f&uuml;r die erste...</td>
-                                <td><i class="icon-play"></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        foreach ($matchReport->result() as $row) {
 
-                    */
+                            echo '<tr>';
+                            echo '<td>'.$row->date.'</td>';
+                            echo '<td>'.$row->title.'</td>';
+                            echo '<td><a href="'.base_url().'aktuelles/article/'.$row->id.'"><i class="icon-play"></a></td>';
+                            echo '</tr>';
+
+                        }
+
+                        echo '</tbody>';
+                        echo '</table>';
+                        
+                    } else {
+                        
+                        echo '<p>Es wurden noch keine Matchberichte verfasst';
+                        
+                    }
+                    
                     ?>
 
                 </div>

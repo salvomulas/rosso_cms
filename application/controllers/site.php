@@ -22,7 +22,8 @@ class Site extends MY_Controller {
         $data ['showTeams'] = array(1,2,3,10);
         $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
         $data ['teamScores'] = $this->ranking->getTeamScores($data['showTeams']);
-        $data ['articles'] = $this->articles->getArticlesHome(5);
+        $data ['articles'] = $this->articles->getArticlesHome(5,1);
+        $data ['matchReport'] = $this->articles->getArticlesHome(5,2);
         
         $this->load->view('meta/metadata', $data);
         $this->drawNavigation();

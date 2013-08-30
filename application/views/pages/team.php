@@ -28,7 +28,10 @@
                         ?>
                     </div>
                     <div class="tab-pane" id="tab3">
-                        <p>Noch kein Spielkalender vorhanden.</p>
+                        <?php
+                        $data['match'] = $match;
+                        $this->load->view('elements/teamCalendar', $data);
+                        ?>
                     </div>
                     <div class="tab-pane" id="tab4">
                         <p>Es wurden noch keine Matchberichte verfasst.</p>

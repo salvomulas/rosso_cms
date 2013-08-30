@@ -13,7 +13,11 @@ class Player extends CI_Model {
 
     public function getPlayers ($teamID) {
 
-        $this->db->select('*')->from('member_active')->where('toTeam',$teamID)->order_by('trikot', 'asc');
+        $this->db->select('*')
+                ->select("DATE_FORMAT(bDay, '%e. %M %Y') AS bDay", FALSE)
+                ->from('member_active')
+                ->where('toTeam',$teamID)
+                ->order_by('trikot', 'asc');
         $query = $this->db->get();
         
         return $query;
@@ -22,7 +26,11 @@ class Player extends CI_Model {
 
     public function getPlayersPosition ($teamID, $positionID) {
 
-        $this->db->select('*')->from('member_active')->where('toTeam', $teamID)->where('toPosition', $positionID)->order_by('trikot', 'asc');
+        $this->db->select('*')
+                ->from('member_active')
+                ->where('toTeam', $teamID)
+                ->where('toPosition', $positionID)
+                ->order_by('trikot', 'asc');
         $query =$this->db->get();
 
         return $query;

@@ -44,23 +44,21 @@ function menuObject ($name, $url) {
                                         echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
                                     }
                                     ?>
-                                    <!--
                                     <li class="divider"></li>
                                     <li class="nav-header">Kinderfussball</li>
-                                    -->
                                     <?php
-                                    /*
+
                                     foreach ($teamsKifu->result() as $row) {
                                         echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
                                     }
-                                    */
+
                                     ?>
-                                    <!--
+
                                     <li class="divider"></li>
                                     <li class="nav-header">Diverses</li>
-                                    <li><a href="#">Schiedsrichter</a></li>
-                                    <li><a href="#">Sportanlagen</a></li>
-                                    -->
+                                    <li><a href="">Schiedsrichter</a></li>
+                                    <li><a href="<?php echo base_url(); ?>sportanlage">Sportanlagen</a></li>
+
                                 </ul>
                             </li>
                             <!--

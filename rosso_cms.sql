@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 30. Aug 2013 um 16:23
+-- Erstellungszeit: 04. Sep 2013 um 18:43
 -- Server Version: 5.5.16
 -- PHP-Version: 5.3.8
 
@@ -23,12 +23,39 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `fields`
+--
+
+CREATE TABLE IF NOT EXISTS `fields` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `pictureURL` varchar(255) NOT NULL,
+  `belag` varchar(255) NOT NULL,
+  `masse` varchar(255) NOT NULL,
+  `jahr` int(11) NOT NULL,
+  `sitze` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Daten für Tabelle `fields`
+--
+
+INSERT INTO `fields` (`id`, `title`, `pictureURL`, `belag`, `masse`, `jahr`, `sitze`) VALUES
+(1, 'Hauptplatz Bifang', '00100.jpg', 'Naturrasen', '101/64', 1979, 500),
+(2, 'Nebenplatz Stutz', '00101.jpg', 'Naturrasen', '90/57', 1994, 200),
+(3, 'KiFu Bifang', '00102.jpg', 'Naturrasen', '35/30', 0, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `match`
 --
 
 CREATE TABLE IF NOT EXISTS `match` (
   `gameID` int(11) NOT NULL,
   `teamID` int(11) NOT NULL,
+  `isHome` int(11) NOT NULL,
   `gameType` varchar(255) NOT NULL,
   `pointsHome` int(11) NOT NULL,
   `pointsAway` int(11) NOT NULL,
@@ -48,103 +75,112 @@ CREATE TABLE IF NOT EXISTS `match` (
 -- Daten für Tabelle `match`
 --
 
-INSERT INTO `match` (`gameID`, `teamID`, `gameType`, `pointsHome`, `pointsAway`, `day`, `date`, `time`, `opponent`, `location`, `complex`, `plz`, `field`, `dressing`) VALUES
-(145860, 2, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '20:00:00', 'Pratteln United ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145864, 2, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '10:00:00', 'FC Bubendorf', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
-(145871, 2, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '11:00:00', 'NK Pajde', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145877, 2, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '12:30:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145882, 2, 'Meisterschaft', 0, 0, 'Sa', '2013-10-12', '20:00:00', 'FC Wallbach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145890, 2, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '19:00:00', 'FC Liestal  ', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
-(145893, 2, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '11:00:00', 'FC Diegten Eptingen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145903, 2, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '14:00:00', 'FC Zeiningen ', 'Unter Reben, Zeiningen - 1', 'Unter Reben', 'Zeiningen', '1', 'Unter Reben, Zeiningen'),
-(145904, 2, 'Meisterschaft', 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Gelterkinden ', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
-(145915, 2, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Eiken', 'Sportanlage Netzi, Eiken,   - 1', 'Sportanlage Netzi, Eiken', ' ', '1', 'Kultureller Saal, Eiken                     '),
-(145917, 2, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145926, 2, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'Pratteln United ', 'Hexmatt, Pratteln - 1', 'Hexmatt', 'Pratteln', '1', 'Hexmatt, Pratteln'),
-(145930, 2, 'Meisterschaft', 0, 0, 'So', '2014-04-27', '00:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145937, 2, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'NK Pajde', 'Sportzentrum Steinli, Moehlin - B 02', 'Sportzentrum Steinli', 'Moehlin', 'B 02', 'Sportzentrum Steinli, Moehlin'),
-(145943, 2, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145948, 2, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Wallbach', 'Sandgrube, Wallbach - 1', 'Sandgrube', 'Wallbach', '1', 'Sandgrube, Wallbach'),
-(145956, 2, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Liestal  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145959, 2, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Diegten Eptingen ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
-(145969, 2, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Zeiningen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146454, 1, 'Meisterschaft', 2, 0, 'Fr', '2013-08-16', '20:00:00', 'SC Muenchenstein a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146465, 1, 'Meisterschaft', 0, 1, 'Di', '2013-08-27', '20:00:00', 'FC Arisdorf  ', 'Gemeindesportplatz, Arisdorf - 1', 'Gemeindesportplatz', 'Arisdorf', '1', 'Arisdorf'),
-(146467, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-08-31', '20:00:00', 'SV Sissach a', 'Sportzentrum Tannenbrunn, Sissach - 1', 'Sportzentrum Tannenbrunn', 'Sissach', '1', 'Sportzentrum Tannenbrunn, Sissach'),
-(146476, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '18:00:00', 'FC Oberdorf ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146480, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '13:00:00', 'FC Bubendorf', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
-(146487, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-28', '18:00:00', 'SV Muttenz b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146493, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-05', '19:00:00', 'FC Diegten Eptingen  ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
-(146498, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-12', '18:00:00', 'FC Gelterkinden b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146506, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '20:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146509, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-26', '18:00:00', 'FC Stein b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146519, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-11-02', '17:00:00', 'FC Laufenburg-Kaisten b', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
-(146520, 1, 'Meisterschaft', 0, 0, 'So', '2014-03-23', '00:00:00', 'SC Muenchenstein a', 'Sportplatz Au, Muenchenstein - 1', 'Sportplatz Au', 'Muenchenstein', '1', 'Sportplatz Au, Muenchenstein'),
-(146531, 1, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Arisdorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146533, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'SV Sissach a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146542, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Oberdorf ', 'z''Hof, Oberdorf - 1 Kunstrasen', 'z''Hof', 'Oberdorf', '1 Kunstrasen', 'z''Hof, Oberdorf'),
-(146546, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-27', '00:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146553, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'SV Muttenz b', 'Sportplatz Margelacker, Muttenz - 1', 'Sportplatz Margelacker', 'Muttenz', '1', 'Sportplatz Margelacker, Muttenz'),
-(146559, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Diegten Eptingen  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146564, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Gelterkinden b', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
-(146572, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146575, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '11:00:00', 'FC Stein b', 'Bustelbach, Stein - 1', 'Bustelbach', 'Stein', '1', 'Bustelbach, Stein'),
-(146585, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Laufenburg-Kaisten b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152022, 10, 'Meisterschaft', 0, 0, 'Mi', '2013-09-04', '20:00:00', 'US Olympia 1963 ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152024, 10, 'Meisterschaft', 0, 0, 'Fr', '2013-08-30', '20:30:00', 'FC Birsfelden  ', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
-(152031, 10, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '16:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152035, 10, 'Meisterschaft', 0, 0, 'Sa', '2013-09-21', '13:00:00', 'FC Tuerkguecue Basel ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(152040, 10, 'Meisterschaft', 0, 0, 'Sa', '2013-09-28', '16:00:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152046, 10, 'Meisterschaft', 0, 0, 'Fr', '2013-10-11', '20:15:00', 'FC Bubendorf  ', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
-(152049, 10, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '16:00:00', 'FC Dardania', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152057, 10, 'Meisterschaft', 0, 0, 'Sa', '2013-10-26', '13:00:00', 'FC Birlik', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
-(152058, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-04-05', '15:00:00', 'US Bottecchia BS', 'Sportanlage Rheinacker, Landauerstr. 45,   - Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45', ' ', 'Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45,  '),
-(152067, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-04-12', '00:00:00', 'US Olympia 1963 ', 'Sportzentrum Pfaffenholz, Basel - wird vor Ort zugeteilt', 'Sportzentrum Pfaffenholz', 'Basel', 'wird vor Ort zugeteilt', 'Sportzentrum Pfaffenholz, Basel'),
-(152069, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-04-26', '00:00:00', 'FC Birsfelden  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152076, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-05-03', '00:00:00', 'FC Laufenburg-Kaisten ', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
-(152080, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-05-10', '00:00:00', 'FC Tuerkguecue Basel ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152085, 10, 'Meisterschaft', 0, 0, 'Fr', '2014-05-16', '20:00:00', 'FC Rheinfelden', 'Im Schiffacker, Rheinfelden - wird vor Ort zugeteilt', 'Im Schiffacker', 'Rheinfelden', 'wird vor Ort zugeteilt', 'Im Schiffacker, Rheinfelden'),
-(152091, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-05-24', '00:00:00', 'FC Bubendorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152094, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-05-31', '15:00:00', 'FC Dardania', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(152102, 10, 'Meisterschaft', 0, 0, 'Sa', '2014-06-14', '00:00:00', 'FC Birlik', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153358, 15, 'Meisterschaft', 0, 0, 'So', '2013-09-01', '13:00:00', 'FC Nordstern BS ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(153362, 15, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '19:00:00', 'FC Concordia Basel ', 'Bifang, Lausen - Stutz', 'Bifang', 'Lausen', 'Stutz', 'siehe Bemerkungen:                             '),
-(153365, 15, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '13:00:00', 'FC Telegraph BS ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(153367, 15, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '13:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153372, 15, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '15:00:00', 'FC Laufenburg-Kaisten ', 'Hard, Kaisten - 1', 'Hard', 'Kaisten', '1', 'Turnhalle, Kaisten                           '),
-(153378, 15, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '17:30:00', 'FC Allschwil', 'Im Brueel, Allschwil,   - 2', 'Im Brueel, Allschwil', ' ', '2', 'Im Brueel, Allschwil,  '),
-(153379, 15, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '13:00:00', 'FC Nordstern BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153383, 15, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Concordia Basel ', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
-(153386, 15, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Telegraph BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153388, 15, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'FC Reinach', 'Einschlag, Reinach - Kunstrasen (1)', 'Einschlag', 'Reinach', 'Kunstrasen (1)', 'Einschlag, Reinach'),
-(153393, 15, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153399, 15, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'FC Allschwil', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153400, 15, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Nordstern BS ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(153404, 15, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Concordia Basel ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153407, 15, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Telegraph BS ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(153409, 15, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153414, 15, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Laufenburg-Kaisten ', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
-(160850, 3, 'Meisterschaft', 0, 0, 'Sa', '2013-08-31', '18:00:00', 'AC Virtus Liestal a', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
-(160859, 3, 'Meisterschaft', 0, 0, 'So', '2013-09-08', '11:00:00', 'FC Birsfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160863, 3, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '15:00:00', 'CD Espanol Basel a', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(160870, 3, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '15:00:00', 'SC Basel Nord a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160876, 3, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '15:00:00', 'FC Ferad a', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
-(160881, 3, 'Meisterschaft', 0, 0, 'So', '2013-10-13', '14:00:00', 'FC Schwarz-Weiss', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160889, 3, 'Meisterschaft', 0, 0, 'So', '2013-10-20', '13:00:00', 'FK Srbija Basel ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(160892, 3, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '15:00:00', 'FC Pratteln', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160902, 3, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Telegraph BS', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(160903, 3, 'Meisterschaft', 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Xalko', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(160914, 3, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Amicitia Riehen ', 'Grendelmatte, Riehen - wird vor Ort zugeteilt', 'Grendelmatte', 'Riehen', 'wird vor Ort zugeteilt', 'Grendelmatte, Riehen'),
-(160916, 3, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160925, 3, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Birsfelden', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
-(160929, 3, 'Meisterschaft', 0, 0, 'So', '2014-04-27', '00:00:00', 'CD Espanol Basel a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160936, 3, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'SC Basel Nord a', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(160942, 3, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Ferad a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160947, 3, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Schwarz-Weiss', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(160955, 3, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FK Srbija Basel ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160958, 3, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Pratteln', 'In den Sandgruben, Pratteln - wird vor Ort zugeteilt', 'In den Sandgruben', 'Pratteln', 'wird vor Ort zugeteilt', 'In den Sandgruben, Pratteln'),
-(160968, 3, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Telegraph BS', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(512261, 1, 'Grosspeter Basler Cup / 1/16 - Final', 0, 0, 'Sa', '2013-09-14', '18:00:00', 'FC Therwil', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz');
+INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `pointsAway`, `day`, `date`, `time`, `opponent`, `location`, `complex`, `plz`, `field`, `dressing`) VALUES
+(145838, 2, 1, 'Meisterschaft', 5, 3, 'Sa', '2013-08-17', '20:00:00', 'FC Gelterkinden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145849, 2, 1, 'Meisterschaft', 3, 2, 'Mi', '2013-08-21', '20:00:00', 'FC Eiken', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145851, 2, 0, 'Meisterschaft', 5, 5, 'Do', '2013-08-29', '20:30:00', 'AC Virtus Liestal b', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
+(145860, 2, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '20:00:00', 'Pratteln United ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145864, 2, 0, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '10:00:00', 'FC Bubendorf', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
+(145871, 2, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '11:00:00', 'NK Pajde', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145877, 2, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '12:30:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145882, 2, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-12', '20:00:00', 'FC Wallbach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145890, 2, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '19:00:00', 'FC Liestal  ', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
+(145893, 2, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '11:00:00', 'FC Diegten Eptingen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145903, 2, 0, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '14:00:00', 'FC Zeiningen ', 'Unter Reben, Zeiningen - 1', 'Unter Reben', 'Zeiningen', '1', 'Unter Reben, Zeiningen'),
+(145904, 2, 0, 'Meisterschaft', 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Gelterkinden ', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
+(145915, 2, 0, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Eiken', 'Sportanlage Netzi, Eiken,   - 1', 'Sportanlage Netzi, Eiken', ' ', '1', 'Kultureller Saal, Eiken                     '),
+(145917, 2, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145926, 2, 0, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'Pratteln United ', 'Hexmatt, Pratteln - 1', 'Hexmatt', 'Pratteln', '1', 'Hexmatt, Pratteln'),
+(145930, 2, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-27', '00:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145937, 2, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'NK Pajde', 'Sportzentrum Steinli, Moehlin - B 02', 'Sportzentrum Steinli', 'Moehlin', 'B 02', 'Sportzentrum Steinli, Moehlin'),
+(145943, 2, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145948, 2, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Wallbach', 'Sandgrube, Wallbach - 1', 'Sandgrube', 'Wallbach', '1', 'Sandgrube, Wallbach'),
+(145956, 2, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Liestal  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145959, 2, 0, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Diegten Eptingen ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
+(145969, 2, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Zeiningen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146454, 1, 1, 'Meisterschaft', 2, 0, 'Fr', '2013-08-16', '20:00:00', 'SC Muenchenstein a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146465, 1, 0, 'Meisterschaft', 0, 1, 'Di', '2013-08-27', '20:00:00', 'FC Arisdorf  ', 'Gemeindesportplatz, Arisdorf - 1', 'Gemeindesportplatz', 'Arisdorf', '1', 'Arisdorf'),
+(146467, 1, 0, 'Meisterschaft', 1, 1, 'Sa', '2013-08-31', '20:00:00', 'SV Sissach a', 'Sportzentrum Tannenbrunn, Sissach - 1', 'Sportzentrum Tannenbrunn', 'Sissach', '1', 'Sportzentrum Tannenbrunn, Sissach'),
+(146476, 1, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '18:00:00', 'FC Oberdorf ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146480, 1, 0, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '13:00:00', 'FC Bubendorf', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
+(146487, 1, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-28', '18:00:00', 'SV Muttenz b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146493, 1, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-05', '19:00:00', 'FC Diegten Eptingen  ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
+(146498, 1, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-12', '18:00:00', 'FC Gelterkinden b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146506, 1, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '20:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146509, 1, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-26', '18:00:00', 'FC Stein b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146519, 1, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-11-02', '17:00:00', 'FC Laufenburg-Kaisten b', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
+(146520, 1, 0, 'Meisterschaft', 0, 0, 'So', '2014-03-23', '00:00:00', 'SC Muenchenstein a', 'Sportplatz Au, Muenchenstein - 1', 'Sportplatz Au', 'Muenchenstein', '1', 'Sportplatz Au, Muenchenstein'),
+(146531, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Arisdorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146533, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'SV Sissach a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146542, 1, 0, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Oberdorf ', 'z''Hof, Oberdorf - 1 Kunstrasen', 'z''Hof', 'Oberdorf', '1 Kunstrasen', 'z''Hof, Oberdorf'),
+(146546, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-27', '00:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146553, 1, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'SV Muttenz b', 'Sportplatz Margelacker, Muttenz - 1', 'Sportplatz Margelacker', 'Muttenz', '1', 'Sportplatz Margelacker, Muttenz'),
+(146559, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Diegten Eptingen  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146564, 1, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Gelterkinden b', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
+(146572, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146575, 1, 0, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '11:00:00', 'FC Stein b', 'Bustelbach, Stein - 1', 'Bustelbach', 'Stein', '1', 'Bustelbach, Stein'),
+(146585, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Laufenburg-Kaisten b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152013, 10, 1, 'Meisterschaft', 4, 1, 'Fr', '2013-08-16', '20:00:00', 'US Bottecchia BS', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152022, 10, 1, 'Meisterschaft', 0, 0, 'Mi', '2013-09-04', '20:00:00', 'US Olympia 1963 ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152024, 10, 0, 'Meisterschaft', 4, 2, 'Fr', '2013-08-30', '20:30:00', 'FC Birsfelden  ', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
+(152031, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '16:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152035, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-09-21', '13:00:00', 'FC Tuerkguecue Basel ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(152040, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-28', '16:00:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152046, 10, 0, 'Meisterschaft', 0, 0, 'Fr', '2013-10-11', '20:15:00', 'FC Bubendorf  ', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
+(152049, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '16:00:00', 'FC Dardania', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152057, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-26', '13:00:00', 'FC Birlik', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
+(152058, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2014-04-05', '15:00:00', 'US Bottecchia BS', 'Sportanlage Rheinacker, Landauerstr. 45,   - Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45', ' ', 'Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45,  '),
+(152067, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2014-04-12', '00:00:00', 'US Olympia 1963 ', 'Sportzentrum Pfaffenholz, Basel - wird vor Ort zugeteilt', 'Sportzentrum Pfaffenholz', 'Basel', 'wird vor Ort zugeteilt', 'Sportzentrum Pfaffenholz, Basel'),
+(152069, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2014-04-26', '00:00:00', 'FC Birsfelden  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152076, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2014-05-03', '00:00:00', 'FC Laufenburg-Kaisten ', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
+(152080, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2014-05-10', '00:00:00', 'FC Tuerkguecue Basel ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152085, 10, 0, 'Meisterschaft', 0, 0, 'Fr', '2014-05-16', '20:00:00', 'FC Rheinfelden', 'Im Schiffacker, Rheinfelden - wird vor Ort zugeteilt', 'Im Schiffacker', 'Rheinfelden', 'wird vor Ort zugeteilt', 'Im Schiffacker, Rheinfelden'),
+(152091, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2014-05-24', '00:00:00', 'FC Bubendorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152094, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2014-05-31', '15:00:00', 'FC Dardania', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(152102, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2014-06-14', '00:00:00', 'FC Birlik', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153357, 15, 1, 'Meisterschaft', 0, 10, 'So', '2013-08-25', '14:00:00', 'FC Allschwil', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153358, 15, 0, 'Meisterschaft', 3, 0, 'So', '2013-09-01', '13:00:00', 'FC Nordstern BS ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
+(153362, 15, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '19:00:00', 'FC Concordia Basel ', 'Bifang, Lausen - Stutz', 'Bifang', 'Lausen', 'Stutz', 'siehe Bemerkungen:                             '),
+(153365, 15, 0, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '13:00:00', 'FC Telegraph BS ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(153367, 15, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '13:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153372, 15, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '15:00:00', 'FC Laufenburg-Kaisten ', 'Hard, Kaisten - 1', 'Hard', 'Kaisten', '1', 'Turnhalle, Kaisten                           '),
+(153378, 15, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '17:30:00', 'FC Allschwil', 'Im Brueel, Allschwil,   - 2', 'Im Brueel, Allschwil', ' ', '2', 'Im Brueel, Allschwil,  '),
+(153379, 15, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '13:00:00', 'FC Nordstern BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153383, 15, 0, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Concordia Basel ', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
+(153386, 15, 1, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Telegraph BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153388, 15, 0, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'FC Reinach', 'Einschlag, Reinach - Kunstrasen (1)', 'Einschlag', 'Reinach', 'Kunstrasen (1)', 'Einschlag, Reinach'),
+(153393, 15, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153399, 15, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'FC Allschwil', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153400, 15, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Nordstern BS ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
+(153404, 15, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Concordia Basel ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153407, 15, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Telegraph BS ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(153409, 15, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153414, 15, 0, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Laufenburg-Kaisten ', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
+(160837, 3, 1, 'Meisterschaft', 3, 5, 'So', '2013-08-18', '13:00:00', 'FC Xalko', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160848, 3, 1, 'Meisterschaft', 3, 4, 'So', '2013-08-25', '16:00:00', 'FC Amicitia Riehen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160850, 3, 0, 'Meisterschaft', 3, 2, 'Sa', '2013-08-31', '18:00:00', 'AC Virtus Liestal a', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
+(160859, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-08', '11:00:00', 'FC Birsfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160863, 3, 0, 'Meisterschaft', 0, 0, 'So', '2013-09-22', '15:00:00', 'CD Espanol Basel a', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(160870, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '15:00:00', 'SC Basel Nord a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160876, 3, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '15:00:00', 'FC Ferad a', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
+(160881, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-13', '14:00:00', 'FC Schwarz-Weiss', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160889, 3, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-20', '13:00:00', 'FK Srbija Basel ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
+(160892, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '15:00:00', 'FC Pratteln', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160902, 3, 0, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Telegraph BS', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(160903, 3, 0, 'Meisterschaft', 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Xalko', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
+(160914, 3, 0, 'Meisterschaft', 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Amicitia Riehen ', 'Grendelmatte, Riehen - wird vor Ort zugeteilt', 'Grendelmatte', 'Riehen', 'wird vor Ort zugeteilt', 'Grendelmatte, Riehen'),
+(160916, 3, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160925, 3, 0, 'Meisterschaft', 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Birsfelden', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
+(160929, 3, 1, 'Meisterschaft', 0, 0, 'So', '2014-04-27', '00:00:00', 'CD Espanol Basel a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160936, 3, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-04', '00:00:00', 'SC Basel Nord a', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
+(160942, 3, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Ferad a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160947, 3, 0, 'Meisterschaft', 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Schwarz-Weiss', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(160955, 3, 1, 'Meisterschaft', 0, 0, 'So', '2014-05-25', '00:00:00', 'FK Srbija Basel ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160958, 3, 0, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Pratteln', 'In den Sandgruben, Pratteln - wird vor Ort zugeteilt', 'In den Sandgruben', 'Pratteln', 'wird vor Ort zugeteilt', 'In den Sandgruben, Pratteln'),
+(160968, 3, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Telegraph BS', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(510297, 1, 1, 'Cup Grosspeter Basler Cup / 1. Vorrunde', 5, 0, 'Sa', '2013-08-03', '18:00:00', 'FC Roeschenz', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(512170, 1, 1, 'Cup Grosspeter Basler Cup / 1. Vorrunde', 4, 1, 'Sa', '2013-08-10', '20:00:00', 'FC Ferad', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(512261, 1, 1, 'Grosspeter Basler Cup / 1/16 - Final', 0, 0, 'Sa', '2013-09-14', '18:00:00', 'FC Therwil', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz');
 
 -- --------------------------------------------------------
 
@@ -260,6 +296,48 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `member_junior`
+--
+
+CREATE TABLE IF NOT EXISTS `member_junior` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `bDay` date NOT NULL,
+  `toTeam` int(11) NOT NULL,
+  `pictureURL` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+
+--
+-- Daten für Tabelle `member_junior`
+--
+
+INSERT INTO `member_junior` (`id`, `firstName`, `lastName`, `bDay`, `toTeam`, `pictureURL`) VALUES
+(1, 'Lauriane', 'Frei', '0000-00-00', 22, ''),
+(2, 'Timo', 'Giger', '0000-00-00', 22, ''),
+(3, 'Raul', 'Luruena', '0000-00-00', 22, ''),
+(4, 'Giulia', 'Mulas', '0000-00-00', 22, ''),
+(5, 'Leandro', 'Piras', '0000-00-00', 22, ''),
+(6, 'Matteo', 'Roberti', '0000-00-00', 22, ''),
+(7, 'Corrado', 'Rosati', '0000-00-00', 22, ''),
+(8, 'Jerimo', 'Sollberger', '0000-00-00', 22, ''),
+(9, 'Gian Andrea', 'Steingruber', '0000-00-00', 22, ''),
+(10, 'Diego', 'Hammer', '0000-00-00', 22, ''),
+(11, 'Ilario', 'Peng', '0000-00-00', 22, ''),
+(12, 'Marco', 'Branca', '0000-00-00', 22, ''),
+(13, 'Simone', 'Damante', '0000-00-00', 20, ''),
+(14, 'Alessio', 'Crusi', '0000-00-00', 20, ''),
+(15, 'Shawn', 'Liverani', '0000-00-00', 20, ''),
+(16, 'Chiara', 'Roberti', '0000-00-00', 20, ''),
+(17, 'Giuseppe', 'Barbato', '0000-00-00', 20, ''),
+(18, 'Ayaz', 'Sercan', '0000-00-00', 20, ''),
+(19, 'Kerim', 'Hablami', '0000-00-00', 20, ''),
+(20, 'Henrique Magno', 'Santos', '0000-00-00', 20, '');
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `member_management`
 --
 
@@ -311,22 +389,29 @@ CREATE TABLE IF NOT EXISTS `member_staff` (
   `function` varchar(255) NOT NULL,
   `toTeam` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
+  `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Daten für Tabelle `member_staff`
 --
 
-INSERT INTO `member_staff` (`id`, `firstName`, `lastName`, `bDay`, `function`, `toTeam`, `pictureURL`) VALUES
-(1, 'Alessandro', 'Roberti', '0000-00-00', 'Trainer', 1, ''),
-(2, 'Pascal', 'Schreiber', '0000-00-00', 'Co-Trainer', 1, ''),
-(3, 'Antonio', 'Mazza', '0000-00-00', 'Torwart-Trainer', 1, ''),
-(4, 'Romano', 'Branca', '0000-00-00', 'Trainer', 2, ''),
-(5, 'Luca', 'Severo', '0000-00-00', 'Trainer', 3, ''),
-(6, 'Luca', 'Mulas', '0000-00-00', 'Co-Trainer', 3, ''),
-(7, 'Daniel', 'Barca', '0000-00-00', 'Trainer', 10, ''),
-(8, 'Deila', 'Santo', '0000-00-00', 'Trainerin', 15, '');
+INSERT INTO `member_staff` (`id`, `firstName`, `lastName`, `bDay`, `function`, `toTeam`, `pictureURL`, `tel`) VALUES
+(1, 'Alessandro', 'Roberti', '0000-00-00', 'Trainer', 1, '', ''),
+(2, 'Pascal', 'Schreiber', '0000-00-00', 'Co-Trainer', 1, '', ''),
+(3, 'Antonio', 'Mazza', '0000-00-00', 'Torwart-Trainer', 1, '', ''),
+(4, 'Romano', 'Branca', '0000-00-00', 'Trainer', 2, '', ''),
+(5, 'Luca', 'Severo', '0000-00-00', 'Trainer', 3, '', ''),
+(6, 'Luca', 'Mulas', '0000-00-00', 'Co-Trainer', 3, '', ''),
+(7, 'Daniel', 'Barca', '0000-00-00', 'Trainer', 10, '', ''),
+(8, 'Deila', 'Santo', '0000-00-00', 'Trainerin', 15, '', ''),
+(9, 'Fabrizio', 'Piras', '0000-00-00', 'Trainer', 22, '', '+41 (0)76 328 03 35'),
+(10, 'Santos', 'Luruena', '0000-00-00', 'Trainer', 22, '', '+41 (0)79 689 89 56'),
+(11, 'José', 'De Sousa', '0000-00-00', 'Trainer', 22, '', '+41 (0)79 257 27 25'),
+(12, 'Giuseppe', 'Roberti', '0000-00-00', 'Trainer', 20, '', '+41 (0)79 302 54 65'),
+(13, 'Mark', 'Crusi', '0000-00-00', 'Trainer', 20, '', '+41 (079 203 53 19'),
+(14, 'Gaetano', 'Ciraolo', '0000-00-00', 'Trainer', 20, '', '+41 (0)79 267 30 50');
 
 -- --------------------------------------------------------
 
@@ -408,56 +493,56 @@ CREATE TABLE IF NOT EXISTS `teams_ranking` (
 
 INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUES
 (1, 'SC M&uuml;nchenstein', 3, 4, 1),
-(2, 'FC Arisdorf', 0, 1, 1),
+(2, 'FC Arisdorf', 3, 1, 1),
 (3, 'FC Diegten Eptingen', 3, 1, 1),
-(4, 'SV Muttenz b', 0, 10, 1),
+(4, 'SV Muttenz b', 3, 10, 1),
 (5, 'FC Oberdorf', 4, 8, 1),
-(6, 'AC Rossoneri', 6, 3, 1),
-(7, 'FC Stein b', 4, 13, 1),
-(8, 'SV Sissach a', 0, 4, 1),
+(6, 'AC Rossoneri', 7, 3, 1),
+(7, 'FC Stein b', 7, 13, 1),
+(8, 'SV Sissach a', 1, 4, 1),
 (9, 'FC Lausen 72', 0, 4, 1),
-(10, 'FC Gelterkinden b', 0, 2, 1),
-(11, 'FC Laufenburg-Kaisten b', 6, 4, 1),
+(10, 'FC Gelterkinden b', 3, 2, 1),
+(11, 'FC Laufenburg-Kaisten b', 9, 4, 1),
 (12, 'FC Bubendorf', 6, 4, 1),
-(13, 'FC Lausen 72', 3, 1, 2),
-(14, 'Pratteln United', 6, 5, 2),
+(13, 'FC Lausen 72', 6, 1, 2),
+(14, 'Pratteln United', 9, 5, 2),
 (15, 'FC Eiken', 3, 3, 2),
 (16, 'NK Pajde', 6, 1, 2),
-(17, 'FC Liestal', 0, 2, 2),
+(17, 'FC Liestal', 3, 2, 2),
 (18, 'FC Wallbach', 0, 10, 2),
-(19, 'AC Virtus Liestal b', 6, 1, 2),
+(19, 'AC Virtus Liestal b', 7, 1, 2),
 (20, 'FC Zeiningen', 0, 2, 2),
-(21, 'AC Rossoneri a', 6, 3, 2),
-(22, 'FC Gelterkinden', 0, 6, 2),
+(21, 'AC Rossoneri a', 7, 3, 2),
+(22, 'FC Gelterkinden', 3, 6, 2),
 (23, 'FC Diegten Eptingen', 0, 6, 2),
-(24, 'FC Bubendorf', 6, 1, 2),
+(24, 'FC Bubendorf', 9, 1, 2),
 (25, 'CD Espanol Basel a', 3, 2, 3),
-(26, 'SC Basel Nord a', 1, 2, 3),
+(26, 'SC Basel Nord a', 2, 2, 3),
 (27, 'FC Ferad a', 3, 2, 3),
-(28, 'AC Virtus Liestal a', 6, 1, 3),
-(29, 'FC Telegraph BS', 3, 7, 3),
+(28, 'AC Virtus Liestal a', 9, 1, 3),
+(29, 'FC Telegraph BS', 6, 7, 3),
 (30, 'FC Birsfelden', 4, 3, 3),
-(31, 'FC Schwarz-Weiss', 1, 1, 3),
+(31, 'FC Schwarz-Weiss', 4, 1, 3),
 (32, 'FC Amicitia Riehen', 3, 5, 3),
-(33, 'FK Srbija Basel', 3, 5, 3),
-(34, 'FC Pratteln', 1, 12, 3),
+(33, 'FK Srbija Basel', 4, 5, 3),
+(34, 'FC Pratteln', 4, 12, 3),
 (35, 'AC Rossoneri b', 0, 3, 3),
-(36, 'FC Xalko', 6, 6, 3),
-(37, 'FC Dardania', 6, 0, 10),
-(38, 'FC Birlik', 3, 2, 10),
-(39, 'FC Rheinfelden', 3, 0, 10),
+(36, 'FC Xalko', 9, 6, 3),
+(37, 'FC Dardania', 9, 0, 10),
+(38, 'FC Birlik', 4, 2, 10),
+(39, 'FC Rheinfelden', 9, 0, 10),
 (40, 'AC Rossoneri', 3, 2, 10),
 (41, 'FC Bubendorf', 3, 1, 10),
-(42, 'FC Laufenburg-Kaisten', 3, 2, 10),
-(43, 'US Olympia 1963', 0, 0, 10),
-(44, 'US Bottecchia BS', 0, 2, 10),
-(45, 'FC T', 0, 2, 10),
-(46, 'FC Birsfelden', 0, 8, 10),
+(42, 'FC Laufenburg-Kaisten', 6, 2, 10),
+(43, 'US Olympia 1963', 1, 0, 10),
+(44, 'US Bottecchia BS', 3, 2, 10),
+(45, 'FC Türkgücü Basel', 0, 2, 10),
+(46, 'FC Birsfelden', 3, 8, 10),
 (47, 'FC Allschwil', 6, 0, 15),
-(48, 'FC Concordia Basel', 6, 0, 15),
-(49, 'FC Nordstern BS', 3, 0, 15),
+(48, 'FC Concordia Basel', 9, 0, 15),
+(49, 'FC Nordstern BS', 6, 0, 15),
 (50, 'FC Reinach', 3, 0, 15),
-(51, 'FC Telegraph BS', 0, 0, 15),
+(51, 'FC Telegraph BS', 3, 0, 15),
 (52, 'AC Rossoneri', 0, 0, 15),
 (53, 'FC Laufenburg-Kaisten', 0, 0, 15);
 

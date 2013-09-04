@@ -22,5 +22,14 @@ class Verein extends MY_Controller {
     public function clubhaus() {
         $this->drawWrapper("Clubhaus", "view_clubhaus");
     }
+    
+    public function statuten() {
+        $data ['page_title'] = "Statuten";
+        
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/statuten", $data);
+        $this->load->view("elements/footer");
+    }
 
 }

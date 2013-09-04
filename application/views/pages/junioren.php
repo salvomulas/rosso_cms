@@ -10,12 +10,9 @@
 
                         <?php
 
-                        $data['goalkeeper'] = $goalkeeper;
-                        $data['defense'] = $defense;
-                        $data['midfield'] = $midfield;
-                        $data['striker'] = $striker;
+                        $data['spieler'] = $spieler;
 
-                        $this->load->view('elements/kaderTable');
+                        $this->load->view('elements/juniorenKader');
 
                         ?>
 
@@ -24,16 +21,10 @@
                         <?php
                         $data['teamNumber'] = $teamID;
                         $data['spieler'] = $spieler;
-                        $this->load->view('elements/playerTable', $data);
+                        $this->load->view('elements/juniorenTable', $data);
                         ?>
                     </div>
                     <div class="tab-pane" id="tab3">
-                        <?php
-                        $data['match'] = $match;
-                        $this->load->view('elements/teamCalendar', $data);
-                        ?>
-                    </div>
-                    <div class="tab-pane" id="tab4">
                         <p>Es wurden noch keine Matchberichte verfasst.</p>
                     </div>
                 </div>
@@ -41,7 +32,7 @@
         </div>
 
         <div class="span4">
-
+            
             <div class="well">
                 <h4>Staff</h4>
                 <hr>
@@ -55,17 +46,7 @@
 
 
             </div>
-            <div class="well">
-                <h4>Tabelle</h4>
 
-                <?php
-
-                $data['teamNumber'] = $teamID;
-                $data['rankTables'] = $rankTables;
-                $this->load->view('elements/rankingTable', $data);
-                ?>
-
-            </div>
             <div class="well">
                 <h4>N&auml;chstes Spiel</h4>
 

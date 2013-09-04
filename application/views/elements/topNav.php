@@ -32,6 +32,7 @@ function menuObject ($name, $url) {
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Verein<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <?php menuObject("Vorstand","verein/vorstand"); ?>
+                                    <?php menuObject("Statuten","verein/statuten"); ?>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -49,15 +50,15 @@ function menuObject ($name, $url) {
                                     <?php
 
                                     foreach ($teamsKifu->result() as $row) {
-                                        echo '<li><a href="'.base_url().'team/aktive/'.$row->id.'">'.$row->name.'</a></li>';
+                                        echo '<li><a href="'.base_url().'team/junioren/'.$row->id.'">'.$row->name.'</a></li>';
                                     }
 
                                     ?>
 
                                     <li class="divider"></li>
                                     <li class="nav-header">Diverses</li>
-                                    <li><a href="">Schiedsrichter</a></li>
-                                    <li><a href="<?php echo base_url(); ?>sportanlage">Sportanlagen</a></li>
+                                    <!--<li><a href="">Schiedsrichter</a></li>-->
+                                    <li><a href="<?php echo base_url(); ?>sportanlage">Sportanlage</a></li>
 
                                 </ul>
                             </li>
@@ -66,7 +67,7 @@ function menuObject ($name, $url) {
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Interaktiv<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="<?php echo base_url(); ?>site/verein">Fotogalerie</a></li>
-                                    <li><a href="#">G&auml;stebuch</a></li>
+                                    <li><a href="<?php echo base_url(); ?>guestbook">G&auml;stebuch</a></li>
                                 </ul>
                             </li>
                             -->

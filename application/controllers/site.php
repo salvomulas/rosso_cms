@@ -14,6 +14,7 @@ class Site extends MY_Controller {
         // Load models
         $this->load->model('ranking');
         $this->load->model('articles');
+        $this->load->model('match');
         
         // Load libraries
         $this->load->library('parser');
@@ -24,6 +25,7 @@ class Site extends MY_Controller {
         $data ['teamScores'] = $this->ranking->getTeamScores($data['showTeams']);
         $data ['articles'] = $this->articles->getArticlesHome(5,1);
         $data ['matchReport'] = $this->articles->getArticlesHome(5,2);
+        $data ['nextMatch'] = $this->match->getNextGame();
         
         $this->load->view('meta/metadata', $data);
         $this->drawNavigation();

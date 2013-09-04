@@ -1,10 +1,11 @@
 <div class="container">
-
-    <h3>Sportanlagen</h3>
     
+    <hr>
+
     <div class="row">
         
         <div class="span8">
+            <h3>Sportanlagen</h3>
             <p>Die Sportanlage Bifang in Lausen bietet zur Zeit insgesamt 3 Fussballfelder f&uuml;r die Aus&uuml;bung des sch&ouml;nsten Hobbies der Welt.
                 Nebst der Fussballfelder, bietet die Sportanlage zwei moderne Mehrzweckhallen (Bifang und Stutz), zwei Hartpl&auml;tze, ein Beach-Volleyball-Feld und eine 400 Meter lange Finnenbahn.
                 <br />
@@ -45,5 +46,54 @@
         </div>
         
     </div>
+    
+    <hr>
+    
+    <?php
+    
+    foreach ($field->result() as $row) {
+        
+        echo '<div class="well">';
+        echo '<div class="row-fluid">';
+        echo '<div class="span3">';
+        echo '<img src="'.base_url().'assets/img/fields/'.$row->pictureURL.'">';
+        echo '</div>';
+        echo '<div class="span9">';
+        echo '<h4>'.$row->title.'</h4>';
+        echo '<table class="table table-condensed table-hover">';
+        
+        echo '<tr>';
+        echo '<th>Belag</th>';
+        echo '<td>'.$row->belag.'</td>';
+        echo '</tr>';
+        
+        echo '<tr>';
+        echo '<th>Masse</th>';
+        echo '<td>'.$row->masse.'</td>';
+        echo '</tr>';
+        
+        if ($row->jahr > 0) {
+        echo '<tr>';
+        echo '<th>Erstellungsjahr</th>';
+        echo '<td>'.$row->jahr.'</td>';
+        echo '</tr>';
+        }
+        
+        if ($row->sitze > 0) {
+        echo '<tr>';
+        echo '<th>Stehpl&auml;tze</th>';
+        echo '<td>'.$row->sitze.'</td>';
+        echo '</tr>';
+        }
+        
+        echo '</table>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        
+        
+    }
+    
+    ?>
     
 </div>

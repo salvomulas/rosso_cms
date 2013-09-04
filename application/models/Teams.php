@@ -54,5 +54,16 @@ class Teams extends CI_Model {
         }
 
     }
+    
+    public function getTeamType($teamID) {
+        
+        $this->db->select('type')
+                ->from('teams')
+                ->where('id', $teamID);
+        $query = $this->db->get();
+        
+        return $query->row();
+        
+    }
 
 }

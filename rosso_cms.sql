@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 05. Sep 2013 um 18:27
+-- Erstellungszeit: 05. Sep 2013 um 22:43
 -- Server Version: 5.1.44
 -- PHP-Version: 5.3.1
 
@@ -202,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `member_active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=118 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=120 ;
 
 --
 -- Daten für Tabelle `member_active`
@@ -212,7 +212,6 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (1, 17, 'Apostolo', 'Ilaria', '', '1996-08-09', '', 15, 3, ''),
 (2, 19, 'Apostolo', 'Martina', '', '1993-08-18', '', 15, 2, ''),
 (3, 13, 'Aquilino', 'Marilena', '', '1993-03-03', '', 15, 2, ''),
-(5, 23, 'Barca', 'Daniel', '', '1978-09-15', '', 10, 2, ''),
 (117, 2, 'Lagnaz', 'Thomas', '', '0000-00-00', '', 2, 2, '00128.jpg'),
 (8, 20, 'Branca', 'Alessandro', '', '1988-06-14', '', 1, 3, '00113.jpg'),
 (9, 10, 'Branca', 'Davide', '', '1994-03-05', '', 1, 3, '00109.jpg'),
@@ -220,16 +219,16 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (11, 22, 'Buchholz', 'Thomas', '', '1993-07-31', '', 2, 2, ''),
 (108, 3, 'Caselle', 'Mirco', '', '0000-00-00', '', 3, 2, ''),
 (13, 3, 'Carlen', 'Nicolas', '', '1991-10-23', '', 2, 2, ''),
-(14, 10, 'Catozza', 'Francesco', '', '1975-02-23', '', 10, 4, ''),
+(5, 10, 'Catozza', 'Francesco', '', '1975-02-23', '', 10, 4, '00170.jpg'),
 (15, 16, 'Chiriaco', 'Domenico', '', '1983-11-16', '', 1, 2, '00110.jpg'),
 (17, 12, 'Ciraolo', 'Gaetano', '', '1984-06-27', '', 1, 1, '00101.jpg'),
 (18, 1, 'Concepcion', 'Hanna', '', '1989-10-20', '', 15, 1, '00132.jpg'),
 (19, 9, 'Cordeiro', 'Danilo', '', '1991-04-22', '', 1, 3, '00108.jpg'),
 (20, 7, 'Cubaixo', 'David', 'Cubi', '1985-02-01', '', 2, 2, ''),
 (107, 18, 'Feller', 'Celine', '', '0000-00-00', '', 15, 3, '00131.jpg'),
-(23, 6, 'De Sousa', 'Jose', '', '1965-01-18', '', 10, 3, ''),
+(23, 6, 'De Sousa', 'Jose', '', '1965-01-18', '', 10, 3, '00177.jpg'),
 (26, 21, 'Eggli', 'Kevin', '', '1986-09-17', '', 2, 3, '00136.jpg'),
-(27, 14, 'Elma', 'Halil', '', '1976-12-30', '', 10, 2, ''),
+(27, 14, 'Elma', 'Halil', '', '1976-12-30', '', 10, 2, '00171.jpg'),
 (30, 18, 'Fankhauser', 'Patrick', 'Büsi', '1988-02-06', '', 2, 3, ''),
 (31, 11, 'Feller', 'Philippe', '', '1988-09-17', '', 2, 2, '00129.jpg'),
 (33, 21, 'Gatti', 'Alessandro', '', '1992-06-22', '', 1, 2, ''),
@@ -242,25 +241,25 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (42, 16, 'Kaufmann', 'Pierre', '', '1988-04-27', '', 2, 2, ''),
 (44, 15, 'Kull', 'Nicolas', '', '1993-07-12', '', 2, 3, '00139.jpg'),
 (46, 5, 'La Ianca', 'Giuseppe', '', '1978-07-21', '', 10, 3, ''),
-(47, 20, 'Leanza', 'Salvatore', '', '1970-11-30', '', 10, 3, ''),
+(47, 20, 'Leanza', 'Salvatore', '', '1970-11-30', '', 10, 3, '00162.jpg'),
 (48, 33, 'Leone', 'Aron', '', '1993-04-23', '', 1, 2, '00121.jpg'),
 (49, 8, 'Lupo', 'Michael', '', '1991-05-22', '', 2, 3, ''),
-(50, 22, 'Luruena Rivera', 'Santos', '', '1975-05-24', '', 10, 4, ''),
-(55, 2, 'Mazza', 'Antonio', '', '1976-10-17', '', 10, 2, ''),
+(50, 22, 'Luruena Rivera', 'Santos', '', '1975-05-24', '', 10, 4, '00172.jpg'),
+(55, 2, 'Mazza', 'Antonio', '', '1976-10-17', '', 10, 2, '00163.jpg'),
 (57, 5, 'Mulas', 'Andrea', 'Thiago Silva', '1993-04-11', '', 1, 2, '00102.jpg'),
-(58, 11, 'Mulas', 'Dario', '', '1968-04-04', '', 10, 4, ''),
+(58, 11, 'Mulas', 'Dario', '', '1968-04-04', '', 10, 4, '00166.jpg'),
 (59, 18, 'Mulas', 'Salvatore', 'FantAntonio', '1988-08-22', '', 1, 4, '00112.jpg'),
 (116, 9, 'Thommen', 'Martin', '', '0000-00-00', '', 2, 3, '00138.jpg'),
 (61, 4, 'Oberle', 'Marco', '', '1987-06-09', '', 2, 2, ''),
-(62, 4, 'Palmieri', 'Angelo', '', '1967-02-11', '', 10, 3, ''),
-(64, 24, 'Paoletti', 'Gianluca', '', '1972-10-03', '', 10, 2, ''),
-(65, 7, 'Parlato', 'Gerardo', '', '1975-09-23', '', 10, 3, ''),
+(62, 4, 'Palmieri', 'Angelo', '', '1967-02-11', '', 10, 3, '00165.jpg'),
+(64, 24, 'Paoletti', 'Gianluca', '', '1972-10-03', '', 10, 2, '00175.jpg'),
+(65, 7, 'Parlato', 'Gerardo', '', '1975-09-23', '', 10, 3, '00167.jpg'),
 (66, 6, 'Pezzo', 'Stefania', '', '1989-08-11', '', 15, 2, ''),
 (67, 13, 'Pilia', 'Stefano', '', '1990-04-03', '', 1, 2, '00105.jpg'),
-(68, 16, 'Piras', 'Fabrizio', '', '1978-07-01', '', 10, 4, ''),
+(68, 16, 'Piras', 'Fabrizio', '', '1978-07-01', '', 10, 4, '00169.jpg'),
 (69, 15, 'Rickenbacher', 'Lukas', '', '1992-03-17', '', 1, 2, '00106.jpg'),
 (70, 57, 'Rieder', 'Yves', '', '1989-10-04', '', 2, 2, '00125.jpg'),
-(71, 15, 'Rosamilia', 'Nicola', '', '1975-04-07', '', 10, 3, ''),
+(71, 15, 'Rosamilia', 'Nicola', '', '1975-04-07', '', 10, 3, '00164.jpg'),
 (72, 7, 'Rüedi', 'Flavio', '', '1993-03-30', '', 1, 3, '00107.jpg'),
 (73, 17, 'Sahin', 'Denis', '', '1986-08-17', '', 1, 3, '00111.jpg'),
 (76, 10, 'Salfinger', 'Fabian', '', '1988-11-03', '', 2, 4, ''),
@@ -269,7 +268,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (79, 6, 'Santoni', 'Fabrizio', '', '1984-05-30', '', 1, 2, '00103.jpg'),
 (106, 8, 'Apostolo', 'Naomi', '', '0000-00-00', '', 15, 3, ''),
 (81, 21, 'Sappracone', 'Elena', '', '1989-01-11', '', 15, 2, ''),
-(115, 1, 'Galizia', 'Andrea Domenico', '', '1976-03-11', '', 10, 1, ''),
+(115, 1, 'Galizia', 'Andrea Domenico', '', '1976-03-11', '', 10, 1, '00168.jpg'),
 (83, 87, 'Shala', 'Nure', '', '1988-11-15', '', 2, 3, '00124.jpg'),
 (86, 5, 'Tanner', 'Lukas', '', '1991-06-02', '', 2, 2, '00137.jpg'),
 (87, 19, 'Tanner', 'Michael', '', '1987-03-24', '', 2, 3, ''),
@@ -278,7 +277,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (105, 2, 'Calabrese', 'Valeria', '', '0000-00-00', '', 15, 2, ''),
 (92, 13, 'Weibel', 'Stefan', '', '1990-11-23', '', 2, 4, '00126.jpg'),
 (93, 31, 'Werisch', 'Sebastian', 'Basti', '1984-10-04', '', 1, 2, '00104.jpg'),
-(94, 18, 'Yalcin', 'Sinan', '', '1973-05-01', '', 10, 3, ''),
+(94, 18, 'Yalcin', 'Sinan', '', '1973-05-01', '', 10, 3, '00173.jpg'),
 (114, 30, 'Linguanti', 'Massimo', '', '0000-00-00', '', 10, 2, ''),
 (96, 22, 'Zimmermann', 'Stefan', 'Pocho', '1986-01-07', '', 1, 3, '00114.jpg'),
 (97, 14, 'Zollinger', 'Sandro', '', '1988-04-28', '', 2, 4, '00127.jpg'),
@@ -292,7 +291,9 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (110, 4, 'Özdemir', 'Recep', '', '0000-00-00', '', 1, 2, '00123.jpg'),
 (111, 7, 'Schmid', 'Melanie', '', '0000-00-00', '', 15, 4, '00135.jpg'),
 (112, 32, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
-(113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg');
+(113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg'),
+(118, 13, 'Tomeo', 'Ferdinando', '', '0000-00-00', '', 10, 3, '00174.jpg'),
+(119, 19, 'Schreiber', 'Pascal', '', '0000-00-00', '', 10, 3, '00176.jpg');
 
 -- --------------------------------------------------------
 
@@ -308,33 +309,37 @@ CREATE TABLE IF NOT EXISTS `member_junior` (
   `toTeam` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=21 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Daten für Tabelle `member_junior`
 --
 
 INSERT INTO `member_junior` (`id`, `firstName`, `lastName`, `bDay`, `toTeam`, `pictureURL`) VALUES
-(1, 'Lauriane', 'Frei', '0000-00-00', 22, ''),
-(2, 'Timo', 'Giger', '0000-00-00', 22, ''),
-(3, 'Raul', 'Luruena', '0000-00-00', 22, ''),
-(4, 'Giulia', 'Mulas', '0000-00-00', 22, ''),
-(5, 'Leandro', 'Piras', '0000-00-00', 22, ''),
-(6, 'Matteo', 'Roberti', '0000-00-00', 22, ''),
-(7, 'Corrado', 'Rosati', '0000-00-00', 22, ''),
-(8, 'Jerimo', 'Sollberger', '0000-00-00', 22, ''),
-(9, 'Gian Andrea', 'Steingruber', '0000-00-00', 22, ''),
-(10, 'Diego', 'Hammer', '0000-00-00', 22, ''),
-(11, 'Ilario', 'Peng', '0000-00-00', 22, ''),
-(12, 'Marco', 'Branca', '0000-00-00', 22, ''),
-(13, 'Simone', 'Damante', '0000-00-00', 20, ''),
-(14, 'Alessio', 'Crusi', '0000-00-00', 20, ''),
-(15, 'Shawn', 'Liverani', '0000-00-00', 20, ''),
-(16, 'Chiara', 'Roberti', '0000-00-00', 20, ''),
-(17, 'Giuseppe', 'Barbato', '0000-00-00', 20, ''),
-(18, 'Ayaz', 'Sercan', '0000-00-00', 20, ''),
-(19, 'Kerim', 'Hablami', '0000-00-00', 20, ''),
-(20, 'Henrique Magno', 'Santos', '0000-00-00', 20, '');
+(1, 'Lauriane', 'Frei', '2006-09-13', 22, '00141.jpg'),
+(2, 'Timo', 'Giger', '2007-01-12', 22, '00151.jpg'),
+(3, 'Raul', 'Luruena', '2006-02-03', 22, '00156.jpg'),
+(4, 'Giulia', 'Mulas', '2006-03-19', 22, '00142.jpg'),
+(5, 'Leandro', 'Piras', '2006-07-28', 22, '00155.jpg'),
+(6, 'Matteo', 'Roberti', '2006-10-20', 22, '00153.jpg'),
+(7, 'Corrado', 'Rosati', '2005-01-31', 22, '00150.jpg'),
+(8, 'Jerimo', 'Sollberger', '2007-01-04', 22, ''),
+(9, 'Gian Andrea', 'Steingrube', '2006-03-27', 22, '00154.jpg'),
+(10, 'Diego', 'Kammer', '2007-04-04', 22, '00149.jpg'),
+(11, 'Ilario', 'Peng', '2007-02-06', 22, '00158.jpg'),
+(12, 'Marco', 'Branca', '2006-04-16', 22, '00157.jpg'),
+(13, 'Simone', 'Damante', '2008-02-11', 20, '00147.jpg'),
+(14, 'Alessio', 'Crusi', '2007-08-31', 20, '00160.jpg'),
+(15, 'Shawn', 'Liverani', '2008-01-21', 20, '00146.jpg'),
+(16, 'Chiara', 'Roberti', '2008-11-05', 20, '00144.jpg'),
+(17, 'Giuseppe', 'Barbato', '2008-12-10', 20, ''),
+(18, 'Ayaz', 'Sercan', '2007-07-07', 20, '00148.jpg'),
+(19, 'Karim', 'Hablami', '2007-03-03', 20, ''),
+(20, 'Henrique Magno', 'Santos', '0000-00-00', 20, '00143.jpg'),
+(21, 'Lenny', 'Graber', '2006-08-17', 22, '00159.jpg'),
+(22, 'Sophie', 'Argenton', '2006-11-13', 22, '00152.jpg'),
+(23, 'Joana', 'De Sousa', '0000-00-00', 22, ''),
+(24, 'Lorin', 'Strübin', '2006-06-15', 22, '');
 
 -- --------------------------------------------------------
 
@@ -437,13 +442,8 @@ CREATE TABLE IF NOT EXISTS `news` (
 
 INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`) VALUES
 (1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '', 0, '2013-08-28 19:33:52', 1),
-(2, 'Erste Mannschaft siegt wieder!', 'Endlich wieder ein Sieg!', '', 0, '2013-08-28 19:33:56', 1),
-(3, 'Erste Mannschaft siegt wieder!', 'Endlich wieder ein Sieg!', '', 0, '2013-08-28 19:33:58', 1),
-(4, 'Test', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '1', 0, '2013-08-28 19:34:01', 1),
-(5, 'Nochmals', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br />\r\n<ul>\r\n<li>Hello</li>\r\n<li>Hoi</li>\r\n</ul>\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\r\n\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.\r\n\r\nLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 19:34:04', 1),
-(6, 'Und erneut', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 19:34:08', 1),
-(7, 'Und schon wieder einer...', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-08-28 19:34:12', 1),
-(8, 'Die erste Mannschaft holt sich die drei Punkte in Arisdorf', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<br />\r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br />\r\n\r\nUt wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br />\r\n\r\nNam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.<br />\r\n\r\nDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.<br />\r\n\r\nAt vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur', '', 1, '2013-08-29 19:47:10', 2);
+(2, 'Familienturnier und Grillabend am 14. September', 'Hallo', '', 0, '2013-09-05 18:00:00', 1),
+(3, 'Matchbericht Test', 'Hallo', '', 0, '2013-08-30 17:39:12', 2);
 
 -- --------------------------------------------------------
 
@@ -468,7 +468,7 @@ INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`) VALUES
 (1, 'Erste Mannschaft', 1, '4. Liga - Gruppe 2', '00100.jpg'),
 (2, 'Zweite Mannschaft', 1, '5. Liga - Gruppe 1', '00101.jpg'),
 (3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', ''),
-(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', ''),
+(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', '00102.jpg'),
 (15, 'Frauen', 1, 'Frauen - 4. Liga', ''),
 (20, 'Junioren G', 2, '', ''),
 (22, 'Junioren F', 2, '', '');

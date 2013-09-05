@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 04. Sep 2013 um 18:43
--- Server Version: 5.5.16
--- PHP-Version: 5.3.8
+-- Erstellungszeit: 05. Sep 2013 um 18:27
+-- Server Version: 5.1.44
+-- PHP-Version: 5.3.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
+CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -121,7 +123,7 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `po
 (146575, 1, 0, 'Meisterschaft', 0, 0, 'So', '2014-06-01', '11:00:00', 'FC Stein b', 'Bustelbach, Stein - 1', 'Bustelbach', 'Stein', '1', 'Bustelbach, Stein'),
 (146585, 1, 1, 'Meisterschaft', 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Laufenburg-Kaisten b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152013, 10, 1, 'Meisterschaft', 4, 1, 'Fr', '2013-08-16', '20:00:00', 'US Bottecchia BS', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152022, 10, 1, 'Meisterschaft', 0, 0, 'Mi', '2013-09-04', '20:00:00', 'US Olympia 1963 ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152022, 10, 1, 'Meisterschaft', 5, 1, 'Mi', '2013-09-04', '20:00:00', 'US Olympia 1963 ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152024, 10, 0, 'Meisterschaft', 4, 2, 'Fr', '2013-08-30', '20:30:00', 'FC Birsfelden  ', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
 (152031, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-07', '16:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152035, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-09-21', '13:00:00', 'FC Tuerkguecue Basel ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
@@ -200,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `member_active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=116 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=118 ;
 
 --
 -- Daten für Tabelle `member_active`
@@ -211,46 +213,45 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (2, 19, 'Apostolo', 'Martina', '', '1993-08-18', '', 15, 2, ''),
 (3, 13, 'Aquilino', 'Marilena', '', '1993-03-03', '', 15, 2, ''),
 (5, 23, 'Barca', 'Daniel', '', '1978-09-15', '', 10, 2, ''),
-(6, 0, 'Baretincic', 'Manuel', 'Maki', '1985-02-19', '', 2, 4, ''),
-(7, 0, 'Batista', 'Vedran', 'Vedi', '1986-06-23', '', 2, 2, ''),
+(117, 2, 'Lagnaz', 'Thomas', '', '0000-00-00', '', 2, 2, '00128.jpg'),
 (8, 20, 'Branca', 'Alessandro', '', '1988-06-14', '', 1, 3, '00113.jpg'),
 (9, 10, 'Branca', 'Davide', '', '1994-03-05', '', 1, 3, '00109.jpg'),
-(10, 11, 'Branca', 'Sara', '', '1992-12-12', '', 15, 3, ''),
-(11, 0, 'Buchholz', 'Thomas', '', '1993-07-31', '', 2, 0, ''),
-(13, 0, 'Carlen', 'Nicolas', '', '1991-10-23', '', 2, 2, ''),
+(10, 11, 'Branca', 'Sara', '', '1992-12-12', '', 15, 3, '00134.jpg'),
+(11, 22, 'Buchholz', 'Thomas', '', '1993-07-31', '', 2, 2, ''),
+(108, 3, 'Caselle', 'Mirco', '', '0000-00-00', '', 3, 2, ''),
+(13, 3, 'Carlen', 'Nicolas', '', '1991-10-23', '', 2, 2, ''),
 (14, 10, 'Catozza', 'Francesco', '', '1975-02-23', '', 10, 4, ''),
 (15, 16, 'Chiriaco', 'Domenico', '', '1983-11-16', '', 1, 2, '00110.jpg'),
 (17, 12, 'Ciraolo', 'Gaetano', '', '1984-06-27', '', 1, 1, '00101.jpg'),
-(18, 1, 'Concepcion', 'Hanna', '', '1989-10-20', '', 15, 1, ''),
+(18, 1, 'Concepcion', 'Hanna', '', '1989-10-20', '', 15, 1, '00132.jpg'),
 (19, 9, 'Cordeiro', 'Danilo', '', '1991-04-22', '', 1, 3, '00108.jpg'),
-(20, 0, 'Cubaixo', 'David', 'Cubi', '1985-02-01', '', 2, 2, ''),
-(107, 18, 'Feller', 'Celine', '', '0000-00-00', '', 15, 3, ''),
+(20, 7, 'Cubaixo', 'David', 'Cubi', '1985-02-01', '', 2, 2, ''),
+(107, 18, 'Feller', 'Celine', '', '0000-00-00', '', 15, 3, '00131.jpg'),
 (23, 6, 'De Sousa', 'Jose', '', '1965-01-18', '', 10, 3, ''),
-(26, 0, 'Eggli', 'Kevin', '', '1986-09-17', '', 2, 3, ''),
+(26, 21, 'Eggli', 'Kevin', '', '1986-09-17', '', 2, 3, '00136.jpg'),
 (27, 14, 'Elma', 'Halil', '', '1976-12-30', '', 10, 2, ''),
-(30, 0, 'Fankhauser', 'Patrick', 'Büsi', '1988-02-06', '', 2, 3, ''),
-(31, 0, 'Feller', 'Philippe', '', '1988-09-17', '', 2, 3, ''),
+(30, 18, 'Fankhauser', 'Patrick', 'Büsi', '1988-02-06', '', 2, 3, ''),
+(31, 11, 'Feller', 'Philippe', '', '1988-09-17', '', 2, 2, '00129.jpg'),
 (33, 21, 'Gatti', 'Alessandro', '', '1992-06-22', '', 1, 2, ''),
 (35, 1, 'Gubser', 'Stefan', 'Gubsi', '1990-12-26', '', 1, 1, '00100.jpg'),
 (36, 27, 'Haas', 'Alejandra', '', '1988-12-18', '', 15, 4, ''),
 (99, 2, 'Colangelo', 'Giuseppe', 'Giusi', '0000-00-00', '', 1, 3, '00122.jpg'),
-(38, 16, 'Inguscio', 'Sara', '', '1990-03-27', '', 15, 2, ''),
-(40, 0, 'Kaiser', 'Benjamin', '', '1986-08-21', '', 2, 4, ''),
-(41, 0, 'Kaiser', 'Roman', '', '1988-09-27', '', 2, 1, ''),
-(42, 0, 'Kaufmann', 'Pierre', '', '1988-04-27', '', 2, 3, ''),
-(43, 0, 'Kiener', 'Roman', '', '1985-03-09', '', 2, 2, ''),
-(44, 0, 'Kull', 'Nicolas', '', '1993-07-12', '', 2, 3, ''),
+(38, 16, 'Inguscio', 'Sara', '', '1990-03-27', '', 15, 2, '00133.jpg'),
+(40, 1, 'Kaiser', 'Benjamin', '', '1986-08-21', '', 2, 1, ''),
+(41, 17, 'Kaiser', 'Roman', '', '1988-09-27', '', 2, 4, ''),
+(42, 16, 'Kaufmann', 'Pierre', '', '1988-04-27', '', 2, 2, ''),
+(44, 15, 'Kull', 'Nicolas', '', '1993-07-12', '', 2, 3, '00139.jpg'),
 (46, 5, 'La Ianca', 'Giuseppe', '', '1978-07-21', '', 10, 3, ''),
 (47, 20, 'Leanza', 'Salvatore', '', '1970-11-30', '', 10, 3, ''),
 (48, 33, 'Leone', 'Aron', '', '1993-04-23', '', 1, 2, '00121.jpg'),
-(49, 0, 'Lupo', 'Michael', '', '1991-05-22', '', 2, 3, ''),
+(49, 8, 'Lupo', 'Michael', '', '1991-05-22', '', 2, 3, ''),
 (50, 22, 'Luruena Rivera', 'Santos', '', '1975-05-24', '', 10, 4, ''),
 (55, 2, 'Mazza', 'Antonio', '', '1976-10-17', '', 10, 2, ''),
 (57, 5, 'Mulas', 'Andrea', 'Thiago Silva', '1993-04-11', '', 1, 2, '00102.jpg'),
 (58, 11, 'Mulas', 'Dario', '', '1968-04-04', '', 10, 4, ''),
 (59, 18, 'Mulas', 'Salvatore', 'FantAntonio', '1988-08-22', '', 1, 4, '00112.jpg'),
-(60, 0, 'M', 'Yves', '', '1987-04-10', '', 2, 2, ''),
-(61, 0, 'Oberle', 'Marco', '', '1987-06-09', '', 2, 2, ''),
+(116, 9, 'Thommen', 'Martin', '', '0000-00-00', '', 2, 3, '00138.jpg'),
+(61, 4, 'Oberle', 'Marco', '', '1987-06-09', '', 2, 2, ''),
 (62, 4, 'Palmieri', 'Angelo', '', '1967-02-11', '', 10, 3, ''),
 (64, 24, 'Paoletti', 'Gianluca', '', '1972-10-03', '', 10, 2, ''),
 (65, 7, 'Parlato', 'Gerardo', '', '1975-09-23', '', 10, 3, ''),
@@ -258,30 +259,30 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (67, 13, 'Pilia', 'Stefano', '', '1990-04-03', '', 1, 2, '00105.jpg'),
 (68, 16, 'Piras', 'Fabrizio', '', '1978-07-01', '', 10, 4, ''),
 (69, 15, 'Rickenbacher', 'Lukas', '', '1992-03-17', '', 1, 2, '00106.jpg'),
-(70, 0, 'Rieder', 'Yves', '', '1989-10-04', '', 2, 4, ''),
+(70, 57, 'Rieder', 'Yves', '', '1989-10-04', '', 2, 2, '00125.jpg'),
 (71, 15, 'Rosamilia', 'Nicola', '', '1975-04-07', '', 10, 3, ''),
 (72, 7, 'Rüedi', 'Flavio', '', '1993-03-30', '', 1, 3, '00107.jpg'),
 (73, 17, 'Sahin', 'Denis', '', '1986-08-17', '', 1, 3, '00111.jpg'),
 (76, 10, 'Salfinger', 'Fabian', '', '1988-11-03', '', 2, 4, ''),
 (77, 5, 'Salvadori', 'Ilaria', '', '1995-02-05', '', 15, 2, ''),
-(78, 10, 'Santo', 'Deila', '', '1989-12-25', '', 15, 4, ''),
+(78, 10, 'Santo', 'Deila', '', '1989-12-25', '', 15, 4, '00130.jpg'),
 (79, 6, 'Santoni', 'Fabrizio', '', '1984-05-30', '', 1, 2, '00103.jpg'),
 (106, 8, 'Apostolo', 'Naomi', '', '0000-00-00', '', 15, 3, ''),
 (81, 21, 'Sappracone', 'Elena', '', '1989-01-11', '', 15, 2, ''),
 (115, 1, 'Galizia', 'Andrea Domenico', '', '1976-03-11', '', 10, 1, ''),
-(83, 0, 'Shala', 'Nure', '', '1988-11-15', '', 2, 3, ''),
-(86, 0, 'Tanner', 'Lukas', '', '1991-06-02', '', 2, 3, ''),
-(87, 0, 'Tanner', 'Michael', '', '1987-03-24', '', 2, 3, ''),
+(83, 87, 'Shala', 'Nure', '', '1988-11-15', '', 2, 3, '00124.jpg'),
+(86, 5, 'Tanner', 'Lukas', '', '1991-06-02', '', 2, 2, '00137.jpg'),
+(87, 19, 'Tanner', 'Michael', '', '1987-03-24', '', 2, 3, ''),
 (88, 21, 'Teotino', 'Daniele', '', '1978-05-22', '', 10, 2, ''),
-(89, 0, 'Tielke', 'Tobias', '', '1992-05-03', '', 2, 2, ''),
+(89, 23, 'Tielke', 'Tobias', '', '1992-05-03', '', 2, 3, ''),
 (105, 2, 'Calabrese', 'Valeria', '', '0000-00-00', '', 15, 2, ''),
-(92, 0, 'Weibel', 'Stefan', '', '1990-11-23', '', 2, 4, ''),
+(92, 13, 'Weibel', 'Stefan', '', '1990-11-23', '', 2, 4, '00126.jpg'),
 (93, 31, 'Werisch', 'Sebastian', 'Basti', '1984-10-04', '', 1, 2, '00104.jpg'),
 (94, 18, 'Yalcin', 'Sinan', '', '1973-05-01', '', 10, 3, ''),
 (114, 30, 'Linguanti', 'Massimo', '', '0000-00-00', '', 10, 2, ''),
-(96, 22, 'Zimmermann', 'Stefan', 'Zimmi', '1986-01-07', '', 1, 3, '00114.jpg'),
-(97, 14, 'Zollinger', 'Sandro', '', '1988-04-28', '', 2, 4, ''),
-(98, 0, 'Zwicky', 'Tobias', '', '1986-11-21', '', 2, 2, ''),
+(96, 22, 'Zimmermann', 'Stefan', 'Pocho', '1986-01-07', '', 1, 3, '00114.jpg'),
+(97, 14, 'Zollinger', 'Sandro', '', '1988-04-28', '', 2, 4, '00127.jpg'),
+(98, 6, 'Zwicky', 'Tobias', '', '1986-11-21', '', 2, 3, '00140.jpg'),
 (100, 23, 'Calabrese', 'Gerardo', 'Gerry', '0000-00-00', '', 1, 3, ''),
 (101, 11, 'Tettey', 'David Prince', 'Dave', '0000-00-00', '', 1, 3, '00118.jpg'),
 (102, 3, 'Lo Presti', 'Luca', '', '0000-00-00', '', 1, 2, '00120.jpg'),
@@ -289,7 +290,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (104, 8, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, ''),
 (109, 19, 'Hofacker', 'Sven', '', '0000-00-00', '', 1, 2, '00115.jpg'),
 (110, 4, 'Özdemir', 'Recep', '', '0000-00-00', '', 1, 2, '00123.jpg'),
-(111, 7, 'Schmid', 'Melanie', '', '0000-00-00', '', 15, 4, ''),
+(111, 7, 'Schmid', 'Melanie', '', '0000-00-00', '', 15, 4, '00135.jpg'),
 (112, 32, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
 (113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg');
 
@@ -529,15 +530,15 @@ INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUE
 (35, 'AC Rossoneri b', 0, 3, 3),
 (36, 'FC Xalko', 9, 6, 3),
 (37, 'FC Dardania', 9, 0, 10),
-(38, 'FC Birlik', 4, 2, 10),
+(38, 'FC Birlik', 4, 3, 10),
 (39, 'FC Rheinfelden', 9, 0, 10),
-(40, 'AC Rossoneri', 3, 2, 10),
-(41, 'FC Bubendorf', 3, 1, 10),
-(42, 'FC Laufenburg-Kaisten', 6, 2, 10),
-(43, 'US Olympia 1963', 1, 0, 10),
-(44, 'US Bottecchia BS', 3, 2, 10),
+(40, 'AC Rossoneri', 6, 3, 10),
+(41, 'FC Bubendorf', 3, 3, 10),
+(42, 'FC Laufenburg-Kaisten', 6, 5, 10),
+(43, 'US Olympia 1963', 1, 1, 10),
+(44, 'US Bottecchia BS', 6, 3, 10),
 (45, 'FC Türkgücü Basel', 0, 2, 10),
-(46, 'FC Birsfelden', 3, 8, 10),
+(46, 'FC Birsfelden', 3, 9, 10),
 (47, 'FC Allschwil', 6, 0, 15),
 (48, 'FC Concordia Basel', 9, 0, 15),
 (49, 'FC Nordstern BS', 6, 0, 15),

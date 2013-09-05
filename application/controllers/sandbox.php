@@ -13,9 +13,6 @@ class Sandbox extends CI_Controller {
         // Berechne die Array-Grösse
         $anzahl = sizeof($aufstellung);
 
-        // Variableninitialisierung für Gültigkeit
-        $validity = false;
-
         // Gültigkeitsrechnung falls nicht 10 Spieler
         if (array_sum($aufstellung) == 10) {
             $validity = true;

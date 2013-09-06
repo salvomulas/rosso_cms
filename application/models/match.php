@@ -82,14 +82,16 @@ class Match extends CI_Model {
     function getNextGame() {
         
         $this->db->select('teams.name,match.*')
-                ->select("date AS sort")
+                ->select("date AS sort_date")
+                ->select("time AS sort_time")
                 ->select("DATE_FORMAT(date, '%e. %M %Y') AS date", FALSE)
                 ->select("TIME_FORMAT(time, '%H:%m') AS time", FALSE)
                 ->from('match,teams')
                 ->where('date >=CURDATE()')
                 ->where('teams.id = match.teamID')
                 ->limit(1)
-                ->order_by('sort','asc');
+                ->order_by('sort_date','asc')
+                ->order_by('sort_time','asc');
         $query = $this->db->get();
         
         return $query;

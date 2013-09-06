@@ -71,6 +71,7 @@ class Match extends CI_Model {
                 ->from('match')
                 ->where('teamID', $teamID)
                 ->where('date >=CURDATE()')
+                ->where('time >=CURTIME()')
                 ->limit(1)
                 ->order_by('sort','asc');
         $query = $this->db->get();
@@ -87,7 +88,7 @@ class Match extends CI_Model {
                 ->select("DATE_FORMAT(date, '%e. %M %Y') AS date", FALSE)
                 ->select("TIME_FORMAT(time, '%H:%m') AS time", FALSE)
                 ->from('match,teams')
-                ->where('date >=CURDATE()')
+                ->where("concat(date,' ',time) >=NOW()")
                 ->where('teams.id = match.teamID')
                 ->limit(1)
                 ->order_by('sort_date','asc')

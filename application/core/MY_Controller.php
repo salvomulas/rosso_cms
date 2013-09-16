@@ -23,6 +23,8 @@ class MY_Controller extends CI_Controller {
         }
     }
 
+    // Print Navigation bar
+
     protected function drawNavigation () {
         $this->load->model('teams');
         $data ['teamsActive'] = $this->teams->getTeamsType(1);

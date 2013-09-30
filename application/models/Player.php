@@ -24,6 +24,35 @@ class Player extends CI_Model {
 
     }
 
+    public function getAllPlayers () {
+
+        $this->db->select('*')
+            ->from('member_active')
+            ->order_by('lastName','asc');
+        $query = $this->db->get();
+
+        return $query;
+
+    }
+
+    public function getAllPlayersLimit ($limit,$start) {
+
+        $this->db->select('*')
+            ->from('member_active')
+            ->order_by('lastName','asc')
+            ->limit($limit, $start);
+        $query = $this->db->get();
+
+        return $query;
+
+    }
+
+    public function getNumberPlayers () {
+
+        return $this->db->count_all('member_active');
+
+    }
+
     public function getPlayersPosition ($teamID, $positionID) {
 
         $this->db->select('*')

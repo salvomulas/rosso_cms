@@ -86,7 +86,7 @@ function menuObject ($name, $url) {
                                 echo '<li><a href=""><i class="icon-star"></i> Sponsoren</a></li>';
                                 echo '<li><a href=""><i class="icon-map-marker"></i> Clubhausverwaltung</a></li>';
                                 echo '<li class="nav-header">Sportadministration</li>';
-                                echo '<li><a href=""><i class="icon-tasks"></i> Spielerverwaltung</a></li>';
+                                echo '<li><a href="'.base_url().'admin/edit_spieler"><i class="icon-tasks"></i> Spielerverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-th-large"></i> Mannschaftsverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-calendar"></i> Spielkalender</a></li>';
                                 echo '<li><a href=""><i class="icon-list-alt"></i> Tabellenverwaltung</a></li>';

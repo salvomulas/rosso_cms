@@ -1741,7 +1741,7 @@ select:focus:invalid:focus {
   line-height: 20px;
   text-align: center;
   text-shadow: 0 1px 0 #ffffff;
-  background-color: #eeeeee;
+  background-color: #707070;
   border: 1px solid #ccc;
 }
 

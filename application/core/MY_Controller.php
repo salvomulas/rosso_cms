@@ -27,8 +27,10 @@ class MY_Controller extends CI_Controller {
 
     protected function drawNavigation () {
         $this->load->model('teams');
+        $this->load->model('users');
         $data ['teamsActive'] = $this->teams->getTeamsType(1);
         $data ['teamsKifu'] = $this->teams->getTeamsType(2);
+        $data ['user'] = $this->users->get_user($this->session->userdata('userid'));
         $this->load->view('elements/topNav', $data);
     }
 

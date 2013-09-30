@@ -47,9 +47,9 @@ class Site extends MY_Controller {
         
         if ($this->form_validation->run()) {
             
-            $this->load->model('model_users');
+            $this->load->model('users');
             $username = $this->input->post('username');
-            $userid = $this->model_users->get_id_for_username($username);
+            $userid = $this->users->get_id_for_username($username);
 
             $data = array(
                 'username' => $username,
@@ -64,9 +64,9 @@ class Site extends MY_Controller {
     }
     
     public function validate_credentials() {
-        $this->load->model('model_users');
+        $this->load->model('users');
 
-        if ($this->model_users->can_log_in()) {
+        if ($this->users->can_log_in()) {
             return true;
         } else {
             $this->form_validation->set_message('validate_credentials', 'Benutzername/Passwort ung&uuml;ltig.');

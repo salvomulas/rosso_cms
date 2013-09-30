@@ -74,15 +74,15 @@ function menuObject ($name, $url) {
                             <?php
 
                             if ($this->session->userdata('is_logged_in')) {
-
-                                echo '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Salvatore Mulas <b class="caret"></b></a>';
+                                $user = $user->row();
+                                echo '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> '.$user->firstName.' '.$user->lastName.' <b class="caret"></b></a>';
                                 echo '<ul class="dropdown-menu">';
                                 echo '<li class="nav-header">Benutzerverwaltung</li>';
-                                echo '<li><a href="<?php echo base_url(); ?>admin/my_profile"><i class="icon-cog"></i> Mein Profil</a></li>';
-                                echo '<li><a href="<?php echo base_url(); ?>admin/groups"><i class="icon-wrench"></i> Rechte und Gruppen</a></li>';
+                                echo '<li><a href="'.base_url().'admin/my_profile"><i class="icon-cog"></i> Mein Profil</a></li>';
+                                echo '<li><a href="'.base_url().'admin/groups"><i class="icon-wrench"></i> Rechte und Gruppen</a></li>';
                                 echo '<li><a href=""><i class="icon-inbox"></i> Postfach <span class="badge badge-important">6</span></a></li>';
                                 echo '<li class="nav-header">Vereinsadministration</li>';
-                                echo '<li><a href="<?php echo base_url(); ?>admin/edit_vorstand"><i class="icon-user"></i> Vorstandmitglieder</a></li>';
+                                echo '<li><a href="'.base_url().'admin/edit_vorstand"><i class="icon-user"></i> Vorstandmitglieder</a></li>';
                                 echo '<li><a href=""><i class="icon-star"></i> Sponsoren</a></li>';
                                 echo '<li><a href=""><i class="icon-map-marker"></i> Clubhausverwaltung</a></li>';
                                 echo '<li class="nav-header">Sportadministration</li>';
@@ -95,17 +95,23 @@ function menuObject ($name, $url) {
                                 echo '<li><a href=""><i class="icon-calendar"></i> Eventverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-bookmark"></i> Highlights</a></li>';
                                 echo '<li class="divider"></li>';
-                                echo '<li><a href=""><i class="icon-off"></i> Logout</a></li>';
+                                echo '<li><a href="'.base_url().'site/logout"><i class="icon-off"></i> Logout</a></li>';
                                 echo '</ul>';
 
                             } else {
 
                                 echo '<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-lock"></i> Login <strong class="caret"></strong></a>';
                                 echo '<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">';
-                                echo '<form method="post" action="login" accept-charset="UTF-8">';
 
-                                echo form_open('admin/login_validation');
-
+                                echo form_open('site/login_validation');
+                                echo form_hidden('form_name', 'form_login');
+                                
+                                // Display the dropdown login form again if this form's validation failed
+                                if (validation_errors() && $this->input->post('form_name') === 'form_login') {
+                                    echo '<script type="text/javascript">$("#login_dropdown").addClass("open");</script>';
+                                    echo '<div class="alert alert-error">'.validation_errors().'</div>';
+                                }
+                                
                                 $username = array(
                                     'name' => 'username',
                                     'id' => 'username',
@@ -136,7 +142,6 @@ function menuObject ($name, $url) {
 
                                 echo form_close();
 
-                                echo '</form>';
                                 echo '</div>';
                                 echo '</li>';
 

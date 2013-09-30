@@ -4,9 +4,11 @@
         <div class="span8">
             <h2>Vorstand bearbeiten</h2>
 
-
-
-            <table class="table table-hover">
+            <?php
+            
+            if ($management->num_rows > 0) {
+                ?>
+                <table class="table table-hover">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -17,89 +19,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mulas</td>
-                        <td>Dario</td>
-                        <td>Pr&auml;sident</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Mulas</td>
-                        <td>Luca</td>
-                        <td>Sportchef</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Mulas</td>
-                        <td>Paolo</td>
-                        <td>Vize-Pr&auml;sident</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>Mulas</td>
-                        <td>Salvatore</td>
-                        <td>Marketing und Sponsoring</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                                        <tr>
-                        <td>5</td>
-                        <td>Roberti</td>
-                        <td>Giuseppe</td>
-                        <td>Materialchef</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>Mulas-Badella</td>
-                        <td>Claudia</td>
-                        <td>Finanzen</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>De Nuccio</td>
-                        <td>Francesca</td>
-                        <td>Sekretariat</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>8</td>
-                        <td>Ceniviva</td>
-                        <td>Giuseppe</td>
-                        <td>Beisitzer</td>
-                        <td>
-                            <a href="<?php echo base_url(); ?>admin/edit_vorstand_member"><i class="icon-pencil"></i></a>
-                            <a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>
-                        </td>
-                    </tr>
+                <?php
+                    foreach ($management->result() as $row) {
+                        echo '<tr>';
+                        echo '<td>'.$row->id.'</td>';
+                        echo '<td>'.$row->lastName.'</td>';
+                        echo '<td>'.$row->firstName.'</td>';
+                        echo '<td>'.$row->function.'</td>';
+                        echo '<td>';
+                        echo '<a href="'.base_url().'admin/edit_vorstand_member"><i class="icon-pencil"></i></a> ';
+                        echo '<a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>';
+                        echo '</td>';
+                        echo '</tr>';
+                    }
+                    
+                ?>
                 </tbody>
-            </table>
-            <hr>
+                </table>
+                <hr>
+                
+                <?php
+            
+                } else {
+                    echo "Keine Vorstandsmitglieder vorhanden";
+                }
+
+                ?>
+            
+
 
             <div class="btn-toolbar">
                 <button class="btn btn-info">Neues Vorstandsmitglied erfassen</button>

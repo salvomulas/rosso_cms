@@ -57,7 +57,7 @@ class Site extends MY_Controller {
                 'is_logged_in' => 1,
             );
             $this->session->set_userdata($data);
-            redirect('dashboard');
+            redirect('admin/my_profile');
         } else {
             $this->index();
         }
@@ -77,21 +77,6 @@ class Site extends MY_Controller {
     public function logout() {
         $this->session->sess_destroy();
         redirect('/');
-    }
-    
-    public function restricted() {
-        $body_data['error_messages'][] = 'Sie sind nicht berechtigt, diese Seite aufzurufen.';
-        if (!$this->session->userdata('is_logged_in')) {
-            $body_data['error_messages'][] = 'Bitte melden Sie sich an und versuchen nochmals, die Seite zu laden.';
-        }
-        
-        $meta_data['page_title'] = 'Zugriff verweigert';
-        $body_data['page_title'] = $meta_data['page_title'];
-
-        // Show success/error message(s)
-        $this->load->view('header');
-        $this->load->view('meta', $meta_data);
-        $this->load->view('show_message', $body_data);
     }
 
 }

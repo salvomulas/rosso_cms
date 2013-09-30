@@ -88,6 +88,8 @@ function menuObject ($name, $url) {
                                 echo '<li class="nav-header">Sportadministration</li>';
                                 echo '<li><a href=""><i class="icon-tasks"></i> Spielerverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-th-large"></i> Mannschaftsverwaltung</a></li>';
+                                echo '<li><a href=""><i class="icon-calendar"></i> Spielkalender</a></li>';
+                                echo '<li><a href=""><i class="icon-list-alt"></i> Tabellenverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-eye-open"></i> Schiedsrichterverwaltung</a></li>';
                                 echo '<li class="nav-header">Inhaltsverwaltung</li>';
                                 echo '<li><a href=""><i class="icon-file"></i> Matchberichte</a></li>';

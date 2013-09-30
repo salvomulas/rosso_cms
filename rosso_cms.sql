@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 26. Sep 2013 um 16:09
+-- Erstellungszeit: 30. Sep 2013 um 18:56
 -- Server Version: 5.5.16
 -- PHP-Version: 5.3.8
 
@@ -544,6 +544,31 @@ INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUE
 (51, 'FC Telegraph BS', 9, 0, 15),
 (52, 'AC Rossoneri', 0, 11, 15),
 (53, 'FC Laufenburg-Kaisten', 0, 0, 15);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Daten für Tabelle `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `firstName`, `lastName`, `email`) VALUES
+(1, 'salvo', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Salvatore', 'Mulas', 'marketing@acrossoneri.ch'),
+(2, 'sgubser', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Stefan', 'Gubser', ''),
+(3, 'pfeller', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Philippe', 'Feller', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

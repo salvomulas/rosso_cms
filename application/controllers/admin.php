@@ -2,6 +2,11 @@
 
 class Admin extends MY_Controller {
     
+    function __construct() {
+        parent::__construct();
+        $this->load->model('users');
+    }
+    
     public function index() 
     {
         $this->my_profile();
@@ -11,6 +16,7 @@ class Admin extends MY_Controller {
     {
         if ($this->session->userdata('is_logged_in')) {
             $data['page_title'] = "Mein Profil";
+            $data ['actualUser'] = $this->users->get_user($this->session->userdata('userid'));
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/view_profile");

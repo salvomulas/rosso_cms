@@ -15,24 +15,24 @@
                         <div class="row">
                             <div class="span4">
                                 <label>Username</label>
-                                <input type="text" value="salvo" class="input-xlarge">
+                                <span class="input-xlarge uneditable-input"><?php echo $actualUser->row()->username; ?></span>
                                 <label>Nachname</label>
-                                <input type="text" value="Mulas" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->lastName; ?>" class="input-xlarge">
                                 <label>Vorname</label>
-                                <input type="text" value="Salvatore" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->firstName; ?>" class="input-xlarge">
                                 <label>Email</label>
-                                <input type="text" value="marketing@acrossoneri.ch" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->email; ?>" class="input-xlarge">
                             </div>
 
                             <div class="span4">
                                 <label>Facebook</label>
-                                <input type="text" value="" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->facebook; ?>" class="input-xlarge">
                                 <label>Google+</label>
-                                <input type="text" value="" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->twitter; ?>" class="input-xlarge">
                                 <label>Twitter</label>
-                                <input type="text" value="twitter.com/salvomulas" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->gplus; ?>" class="input-xlarge">
                                 <label>YouTube</label>
-                                <input type="text" value="youtube.com/salvomulas" class="input-xlarge">                                    
+                                <input type="text" value="<?php echo $actualUser->row()->youtube; ?>" class="input-xlarge">                                    
                             </div>
                         </div>
                         <hr>
@@ -40,20 +40,20 @@
                         <div class="row">
                             <div class="span4">
                                 <label>Addresse</label>
-                                <textarea value="Smith" rows="3" class="input-xlarge">Geissbrunnenweg 22</textarea>
+                                <input type="text" value="<?php echo $actualUser->row()->address; ?>" class="input-xlarge">
                                 <label>PLZ / Ort</label>
-                                <input type="text" value="4452 Itingen" class="input-xlarge">      
+                                <input type="text" value="<?php echo $actualUser->row()->plz; ?>" class="input-xlarge">      
                                 <label>Land</label>
-                                <input type="text" value="Schweiz" class="input-xlarge">   
+                                <input type="text" value="<?php echo $actualUser->row()->country; ?>" class="input-xlarge">   
                             </div>
 
                             <div class="span4">
                                 <label>Telefon privat</label>
-                                <input type="text" value="061 921 04 89" class="input-xlarge">      
+                                <input type="text" value="<?php echo $actualUser->row()->phone; ?>" class="input-xlarge">      
                                 <label>Telefon mobil</label>
-                                <input type="text" value="079 291 55 77" class="input-xlarge">
+                                <input type="text" value="<?php echo $actualUser->row()->mobile; ?>" class="input-xlarge">
                                 <label>Fax</label>
-                                <input type="text" value="" class="input-xlarge">   
+                                <input type="text" value="<?php echo $actualUser->row()->fax; ?>" class="input-xlarge">   
                             </div>
                         </div>
 

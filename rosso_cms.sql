@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 30. Sep 2013 um 18:56
+-- Erstellungszeit: 02. Okt 2013 um 18:16
 -- Server Version: 5.5.16
 -- PHP-Version: 5.3.8
 
@@ -491,57 +491,57 @@ CREATE TABLE IF NOT EXISTS `teams_ranking` (
 --
 
 INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUES
-(1, 'SC M&uuml;nchenstein', 3, 10, 1),
-(2, 'FC Arisdorf', 7, 5, 1),
-(3, 'FC Diegten Eptingen', 6, 6, 1),
-(4, 'SV Muttenz b', 3, 18, 1),
-(5, 'FC Oberdorf', 4, 11, 1),
-(6, 'AC Rossoneri', 13, 8, 1),
+(1, 'SC M&uuml;nchenstein', 6, 13, 1),
+(2, 'FC Arisdorf', 10, 5, 1),
+(3, 'FC Diegten Eptingen', 9, 10, 1),
+(4, 'SV Muttenz b', 3, 19, 1),
+(5, 'FC Oberdorf', 4, 13, 1),
+(6, 'AC Rossoneri', 16, 8, 1),
 (7, 'FC Stein b', 13, 27, 1),
-(8, 'SV Sissach a', 5, 17, 1),
-(9, 'FC Lausen 72', 0, 19, 1),
-(10, 'FC Gelterkinden b', 12, 10, 1),
-(11, 'FC Laufenburg-Kaisten b', 15, 7, 1),
+(8, 'SV Sissach a', 8, 17, 1),
+(9, 'FC Lausen 72', 0, 22, 1),
+(10, 'FC Gelterkinden b', 15, 10, 1),
+(11, 'FC Laufenburg-Kaisten b', 15, 13, 1),
 (12, 'FC Bubendorf', 6, 12, 1),
-(13, 'FC Lausen 72', 12, 1, 2),
-(14, 'Pratteln United', 15, 8, 2),
-(15, 'FC Eiken', 3, 4, 2),
-(16, 'NK Pajde', 12, 2, 2),
-(17, 'FC Liestal', 6, 5, 2),
-(18, 'FC Wallbach', 0, 12, 2),
-(19, 'AC Virtus Liestal b', 13, 9, 2),
-(20, 'FC Zeiningen', 0, 6, 2),
-(21, 'AC Rossoneri a', 7, 6, 2),
-(22, 'FC Gelterkinden', 6, 12, 2),
-(23, 'FC Diegten Eptingen', 0, 8, 2),
-(24, 'FC Bubendorf', 15, 2, 2),
-(25, 'CD Espanol Basel a', 4, 7, 3),
-(26, 'SC Basel Nord a', 2, 6, 3),
-(27, 'FC Ferad a', 3, 6, 3),
-(28, 'AC Virtus Liestal a', 15, 6, 3),
-(29, 'FC Telegraph BS', 12, 17, 3),
-(30, 'FC Birsfelden', 7, 6, 3),
-(31, 'FC Schwarz-Weiss', 5, 6, 3),
-(32, 'FC Amicitia Riehen', 3, 8, 3),
-(33, 'FK Srbija Basel', 8, 13, 3),
-(34, 'FC Pratteln', 10, 13, 3),
-(35, 'AC Rossoneri b', 4, 7, 3),
-(36, 'FC Xalko', 12, 12, 3),
-(37, 'FC Dardania', 15, 2, 10),
-(38, 'FC Birlik', 5, 6, 10),
+(13, 'FC Lausen 72', 15, 3, 2),
+(14, 'Pratteln United', 16, 10, 2),
+(15, 'FC Eiken', 3, 6, 2),
+(16, 'NK Pajde', 15, 8, 2),
+(17, 'FC Liestal', 9, 6, 2),
+(18, 'FC Wallbach', 3, 13, 2),
+(19, 'AC Virtus Liestal b', 14, 11, 2),
+(20, 'FC Zeiningen', 0, 17, 2),
+(21, 'AC Rossoneri a', 7, 10, 2),
+(22, 'FC Gelterkinden', 6, 23, 2),
+(23, 'FC Diegten Eptingen', 0, 10, 2),
+(24, 'FC Bubendorf', 18, 2, 2),
+(25, 'CD Espanol Basel a', 4, 8, 3),
+(26, 'SC Basel Nord a', 5, 6, 3),
+(27, 'FC Ferad a', 4, 6, 3),
+(28, 'AC Virtus Liestal a', 18, 12, 3),
+(29, 'FC Telegraph BS', 13, 18, 3),
+(30, 'FC Birsfelden', 7, 7, 3),
+(31, 'FC Schwarz-Weiss', 5, 7, 3),
+(32, 'FC Amicitia Riehen', 6, 8, 3),
+(33, 'FK Srbija Basel', 9, 13, 3),
+(34, 'FC Pratteln', 13, 15, 3),
+(35, 'AC Rossoneri b', 4, 8, 3),
+(36, 'FC Xalko', 13, 14, 3),
+(37, 'FC Dardania', 16, 4, 10),
+(38, 'FC Birlik', 6, 8, 10),
 (39, 'FC Rheinfelden', 12, 6, 10),
 (40, 'AC Rossoneri', 6, 9, 10),
-(41, 'FC Bubendorf', 6, 4, 10),
+(41, 'FC Bubendorf', 7, 5, 10),
 (42, 'FC Laufenburg-Kaisten', 12, 19, 10),
-(43, 'US Olympia 1963', 1, 5, 10),
-(44, 'US Bottecchia BS', 6, 4, 10),
-(45, 'FC Türkgücü Basel', 4, 2, 10),
-(46, 'FC Birsfelden', 9, 10, 10),
+(43, 'US Olympia 1963', 1, 6, 10),
+(44, 'US Bottecchia BS', 7, 5, 10),
+(45, 'FC Türkgücü Basel', 7, 3, 10),
+(46, 'FC Birsfelden', 12, 11, 10),
 (47, 'FC Allschwil', 9, 0, 15),
-(48, 'FC Concordia Basel', 12, 0, 15),
-(49, 'FC Nordstern BS', 9, 0, 15),
-(50, 'FC Reinach', 9, 0, 15),
-(51, 'FC Telegraph BS', 9, 0, 15),
+(48, 'FC Concordia Basel', 15, 0, 15),
+(49, 'FC Nordstern BS', 9, 1, 15),
+(50, 'FC Reinach', 12, 0, 15),
+(51, 'FC Telegraph BS', 12, 0, 15),
 (52, 'AC Rossoneri', 0, 11, 15),
 (53, 'FC Laufenburg-Kaisten', 0, 0, 15);
 
@@ -558,6 +558,16 @@ CREATE TABLE IF NOT EXISTS `users` (
   `firstName` varchar(255) NOT NULL,
   `lastName` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
+  `facebook` varchar(255) NOT NULL,
+  `twitter` varchar(255) NOT NULL,
+  `gplus` varchar(255) NOT NULL,
+  `youtube` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `plz` varchar(255) NOT NULL,
+  `country` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `mobile` varchar(255) NOT NULL,
+  `fax` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -565,10 +575,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `firstName`, `lastName`, `email`) VALUES
-(1, 'salvo', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Salvatore', 'Mulas', 'marketing@acrossoneri.ch'),
-(2, 'sgubser', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Stefan', 'Gubser', ''),
-(3, 'pfeller', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Philippe', 'Feller', '');
+INSERT INTO `users` (`id`, `username`, `password`, `firstName`, `lastName`, `email`, `facebook`, `twitter`, `gplus`, `youtube`, `address`, `plz`, `country`, `phone`, `mobile`, `fax`) VALUES
+(1, 'salvo', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Salvatore', 'Mulas', 'marketing@acrossoneri.ch', '', 'twitter.com/salvomulas', '', '', 'Geissbrunnenweg 22', '4452 Itingen', 'Schweiz', '+41 61 921 04 89', '+41 79 291 55 77', ''),
+(2, 'sgubser', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Stefan', 'Gubser', '', '', '', '', '', '', '', '', '', '', ''),
+(3, 'pfeller', '7af5c96bf001fd494760aacc951bc97b145e404c', 'Philippe', 'Feller', '', '', '', '', '', '', '', '', '', '', '');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

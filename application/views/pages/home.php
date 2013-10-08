@@ -38,16 +38,77 @@
             <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
             <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
         </div>
+        
+        <hr>
+        
+        <?php
+
+            function shortenString ($string, $width) {
+                if (strlen($string) > $width)
+                {
+                    $string = wordwrap($string, $width);
+                    $i = strpos($string, "\n");
+                    if ($i) {
+                        $string = substr($string, 0, $i);
+                    }
+                }
+                return $string;
+            }
+            
+            foreach ($articlesMain->result() as $row) {
+
+                switch ($row->category) {
+                    case 1: $link = base_url().'aktuelles/article/'.$row->id;
+                            $cat = "News";
+                    break;
+                    case 2: $link = base_url().'aktuelles/match/'.$row->id;
+                            $cat = "Matchbericht";
+                    break;
+                    default: $link = NULL;
+                             $cat = NULL;
+                }
+
+                // Print article title
+                echo '<div class="row">';
+                echo '<div class="span8">';
+
+                echo '</div>';
+                echo '</div>';
+
+                // Print article body
+                echo '<div class="row">';
+                echo '<div class="span2">';
+                echo '<a href="'.$link.'" class="thumbnail">';
+                echo '<img src="http://placehold.it/260x180" alt="">';
+                echo '</a>';
+                echo '</div>';
+
+                echo '<div class="span6">';
+                echo '<h4><strong><a href="'.$link.'">'.$row->title.'</a></strong></h4>';
+                echo '<p>';
+                echo '<a href="#"><span class="label label-important">'.$cat.'</span></a> ';
+                echo shortenString($row->article, 300);
+                echo '</p>';
+                echo '</div>';
+                echo '</div>';
+
+
+                echo '<hr>';
+
+            }
+            
+        ?>
+        
 
         <div class="row">
 
             <div class="span4">
                 <div class="well">
-                    <h4>Letzte News</h4>
+                    <h4>Newsarchiv</h4>
 
                     <?php
                     
-                    if ($articles->num_rows > 0) {
+                    if ($articles) {
                     
                         echo '<table class="table table-condensed table-hover">';
                         echo '<thead>';
@@ -85,7 +146,7 @@
 
             <div class="span4">
                 <div class="well">
-                    <h4>Letzte Matchberichte</h4>
+                    <h4>Matchberichte Archiv</h4>
 
                     <?php
                     

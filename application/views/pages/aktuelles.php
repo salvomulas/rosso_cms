@@ -59,7 +59,7 @@
                 echo '<p></p>';
                 echo '<p>';
                 echo '<i class="icon-user"></i> von Salvatore Mulas';
-                echo ' | <i class="icon-calendar"></i> '.$row->date;
+                echo ' | <i class="icon-calendar"></i> '.$row->fulldate;
                 echo ' | <i class="icon-share"></i> 0 Shares';
                 echo ' | <i class="icon-tags"></i> Kategorie : <a href="#"><span class="label label-important">'.$cat.'</span></a>';
                 echo '</p>';

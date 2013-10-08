@@ -42,28 +42,24 @@ class Articles extends CI_Model {
     public function getArticlesLimit ($limit, $start) {
         
         $this->db->select('*');
-        $this->db->select("DATE_FORMAT(date, '%e. %M %Y') AS date", FALSE);
+        $this->db->select("DATE_FORMAT(date, '%e. %M %Y') AS fulldate", FALSE);
         $this->db->from('news');
         $this->db->order_by('date','desc');
         $this->db->limit($limit, $start);
         $query = $this->db->get();
         
-        if ($query->num_rows > 0) {
-            return $query;
-        } else {
-            return NULL;
-        }
+        return $query;
         
     }
     
-    public function getArticlesHome ($limit, $type) {
+    public function getArticlesHome ($limit, $start, $type) {
         
         $this->db->select('*');
-        $this->db->select("DATE_FORMAT(date, '%e.%m.%y') AS date", FALSE);
+        $this->db->select("DATE_FORMAT(date, '%e.%m.%y') AS fulldate", FALSE);
         $this->db->from('news');
         $this->db->where('category',$type);
         $this->db->order_by('date','desc');
-        $this->db->limit($limit);
+        $this->db->limit($limit, $start);
         $query = $this->db->get();
         
         if ($query->num_rows > 0) {

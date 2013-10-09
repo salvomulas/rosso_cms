@@ -55,7 +55,7 @@ class Articles extends CI_Model {
     public function getArticlesHome ($limit, $start, $type) {
         
         $this->db->select('*');
-        $this->db->select("DATE_FORMAT(date, '%e.%m.%y') AS fulldate", FALSE);
+        $this->db->select("DATE_FORMAT(date, '%e.%m.%y') AS date", FALSE);
         $this->db->from('news');
         $this->db->where('category',$type);
         $this->db->order_by('date','desc');

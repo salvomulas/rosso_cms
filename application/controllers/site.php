@@ -21,12 +21,17 @@ class Site extends MY_Controller {
         $this->load->library('parser');
 
         $data ['page_title'] = "Willkommen";
+        
+        // Load ranking data
         $data ['showTeams'] = array(1,2,3,10);
         $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
         $data ['teamScores'] = $this->ranking->getTeamScores($data['showTeams']);
-        $data ['articles'] = $this->articles->getArticlesHome(5,1,1);
-        $data ['articlesMain'] = $this->articles->getArticlesLimit(5,0);
-        $data ['matchReport'] = $this->articles->getArticlesHome(5,0,2);
+        
+        // Load news data
+        $data ['blog'] = $this->articles->getArticlesHome(5,0);
+        $data ['highlights'] = $this->articles->getHighlights(5,0);
+        $data ['newsArchive'] = $this->articles->getArticlesHomeWidget(5,1,1);
+        $data ['matchReport'] = $this->articles->getArticlesHomeWidget(5,0,2);
         $data ['nextMatch'] = $this->match->getNextGame();
         
         $this->load->view('meta/metadata', $data);

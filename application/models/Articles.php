@@ -43,6 +43,7 @@ class Articles extends CI_Model {
         
         $this->db->select('*');
         $this->db->select("DATE_FORMAT(date, '%e. %M %Y') AS fulldate", FALSE);
+        $this->db->select("DATE_FORMAT(date, '%d.%m.%y') AS shortdate", FALSE);
         $this->db->from('news');
         $this->db->order_by('date','desc');
         $this->db->limit($limit, $start);
@@ -52,7 +53,37 @@ class Articles extends CI_Model {
         
     }
     
-    public function getArticlesHome ($limit, $start, $type) {
+    public function getArticlesHome ($limit, $start) {
+        
+        $this->db->select('*');
+        $this->db->select("DATE_FORMAT(date, '%e. %M %Y') AS fulldate", FALSE);
+        $this->db->select("DATE_FORMAT(date, '%d.%m.%y') AS shortdate", FALSE);
+        $this->db->from('news');
+        $this->db->order_by('date','desc');
+        $this->db->where('category != 3');
+        $this->db->limit($limit, $start);
+        $query = $this->db->get();
+        
+        return $query;
+        
+    }
+    
+    public function getHighlights ($limit, $start) {
+        
+        $this->db->select('*');
+        $this->db->select("DATE_FORMAT(date, '%e. %M %Y') AS fulldate", FALSE);
+        $this->db->select("DATE_FORMAT(date, '%d.%m.%y') AS shortdate", FALSE);
+        $this->db->from('news');
+        $this->db->order_by('date','desc');
+        $this->db->where('category', '3');
+        $this->db->limit($limit, $start);
+        $query = $this->db->get();
+        
+        return $query;
+        
+    }
+    
+    public function getArticlesHomeWidget ($limit, $start, $type) {
         
         $this->db->select('*');
         $this->db->select("DATE_FORMAT(date, '%e.%m.%y') AS date", FALSE);

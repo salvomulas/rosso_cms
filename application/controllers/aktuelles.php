@@ -52,7 +52,7 @@ class Aktuelles extends MY_Controller {
         // Set Controller properties
         $data['page_title'] = $data['articleTitle'];
 
-        if ($data['article']->category == 1) {
+        if ($data['article']->category == 1 || 3) {
             // Load views with all the loaded data
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();

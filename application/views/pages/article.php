@@ -15,7 +15,7 @@
             <?php
             if ($article->pictureURL) {
                 echo '<div class="text-center">';
-                echo '<img src="http://placehold.it/260x180" alt="" style="width: 260px; height: 180px;">';
+                echo '<img src="'.base_url().'assets/img/articles/'.$article->pictureURL.'" alt="" style="width: 260px; height: 180px;">';
                 echo '</div>';
                 echo '<hr>';
             }

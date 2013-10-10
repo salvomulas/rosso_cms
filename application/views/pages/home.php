@@ -262,7 +262,42 @@
         </div>
 
         <div class="well">
-                <h4>N&auml;chstes Spiel</h4>
+            <h4>N&auml;chstes Spiel der ersten Mannschaft</h4>
+
+            <div class="row-fluid">
+                <div class="span3">
+                    <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 150px;">
+                </div>
+                <div class="span9">
+                    <?php
+
+                    if ($nextMatch->num_rows > 0) {
+                        foreach ($nextMatch->result() as $row) {
+
+                            switch ($row->teamID) {
+                                case 1:
+                            }
+
+                            echo '<h5>'.$row->gameType.' - '.$row->name.'</h5>';
+                            echo '<p><strong>vs </strong>'.$row->opponent.'</p>';
+                            echo '<p>'.$row->location.'</p>';
+                            echo '<p>'.$row->complex.'</p>';
+                            echo '<p>'.$row->date.' um '.$row->time.' Uhr</p>';
+                        }
+                    } else {
+                        echo '<p>Es sind noch keine Spiele angesetzt!</p>';
+                    }
+
+                    ?>
+                </div>
+                <hr>
+                <p></p>
+            </div>
+
+        </div>
+
+        <div class="well">
+                <h4>N&auml;chste Spiele</h4>
 
                 <div class="row-fluid">
                     <div class="span3">
@@ -290,6 +325,24 @@
                        
                         ?>
                     </div>
+                    <hr>
+                    <p></p>
+                    <table class="table table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Team</th>
+                                <th>Gegner</th>
+                                <th>Datum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Zweite</td>
+                                <td>FC Laufenburg</td>
+                                <td>02.08.13</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
             </div>

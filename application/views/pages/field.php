@@ -26,11 +26,11 @@
                     </tr>
                     <tr>
                         <th>Abwart</th>
-                        <td>Peter Niederhauser</td>
+                        <td>Markus Spiess</td>
                     </tr>
                     <tr>
                         <th>Tel. Abwart</th>
-                        <td>+41 (61) 921 49 74</td>
+                        <td>+41 (61) 926 20 12</td>
                     </tr>
                     <tr>
                         <th>Ort</th>

@@ -19,20 +19,20 @@ class Site extends MY_Controller {
         
         // Load libraries
         $this->load->library('parser');
-
         $data ['page_title'] = "Willkommen";
         
         // Load ranking data
         $data ['showTeams'] = array(1,2,3,10);
         $data ['rankTables'] = $this->ranking->getTables($data['showTeams']);
         $data ['teamScores'] = $this->ranking->getTeamScores($data['showTeams']);
-        
+
         // Load news data
         $data ['blog'] = $this->articles->getArticlesHome(5,0);
         $data ['highlights'] = $this->articles->getHighlights(5,0);
         $data ['newsArchive'] = $this->articles->getArticlesHomeWidget(5,1,1);
         $data ['matchReport'] = $this->articles->getArticlesHomeWidget(5,0,2);
-        $data ['nextMatch'] = $this->match->getNextGame();
+        $data ['nextMatch'] = $this->match->getNextGameTeam(1);
+        $data ['nextMatches'] = $this->match->getNextGames();
         
         $this->load->view('meta/metadata', $data);
         $this->drawNavigation();

@@ -25,14 +25,6 @@
                         <td>3</td>
                     </tr>
                     <tr>
-                        <th>Abwart</th>
-                        <td>Markus Spiess</td>
-                    </tr>
-                    <tr>
-                        <th>Tel. Abwart</th>
-                        <td>+41 (61) 926 20 12</td>
-                    </tr>
-                    <tr>
                         <th>Ort</th>
                         <td>Lausen</td>
                     </tr>

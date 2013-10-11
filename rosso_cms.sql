@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 11. Okt 2013 um 16:35
--- Server Version: 5.5.16
--- PHP-Version: 5.3.8
+-- Erstellungszeit: 11. Okt 2013 um 23:06
+-- Server Version: 5.1.44
+-- PHP-Version: 5.3.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
+CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -81,8 +83,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `po
 (145851, 2, 0, 'Meisterschaft', 5, 5, 'Do', '2013-08-29', '20:30:00', 'AC Virtus Liestal b', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
 (145860, 2, 1, 'Meisterschaft', 2, 6, 'Sa', '2013-09-18', '20:00:00', 'Pratteln United ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145864, 2, 0, 'Meisterschaft', 8, 2, 'So', '2013-09-22', '10:00:00', 'FC Bubendorf', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
-(145871, 2, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '11:00:00', 'NK Pajde', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145877, 2, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '12:30:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145871, 2, 1, 'Meisterschaft', 2, 3, 'So', '2013-09-29', '11:00:00', 'NK Pajde', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145877, 2, 0, 'Meisterschaft', 0, 1, 'So', '2013-10-06', '12:30:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145882, 2, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-12', '20:00:00', 'FC Wallbach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145890, 2, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '19:00:00', 'FC Liestal  ', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
 (145893, 2, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '11:00:00', 'FC Diegten Eptingen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -103,7 +105,7 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `po
 (146467, 1, 0, 'Meisterschaft', 1, 1, 'Sa', '2013-08-31', '20:00:00', 'SV Sissach a', 'Sportzentrum Tannenbrunn, Sissach - 1', 'Sportzentrum Tannenbrunn', 'Sissach', '1', 'Sportzentrum Tannenbrunn, Sissach'),
 (146476, 1, 1, 'Meisterschaft', 5, 0, 'Sa', '2013-09-07', '18:00:00', 'FC Oberdorf ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146480, 1, 0, 'Meisterschaft', 0, 4, 'So', '2013-09-22', '13:00:00', 'FC Bubendorf', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
-(146487, 1, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-28', '18:00:00', 'SV Muttenz b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146487, 1, 1, 'Meisterschaft', 8, 0, 'Sa', '2013-09-28', '18:00:00', 'SV Muttenz b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146493, 1, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-05', '19:00:00', 'FC Diegten Eptingen  ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
 (146498, 1, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-12', '18:00:00', 'FC Gelterkinden b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146506, 1, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '20:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -125,8 +127,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `po
 (152024, 10, 0, 'Meisterschaft', 4, 2, 'Fr', '2013-08-30', '20:30:00', 'FC Birsfelden  ', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
 (152031, 10, 1, 'Meisterschaft', 1, 4, 'Sa', '2013-09-07', '16:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152035, 10, 0, 'Meisterschaft', 4, 1, 'Sa', '2013-09-21', '13:00:00', 'FC Tuerkguecue Basel ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(152040, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-09-28', '16:00:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152046, 10, 0, 'Meisterschaft', 0, 0, 'Fr', '2013-10-11', '20:15:00', 'FC Bubendorf  ', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
+(152040, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-23', '20:15:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152046, 10, 0, 'Meisterschaft', 1, 6, 'Fr', '2013-10-11', '20:15:00', 'FC Bubendorf  ', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
 (152049, 10, 1, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '16:00:00', 'FC Dardania', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152057, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-26', '13:00:00', 'FC Birlik', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
 (152058, 10, 0, 'Meisterschaft', 0, 0, 'Sa', '2014-04-05', '15:00:00', 'US Bottecchia BS', 'Sportanlage Rheinacker, Landauerstr. 45,   - Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45', ' ', 'Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45,  '),
@@ -142,8 +144,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `po
 (153358, 15, 0, 'Meisterschaft', 3, 0, 'So', '2013-09-01', '13:00:00', 'FC Nordstern BS ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
 (153362, 15, 1, 'Meisterschaft', 0, 6, 'Sa', '2013-09-11', '19:30:00', 'FC Concordia Basel ', 'Bifang, Lausen - Stutz', 'Bifang', 'Lausen', 'Stutz', 'siehe Bemerkungen:                             '),
 (153365, 15, 0, 'Meisterschaft', 13, 0, 'So', '2013-09-22', '13:00:00', 'FC Telegraph BS ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(153367, 15, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '13:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153372, 15, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '15:00:00', 'FC Laufenburg-Kaisten ', 'Hard, Kaisten - 1', 'Hard', 'Kaisten', '1', 'Turnhalle, Kaisten                           '),
+(153367, 15, 1, 'Meisterschaft', 0, 16, 'So', '2013-09-29', '13:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153372, 15, 0, 'Meisterschaft', 3, 0, 'So', '2013-10-06', '15:00:00', 'FC Laufenburg-Kaisten ', 'Hard, Kaisten - 1', 'Hard', 'Kaisten', '1', 'Turnhalle, Kaisten                           '),
 (153378, 15, 0, 'Meisterschaft', 0, 0, 'Sa', '2013-10-19', '17:30:00', 'FC Allschwil', 'Im Brueel, Allschwil,   - 2', 'Im Brueel, Allschwil', ' ', '2', 'Im Brueel, Allschwil,  '),
 (153379, 15, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '13:00:00', 'FC Nordstern BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (153383, 15, 0, 'Meisterschaft', 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Concordia Basel ', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
@@ -161,8 +163,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `pointsHome`, `po
 (160850, 3, 0, 'Meisterschaft', 3, 2, 'Sa', '2013-08-31', '18:00:00', 'AC Virtus Liestal a', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
 (160859, 3, 1, 'Meisterschaft', 3, 1, 'So', '2013-09-08', '11:00:00', 'FC Birsfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (160863, 3, 0, 'Meisterschaft', 3, 3, 'So', '2013-09-22', '15:00:00', 'CD Espanol Basel a', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(160870, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-09-29', '15:00:00', 'SC Basel Nord a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160876, 3, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-06', '15:00:00', 'FC Ferad a', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
+(160870, 3, 1, 'Meisterschaft', 0, 7, 'So', '2013-09-29', '15:00:00', 'SC Basel Nord a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160876, 3, 0, 'Meisterschaft', 1, 5, 'So', '2013-10-06', '15:00:00', 'FC Ferad a', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
 (160881, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-13', '14:00:00', 'FC Schwarz-Weiss', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (160889, 3, 0, 'Meisterschaft', 0, 0, 'So', '2013-10-20', '13:00:00', 'FK Srbija Basel ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
 (160892, 3, 1, 'Meisterschaft', 0, 0, 'So', '2013-10-27', '15:00:00', 'FC Pratteln', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -200,7 +202,7 @@ CREATE TABLE IF NOT EXISTS `member_active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=121 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=139 ;
 
 --
 -- Daten für Tabelle `member_active`
@@ -259,7 +261,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (70, 57, 'Rieder', 'Yves', '', '1989-10-04', '', 2, 2, '00125.jpg'),
 (71, 15, 'Rosamilia', 'Nicola', '', '1975-04-07', '', 10, 3, '00164.jpg'),
 (72, 7, 'Rüedi', 'Flavio', '', '1993-03-30', '', 1, 3, '00107.jpg'),
-(73, 17, 'Sahin', 'Denis', '', '1986-08-17', '', 1, 3, '00111.jpg'),
+(73, 17, 'Sahin', 'Denis', '', '1986-08-17', '', 3, 3, '00111.jpg'),
 (76, 10, 'Salfinger', 'Fabian', '', '1988-11-03', '', 2, 4, ''),
 (77, 5, 'Salvadori', 'Ilaria', '', '1995-02-05', '', 15, 2, ''),
 (78, 10, 'Santo', 'Deila', '', '1989-12-25', '', 15, 4, '00130.jpg'),
@@ -291,7 +293,25 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (112, 32, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
 (113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg'),
 (118, 13, 'Tomeo', 'Ferdinando', '', '0000-00-00', '', 10, 3, '00174.jpg'),
-(119, 19, 'Schreiber', 'Pascal', '', '0000-00-00', '', 10, 3, '00176.jpg');
+(119, 19, 'Schreiber', 'Pascal', '', '0000-00-00', '', 10, 3, '00176.jpg'),
+(121, 1, 'Höfler', 'Alain', '', '1983-02-12', '', 3, 1, ''),
+(122, 2, 'Accanito', 'Luciano', '', '1981-06-07', '', 3, 2, ''),
+(123, 3, 'Caselle', 'Mirco', '', '1989-12-16', '', 3, 2, ''),
+(124, 4, 'Isone', 'Damiano', '', '1989-09-27', '', 3, 2, ''),
+(125, 5, 'Jeanneret', 'Nicolas', '', '1992-09-15', '', 3, 2, ''),
+(126, 6, 'Bürkler', 'Saverio', '', '1990-08-06', '', 3, 2, ''),
+(127, 7, 'Furler', 'Yves', '', '1993-02-05', '', 3, 3, ''),
+(128, 8, 'Russo', 'Fabio', '', '1990-07-08', '', 3, 3, ''),
+(129, 9, 'Schilt', 'Ramon', '', '1997-08-28', '', 3, 3, ''),
+(130, 10, 'Spinella', 'Giuseppe', '', '1985-06-07', '', 3, 4, ''),
+(131, 13, 'Russo', 'Gianluca', '', '1995-05-29', '', 3, 3, ''),
+(132, 14, 'Di Benedetto', 'Samuele', '', '1992-12-22', '', 3, 3, ''),
+(133, 15, 'Schiliro', 'Vincenzo', '', '1990-11-24', '', 3, 2, ''),
+(134, 18, 'Aegerter', 'Christian', '', '1991-12-17', '', 3, 3, ''),
+(135, 19, 'Gazel', 'Onur', '', '1995-01-16', '', 3, 4, ''),
+(136, 21, 'Greco', 'Aniello', '', '1994-04-15', '', 3, 3, ''),
+(137, 22, 'Spinella', 'Luigi', '', '1977-09-08', '', 3, 4, ''),
+(138, 12, 'Lopez', 'Selina', '', '1995-07-29', '', 15, 3, '');
 
 -- --------------------------------------------------------
 
@@ -441,11 +461,11 @@ CREATE TABLE IF NOT EXISTS `news` (
 INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`) VALUES
 (1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '00103.jpg', 0, '2013-08-28 19:33:58', 1),
 (2, 'Familienturnier und Grillabend am 14. September', 'Der AC Rossoneri organisiert am 14. September 2013 um 14:00 Uhr ein Familienturnier in Lausen. Am Turnier sind sämtliche Mitglieder nach Anmeldung spielberechtigt. Darüber hinaus findet am selben Tag um 18:00 Uhr das Cupspiel unserer ersten Mannschaft gegen den FC Therwil (2. Liga) statt. Zum krönenden Abschluss gibt es natürlich gleich neben dem Spielfeld einen wunderbaren Grillplausch, unsere Bar ist selbstverständlich ebenfalls vor Ort und kümmert sich sehr gerne um unsere durstige Gäste. Wir freuen uns auf diesen Event!', '00102.jpg', 0, '2013-09-05 22:41:03', 1),
-(3, 'Die erste Mannschaft auf dem ersten Platz', 'Die harte Arbeit des Trainer-Trio''s und der gesamten Mannschaft hat sich nun endlich ausbezahlt! Die erste Mannschaft erreicht nach dem grandiosen Sieg von 8:0 gegen den SV Muttenz den ersten Platz. Unsere erste Mannschaft hat bisher insgesamt 6 Spiele bestritten - davon 5 Spiele gewonnen und 1 Spiel unentschieden. Eine sagenhafte Leistung!<br />\r\nAuch das Torverhältnis sieht fantastisch aus: Nach den 6 Spielen hat die erste Mannschaft bisher nur ein einziges Gegentor kassiert und konnte 21 Treffer erzielen - somit hat der AC Rossoneri in der gesamten 4. Liga die beste Verteidigung überhaupt (natürlich gehört die ganze Mannschaft dazu).<br />\r\nWir wünschen der ersten Mannschaft weiterhin viel Erfolg. Weiter so!', '00104.jpg', 0, '2013-09-28 21:54:47', 1),
-(9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem Unentschieden unserer ersten Mannschaft gegen den FC Diegten Eptingen ging die plötzliche Euphorie wieder den Bach runter. Sofort nach dem Erlangen des ersten Platzes erfasste uns die Panik, die Führung wieder abgeben zu müssen. Unsere Jungs werden in der Tabelle zur Zeit sehr dicht von Laufenburg, Gelterkinden und dem FC Stein verfolgt - einmal stolpern wäre bereits genug, um die Führung wieder zu verlieren. Leider reichte es in Diegten nur für ein Unentschieden.<br />\r\nDas Spiel zwischen Laufenburg und Gelterkinden endete aber zu unseren Gunsten ebenfalls mit einem Unentschieden. Diesbezüglich können wir weiterhin von der Tabellenspitze grüssen und bereiten uns auf ein spannendes Spiel nächsten Samstag gegen den FC Gelterkinden vor. Forza Rossoneri. ', '00105.jpg', 0, '2013-10-06 13:59:28', 1),
-(10, 'Drei direkte Begegnungen und ein Derby', 'Die Vorrunde neigt sich dem Ende zu - und was für ein Ende! Die Leistung der ersten Mannschaft kann zur Zeit nicht einmal in Worte gefasst werden. Sagenhaft, grandios, souverän! Angesichts der super Leistungen der gesamten Mannschaft inklusive Trainerstab ist dieser erste Platz hochverdient.<br />\r\nSpannend werden die letzten vier Spiele der Vorrunde: Uns erwarten nämlich drei Direktbegegnungen mit dem zweit-, dritt- und viert-Platzierten. Darüber hinaus wird es auch noch zum hochspannenden Derby mit dem FC Lausen kommen. Die Vorrunde wird in einem fussballerischen Spektakel enden.', '00106.jpg', 0, '2013-10-11 14:16:06', 1),
-(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuhalten und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten.', '00100.jpg', 0, '2013-10-10 13:47:21', 3),
-(12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre den ganzen Tag mit unseren Mitgliedern zu verbringen.', '00101.jpg', 0, '2013-10-10 22:25:48', 3);
+(3, 'Die erste Mannschaft auf dem ersten Platz', 'Die harte Arbeit des Trainer-Trio''s und der gesamten Mannschaft hat sich nun endlich ausbezahlt! Die erste Mannschaft erreicht nach dem grandiosen Sieg von 8:0 gegen den SV Muttenz den ersten Platz. Unsere erste Mannschaft hat bisher insgesamt 6 Spiele bestritten - davon 5 Spiele gewonnen und 1 Spiel unentschieden. Eine sagenhafte Leistung!<br />\r\nAuch das Torverhältnis sieht fantastisch aus: Nach den 6 Spielen hat die erste Mannschaft bisher nur ein einziges Gegentor kassiert und konnte satte 21 Treffer erzielen - somit hat der AC Rossoneri in der gesamten 4. Liga die beste Verteidigung überhaupt (natürlich gehört die ganze Mannschaft dazu).<br />\r\nWir wünschen der ersten Mannschaft weiterhin viel Erfolg. Weiter so!', '00104.jpg', 0, '2013-09-28 21:54:47', 1),
+(9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem Unentschieden unserer ersten Mannschaft gegen den FC Diegten Eptingen ging die plötzliche Euphorie wieder den Bach runter. Sofort nach dem Erlangen des ersten Platzes erfasste uns die Panik, die Führung wieder abgeben zu müssen. Unsere Jungs werden in der Tabelle zur Zeit sehr dicht von Laufenburg, Gelterkinden und dem FC Stein verfolgt - einmal stolpern wäre bereits genug, um die Führung wieder zu verlieren. Das Stolpern liess nicht lange auf sich warten: Leider reichte es in Diegten trotz einer brillianten Leistung nur für ein Unentschieden.<br />\r\nDas Spiel zwischen Laufenburg und Gelterkinden endete allerdings zu unseren Gunsten ebenfalls mit einem Unentschieden. Diesbezüglich können wir weiterhin von der Tabellenspitze grüssen und bereiten uns auf ein spannendes Spiel nächsten Samstag gegen den FC Gelterkinden vor. Forza Rossoneri. ', '00105.jpg', 0, '2013-10-06 13:59:28', 1),
+(10, 'Drei direkte Begegnungen und ein Derby', 'Die Vorrunde neigt sich dem Ende zu - und was für ein Ende! Die Leistung der ersten Mannschaft kann zur Zeit nicht einmal in Worte gefasst werden. Sagenhaft, grandios, souverän! Angesichts der super Leistungen der gesamten Mannschaft inklusive Trainerstab ist dieser erste Platz hochverdient.<br />\r\nSpannend werden die letzten vier Spiele der Vorrunde: Uns erwarten nämlich drei Direktbegegnungen mit dem zweit-, dritt- und viert-Platzierten. Darüber hinaus wird es auch noch zum hochspannenden Derby mit dem FC Lausen kommen. Die Vorrunde wird in einem fussballerischen Spektakel enden. Forza Rossoneri', '00106.jpg', 0, '2013-10-11 14:16:06', 1),
+(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuheben und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten. Weitere Infos werden in Kürze auf unserer Webseite folgen. Save the date!', '00100.jpg', 0, '2013-10-10 13:47:21', 3),
+(12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre, so viele Gäste für diese Anlässe begrüssen zu dürfen. Vielen Dank an unsere Fans und den Familien unserer Mitglieder.', '00101.jpg', 0, '2013-10-10 22:41:45', 3);
 
 -- --------------------------------------------------------
 

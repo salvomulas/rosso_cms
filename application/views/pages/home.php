@@ -12,6 +12,17 @@ function shortenString($string, $width) {
 }
 
 ?>
+
+<script>
+    $(function (){
+        $("#1").popover().on('click', function(e) {e.preventDefault(); return true;});
+        $("#2").popover().on('click', function(e) {e.preventDefault(); return true;});
+        $("#3").popover().on('click', function(e) {e.preventDefault(); return true;});
+        $("#4").popover().on('click', function(e) {e.preventDefault(); return true;});
+        $("#5").popover().on('click', function(e) {e.preventDefault(); return true;});
+    });
+</script>
+
 <div class="container">
 
     <div class="row">
@@ -210,7 +221,7 @@ function shortenString($string, $width) {
                                 case 1:
                             }
 
-                            echo '<h5>' . $row->gameType . ' - ' . $row->name . '</h5>';
+                            echo '<h5>' . $row->gameType .'</h5>';
                             echo '<p><strong>vs </strong>' . $row->opponent . '</p>';
                             echo '<p>' . $row->location . '</p>';
                             echo '<p>' . $row->complex . '</p>';
@@ -230,52 +241,73 @@ function shortenString($string, $width) {
             <div class="well">
                 <h4>N&auml;chste Spiele</h4>
 
-                <div class="row-fluid">
-                    <div class="span3">
-                        <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 150px;">
-                    </div>
-                    <div class="span9">
-                    <?php
-                    if ($nextMatch->num_rows > 0) {
-                        foreach ($nextMatch->result() as $row) {
+                <?php
 
-                            switch ($row->teamID) {
-                                case 1:
-                            }
+                if ($nextMatches) {
 
-                            echo '<h5>' . $row->gameType . ' - ' . $row->name . '</h5>';
-                            echo '<p><strong>vs </strong>' . $row->opponent . '</p>';
-                            echo '<p>' . $row->location . '</p>';
-                            echo '<p>' . $row->complex . '</p>';
-                            echo '<p>' . $row->date . ' um ' . $row->time . ' Uhr</p>';
+                    echo '<table class="table table-hover table-condensed">';
+                    echo '<thead>';
+                    echo '<tr>';
+                    echo '<th>Team</th>';
+                    echo '<th>Gegner</th>';
+                    echo '<th>Datum</th>';
+                    echo '<th>Zeit</th>';
+                    echo '</tr>';
+                    echo '</thead>';
+                    echo '<tbody>';
+
+                    $jsObject = 1;
+
+                    foreach ($nextMatches->result() as $row) {
+
+                        switch ($row->teamID) {
+
+                            case 1: $team = "Erste";
+                            break;
+                            case 2: $team = "Zweite";
+                            break;
+                            case 3: $team = "Dritte";
+                            break;
+                            case 10: $team = "Senioren";
+                            break;
+                            case 15: $team = "Frauen";
+                            break;
+                            default: $team = NULL;
+                            break;
+
                         }
-                    } else {
-                        echo '<p>Es sind noch keine Spiele angesetzt!</p>';
+
+                        if ($row->isHome == 1) {
+                            $gameTitle = "AC Rossoneri - ".$row->opponent;
+                        } else {
+                            $gameTitle = $row->opponent." - AC Rossoneri";
+                        }
+
+                        $location = $row->time.' Uhr: '.$row->location.' | '.$row->plz;
+
+                        echo '<tr>';
+                        echo '<td>'.$team.'</td>';
+                        echo '<td>'.$row->opponent.'</td>';
+                        echo '<td>'.$row->date.'</td>';
+                        echo '<td><a href="" id="'.$jsObject.'" rel="popover" class="btn btn-mini" data-placement="top" data-toggle="popover" title="" data-content="'.$location.'" data-original-title="'.$gameTitle.'"><i class="icon-info-sign"></i></i></a></td>';
+                        echo '</tr>';
+
+                        $jsObject++;
+
                     }
-                    ?>
-                    </div>
-                    <hr>
-                    <p></p>
-                    <table class="table table-hover table-condensed">
-                        <thead>
-                            <tr>
-                                <th>Team</th>
-                                <th>Gegner</th>
-                                <th>Datum</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Zweite</td>
-                                <td>FC Laufenburg</td>
-                                <td>02.08.13</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+
+                    echo '</tbody>';
+                    echo '</table>';
+
+                } else {
+
+                    echo "Keine Spiele angesetzt";
+
+                }
+
+                ?>
 
             </div>
-
 
         </div>
 
@@ -305,7 +337,7 @@ function shortenString($string, $width) {
                     foreach ($newsArchive->result() as $row) {
 
                         echo '<tr>';
-                        echo '<td>' . $row->date . '</td>';
+                        echo '<td>' . $row->fulldate . '</td>';
                         echo '<td>' . $row->title . '</td>';
                         echo '<td><a href="' . base_url() . 'aktuelles/article/' . $row->id . '"><i class="icon-play"></a></td>';
                         echo '</tr>';
@@ -342,7 +374,7 @@ function shortenString($string, $width) {
                     foreach ($matchReport->result() as $row) {
 
                         echo '<tr>';
-                        echo '<td>' . $row->date . '</td>';
+                        echo '<td>' . $row->fulldate . '</td>';
                         echo '<td>' . $row->title . '</td>';
                         echo '<td><a href="' . base_url() . 'aktuelles/match/' . $row->id . '"><i class="icon-play"></a></td>';
                         echo '</tr>';
@@ -358,41 +390,27 @@ function shortenString($string, $width) {
 
             </div>
         </div>
-        
+
         <div class="span4">
             <div class="well">
                 <h4>Letzte Spiele</h4>
-
-                <?php
-                if ($matchReport) {
-
-                    echo '<table class="table table-condensed table-hover">';
-                    echo '<thead>';
-                    echo '<tr>';
-                    echo '<th>Datum</th>';
-                    echo '<th>Titel</th>';
-                    echo '<th></th>';
-                    echo '</tr>';
-                    echo '</thead>';
-                    echo '<tbody>';
-
-                    foreach ($matchReport->result() as $row) {
-
-                        echo '<tr>';
-                        echo '<td>' . $row->date . '</td>';
-                        echo '<td>' . $row->title . '</td>';
-                        echo '<td><a href="' . base_url() . 'aktuelles/match/' . $row->id . '"><i class="icon-play"></a></td>';
-                        echo '</tr>';
-                    }
-
-                    echo '</tbody>';
-                    echo '</table>';
-                } else {
-
-                    echo '<p>Es wurden noch keine Matchberichte verfasst';
-                }
-                ?>
-
+                <table class="table table-condensed table-hover">
+                    <tr>
+                        <td><strong>AC Rossoneri (1)</strong></td>
+                        <td class="text-center">8 : 0</td>
+                        <td>SV Muttenz</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AC Rossoneri (2)</strong></td>
+                        <td class="text-center">4 : 1</td>
+                        <td>FC Lausen</td>
+                    </tr>
+                    <tr>
+                        <td>FC Birsfelden</td>
+                        <td class="text-center">3 : 4</td>
+                        <td><strong>AC Rossoneri (Sen.)</strong></td>
+                    </tr>
+                </table>
             </div>
         </div>
 

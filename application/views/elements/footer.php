@@ -16,14 +16,17 @@
         </div>
         <hr>
         <div class="row text-center">
-            <div class="span4">
+            <div class="span3">
                 <a hreF="http://www.lenkgeometrie-center.ch" target="_blank" alt="Lenkgeometrie Center GmbH"><img src="<? echo base_url(); ?>assets/img/sponsors/lenkgeometrie.png"></a>
             </div>
-            <div class="span4">
+            <div class="span3">
                 <a hreF="http://www.visam.ch" target="_blank" alt="Visam Sport"><img src="<? echo base_url(); ?>assets/img/sponsors/visamsport.png"></a>
             </div>
-            <div class="span4">
+            <div class="span3">
                 <a hreF="http://www.axanova.ch" target="_blank" alt="AxaNova"><img src="<? echo base_url(); ?>assets/img/sponsors/axanova.png"></a>
+            </div>
+            <div class="span3">
+                <a hreF="http://www.trafico.ch" target="_blank" alt="Trafico"><img src="<? echo base_url(); ?>assets/img/sponsors/trafico.png"></a>
             </div>
         </div>
     </div>

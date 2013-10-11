@@ -15,11 +15,28 @@
             <?php
             if ($article->pictureURL) {
                 echo '<div class="text-center">';
-                echo '<img src="'.base_url().'assets/img/articles/'.$article->pictureURL.'" alt="" style="width: 260px; height: 180px;">';
+                echo '<img src="'.base_url().'assets/img/articles/'.$article->pictureURL.'" alt="">';
                 echo '</div>';
                 echo '<hr>';
             }
-            ?> 
+            ?>
+
+            <?php
+
+            switch ($article->category) {
+
+                case 1: $cat = "News";
+                    break;
+                case 2: $cat = "Matchbericht";
+                    break;
+                case 3: $cat = "Highlight";
+                    break;
+                default: $cat = NULL;
+                    break;
+
+            }
+
+            ?>
       
             <div class="well">
                 
@@ -40,7 +57,7 @@
                     </tr>
                     <tr>
                         <th>Kategorie</th>
-                        <td><a href="#"><span class="label label-important">News</span></a></td>
+                        <td><a href="#"><span class="label label-important"><?php echo $cat; ?></span></a></td>
                     </tr>
                 </table>
                 

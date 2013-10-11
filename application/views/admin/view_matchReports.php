@@ -28,7 +28,7 @@
                         echo '<td>'.$row->title.'</td>';
                         echo '<td></td>';
                         echo '<td>';
-                        echo '<a href="'.base_url().'admin/edit_vorstand_member"><i class="icon-pencil"></i></a> ';
+                        echo '<a href="'.base_url().'administration/match/edit/'.$row->id.'"><i class="icon-pencil"></i></a> ';
                         echo '<a href="#myModal" role="button" data-toggle="modal"><i class="icon-remove"></i></a>';
                         echo '</td>';
                         echo '</tr>';

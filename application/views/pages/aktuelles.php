@@ -26,6 +26,9 @@
                     case 2: $link = base_url().'aktuelles/match/'.$row->id;
                             $cat = "Matchbericht";
                     break;
+                    case 3: $link = base_url().'aktuelles/article/'.$row->id;
+                            $cat = "Highlights";
+                    break;
                     default: $link = NULL;
                              $cat = NULL;
                 }

@@ -44,7 +44,11 @@
                 echo '<div class="row">';
                 echo '<div class="span2">';
                 echo '<a href="'.$link.'" class="thumbnail">';
-                echo '<img src="http://placehold.it/260x180" alt="">';
+                if ($row->pictureURL) {
+                    echo '<img src="'.base_url().'assets/img/articles/'.$row->pictureURL.'" alt="">';
+                } else {
+                    echo '<img src="http://placehold.it/260x180" alt="">';
+                }
                 echo '</a>';
                 echo '</div>';
 

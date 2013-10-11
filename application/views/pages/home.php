@@ -92,7 +92,11 @@ function shortenString($string, $width) {
                 echo '<div class="row">';
                 echo '<div class="span2">';
                 echo '<a href="' . $link . '" class="thumbnail">';
-                echo '<img src="http://placehold.it/260x180" alt="">';
+                if ($row->pictureURL) {
+                    echo '<img src="'.base_url().'assets/img/articles/'.$row->pictureURL.'" alt="">';
+                } else {
+                    echo '<img src="http://placehold.it/260x180" alt="">';
+                }
                 echo '</a>';
                 echo '</div>';
 
@@ -323,7 +327,7 @@ function shortenString($string, $width) {
                 <h4>Matchberichte Archiv</h4>
 
                 <?php
-                if ($matchReport->num_rows > 0) {
+                if ($matchReport) {
 
                     echo '<table class="table table-condensed table-hover">';
                     echo '<thead>';
@@ -360,7 +364,7 @@ function shortenString($string, $width) {
                 <h4>Letzte Spiele</h4>
 
                 <?php
-                if ($matchReport->num_rows > 0) {
+                if ($matchReport) {
 
                     echo '<table class="table table-condensed table-hover">';
                     echo '<thead>';

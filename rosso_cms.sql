@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 11. Okt 2013 um 00:05
--- Server Version: 5.1.44
--- PHP-Version: 5.3.1
+-- Erstellungszeit: 11. Okt 2013 um 16:35
+-- Server Version: 5.5.16
+-- PHP-Version: 5.3.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
-CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -441,11 +439,11 @@ CREATE TABLE IF NOT EXISTS `news` (
 --
 
 INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`) VALUES
-(1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '', 0, '2013-08-28 19:33:52', 1),
-(2, 'Familienturnier und Grillabend am 14. September', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-09-08 16:14:14', 1),
-(3, 'Matchbericht Test', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-09-08 16:14:19', 2),
-(9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem harten Unentschieden gegen den FC Diegten Eptingen vermutete man das Schlimmste. Gleich nach dem Erlangen des ersten Platzes war nach dem Schlusspfiff der letzten Partie klar, dass wir die Führung genau so schnell verlieren könnten. Allerdings endete der Rest der Woche zu Gunsten unserer ersten Mannschaft. Ein Unentschieden zwischen Gelterkinden und Laufenburg sorge dafür, dass wir weiterhin auf dem ersten Platz verweilen können und mit einem Punkt abstand noch aufatmen können. Nächste Woche folgt das Spitzenspiel gegen Gelterkinden - Forza Rossoneri!', '', 0, '2013-10-08 16:20:02', 1),
-(10, 'Wir brauchen noch einen Test', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-10-10 12:32:11', 1),
+(1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '00103.jpg', 0, '2013-08-28 19:33:58', 1),
+(2, 'Familienturnier und Grillabend am 14. September', 'Der AC Rossoneri organisiert am 14. September 2013 um 14:00 Uhr ein Familienturnier in Lausen. Am Turnier sind sämtliche Mitglieder nach Anmeldung spielberechtigt. Darüber hinaus findet am selben Tag um 18:00 Uhr das Cupspiel unserer ersten Mannschaft gegen den FC Therwil (2. Liga) statt. Zum krönenden Abschluss gibt es natürlich gleich neben dem Spielfeld einen wunderbaren Grillplausch, unsere Bar ist selbstverständlich ebenfalls vor Ort und kümmert sich sehr gerne um unsere durstige Gäste. Wir freuen uns auf diesen Event!', '00102.jpg', 0, '2013-09-05 22:41:03', 1),
+(3, 'Die erste Mannschaft auf dem ersten Platz', 'Die harte Arbeit des Trainer-Trio''s und der gesamten Mannschaft hat sich nun endlich ausbezahlt! Die erste Mannschaft erreicht nach dem grandiosen Sieg von 8:0 gegen den SV Muttenz den ersten Platz. Unsere erste Mannschaft hat bisher insgesamt 6 Spiele bestritten - davon 5 Spiele gewonnen und 1 Spiel unentschieden. Eine sagenhafte Leistung!<br />\r\nAuch das Torverhältnis sieht fantastisch aus: Nach den 6 Spielen hat die erste Mannschaft bisher nur ein einziges Gegentor kassiert und konnte 21 Treffer erzielen - somit hat der AC Rossoneri in der gesamten 4. Liga die beste Verteidigung überhaupt (natürlich gehört die ganze Mannschaft dazu).<br />\r\nWir wünschen der ersten Mannschaft weiterhin viel Erfolg. Weiter so!', '00104.jpg', 0, '2013-09-28 21:54:47', 1),
+(9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem Unentschieden unserer ersten Mannschaft gegen den FC Diegten Eptingen ging die plötzliche Euphorie wieder den Bach runter. Sofort nach dem Erlangen des ersten Platzes erfasste uns die Panik, die Führung wieder abgeben zu müssen. Unsere Jungs werden in der Tabelle zur Zeit sehr dicht von Laufenburg, Gelterkinden und dem FC Stein verfolgt - einmal stolpern wäre bereits genug, um die Führung wieder zu verlieren. Leider reichte es in Diegten nur für ein Unentschieden.<br />\r\nDas Spiel zwischen Laufenburg und Gelterkinden endete aber zu unseren Gunsten ebenfalls mit einem Unentschieden. Diesbezüglich können wir weiterhin von der Tabellenspitze grüssen und bereiten uns auf ein spannendes Spiel nächsten Samstag gegen den FC Gelterkinden vor. Forza Rossoneri. ', '00105.jpg', 0, '2013-10-06 13:59:28', 1),
+(10, 'Drei direkte Begegnungen und ein Derby', 'Die Vorrunde neigt sich dem Ende zu - und was für ein Ende! Die Leistung der ersten Mannschaft kann zur Zeit nicht einmal in Worte gefasst werden. Sagenhaft, grandios, souverän! Angesichts der super Leistungen der gesamten Mannschaft inklusive Trainerstab ist dieser erste Platz hochverdient.<br />\r\nSpannend werden die letzten vier Spiele der Vorrunde: Uns erwarten nämlich drei Direktbegegnungen mit dem zweit-, dritt- und viert-Platzierten. Darüber hinaus wird es auch noch zum hochspannenden Derby mit dem FC Lausen kommen. Die Vorrunde wird in einem fussballerischen Spektakel enden.', '00106.jpg', 0, '2013-10-11 14:16:06', 1),
 (11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuhalten und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten.', '00100.jpg', 0, '2013-10-10 13:47:21', 3),
 (12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre den ganzen Tag mit unseren Mitgliedern zu verbringen.', '00101.jpg', 0, '2013-10-10 22:25:48', 3);
 
@@ -497,42 +495,42 @@ CREATE TABLE IF NOT EXISTS `teams_ranking` (
 --
 
 INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUES
-(1, 'SC M&uuml;nchenstein', 6, 13, 1),
-(2, 'FC Arisdorf', 10, 5, 1),
-(3, 'FC Diegten Eptingen', 9, 10, 1),
-(4, 'SV Muttenz b', 3, 19, 1),
-(5, 'FC Oberdorf', 4, 13, 1),
-(6, 'AC Rossoneri', 16, 8, 1),
-(7, 'FC Stein b', 13, 27, 1),
-(8, 'SV Sissach a', 8, 17, 1),
-(9, 'FC Lausen 72', 0, 22, 1),
-(10, 'FC Gelterkinden b', 15, 10, 1),
-(11, 'FC Laufenburg-Kaisten b', 15, 13, 1),
-(12, 'FC Bubendorf', 6, 12, 1),
-(13, 'FC Lausen 72', 15, 3, 2),
-(14, 'Pratteln United', 16, 10, 2),
-(15, 'FC Eiken', 3, 6, 2),
-(16, 'NK Pajde', 15, 8, 2),
-(17, 'FC Liestal', 9, 6, 2),
-(18, 'FC Wallbach', 3, 13, 2),
-(19, 'AC Virtus Liestal b', 14, 11, 2),
+(1, 'SC M&uuml;nchenstein', 6, 16, 1),
+(2, 'FC Arisdorf', 13, 8, 1),
+(3, 'FC Diegten Eptingen', 10, 11, 1),
+(4, 'SV Muttenz b', 3, 21, 1),
+(5, 'FC Oberdorf', 7, 16, 1),
+(6, 'AC Rossoneri', 17, 10, 1),
+(7, 'FC Stein b', 14, 29, 1),
+(8, 'SV Sissach a', 11, 19, 1),
+(9, 'FC Lausen 72', 1, 22, 1),
+(10, 'FC Gelterkinden b', 16, 1, 1),
+(11, 'FC Laufenburg-Kaisten b', 16, 14, 1),
+(12, 'FC Bubendorf', 6, 14, 1),
+(13, 'FC Lausen 72', 15, 6, 2),
+(14, 'Pratteln United', 19, 12, 2),
+(15, 'FC Eiken', 3, 10, 2),
+(16, 'NK Pajde', 18, 8, 2),
+(17, 'FC Liestal', 12, 7, 2),
+(18, 'FC Wallbach', 6, 13, 2),
+(19, 'AC Virtus Liestal b', 17, 12, 2),
 (20, 'FC Zeiningen', 0, 17, 2),
-(21, 'AC Rossoneri a', 7, 10, 2),
+(21, 'AC Rossoneri a', 10, 11, 2),
 (22, 'FC Gelterkinden', 6, 23, 2),
-(23, 'FC Diegten Eptingen', 0, 10, 2),
-(24, 'FC Bubendorf', 18, 2, 2),
+(23, 'FC Diegten Eptingen', 0, 20, 2),
+(24, 'FC Bubendorf', 21, 4, 2),
 (25, 'CD Espanol Basel a', 4, 8, 3),
-(26, 'SC Basel Nord a', 5, 6, 3),
-(27, 'FC Ferad a', 4, 6, 3),
-(28, 'AC Virtus Liestal a', 18, 12, 3),
-(29, 'FC Telegraph BS', 13, 18, 3),
-(30, 'FC Birsfelden', 7, 7, 3),
-(31, 'FC Schwarz-Weiss', 5, 7, 3),
+(26, 'SC Basel Nord a', 8, 8, 3),
+(27, 'FC Ferad a', 4, 8, 3),
+(28, 'AC Virtus Liestal a', 21, 18, 3),
+(29, 'FC Telegraph BS', 13, 21, 3),
+(30, 'FC Birsfelden', 10, 9, 3),
+(31, 'FC Schwarz-Weiss', 8, 11, 3),
 (32, 'FC Amicitia Riehen', 6, 8, 3),
-(33, 'FK Srbija Basel', 9, 13, 3),
-(34, 'FC Pratteln', 13, 15, 3),
-(35, 'AC Rossoneri b', 4, 8, 3),
-(36, 'FC Xalko', 13, 14, 3),
+(33, 'FK Srbija Basel', 9, 14, 3),
+(34, 'FC Pratteln', 16, 24, 3),
+(35, 'AC Rossoneri b', 7, 9, 3),
+(36, 'FC Xalko', 13, 22, 3),
 (37, 'FC Dardania', 16, 4, 10),
 (38, 'FC Birlik', 6, 8, 10),
 (39, 'FC Rheinfelden', 12, 6, 10),
@@ -545,11 +543,11 @@ INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUE
 (46, 'FC Birsfelden', 12, 11, 10),
 (47, 'FC Allschwil', 9, 0, 15),
 (48, 'FC Concordia Basel', 15, 0, 15),
-(49, 'FC Nordstern BS', 9, 1, 15),
+(49, 'FC Nordstern BS', 12, 1, 15),
 (50, 'FC Reinach', 12, 0, 15),
 (51, 'FC Telegraph BS', 12, 0, 15),
 (52, 'AC Rossoneri', 0, 11, 15),
-(53, 'FC Laufenburg-Kaisten', 0, 0, 15);
+(53, 'FC Laufenburg-Kaisten', 3, 0, 15);
 
 -- --------------------------------------------------------
 

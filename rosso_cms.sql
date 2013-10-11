@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 10. Okt 2013 um 16:17
--- Server Version: 5.5.16
--- PHP-Version: 5.3.8
+-- Erstellungszeit: 11. Okt 2013 um 00:05
+-- Server Version: 5.1.44
+-- PHP-Version: 5.3.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
+CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -432,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `category` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
 
 --
 -- Daten für Tabelle `news`
@@ -444,7 +446,8 @@ INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `ca
 (3, 'Matchbericht Test', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-09-08 16:14:19', 2),
 (9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem harten Unentschieden gegen den FC Diegten Eptingen vermutete man das Schlimmste. Gleich nach dem Erlangen des ersten Platzes war nach dem Schlusspfiff der letzten Partie klar, dass wir die Führung genau so schnell verlieren könnten. Allerdings endete der Rest der Woche zu Gunsten unserer ersten Mannschaft. Ein Unentschieden zwischen Gelterkinden und Laufenburg sorge dafür, dass wir weiterhin auf dem ersten Platz verweilen können und mit einem Punkt abstand noch aufatmen können. Nächste Woche folgt das Spitzenspiel gegen Gelterkinden - Forza Rossoneri!', '', 0, '2013-10-08 16:20:02', 1),
 (10, 'Wir brauchen noch einen Test', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 0, '2013-10-10 12:32:11', 1),
-(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuhalten und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten.', '00100.jpg', 0, '2013-10-10 13:47:21', 3);
+(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuhalten und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten.', '00100.jpg', 0, '2013-10-10 13:47:21', 3),
+(12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre den ganzen Tag mit unseren Mitgliedern zu verbringen.', '00101.jpg', 0, '2013-10-10 22:25:48', 3);
 
 -- --------------------------------------------------------
 

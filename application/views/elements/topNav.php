@@ -92,7 +92,7 @@ function menuObject ($name, $url) {
                                 echo '<li><a href=""><i class="icon-list-alt"></i> Tabellenverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-eye-open"></i> Schiedsrichterverwaltung</a></li>';
                                 echo '<li class="nav-header">Inhaltsverwaltung</li>';
-                                echo '<li><a href=""><i class="icon-file"></i> Matchberichte</a></li>';
+                                echo '<li><a href="'.base_url().'admin/match/show"><i class="icon-file"></i> Matchberichte</a></li>';
                                 echo '<li><a href=""><i class="icon-envelope"></i> Mitteilungen und News</a></li>';
                                 echo '<li><a href=""><i class="icon-calendar"></i> Eventverwaltung</a></li>';
                                 echo '<li><a href=""><i class="icon-bookmark"></i> Highlights</a></li>';

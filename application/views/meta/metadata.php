@@ -43,8 +43,15 @@ $css_responsive = array(
           'type' => 'text/css',
 );
 
+$css_summernote = array(
+          'href' => base_url().'assets/css/summernote-bootstrap.css',
+          'rel' => 'stylesheet',
+          'type' => 'text/css'
+);
+
 echo link_tag($css);
 echo link_tag($css_responsive);
+echo link_tag($css_summernote);
 
 ?>
 
@@ -54,3 +61,5 @@ echo link_tag($css_responsive);
 
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
+<script src="<?php echo base_url(); ?>/assets/js/summernote.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">

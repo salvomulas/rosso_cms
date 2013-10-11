@@ -25,6 +25,20 @@ class Admin extends MY_Controller {
             redirect ("error/PermissionDenied");
         }
     }
+
+    public function showReports()
+    {
+        if ($this->session->userdata('is_logged_in')) {
+            $data['page_title'] = "Matchberichte";
+            $data ['actualUser'] = $this->users->get_user($this->session->userdata('userid'));
+            $this->load->view("meta/metadata", $data);
+            $this->drawNavigation();
+            $this->load->view("admin/view_matchReports");
+            $this->load->view("elements/footer");
+        } else {
+            redirect ("error/PermissionDenied");
+        }
+    }
     
     public function groups()
     {

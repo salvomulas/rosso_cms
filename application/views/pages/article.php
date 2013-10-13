@@ -45,7 +45,7 @@
                 <table class="table table-condensed">
                     <tr>
                         <th>Autor</th>
-                        <td>Salvatore Mulas</td>
+                        <td><?php echo $article->firstName.' '.$article->lastName; ?></td>
                     </tr>
                     <tr>
                         <th>Datum</th>

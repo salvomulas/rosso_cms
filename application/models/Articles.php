@@ -13,10 +13,10 @@ class Articles extends CI_Model {
 
     public function getArticle ($id) {
 
-        $this->db->select('*')
+        $this->db->select('n.*, u.firstName, u.lastName')
                 ->select("DATE_FORMAT(date, '%e. %M %Y') AS date", FALSE)
                 ->select("DATE_FORMAT(date, '%H:%i') AS time", FALSE)
-                ->from('news')->where('id', $id);
+                ->from('news AS n, users AS u')->where('n.autor = u.id')->where('n.id', $id);
         $query = $this->db->get();
 
         if ($query->num_rows > 0) {
@@ -41,10 +41,11 @@ class Articles extends CI_Model {
     
     public function getArticlesLimit ($limit, $start) {
         
-        $this->db->select('*');
+        $this->db->select('n.*, u.firstName, u.lastName');
         $this->db->select("DATE_FORMAT(date, '%e. %M %Y') AS fulldate", FALSE);
         $this->db->select("DATE_FORMAT(date, '%d.%m.%y') AS shortdate", FALSE);
-        $this->db->from('news');
+        $this->db->from('news AS n, users AS u');
+        $this->db->where('n.autor = u.id');
         $this->db->order_by('date','desc');
         $this->db->limit($limit, $start);
         $query = $this->db->get();

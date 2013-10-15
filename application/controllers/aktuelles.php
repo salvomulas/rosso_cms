@@ -66,9 +66,17 @@ class Aktuelles extends MY_Controller {
 
     public function match($articleID) {
 
+        // Load player model
+        $this->load->model('player');
+        $test = array(35,102,69,33,79,101,103,19,93,99,96,57,113,100,109,120,104,139);
+
+        // Prepare sorting of SQL output
+        $csv = implode(',', $test);
+
         // Load aritcle
-        $data ['article'] = $this->articles->getArticle($articleID);
+        $data ['article'] = $this->articles->getMatchReport($articleID);
         $data ['articleTitle'] = $this->articles->getArticleTitle($articleID);
+        $data ['players'] = $this->player->getMatchPlayers($test,$csv);
 
         // Set Controller properties
         $data['page_title'] = $data['articleTitle'];
@@ -77,7 +85,7 @@ class Aktuelles extends MY_Controller {
             // Load views with all the loaded data
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
-            $this->load->view("elements/matchUnit", $data);
+            $this->load->view("elements/formation/451", $data);
             $this->load->view("pages/match", $data);
             $this->load->view("elements/footer");
         } else {

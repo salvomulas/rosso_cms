@@ -1,7 +1,21 @@
 <div class="container">
+
+    <?php
+
+    if ($article->isHome == 1) {
+        $loc = "Heimspiel";
+        $home = "AC Rossoneri";
+        $guest = $article->opponent;
+    } else {
+        $loc = "Ausw&auml;rts";
+        $home = $article->opponent;
+        $guest = "AC Rossoneri";
+    }
+
+    ?>
     
     <h2 class="text-center"><?php echo $article->title; ?></h2>
-    <h4 class="text-center">Erste Mannschaft | auswärts</h4>
+    <h4 class="text-center"><?php echo $article->name.' | '.$loc; ?></h4>
     <hr>
     
     <div class="row">
@@ -9,7 +23,7 @@
         <div class="span8">
             
             <p><?php echo $article->article; ?></p>
-            
+
         </div>
         
         <div class="span4">
@@ -17,11 +31,11 @@
             <?php
             if ($article->pictureURL) {
                 echo '<div class="text-center">';
-                echo '<img src="http://placehold.it/260x180" alt="" style="width: 260px; height: 180px;">';
+                echo '<img src="'.base_url().'assets/img/articles/'.$article->pictureURL.'" alt="">';
                 echo '</div>';
                 echo '<hr>';
             }
-            
+
             switch ($article->category) {
 
                 case 1: $cat = "News";
@@ -41,19 +55,24 @@
 
                 <table class="table table-condensed">
                     <tr>
-                        <th><p class="text-center">FC Arisdorf</p></th>
+                        <th><p class="text-center"><?php echo $home; ?></p></th>
                         <th><p class="text-center"></p></th>
-                        <th><p class="text-center">AC Rossoneri</p></th>
+                        <th><p class="text-center"><?php echo $guest; ?></p></th>
                     </tr>
                     <tr>
-                        <th><h2 class="text-center">0</h2></th>
+                        <th><h2 class="text-center"><?php echo $article->pointsHome; ?></h2></th>
                         <td><h2 class="text-center">-</h2></td>
-                        <td><h2 class="text-center">1</h2></td>
+                        <td><h2 class="text-center"><?php echo $article->pointsAway; ?></h2></td>
                     </tr>
                 </table>
                 <hr>
-                <p class="text-center">Meisterschaftsspiel</p>
-                <p class="text-center">4. Liga - Gruppe 2</p>
+                <p class="text-center"><?php echo $article->mDate.' | '.$article->mTime.' Uhr'; ?></p>
+                <p class="text-center"><?php echo $article->gameType; ?></p>
+                <?php
+                if ($article->gameType == "Meisterschaft") {
+                    echo '<p class="text-center">'.$article->ligaDesc.'</p>';
+                }
+                ?>
 
             </div>
 
@@ -80,11 +99,11 @@
                     </tr>
                     <tr>
                         <th>Datum</th>
-                        <td><?php echo $article->date; ?></td>
+                        <td><?php echo $article->aDate; ?></td>
                     </tr>
                     <tr>
                         <th>Zeit</th>
-                        <td><?php echo $article->time; ?> Uhr</td>
+                        <td><?php echo $article->aTime; ?> Uhr</td>
                     </tr>
                     <tr>
                         <th>Kategorie</th>

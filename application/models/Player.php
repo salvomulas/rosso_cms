@@ -35,6 +35,20 @@ class Player extends CI_Model {
 
     }
 
+    public function getMatchPlayers ($playerArray, $csv) {
+
+        $this->db->_protect_identifiers = FALSE;
+        $this->db->select('*')
+            ->select("DATE_FORMAT(bDay, '%e. %M %Y') AS bDay", FALSE)
+            ->from('member_active')
+            ->where_in('id',$playerArray)
+            ->order_by('FIELD (id,'.$csv.')',FALSE);
+        $this->db->_protect_identifiers = TRUE;
+        $query = $this->db->get();
+
+        return $query;
+    }
+
     public function getAllPlayersLimit ($limit,$start) {
 
         $this->db->select('*')

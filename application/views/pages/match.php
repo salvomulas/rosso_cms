@@ -21,6 +21,20 @@
                 echo '</div>';
                 echo '<hr>';
             }
+            
+            switch ($article->category) {
+
+                case 1: $cat = "News";
+                    break;
+                case 2: $cat = "Matchbericht";
+                    break;
+                case 3: $cat = "Highlight";
+                    break;
+                default: $cat = NULL;
+                    break;
+
+            }
+            
             ?> 
 
             <div clasS="well">
@@ -62,7 +76,7 @@
                 <table class="table table-condensed">
                     <tr>
                         <th>Autor</th>
-                        <td>Salvatore Mulas</td>
+                        <td><?php echo $article->firstName.' '.$article->lastName; ?></td>
                     </tr>
                     <tr>
                         <th>Datum</th>
@@ -74,7 +88,7 @@
                     </tr>
                     <tr>
                         <th>Kategorie</th>
-                        <td><a href="#"><span class="label label-important">News</span></a></td>
+                        <td><a href="#"><span class="label label-important"><?php echo $cat; ?></span></a></td>
                     </tr>
                 </table>
                 

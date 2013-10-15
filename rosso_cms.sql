@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 11. Okt 2013 um 23:06
--- Server Version: 5.1.44
--- PHP-Version: 5.3.1
+-- Erstellungszeit: 15. Okt 2013 um 17:31
+-- Server Version: 5.5.16
+-- PHP-Version: 5.3.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
-CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -341,8 +339,8 @@ INSERT INTO `member_junior` (`id`, `firstName`, `lastName`, `bDay`, `toTeam`, `p
 (5, 'Leandro', 'Piras', '2006-07-28', 22, '00155.jpg'),
 (6, 'Matteo', 'Roberti', '2006-10-20', 22, '00153.jpg'),
 (7, 'Corrado', 'Rosati', '2005-01-31', 22, '00150.jpg'),
-(8, 'Jerimo', 'Sollberger', '2007-01-04', 22, ''),
-(9, 'Gian Andrea', 'Steingrube', '2006-03-27', 22, '00154.jpg'),
+(8, 'Jerimo', 'Sollberger', '2007-01-04', 22, '00154.jpg'),
+(9, 'Gian Andrea', 'Steingrube', '2006-03-27', 22, '00178.jpg'),
 (10, 'Diego', 'Kammer', '2007-04-04', 22, '00149.jpg'),
 (11, 'Ilario', 'Peng', '2007-02-06', 22, '00158.jpg'),
 (12, 'Marco', 'Branca', '2006-04-16', 22, '00157.jpg'),
@@ -350,13 +348,13 @@ INSERT INTO `member_junior` (`id`, `firstName`, `lastName`, `bDay`, `toTeam`, `p
 (14, 'Alessio', 'Crusi', '2007-08-31', 20, '00160.jpg'),
 (15, 'Shawn', 'Liverani', '2008-01-21', 20, '00146.jpg'),
 (16, 'Chiara', 'Roberti', '2008-11-05', 20, '00144.jpg'),
-(17, 'Giuseppe', 'Barbato', '2008-12-10', 20, ''),
+(17, 'Giuseppe', 'Barbato', '2008-12-10', 20, '00180.jpg'),
 (18, 'Ayaz', 'Sercan', '2007-07-07', 20, '00148.jpg'),
 (19, 'Karim', 'Hablami', '2007-03-03', 20, ''),
 (20, 'Henrique Magno', 'Santos', '0000-00-00', 20, '00143.jpg'),
 (21, 'Lenny', 'Graber', '2006-08-17', 22, '00159.jpg'),
 (22, 'Sophie', 'Argenton', '2006-11-13', 22, '00152.jpg'),
-(23, 'Joana', 'De Sousa', '0000-00-00', 22, ''),
+(23, 'Joana', 'De Sousa', '0000-00-00', 22, '00179.jpg'),
 (24, 'Lorin', 'Strübin', '2006-06-15', 22, '');
 
 -- --------------------------------------------------------
@@ -449,23 +447,46 @@ CREATE TABLE IF NOT EXISTS `news` (
   `article` longtext NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   `autor` int(11) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `category` int(11) NOT NULL,
+  `reportID` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
 
 --
 -- Daten für Tabelle `news`
 --
 
-INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`) VALUES
-(1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '00103.jpg', 0, '2013-08-28 19:33:58', 1),
-(2, 'Familienturnier und Grillabend am 14. September', 'Der AC Rossoneri organisiert am 14. September 2013 um 14:00 Uhr ein Familienturnier in Lausen. Am Turnier sind sämtliche Mitglieder nach Anmeldung spielberechtigt. Darüber hinaus findet am selben Tag um 18:00 Uhr das Cupspiel unserer ersten Mannschaft gegen den FC Therwil (2. Liga) statt. Zum krönenden Abschluss gibt es natürlich gleich neben dem Spielfeld einen wunderbaren Grillplausch, unsere Bar ist selbstverständlich ebenfalls vor Ort und kümmert sich sehr gerne um unsere durstige Gäste. Wir freuen uns auf diesen Event!', '00102.jpg', 0, '2013-09-05 22:41:03', 1),
-(3, 'Die erste Mannschaft auf dem ersten Platz', 'Die harte Arbeit des Trainer-Trio''s und der gesamten Mannschaft hat sich nun endlich ausbezahlt! Die erste Mannschaft erreicht nach dem grandiosen Sieg von 8:0 gegen den SV Muttenz den ersten Platz. Unsere erste Mannschaft hat bisher insgesamt 6 Spiele bestritten - davon 5 Spiele gewonnen und 1 Spiel unentschieden. Eine sagenhafte Leistung!<br />\r\nAuch das Torverhältnis sieht fantastisch aus: Nach den 6 Spielen hat die erste Mannschaft bisher nur ein einziges Gegentor kassiert und konnte satte 21 Treffer erzielen - somit hat der AC Rossoneri in der gesamten 4. Liga die beste Verteidigung überhaupt (natürlich gehört die ganze Mannschaft dazu).<br />\r\nWir wünschen der ersten Mannschaft weiterhin viel Erfolg. Weiter so!', '00104.jpg', 0, '2013-09-28 21:54:47', 1),
-(9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem Unentschieden unserer ersten Mannschaft gegen den FC Diegten Eptingen ging die plötzliche Euphorie wieder den Bach runter. Sofort nach dem Erlangen des ersten Platzes erfasste uns die Panik, die Führung wieder abgeben zu müssen. Unsere Jungs werden in der Tabelle zur Zeit sehr dicht von Laufenburg, Gelterkinden und dem FC Stein verfolgt - einmal stolpern wäre bereits genug, um die Führung wieder zu verlieren. Das Stolpern liess nicht lange auf sich warten: Leider reichte es in Diegten trotz einer brillianten Leistung nur für ein Unentschieden.<br />\r\nDas Spiel zwischen Laufenburg und Gelterkinden endete allerdings zu unseren Gunsten ebenfalls mit einem Unentschieden. Diesbezüglich können wir weiterhin von der Tabellenspitze grüssen und bereiten uns auf ein spannendes Spiel nächsten Samstag gegen den FC Gelterkinden vor. Forza Rossoneri. ', '00105.jpg', 0, '2013-10-06 13:59:28', 1),
-(10, 'Drei direkte Begegnungen und ein Derby', 'Die Vorrunde neigt sich dem Ende zu - und was für ein Ende! Die Leistung der ersten Mannschaft kann zur Zeit nicht einmal in Worte gefasst werden. Sagenhaft, grandios, souverän! Angesichts der super Leistungen der gesamten Mannschaft inklusive Trainerstab ist dieser erste Platz hochverdient.<br />\r\nSpannend werden die letzten vier Spiele der Vorrunde: Uns erwarten nämlich drei Direktbegegnungen mit dem zweit-, dritt- und viert-Platzierten. Darüber hinaus wird es auch noch zum hochspannenden Derby mit dem FC Lausen kommen. Die Vorrunde wird in einem fussballerischen Spektakel enden. Forza Rossoneri', '00106.jpg', 0, '2013-10-11 14:16:06', 1),
-(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuheben und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten. Weitere Infos werden in Kürze auf unserer Webseite folgen. Save the date!', '00100.jpg', 0, '2013-10-10 13:47:21', 3),
-(12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre, so viele Gäste für diese Anlässe begrüssen zu dürfen. Vielen Dank an unsere Fans und den Familien unserer Mitglieder.', '00101.jpg', 0, '2013-10-10 22:41:45', 3);
+INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `category`, `reportID`) VALUES
+(1, 'Wir sind wieder online!', 'Es hat zwar ein wenig gedauert, aber nun endlich ist sie da: die neue Webseite des AC Rossoneri. Wir sind sehr stolz, nun endlich eine saubere und übersichtliche Webseite präsentieren zu dürfen und hoffen, dass sich alle Nutzer problemlos mit der neuen Navigation vertraut machen können.\r\nDas System, welches sich hinter dieser Webseite verbirgt, wurde von A bis Z für unser Verein realisiert und bietet dementsprechend ein einzigartiges Surferlebnis. Ebenfalls ermöglicht diese Webseite eine dynamische Interaktion mit mehreren registrierten Benutzern, vereinfacht bedeutet dies, dass wir mehrere Hilfskräfte beschäftigen werden um Matchberichte zu verfassen und Inhalte zu pflegen.\r\nDas System wurde von Salvatore Mulas entworfen und programmiert, für sämtliche Fragen oder Unklarheiten bitte Kontakt Aufnahmen unter marketing@acrossoneri.ch.', '00103.jpg', 1, '2013-08-28 19:33:58', 1, 0),
+(2, 'Familienturnier und Grillabend am 14. September', 'Der AC Rossoneri organisiert am 14. September 2013 um 14:00 Uhr ein Familienturnier in Lausen. Am Turnier sind sämtliche Mitglieder nach Anmeldung spielberechtigt. Darüber hinaus findet am selben Tag um 18:00 Uhr das Cupspiel unserer ersten Mannschaft gegen den FC Therwil (2. Liga) statt. Zum krönenden Abschluss gibt es natürlich gleich neben dem Spielfeld einen wunderbaren Grillplausch, unsere Bar ist selbstverständlich ebenfalls vor Ort und kümmert sich sehr gerne um unsere durstige Gäste. Wir freuen uns auf diesen Event!', '00102.jpg', 1, '2013-09-05 22:41:03', 1, 0),
+(3, 'Die erste Mannschaft auf dem ersten Platz', 'Die harte Arbeit des Trainer-Trio''s und der gesamten Mannschaft hat sich nun endlich ausbezahlt! Die erste Mannschaft erreicht nach dem grandiosen Sieg von 8:0 gegen den SV Muttenz den ersten Platz. Unsere erste Mannschaft hat bisher insgesamt 6 Spiele bestritten - davon 5 Spiele gewonnen und 1 Spiel unentschieden. Eine sagenhafte Leistung!<br />\r\nAuch das Torverhältnis sieht fantastisch aus: Nach den 6 Spielen hat die erste Mannschaft bisher nur ein einziges Gegentor kassiert und konnte satte 21 Treffer erzielen - somit hat der AC Rossoneri in der gesamten 4. Liga die beste Verteidigung überhaupt (natürlich gehört die ganze Mannschaft dazu).<br />\r\nWir wünschen der ersten Mannschaft weiterhin viel Erfolg. Weiter so!', '00104.jpg', 1, '2013-09-28 21:54:47', 1, 0),
+(9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem Unentschieden unserer ersten Mannschaft gegen den FC Diegten Eptingen ging die plötzliche Euphorie wieder den Bach runter. Sofort nach dem Erlangen des ersten Platzes erfasste uns die Panik, die Führung wieder abgeben zu müssen. Unsere Jungs werden in der Tabelle zur Zeit sehr dicht von Laufenburg, Gelterkinden und dem FC Stein verfolgt - einmal stolpern wäre bereits genug, um die Führung wieder zu verlieren. Das Stolpern liess nicht lange auf sich warten: Leider reichte es in Diegten trotz einer brillianten Leistung nur für ein Unentschieden.<br />\r\nDas Spiel zwischen Laufenburg und Gelterkinden endete allerdings zu unseren Gunsten ebenfalls mit einem Unentschieden. Diesbezüglich können wir weiterhin von der Tabellenspitze grüssen und bereiten uns auf ein spannendes Spiel nächsten Samstag gegen den FC Gelterkinden vor. Forza Rossoneri. ', '00105.jpg', 1, '2013-10-06 13:59:28', 1, 0),
+(10, 'Drei direkte Begegnungen und ein Derby', 'Die Vorrunde neigt sich dem Ende zu - und was für ein Ende! Die Leistung der ersten Mannschaft kann zur Zeit nicht einmal in Worte gefasst werden. Sagenhaft, grandios, souverän! Angesichts der super Leistungen der gesamten Mannschaft inklusive Trainerstab ist dieser erste Platz hochverdient.<br />\r\nSpannend werden die letzten vier Spiele der Vorrunde: Uns erwarten nämlich drei Direktbegegnungen mit dem zweit-, dritt- und viert-Platzierten. Darüber hinaus wird es auch noch zum hochspannenden Derby mit dem FC Lausen kommen. Die Vorrunde wird in einem fussballerischen Spektakel enden. Forza Rossoneri', '00106.jpg', 1, '2013-10-11 14:16:06', 1, 0),
+(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuheben und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten. Weitere Infos werden in Kürze auf unserer Webseite folgen. Save the date!', '00100.jpg', 1, '2013-10-10 13:47:21', 3, 0),
+(12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre, so viele Gäste für diese Anlässe begrüssen zu dürfen. Vielen Dank an unsere Fans und den Familien unserer Mitglieder.', '00101.jpg', 1, '2013-10-10 22:41:45', 3, 0),
+(13, 'Glasklarer Sieg gegen den SV Muttenz: Acht zu Null', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.', '', 1, '2013-10-15 14:33:00', 2, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `reports`
+--
+
+CREATE TABLE IF NOT EXISTS `reports` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `matchID` int(11) NOT NULL,
+  `formation` int(11) NOT NULL,
+  `players` mediumtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Daten für Tabelle `reports`
+--
+
+INSERT INTO `reports` (`id`, `matchID`, `formation`, `players`) VALUES
+(1, 146487, 451, '');
 
 -- --------------------------------------------------------
 

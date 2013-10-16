@@ -291,7 +291,7 @@ function shortenString($string, $width) {
                         echo '<td>'.$team.'</td>';
                         echo '<td>'.$row->opponent.'</td>';
                         echo '<td>'.$row->date.'</td>';
-                        echo '<td><a href="" id="'.$jsObject.'" rel="popover" class="btn btn-mini" data-placement="top" data-toggle="popover" title="" data-content="'.$location.'" data-original-title="'.$gameTitle.'"><i class="icon-info-sign"></i></i></a></td>';
+                        echo '<td><a href="" id="'.$jsObject.'" rel="popover" class="btn btn-mini" data-placement="top" data-toggle="popover" title="" data-content="'.$location.'" data-original-title="'.$gameTitle.'"><i class="icon-info-sign"></i></a></td>';
                         echo '</tr>';
 
                         $jsObject++;

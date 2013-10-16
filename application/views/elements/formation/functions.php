@@ -12,6 +12,20 @@ function showPlayer ($data, $id) {
 
 }
 
+function showPlayerMobile ($data, $pos) {
+    
+    for ($index=0;$index<11;$index++) {
+                    
+                    echo '<tr>';
+                    echo '<td>'.$pos[$index].'</td>';
+                    echo '<td>'.$data->row($index)->firstName.'</td>';
+                    echo '<td>'.$data->row($index)->lastName.'</td>';
+                    echo '</tr>';
+                    
+                }
+    
+}
+
 function writeJS () {
 
     echo '<script>';
@@ -34,7 +48,10 @@ function resPlayer ($data) {
 
         for ($id = 11; $id < $data->num_rows; $id++) {
 
+            $jsID = str_replace(' ','',$data->row($id)->firstName.$data->row($id)->lastName);
+            
             echo '<tr>';
+            echo '<td><a href="#'.$jsID.'" class="btn btn-mini" data-toggle="modal"><i class="icon-info-sign"></a></i></td>';
             echo '<td>'.$data->row($id)->firstName.'</td>';
             echo '<td>'.$data->row($id)->lastName.'</td>';
             echo '</tr>';
@@ -71,7 +88,7 @@ function drawModal ($data) {
             echo '<img src="'.base_url().'assets/img/dummy_person.jpg" style="width:150px;">';
         }
         echo '<hr>';
-        echo '<a href="" class="btn btn-info btn-small">zum Spielerprofil</a>';
+        echo '<a href="'.base_url().'spieler/aktiv/'.$data->row($id)->id.'" class="btn btn-info btn-small">zum Spielerprofil</a>';
         echo '</div>';
         echo '<div class="span8">';
         echo '<h4>Erste Mannschaft</h4>';
@@ -87,30 +104,34 @@ function drawModal ($data) {
         echo '</tr>';
         echo '<tr>';
         echo '<th>Alter</th>';
-        echo '<td>23</td>';
+        if ($data->row($id)->bDay) {
+            echo '<td>'.floor((time() - strtotime($data->row($id)->bDay))/31556926).'</td>';
+        } else {
+            echo '<td>(keine Angabe)</td>';
+        }
         echo '</tr>';
         echo '</table>';
         echo '<h5>Statistische Werte</h5>';
         echo '<table class="table table-condensed table-hover">';
         echo '<tr>';
         echo '<th>Eins&auml;tze</th>';
-        echo '<td>12</td>';
+        echo '<td>(keine Angabe)</td>';
         echo '</tr>';
         echo '<tr>';
         echo '<th>Tore (gesamt)</th>';
-        echo '<td>0 (0)</td>';
+        echo '<td>(keine Angabe)</td>';
         echo '</tr>';
         echo '<tr>';
         echo '<th>Assist (gesamt)</th>';
-        echo '<td>0 (1)</td>';
+        echo '<td>(keine Angabe)</td>';
         echo '</tr>';
         echo '<tr>';
         echo '<th>Gelbe Karten (gesamt)</th>';
-        echo '<td>1 (2)</td>';
+        echo '<td>(keine Angabe)</td>';
         echo '</tr>';
         echo '<tr>';
         echo '<th>Rote Karten (gesamt)</th>';
-        echo '<td>0 (0)</td>';
+        echo '<td>(keine Angabe)</td>';
         echo '</tr>';
         echo '</table>';
         echo '</div>';

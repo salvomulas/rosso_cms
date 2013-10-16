@@ -4,7 +4,7 @@ require('functions.php');
 
 writeJS();
 
-$pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
+$pos = array('TW','LV','IV','IV','RV','LM','ZM','ZM','RM','MS','ST');
 
 ?>
 
@@ -21,7 +21,7 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
                     <div class="span2 offset3">
                         <?php showPlayer($players,1); ?>
                     </div>
-                    <div class="span2 offset2">
+                    <div class="span2 offset1">
                         <?php showPlayer($players,5); ?>
                     </div>
                 </div>
@@ -31,7 +31,7 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
                     <div class="span2 offset2">
                         <?php showPlayer($players,2); ?>
                     </div>
-                    <div class="span2 offset2">
+                    <div class="span2 offset1">
                         <?php showPlayer($players,6); ?>
                     </div>
                 </div>
@@ -41,10 +41,10 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
                     <div class="span2">
                         <?php showPlayer($players,0); ?>
                     </div>
-                    <div class="span2 offset5">
-                        <?php showPlayer($players,7); ?>
+                    <div class="span2 offset6">
+                        <?php showPlayer($players,9); ?>
                     </div>
-                    <div class="span2 offset1">
+                    <div class="span2">
                         <?php showPlayer($players,10); ?>
                     </div>
 
@@ -55,8 +55,8 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
                     <div class="span2 offset2">
                         <?php showPlayer($players,3); ?>
                     </div>
-                    <div class="span2 offset2">
-                        <?php showPlayer($players,8); ?>
+                    <div class="span2 offset1">
+                        <?php showPlayer($players,7); ?>
                     </div>
 
                 </div>
@@ -66,8 +66,8 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
                     <div class="span2 offset3">
                         <?php showPlayer($players,4); ?>
                     </div>
-                    <div class="span2 offset2">
-                        <?php showPlayer($players,9); ?>
+                    <div class="span2 offset1">
+                        <?php showPlayer($players,8); ?>
                     </div>
                 </div>
 
@@ -76,7 +76,7 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
             <div class="span3">
 
 
-                <h4 class="text-center">4 - 5 - 1</h4>
+                <h4 class="text-center">4 - 4 - 1 - 1</h4>
                 <hr>
 
 
@@ -108,13 +108,11 @@ $pos = array('TW','LV','IV','IV','RV','LF','ZDM','ZOM','ZDM','RF','ST');
             </tr>
             </thead>
             <tbody>
-                
                 <?php
                 
                 showPlayerMobile($players,$pos);
                 
                 ?>
-       
             </tbody>
         </table>
 

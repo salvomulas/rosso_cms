@@ -34,7 +34,10 @@
                         ?>
                     </div>
                     <div class="tab-pane" id="tab4">
-                        <p>Es wurden noch keine Matchberichte verfasst.</p>
+                        <?php
+                        $data['reports'] = $reports;
+                        $this->load->view('elements/teamReports', $data);
+                        ?>
                     </div>
                 </div>
             </div>

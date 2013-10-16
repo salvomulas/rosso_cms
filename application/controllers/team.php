@@ -16,6 +16,7 @@ class Team extends MY_Controller {
         $this->load->model('ranking');
         $this->load->model('staff');
         $this->load->model('match');
+        $this->load->model('articles');
         
     }
 
@@ -49,6 +50,9 @@ class Team extends MY_Controller {
         $data['match'] = $this->match->getTeamCalendar($teamID);
         $data['matchDone'] = $this->match->getTeamCalendarPast($teamID);
         $data['nextMatch'] = $this->match->getNextGameTeam($teamID);
+        
+        // Load team reports
+        $data ['reports'] = $this->articles->getMatchReportsTeam($teamID);
         
         // Set Page Title
         $data['page_title'] = $data['teamName'];

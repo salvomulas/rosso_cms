@@ -43,6 +43,34 @@ class Articles extends CI_Model {
         return $query->row();
 
     }
+    
+    public function getMatchReportsTeam ($teamID) {
+
+        $this->db->select('n.id, n.title, n.article, n.pictureURL, n.autor, n.date, n.category, m.*')
+            ->select("DATE_FORMAT(n.date, '%e. %M %Y') AS aDate", FALSE)
+            ->select("DATE_FORMAT(n.date, '%H:%i') AS aTime", FALSE)
+            ->select("DATE_FORMAT(m.date, '%e. %M %Y') AS mDate", FALSE)
+            ->select("DATE_FORMAT(m.time, '%H:%i') AS mTime", FALSE)
+            ->from('news AS n')
+            ->join('match AS m','n.gameID = m.gameID')
+            ->where('m.teamID', $teamID)
+            ->order_by('m.date','desc');
+        $query = $this->db->get();
+
+        return $query;
+
+    }
+    
+    public function getPlayerArray ($id) {
+        
+        $this->db->select('playerArray,formation')
+                ->from('news')
+                ->where('id',$id);
+        $query = $this->db->get();
+        
+        return $query->row();
+        
+    }
 
     public function getArticles () {
 

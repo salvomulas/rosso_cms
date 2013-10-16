@@ -75,7 +75,7 @@
                 ?>
 
             </div>
-
+            <!--
             <div clasS="well">
 
                 <h4>Spielereignisse</h4>
@@ -87,7 +87,7 @@
                     </tr>
                 </table>
             </div>
-
+            -->
             <div class="well">
                 
                 <h4>Infos</h4>

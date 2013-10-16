@@ -73,10 +73,11 @@ class Aktuelles extends MY_Controller {
         $data ['article'] = $this->articles->getMatchReport($articleID);
         $data ['articleTitle'] = $this->articles->getArticleTitle($articleID);
         $data ['formation'] = $this->articles->getPlayerArray($articleID)->formation;
-        $data ['playerArray'] = unserialize($this->articles->getPlayerArray($articleID)->playerArray);
-        $data ['playerSort'] = implode(',',$data['playerArray']);
-        $data ['players'] = $this->player->getMatchPlayers($data['playerArray'],$data['playerSort']);
-
+        if ($data['formation']) {
+            $data ['playerArray'] = unserialize($this->articles->getPlayerArray($articleID)->playerArray);
+            $data ['playerSort'] = implode(',',$data['playerArray']);
+            $data ['players'] = $this->player->getMatchPlayers($data['playerArray'],$data['playerSort']);
+        }
         // Set Controller properties
         $data['page_title'] = $data['articleTitle'];
 
@@ -84,7 +85,9 @@ class Aktuelles extends MY_Controller {
             // Load views with all the loaded data
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
-            $this->load->view("elements/formation/".$data['formation'], $data);
+            if ($data['formation']) {
+                $this->load->view("elements/formation/".$data['formation'], $data);
+            }
             $this->load->view("pages/match", $data);
             $this->load->view("elements/footer");
         } else {

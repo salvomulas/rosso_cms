@@ -1,11 +1,13 @@
 <?php
 
 function showPlayer ($data, $id) {
+    
+    $jsID = str_replace(' ','',$data->row($id)->firstName.$data->row($id)->lastName);
 
     if (!$data->row($id)->pictureURL) {
-        echo '<img href="#'.$data->row($id)->firstName.$data->row($id)->lastName.'"  data-toggle="modal" id="'.$id.'" data-placement="bottom" rel="popover" data-original-title="'.$data->row($id)->firstName.' '.$data->row($id)->lastName.'" class="img-circle" src="'.base_url().'assets/img/dummy_person.jpg" style="width:70px;">';
+        echo '<img href="#'.$jsID.'"  data-toggle="modal" id="'.$id.'" data-placement="bottom" rel="popover" data-original-title="'.$data->row($id)->firstName.' '.$data->row($id)->lastName.'" class="img-circle" src="'.base_url().'assets/img/dummy_person.jpg" style="width:70px;">';
     } else {
-        echo '<img href="#'.$data->row($id)->firstName.$data->row($id)->lastName.'"  data-toggle="modal" id="'.$id.'" data-placement="bottom" rel="popover" data-original-title="'.$data->row($id)->firstName.' '.$data->row($id)->lastName.'" class="img-circle" src="'.base_url().'assets/img/member/'.$data->row($id)->pictureURL.'" style="width:70px;">';
+        echo '<img href="#'.$jsID.'"  data-toggle="modal" id="'.$id.'" data-placement="bottom" rel="popover" data-original-title="'.$data->row($id)->firstName.' '.$data->row($id)->lastName.'" class="img-circle" src="'.base_url().'assets/img/member/'.$data->row($id)->pictureURL.'" style="width:70px;">';
     }
 
 }
@@ -52,8 +54,10 @@ function resPlayer ($data) {
 function drawModal ($data) {
 
     for ($id = 0; $id < $data->num_rows; $id++) {
+        
+        $jsID = str_replace(' ','',$data->row($id)->firstName.$data->row($id)->lastName);
 
-        echo '<div id="'.$data->row($id)->firstName.$data->row($id)->lastName.'" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+        echo '<div id="'.$jsID.'" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
         echo '<div class="modal-header">';
         echo '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         echo '<h3 id="myModalLabel">'.$data->row($id)->firstName.' '.$data->row($id)->lastName.'</h3>';

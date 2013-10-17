@@ -38,11 +38,12 @@ class Player extends CI_Model {
     public function getMatchPlayers ($playerArray, $csv) {
 
         $this->db->_protect_identifiers = FALSE;
-        $this->db->select('*')
-            ->select("DATE_FORMAT(bDay, '%e. %M %Y') AS bDay", FALSE)
-            ->from('member_active')
-            ->where_in('id',$playerArray)
-            ->order_by('FIELD (id,'.$csv.')',FALSE);
+        $this->db->select('m.*,t.name')
+            ->select("DATE_FORMAT(m.bDay, '%e. %M %Y') AS bDay", FALSE)
+            ->from('member_active m,teams t')
+            ->where_in('m.id',$playerArray)
+            ->where('m.toTeam = t.id')
+            ->order_by('FIELD (m.id,'.$csv.')',FALSE);
         $this->db->_protect_identifiers = TRUE;
         $query = $this->db->get();
 

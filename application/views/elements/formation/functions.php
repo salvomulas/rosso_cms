@@ -91,7 +91,7 @@ function drawModal ($data) {
         echo '<a href="'.base_url().'spieler/aktiv/'.$data->row($id)->id.'" class="btn btn-info btn-small">zum Spielerprofil</a>';
         echo '</div>';
         echo '<div class="span8">';
-        echo '<h4>Erste Mannschaft</h4>';
+        echo '<h4>'.$data->row($id)->name.'</h4>';
         echo '<h5>Pers&ouml;nliche Daten</h5>';
         echo '<table class="table table-condensed table-hover">';
         echo '<tr>';

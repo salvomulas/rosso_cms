@@ -33,6 +33,7 @@ class Site extends MY_Controller {
         $data ['matchReport'] = $this->articles->getArticlesHomeWidget(5,0,2);
         $data ['nextMatch'] = $this->match->getNextGameTeam(1);
         $data ['nextMatches'] = $this->match->getNextGames();
+        $data ['lastMatches'] = $this->match->getLastGames();
         
         $this->load->view('meta/metadata', $data);
         $this->drawNavigation();

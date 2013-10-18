@@ -61,7 +61,7 @@ function resPlayer ($data) {
     } else {
 
         echo '<tr>';
-        echo '<td>Keine Ersatzspieler</td>';
+        echo '<td>Keine Ersatzspieler erfasst</td>';
         echo '</tr>';
 
     }

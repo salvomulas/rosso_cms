@@ -29,7 +29,7 @@ foreach ($matchDone->result() as $row) {
     } else {
         echo '<td>AC Rossoneri</td>';
     }
-    if ($row->pointsHome == NULL && $row->pointsAway == NULL) {
+    if (!$row->resultConfirmed) {
         echo '<td></td>';
     } else {
         echo '<td>'.$row->pointsHome.' : '.$row->pointsAway.'</td>';

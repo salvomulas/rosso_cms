@@ -396,23 +396,41 @@ function shortenString($string, $width) {
         <div class="span4">
             <div class="well">
                 <h4>Letzte Spiele</h4>
-                <table class="table table-condensed table-hover">
-                    <tr>
-                        <td><strong>AC Rossoneri (1)</strong></td>
-                        <td class="text-center">8 : 0</td>
-                        <td>SV Muttenz</td>
-                    </tr>
-                    <tr>
-                        <td><strong>AC Rossoneri (2)</strong></td>
-                        <td class="text-center">4 : 1</td>
-                        <td>FC Lausen</td>
-                    </tr>
-                    <tr>
-                        <td>FC Birsfelden</td>
-                        <td class="text-center">3 : 4</td>
-                        <td><strong>AC Rossoneri (Sen.)</strong></td>
-                    </tr>
-                </table>
+
+                <?php
+
+                if ($lastMatches) {
+
+                    echo '<table class="table table-condensed table-hover">';
+
+                    foreach ($lastMatches->result() as $row) {
+
+                        $team = substr($row->name,0,4);
+
+                        echo '<tr>';
+                        if ($row->isHome == 1) {
+                            echo '<td><strong>ACR ('.$team.'.)</strong></td>';
+                            echo '<td class="text-center">'.$row->pointsHome.':'.$row->pointsAway.'</td>';
+                            echo '<td>'.$row->opponent.'</td>';
+                        } else {
+                            echo '<td>'.$row->opponent.'</td>';
+                            echo '<td class="text-center">'.$row->pointsHome.':'.$row->pointsAway.'</td>';
+                            echo '<td><strong>ACR ('.$team.'.)</strong></td>';
+                        }
+                        echo '</tr>';
+
+                    }
+
+
+                    echo '</table>';
+
+                } else {
+
+                    echo '<p>Noch keine Spiele getätigt!';
+                }
+
+                ?>
+
             </div>
         </div>
 

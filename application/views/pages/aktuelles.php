@@ -89,10 +89,6 @@
                 <h4>Kategorien</h4>
                 <ul class="nav nav-list">
                     <li class="active"><a href="#">alle</a></li>
-                    <li><a href="#">Matchberichte</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Mitteilungen</a></li>
                 </ul>
             </div>
 
@@ -100,7 +96,6 @@
                 <h4>Autoren</h4>
                 <ul class="nav nav-list">
                     <li class="active"><a href="#">alle</a></li>
-                    <li><a href="#">Salvatore Mulas</a></li>
                 </ul>
             </div>
 

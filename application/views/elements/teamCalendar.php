@@ -19,14 +19,11 @@ foreach ($matchDone->result() as $row) {
     echo '<tr>';
     echo '<td>'.$row->gameType.'</td>';
     echo '<td>'.$row->date.'</td>';
-    if ($row->plz == "Lausen") {
+    if ($row->isHome == 1) {
         echo '<td>AC Rossoneri</td>';
-    } else {
-        echo '<td>'.$row->opponent.'</td>';
-    }
-    if ($row->plz == "Lausen") {
         echo '<td>'.$row->opponent.'</td>';
     } else {
+        echo '<td>'.$row->opponent.'</td>';
         echo '<td>AC Rossoneri</td>';
     }
     if (!$row->resultConfirmed) {

@@ -130,6 +130,7 @@ class Match extends CI_Model {
             ->from('match,teams')
             ->where("concat(date,' ',time) <NOW()")
             ->where('teams.id = match.teamID')
+            ->where('match.resultConfirmed',1)
             ->limit(7)
             ->order_by('sort_date','desc')
             ->order_by('sort_time','desc');

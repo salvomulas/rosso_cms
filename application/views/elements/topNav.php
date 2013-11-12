@@ -27,7 +27,15 @@ function menuObject ($name, $url) {
                     <div class="nav-collapse collapse">
                         <ul class="nav navbar-static-top nav-pills pull-right">
                             <?php menuObject("Home",""); ?>
-                            <?php menuObject("Aktuelles","aktuelles"); ?>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aktuelles<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <?php menuObject("Newsarchiv","aktuelles"); ?>
+                                    <li class="divider"></li>
+                                    <li class="nav-header">Anl&auml;sse</li>
+                                    <?php menuObject("Silvester 12/13","silvester"); ?>
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Verein<b class="caret"></b></a>
                                 <ul class="dropdown-menu">

@@ -33,7 +33,7 @@ function menuObject ($name, $url) {
                                     <?php menuObject("Newsarchiv","aktuelles"); ?>
                                     <li class="divider"></li>
                                     <li class="nav-header">Anl&auml;sse</li>
-                                    <?php menuObject("Silvester 12/13","silvester"); ?>
+                                    <?php menuObject("Silvester 13/14","silvester"); ?>
                                 </ul>
                             </li>
                             <li class="dropdown">

@@ -17,19 +17,19 @@
         
         <div class="pagination pagination-centered hidden-phone">
             <ul>
-                <li class="active"><a href="">Informationen</a></li>
-                <li><a href="">Gala-Dinner</a></li>
-                <li><a href="">Unterhaltung</a></li>
-                <li><a href="">Preise und Reservation</a></li>
+                <li class="active"><a href="#tab1" data-toggle="tab">Informationen</a></li>
+                <li><a href="#tab2" data-toggle="tab">Gala-Dinner</a></li>
+                <li><a href="#tab3" data-toggle="tab">Unterhaltung</a></li>
+                <li><a href="#tab4" data-toggle="tab">Preise und Reservation</a></li>
             </ul>
         </div>
 
         <div class="well visible-phone">
             <ul class="nav nav-tabs nav-stacked">
-                <li class="active"><a href="">Informationen</a></li>
-                <li><a href="">Gala-Dinner</a></li>
-                <li><a href="">Unterhaltung</a></li>
-                <li><a href="">Preise und Reservation</a></li>
+                <li class="active"><a href="#tab1" data-toggle="tab">Informationen</a></li>
+                <li><a href="#tab2" data-toggle="tab">Gala-Dinner</a></li>
+                <li><a href="#tab3" data-toggle="tab">Unterhaltung</a></li>
+                <li><a href="#tab4" data-toggle="tab">Preise und Reservation</a></li>
             </ul>
         </div>
         

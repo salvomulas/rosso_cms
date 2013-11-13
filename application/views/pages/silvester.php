@@ -8,9 +8,9 @@
 
                 <h4>Flyer herunterladen</h4>
                 <hr>
-                <ul class="nav nav-list">
-                    <li><a href="<?php echo base_url(); ?>assets/files/ACR_Statuten_DE.pdf">Deutsch</a></li>
-                    <li><a href="<?php echo base_url(); ?>assets/files/ACR_Statuto_IT.pdf">Italienisch</a></li>
+                <ul class="nav nav-list nav-stacked">
+                    <li><a href="<?php echo base_url(); ?>assets/files/flyer-deutsch-mailing.pdf">PDF - Deutsch</a></li>
+                    <li><a href="<?php echo base_url(); ?>assets/files/flyer-italiano-mailing.pdf">PDF - Italienisch</a></li>
                 </ul>
 
             </div>

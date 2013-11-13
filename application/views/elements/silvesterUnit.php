@@ -5,13 +5,13 @@
 
         <div class="row text-center hidden-phone">
             <div class="span4">
-                <img class="img-rounded" src="<?php echo base_url(); ?>assets/img/silv_05.jpg" style="max-width: 270px;">
+                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/silv_05.jpg" style="max-width: 270px;">
             </div>
             <div class="span4">
-                <img class="img-rounded" src="<?php echo base_url(); ?>assets/img/silv_10.jpg" style="max-width: 270px; height: 180.078px;">
+                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/silv_10.jpg" style="max-width: 270px; height: 180.078px;">
             </div>
             <div class="span4">
-                <img class="img-rounded" src="<?php echo base_url(); ?>assets/img/silv_09.jpg" style="max-width: 270px;">
+                <img class="img-circle" src="<?php echo base_url(); ?>assets/img/silv_09.jpg" style="max-width: 270px;">
             </div>
         </div>
         

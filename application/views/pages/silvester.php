@@ -127,11 +127,61 @@
 
             </div>
             
-            <div class="tab-pane" id="tab3">
-                
-            </div>
-            
             <div class="tab-pane" id="tab4">
+
+                <div class="row">
+
+                    <div class="span8">
+
+                        <h2>Reservation und Preise</h2>
+                        <p>Unsere Silvesterfeier ist ein sehr popul&auml;rer Event in der Region und wird j&auml;hrlich von vielen G&auml;sten besucht. Das hohe Interesse bereitet uns sehr grosse Freude, allerdings k&ouml;nnen wir leider nicht unendlich viele Pl&auml;tze anbieten und sind diesbez&uuml;glich auf fr&uuml;hzeitige Reservierungen angewiesen.<br/><br/>
+                        Um sich f&uuml;r den Anlass anzumelden und somit eine Anzahl Pl&auml;tze zu reservieren bitten wir um eine <strong>telefonische Anmeldung</strong>. Wir nehmen keine Anmeldungen per e-Mail, SMS oder anderen Kommunikationsmedien an. Bitte bei Paolo oder Dario Mulas (Telefonnummern auf dieser Seite) telefonisch anmelden und die Pl&auml;tze reservieren.<br/><br/>
+                        </p>
+                        <hr>
+                        <h3>Preise</h3>
+                        <p>Die Preise f&uuml;r das diesj&auml;hrige Silvesterfest setzen sich wie folgt zusammen:</p>
+                        <table class="table table-condensed table-hover">
+                            <tr>
+                                <th>Erwachsene</th>
+                                <td>CHF 120.--</td>
+                            </tr>
+                            <tr>
+                                <th>Mitglieder</th>
+                                <td>CHF 110.--</td>
+                            </tr>
+                            <tr>
+                                <th>Kinder zwischen 4 und 12 Jahre</th>
+                                <td>CHF 60.--</td>
+                            </tr>
+                        </table>
+
+                    </div>
+
+                    <div class="span4">
+
+                        <div class="well">
+
+                            <h4>Tickets Vorverkauf</h4>
+                            <hr>
+                            <table class="table table-condensed table-hover">
+                                <tr>
+                                    <th>Dario</th>
+                                    <td>+41 79 322 64 28</td>
+                                </tr>
+                                <tr>
+                                    <th>Paolo</th>
+                                    <td>+41 79 322 35 50</td>
+                                </tr>
+
+                            </table>
+
+                            <p>Wir freuen uns auf Ihre Reservierung!</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
                 
             </div>
 

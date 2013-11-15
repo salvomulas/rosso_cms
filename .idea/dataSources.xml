@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2935183414">
-    <data-source source="LOCAL" name="RossoCMS Database" product="MySQL" version="5.1.44" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="a920b378-3f04-4bfc-938c-9684540df332">
+  <component name="DataSourceManagerImpl" format="xml" hash="246850791">
+    <data-source source="LOCAL" name="Rosso_CMS Database" product="MySQL" version="5.1.44" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="e9c71fe9-1618-40e0-9c50-e9c560f04503">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
       <synchronize>true</synchronize>

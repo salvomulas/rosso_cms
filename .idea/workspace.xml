@@ -2,47 +2,64 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Articles.php" afterPath="$PROJECT_DIR$/application/models/Articles.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/aktuelles.php" afterPath="$PROJECT_DIR$/application/controllers/aktuelles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/silvester.php" afterPath="$PROJECT_DIR$/application/views/pages/silvester.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/elements/silvesterUnit.php" afterPath="$PROJECT_DIR$/application/views/elements/silvesterUnit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rosso_cms.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376842645485" ignored="false" />
+    <file path="/Dummy.txt" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1384472135211" ignored="false" />
     <file path="/.htaccess" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372967668883" ignored="false" />
     <file path="/404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981779302" ignored="false" />
     <file path="/view_404.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1372981808609" ignored="false" />
     <file path="/a.dummy" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376583541772" ignored="false" />
     <file path="/Member.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374962426041" ignored="false" />
     <file path="/Ranking.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629452911" ignored="false" />
-    <file path="/site.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374627844154" ignored="false" />
+    <file path="/site.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1384473129881" ignored="false" />
     <file path="/view_home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375312244257" ignored="false" />
     <file path="/rankingTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374629269460" ignored="false" />
-    <file path="/admin.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374946040237" ignored="false" />
+    <file path="/admin.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381422944488" ignored="false" />
     <file path="/error.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375295131805" ignored="false" />
     <file path="/MY_Controller.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376657421579" ignored="false" />
-    <file path="/verein.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1374623086659" ignored="false" />
+    <file path="/verein.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1377475868801" ignored="false" />
     <file path="/team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376657085797" ignored="false" />
     <file path="/view_topnav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375229149699" ignored="false" />
-    <file path="/bootstrap.dark.css" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375982299073" ignored="false" />
+    <file path="/bootstrap.dark.css" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381525239683" ignored="false" />
     <file path="/topNav.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376657504996" ignored="false" />
     <file path="/view_footer.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375233369218" ignored="false" />
-    <file path="/footer.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375291033492" ignored="false" />
-    <file path="/aktuelles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376944441093" ignored="false" />
+    <file path="/footer.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381528589872" ignored="false" />
+    <file path="/aktuelles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381940880211" ignored="false" />
     <file path="/view_aktuelles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375312036279" ignored="false" />
-    <file path="/home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375642658429" ignored="false" />
+    <file path="/home.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1382052292045" ignored="false" />
     <file path="/Team.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1375812124725" ignored="false" />
-    <file path="/Player.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376584590744" ignored="false" />
+    <file path="/Player.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381878171498" ignored="false" />
     <file path="/teamUnit.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376339664790" ignored="false" />
     <file path="/playerTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376511009287" ignored="false" />
     <file path="/Teams.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376657408520" ignored="false" />
     <file path="/Staff.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376407636811" ignored="false" />
     <file path="/staffTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376408601574" ignored="false" />
-    <file path="/metadata.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376409449224" ignored="false" />
+    <file path="/metadata.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381448657213" ignored="false" />
     <file path="/kaderTable.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376585613820" ignored="false" />
     <file path="/player.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376598781931" ignored="false" />
     <file path="/playerUnit.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376585319208" ignored="false" />
-    <file path="/Articles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1376941934210" ignored="false" />
+    <file path="/Articles.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381879043882" ignored="false" />
+    <file path="/vorstand.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1377534253067" ignored="false" />
+    <file path="/match.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381940403335" ignored="false" />
+    <file path="/sandbox.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1382048693903" ignored="false" />
+    <file path="/view_vorstand.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1380582155249" ignored="false" />
+    <file path="/view_spieler.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1380583846406" ignored="false" />
+    <file path="/profile.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1380741136466" ignored="false" />
+    <file path="/view_matchReports.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381426983760" ignored="false" />
+    <file path="/edit_matchReports.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381449005551" ignored="false" />
+    <file path="/article.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381699761105" ignored="false" />
+    <file path="/RossoCMS Database" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381699339842" ignored="false" />
+    <file path="/Localhost MySQL" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381877886466" ignored="false" />
+    <file path="/451.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1381876819439" ignored="false" />
+    <file path="/functions.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1382049199132" ignored="false" />
+    <file path="/teamCalendar.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1382226543548" ignored="false" />
+    <file path="/silvesterUnit.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1384302414123" ignored="false" />
+    <file path="/silvester.php" changelist="6edcede6-d5ac-42d0-aaae-c0d3e1926a48" time="1384472796366" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,62 +83,7 @@
     <favorites_list name="rosso_cms" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Teams.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Teams.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-5.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teamUnit.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/elements/teamUnit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="6" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-18.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Player.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="0" selection-start="1336" selection-end="1336" vertical-scroll-proportion="-28.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aktuelles.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/pages/aktuelles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="28" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-28.125">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Articles.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Articles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="24" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-29.375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aktuelles.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.13333334">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -139,22 +101,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/controllers/player.php" />
+        <option value="$PROJECT_DIR$/application/views/elements/formation/451.php" />
+        <option value="db-console:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/" />
         <option value="$PROJECT_DIR$/application/models/Player.php" />
-        <option value="$PROJECT_DIR$/application/views/elements/playerUnit.php" />
-        <option value="$PROJECT_DIR$/application/views/pages/player.php" />
-        <option value="$PROJECT_DIR$/application/views/pages/team.php" />
-        <option value="$PROJECT_DIR$/application/views/elements/kaderTable.php" />
-        <option value="$PROJECT_DIR$/application/models/Teams.php" />
-        <option value="$PROJECT_DIR$/application/views/elements/topNav.php" />
-        <option value="$PROJECT_DIR$/application/core/MY_Controller.php" />
-        <option value="$PROJECT_DIR$/application/controllers/error.php" />
-        <option value="$PROJECT_DIR$/application/controllers/site.php" />
-        <option value="$PROJECT_DIR$/application/controllers/spieler.php" />
-        <option value="$PROJECT_DIR$/application/controllers/team.php" />
-        <option value="$PROJECT_DIR$/application/views/pages/aktuelles.php" />
         <option value="$PROJECT_DIR$/application/models/Articles.php" />
+        <option value="$PROJECT_DIR$/application/views/pages/match.php" />
         <option value="$PROJECT_DIR$/application/controllers/aktuelles.php" />
+        <option value="$PROJECT_DIR$/application/views/elements/formation/functions.php" />
+        <option value="$PROJECT_DIR$/application/controllers/sandbox.php" />
+        <option value="$PROJECT_DIR$/application/models/match.php" />
+        <option value="$PROJECT_DIR$/application/views/pages/home.php" />
+        <option value="$PROJECT_DIR$/application/views/pages/aktuelles.php" />
+        <option value="$PROJECT_DIR$/application/views/elements/teamCalendar.php" />
+        <option value="$PROJECT_DIR$/assets/css/bootstrap.dark.css" />
+        <option value="$PROJECT_DIR$/application/views/elements/silvesterUnit.php" />
+        <option value="$PROJECT_DIR$/application/views/pages/silvester.php" />
+        <option value="$PROJECT_DIR$/application/controllers/site.php" />
       </list>
     </option>
   </component>
@@ -166,8 +128,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="y" value="22" />
+    <option name="width" value="2560" />
+    <option name="height" value="1382" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -247,6 +210,28 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="All">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="rosso_cms">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -292,6 +277,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -324,205 +313,23 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rosso_cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rosso_cms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meta" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="elements" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rosso_cms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-        <subPane subId="All">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="rosso_cms">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -544,7 +351,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="JdbcConsole.Extract.QuoteEverything" value="false" />
     <property name="JdbcConsole.Extract.IncludeHeader" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="JdbcConsole.Extract.IncludeRowNumbers" value="false" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -552,13 +359,10 @@
   </component>
   <component name="PublishConfig" serverName="http://localhost" serverId="909e25f1-818d-4f8e-870d-ff44e4ccb6cb">
     <servers>
-      <server id="291aa854-6fc9-403f-bb3f-5b2c9b2a2ad1">
+      <server id="909e25f1-818d-4f8e-870d-ff44e4ccb6cb">
         <serverdata />
       </server>
-      <server id="99934f8a-9a99-4a9a-bbbc-df656c227fcc">
-        <serverdata />
-      </server>
-      <server id="d9f625da-6d3e-4df0-957c-9c68106b3a05">
+      <server id="ea855ad6-ca71-4fa7-9d9f-f88b322cb6e2">
         <serverdata />
       </server>
     </servers>
@@ -704,24 +508,25 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="22" width="2560" height="1382" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16585067" sideWeight="0.67016804" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1646778" sideWeight="0.778747" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22460221" sideWeight="0.67016804" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16825776" sideWeight="0.778747" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32983193" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293745" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21298495" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22125298" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293745" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -810,118 +615,90 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin.php">
+    <entry file="dbDummy://db-console:/352a4a5c/a920b378-3f04-4bfc-938c-9684540df332/">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="0" column="66" selection-start="66" selection-end="66" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/formation/451.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="84" column="28" selection-start="2479" selection-end="2479" vertical-scroll-proportion="0.91935486" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="9" selection-start="3291" selection-end="3291" vertical-scroll-proportion="0.8513625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2454" selection-end="2454" vertical-scroll-proportion="0.46738234" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/formation/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="45" selection-start="2011" selection-end="2011" vertical-scroll-proportion="0.77675587" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/formation/4231.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="668" selection-end="668" vertical-scroll-proportion="-16.25" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/sandbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="84" selection-start="230" selection-end="230" vertical-scroll-proportion="-5.625" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="40" selection-start="4099" selection-end="4099" vertical-scroll-proportion="0.81389576" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/aktuelles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="64" selection-start="3468" selection-end="3468" vertical-scroll-proportion="0.8331957" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/elements/teamCalendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="12" selection-start="705" selection-end="705" vertical-scroll-proportion="0.3715937" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/bootstrap.dark.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6205" column="17" selection-start="128447" selection-end="128447" vertical-scroll-proportion="0.420278" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/statuten.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="6" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.32178217" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/pages/silvester.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="150" column="33" selection-start="7690" selection-end="7690" vertical-scroll-proportion="0.42452043">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/core/MY_Controller.php">
+    <entry file="file://$PROJECT_DIR$/application/views/elements/silvesterUnit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="32" selection-start="443" selection-end="443" vertical-scroll-proportion="0.26041666">
+        <state line="28" column="74" selection-start="1487" selection-end="1487" vertical-scroll-proportion="0.34653464">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="593" selection-end="593" vertical-scroll-proportion="0.35">
+        <state line="38" column="32" selection-start="1354" selection-end="1354" vertical-scroll-proportion="0.47029704">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/verein.php">
+    <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Staff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="1" selection-start="675" selection-end="675" vertical-scroll-proportion="0.5833333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Member.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="38" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.6157355">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/elements/teamUnit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="6" selection-start="1077" selection-end="1077" vertical-scroll-proportion="-18.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages/aktuelles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="28" selection-start="1616" selection-end="1616" vertical-scroll-proportion="-28.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages/team.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="48" selection-start="720" selection-end="720" vertical-scroll-proportion="0.4">
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#2;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1376601702000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1376601702000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/spieler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="68" selection-start="565" selection-end="565" vertical-scroll-proportion="0.36666667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Teams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-5.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Player.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="0" selection-start="1336" selection-end="1336" vertical-scroll-proportion="-28.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Articles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="24" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-29.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/error.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.51666665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/aktuelles.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="150" selection-end="150" vertical-scroll-proportion="0.13333334">
+        <state line="29" column="21" selection-start="803" selection-end="803" vertical-scroll-proportion="0.36280233">
           <folding />
         </state>
       </provider>

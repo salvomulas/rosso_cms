@@ -18,12 +18,12 @@ echo doctype('html5');
 // Dynamic META-tag generation
 $meta = array(
         array('name' => 'robots', 'content' => 'no-cache'),
-	array('name' => 'author', 'content' => 'Salvatore Mulas'),
-	array('name' => 'generator', 'content' => 'pixEffect'),
+	    array('name' => 'author', 'content' => 'Salvatore Mulas'),
+	    array('name' => 'generator', 'content' => 'pixEffect'),
         array('name' => 'description', 'content' => 'AC Rossoneri Lausen'),
         array('name' => 'keywords', 'content' => 'acrossoneri, acr, rossoneri, lausen, acrlausen, rosso, neri'),
         array('name' => 'robots', 'content' => 'no-cache'),
-	array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0'),
+	    array('name' => 'viewport', 'content' => 'width=device-width, initial-scale=1.0'),
         array('name' => 'Content-type', 'content' => 'text/html; charset=utf-8', 'type' => 'equiv')
     );
 	
@@ -31,16 +31,10 @@ echo meta($meta);
 
 // Dynamic stylesheet implementation
 $css = array(
-          'href' => base_url().'assets/css/bootstrap.dark.css',
+          'href' => base_url().'assets/css/bootstrap.css',
           'rel' => 'stylesheet',
           'type' => 'text/css',
           'media' => 'screen'
-);
-
-$css_responsive = array(
-          'href' => base_url().'assets/css/bootstrap-responsive.css',
-          'rel' => 'stylesheet',
-          'type' => 'text/css',
 );
 
 $css_summernote = array(
@@ -50,7 +44,6 @@ $css_summernote = array(
 );
 
 echo link_tag($css);
-echo link_tag($css_responsive);
 echo link_tag($css_summernote);
 
 ?>

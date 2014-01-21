@@ -28,7 +28,7 @@ function shortenString($string, $width) {
 <div class="container">
 
     <div class="row">
-        <div class="span8">
+        <div class="col-md-8">
 
             <div id="myCarousel" class="carousel slide">
                 <ol class="carousel-indicators">
@@ -96,14 +96,14 @@ function shortenString($string, $width) {
 
                 // Print article title
                 echo '<div class="row">';
-                echo '<div class="span8">';
+                echo '<div class="col-md-8">';
 
                 echo '</div>';
                 echo '</div>';
 
                 // Print article body
                 echo '<div class="row">';
-                echo '<div class="span2">';
+                echo '<div class="col-md-3">';
                 echo '<a href="' . $link . '" class="thumbnail">';
                 if ($row->pictureURL) {
                     echo '<img src="'.base_url().'assets/img/articles/'.$row->pictureURL.'" alt="">';
@@ -113,11 +113,11 @@ function shortenString($string, $width) {
                 echo '</a>';
                 echo '</div>';
 
-                echo '<div class="span6">';
+                echo '<div class="col-md-9">';
                 echo '<h4><strong><a href="' . $link . '">' . $row->title . '</a></strong></h4>';
                 echo '<p>';
-                echo '<span class="label">' . $row->shortdate . '</span> ';
-                echo '<a href="#"><span class="label label-important">' . $cat . '</span></a> ';
+                echo '<span class="label label-default">' . $row->shortdate . '</span> ';
+                echo '<a href="#"><span class="label label-primary">' . $cat . '</span></a> ';
                 echo shortenString($row->article, 300);
                 echo '</p>';
                 echo '</div>';
@@ -128,14 +128,12 @@ function shortenString($string, $width) {
             }
             ?>
             
-            <div class="pagination">
-                <ul>
-                    <li><a href="<?php echo base_url(); ?>aktuelles">Zum Newsarchiv</a></li>
-                </ul>
-            </div>
+            <ul class="pagination">
+                <li><a href="<?php echo base_url(); ?>aktuelles">Zum Newsarchiv</a></li>
+            </ul>
 
         </div>
-        <div class="span4">
+        <div class="col-md-4">
 
             <div class="well-small text-center">
                 <a href="https://www.facebook.com/pages/AC-Rossoneri/238296652947602" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/facebook.png"></a>
@@ -148,61 +146,68 @@ function shortenString($string, $width) {
 
             </div>
 
-            <div class="well">
+            <div class="panel panel-default">
 
-                <h4>Tabelle</h4>
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tabelle</h3>
+                </div>
 
-                <div class="tabbable">
+                    <div class="panel-body">
 
-                    <ul class="nav nav-pills">
-                        <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
-                        <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
-                        <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
-                        <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
-                    </ul>
+                    <div class="tabbable">
 
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="tab1">
+                        <ul class="pagination">
+                            <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
+                            <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
+                            <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
+                            <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
+                        </ul>
 
-                        <?php
-                        $data['teamNumber'] = 1;
-                        $data['rankTables'] = $rankTables;
-                        $data['teamScores'] = $teamScores;
-                        $this->load->view('elements/rankingTable', $data);
-                        ?>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
 
+                            <?php
+                            $data['teamNumber'] = 1;
+                            $data['rankTables'] = $rankTables;
+                            $data['teamScores'] = $teamScores;
+                            $this->load->view('elements/rankingTable', $data);
+                            ?>
+
+                            </div>
+                            <div class="tab-pane" id="tab2">
+
+                            <?php
+                            $data['teamNumber'] = 2;
+                            $data['rankTables'] = $rankTables;
+                            $data['teamScores'] = $teamScores;
+                            $this->load->view('elements/rankingTable', $data);
+                            ?>
+
+                            </div>
+                            <div class="tab-pane" id="tab3">
+
+                            <?php
+                            $data['teamNumber'] = 3;
+                            $data['rankTables'] = $rankTables;
+                            $data['teamScores'] = $teamScores;
+                            $this->load->view('elements/rankingTable', $data);
+                            ?>
+
+                            </div>
+                            <div class="tab-pane" id="tab4">
+
+                            <?php
+                            $data['teamNumber'] = 10;
+                            $data['rankTables'] = $rankTables;
+                            $data['teamScores'] = $teamScores;
+                            $this->load->view('elements/rankingTable', $data);
+                            ?>
+
+                            </div>
                         </div>
-                        <div class="tab-pane" id="tab2">
 
-                        <?php
-                        $data['teamNumber'] = 2;
-                        $data['rankTables'] = $rankTables;
-                        $data['teamScores'] = $teamScores;
-                        $this->load->view('elements/rankingTable', $data);
-                        ?>
-
-                        </div>
-                        <div class="tab-pane" id="tab3">
-
-                        <?php
-                        $data['teamNumber'] = 3;
-                        $data['rankTables'] = $rankTables;
-                        $data['teamScores'] = $teamScores;
-                        $this->load->view('elements/rankingTable', $data);
-                        ?>
-
-                        </div>
-                        <div class="tab-pane" id="tab4">
-
-                        <?php
-                        $data['teamNumber'] = 10;
-                        $data['rankTables'] = $rankTables;
-                        $data['teamScores'] = $teamScores;
-                        $this->load->view('elements/rankingTable', $data);
-                        ?>
-
-                        </div>
                     </div>
+
                 </div>
 
             </div>
@@ -210,11 +215,11 @@ function shortenString($string, $width) {
             <div class="well">
                 <h4>N&auml;chstes Spiel der ersten Mannschaft</h4>
 
-                <div class="row-fluid">
-                    <div class="span3">
-                        <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 150px;">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 76px;">
                     </div>
-                    <div class="span9">
+                    <div class="col-md-9">
                     <?php
                     if ($nextMatch->num_rows > 0) {
                         foreach ($nextMatch->result() as $row) {
@@ -319,7 +324,7 @@ function shortenString($string, $width) {
 
     <div class="row">
 
-        <div class="span4">
+        <div class="col-md-4">
             <div class="well">
                 <h4>Newsarchiv</h4>
 
@@ -356,7 +361,7 @@ function shortenString($string, $width) {
             </div>
         </div>
 
-        <div class="span4">
+        <div class="col-md-4">
             <div class="well">
                 <h4>Matchberichte Archiv</h4>
 
@@ -393,7 +398,7 @@ function shortenString($string, $width) {
             </div>
         </div>
 
-        <div class="span4">
+        <div class="col-md-4">
             <div class="well">
                 <h4>Letzte Spiele</h4>
 

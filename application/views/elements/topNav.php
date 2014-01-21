@@ -18,10 +18,10 @@ function menuObject ($name, $url, $active = true) {
 
     <div class="container">
         <div class="row">
-            <div class="span5">
+            <div class="col-md-5">
                 <img src="<?php echo base_url(); ?>assets/img/logo.png" alt="AC Rossoneri">
             </div>
-            <div class="span7">
+            <div class="col-md-7">
                 <div class="navbar">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                         <span class="icon-bar"></span>

@@ -1,10 +1,14 @@
 <?php
 
-function menuObject ($name, $url) {
+function menuObject ($name, $url, $active = true) {
     if ($url == uri_string()) {
         echo '<li class="active"><a href="'.base_url().$url.'">'.$name.'</a></li>';
     } else {
-        echo '<li><a href="'.base_url().$url.'">'.$name.'</a></li>';
+        if ($active == true) {
+            echo '<li><a href="'.base_url().$url.'">'.$name.'</a></li>';
+        } else {
+            echo '<li class="disabled"><a href="'.base_url().$url.'">'.$name.'</a></li>';
+        }
     }
 }
 
@@ -33,7 +37,7 @@ function menuObject ($name, $url) {
                                     <?php menuObject("Newsarchiv","aktuelles"); ?>
                                     <li class="divider"></li>
                                     <li class="nav-header">Anl&auml;sse</li>
-                                    <?php menuObject("Silvester 13/14","silvester"); ?>
+                                    <li class="disabled"><a href="">Keine Events</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">

@@ -11,8 +11,8 @@ class Silvester extends MY_Controller {
         
     }
     
-    public function index() {
-
+    public function archiv() {
+        
         // Set Controller properties
         $data ['page_title'] = "Silvester 13/14";
         
@@ -22,6 +22,12 @@ class Silvester extends MY_Controller {
         $this->load->view("elements/silvesterUnit");
         $this->load->view("pages/silvester", $data);
         $this->load->view("elements/footer");
+        
+    }
+    
+    public function index() {
+
+        redirect ("error/PageNotFound");
 
     }
 

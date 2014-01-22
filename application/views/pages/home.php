@@ -30,7 +30,7 @@ function shortenString($string, $width) {
     <div class="row">
         <div class="col-md-8">
 
-            <div id="myCarousel" class="carousel slide">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <?php
                     
@@ -63,7 +63,7 @@ function shortenString($string, $width) {
                         echo '<img src="'.base_url().'assets/img/articles/highlights/'.$row->pictureURL.'">';
                         echo '<div class="carousel-caption">';
                         echo '<h4><a href="'.base_url().'aktuelles/article/'.$row->id.'">'.$row->title.'</a></h4>';
-                        echo '<p>'.shortenString($row->article,300).'</p>';
+                        echo '<p>'.shortenString($row->article,200).'</p>';
                         echo '</div>';
                         echo '</div>';
                         $counter++;
@@ -73,8 +73,12 @@ function shortenString($string, $width) {
                     
                 </div>
                 <!-- Carousel nav -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
             </div>
 
             <hr>
@@ -93,13 +97,6 @@ function shortenString($string, $width) {
                     default: $link = NULL;
                         $cat = NULL;
                 }
-
-                // Print article title
-                echo '<div class="row">';
-                echo '<div class="col-md-8">';
-
-                echo '</div>';
-                echo '</div>';
 
                 // Print article body
                 echo '<div class="row">';
@@ -308,7 +305,7 @@ function shortenString($string, $width) {
                         echo '<td>'.$team.'</td>';
                         echo '<td>'.$row->opponent.'</td>';
                         echo '<td>'.$row->date.'</td>';
-                        echo '<td><a href="" id="'.$jsObject.'" rel="popover" class="btn btn-mini" data-placement="top" data-toggle="popover" title="" data-content="'.$location.'" data-original-title="'.$gameTitle.'"><i class="icon-info-sign"></i></a></td>';
+                        echo '<td><button type="button" href="" id="'.$jsObject.'" rel="popover" class="btn btn-primary btn-xs" data-placement="top" data-toggle="popover" title="" data-content="'.$location.'" data-original-title="'.$gameTitle.'"><span class="glyphicon glyphicon glyphicon-info-sign"></span></button></td>';
                         echo '</tr>';
 
                         $jsObject++;
@@ -365,7 +362,7 @@ function shortenString($string, $width) {
                             echo '<tr>';
                             echo '<td>' . $row->fulldate . '</td>';
                             echo '<td>' . $row->title . '</td>';
-                            echo '<td><a href="' . base_url() . 'aktuelles/article/' . $row->id . '"><i class="icon-play"></a></td>';
+                            echo '<td><a href="' . base_url() . 'aktuelles/article/' . $row->id . '"><span class="glyphicon glyphicon-chevron-right"></span></a></td>';
                             echo '</tr>';
                         }
 
@@ -410,7 +407,7 @@ function shortenString($string, $width) {
                             echo '<tr>';
                             echo '<td>' . $row->fulldate . '</td>';
                             echo '<td>' . $row->title . '</td>';
-                            echo '<td><a href="' . base_url() . 'aktuelles/match/' . $row->id . '"><i class="icon-play"></a></td>';
+                            echo '<td><a href="' . base_url() . 'aktuelles/match/' . $row->id . '"><span class="glyphicon glyphicon-chevron-right"></span></a></td>';
                             echo '</tr>';
                         }
 

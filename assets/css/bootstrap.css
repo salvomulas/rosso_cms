@@ -45,7 +45,7 @@ body {
 
 header {
     background: url("../img/header-bg.png");
-    padding-top: 35px;
+    padding-top: 15px;
     min-height: 170px;
 }
 
@@ -315,6 +315,12 @@ body {
   line-height: 1.428571429;
   color: #888888;
   background-color: #060606;
+  background-image: -moz-linear-gradient(top, #060606, #111111);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#060606), to(#111111));
+  background-image: -webkit-linear-gradient(top, #060606, #111111);
+  background-image: -o-linear-gradient(top, #060606, #111111);
+  background-image: linear-gradient(to bottom, #060606, #111111);
+  background-repeat: repeat-x;
 }
 
 input,
@@ -4343,6 +4349,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
   background-color: transparent;
 }
 
+.nav > li.nav-header > a {
+    cursor: default;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .nav .open > a,
 .nav .open > a:hover,
 .nav .open > a:focus {
@@ -4880,8 +4893,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
+    float: none; /* Adjustment for centering nav */
+    display: inline-block; /* Adjustment for centering nav */
     margin: 0;
+    text-align: left;
   }
   .navbar-nav > li {
     float: left;
@@ -5013,8 +5028,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #060606;
+  background-color: #151515;
   border-color: #000000;
+  margin-top: 10px;
 }
 
 .navbar-default .navbar-brand {
@@ -5038,7 +5054,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #222222;
 }
 
 .navbar-default .navbar-nav > .active > a,
@@ -5071,13 +5087,14 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border-color: #000000;
+  text-align: center; /* Adjustment for centering nav */
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #222222;
 }
 
 @media (max-width: 767px) {
@@ -5559,6 +5576,15 @@ a.list-group-item.active > .badge,
 
 .nav-pills > li > a > .badge {
   margin-left: 3px;
+}
+
+.nav-secondary {
+  color: inherit;
+  background-color: #222222;
+  margin-top: -20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .jumbotron {
@@ -6900,9 +6926,7 @@ button.close {
 
 .carousel-caption {
   position: absolute;
-  right: 15%;
-  bottom: 20px;
-  left: 15%;
+  bottom: 0px;
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -6927,12 +6951,10 @@ button.close {
     font-size: 30px;
   }
   .carousel-caption {
-    right: 20%;
-    left: 20%;
-    padding-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.75);
   }
   .carousel-indicators {
-    bottom: 20px;
+    bottom: -5px;
   }
 }
 
@@ -7529,7 +7551,6 @@ td.visible-print {
 }
 
 .navbar {
-  border-bottom: 1px solid #282828;
 }
 
 .text-primary,

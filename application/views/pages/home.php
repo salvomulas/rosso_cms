@@ -146,7 +146,7 @@ function shortenString($string, $width) {
 
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
 
                 <div class="panel-heading">
                     <h3 class="panel-title">Tabelle</h3>
@@ -212,41 +212,53 @@ function shortenString($string, $width) {
 
             </div>
 
-            <div class="well">
-                <h4>N&auml;chstes Spiel der ersten Mannschaft</h4>
+            <div class="panel panel-primary">
 
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 76px;">
-                    </div>
-                    <div class="col-md-9">
-                    <?php
-                    if ($nextMatch->num_rows > 0) {
-                        foreach ($nextMatch->result() as $row) {
-
-                            switch ($row->teamID) {
-                                case 1:
-                            }
-
-                            echo '<h5>' . $row->gameType .'</h5>';
-                            echo '<p><strong>vs </strong>' . $row->opponent . '</p>';
-                            echo '<p>' . $row->location . '</p>';
-                            echo '<p>' . $row->complex . '</p>';
-                            echo '<p>' . $row->date . ' um ' . $row->time . ' Uhr</p>';
-                        }
-                    } else {
-                        echo '<p>Es sind noch keine Spiele angesetzt!</p>';
-                    }
-                    ?>
-                    </div>
-                    <hr>
-                    <p></p>
+                <div class="panel-heading">
+                    <h3 class="panel-title">N&auml;chstes Spiel der ersten Mannschaft</h3>
                 </div>
+
+                <div class="panel-body">
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 76px;">
+                        </div>
+                        <div class="col-md-9">
+                        <?php
+                        if ($nextMatch->num_rows > 0) {
+                            foreach ($nextMatch->result() as $row) {
+
+                                switch ($row->teamID) {
+                                    case 1:
+                                }
+
+                                echo '<h5>' . $row->gameType .'</h5>';
+                                echo '<p><strong>vs </strong>' . $row->opponent . '</p>';
+                                echo '<p>' . $row->location . '</p>';
+                                echo '<p>' . $row->complex . '</p>';
+                                echo '<p>' . $row->date . ' um ' . $row->time . ' Uhr</p>';
+                            }
+                        } else {
+                            echo '<p>Es sind noch keine Spiele angesetzt!</p>';
+                        }
+                        ?>
+                        </div>
+                        <hr>
+                        <p></p>
+                    </div>
+                    
+                    </div>
 
             </div>
 
-            <div class="well">
-                <h4>N&auml;chste Spiele</h4>
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">N&auml;chste Spiele</h3>
+                </div>
+
+                <div class="panel-body">
 
                 <?php
 
@@ -315,6 +327,7 @@ function shortenString($string, $width) {
                 ?>
 
             </div>
+        </div>
 
         </div>
 
@@ -325,116 +338,140 @@ function shortenString($string, $width) {
     <div class="row">
 
         <div class="col-md-4">
-            <div class="well">
-                <h4>Newsarchiv</h4>
+            
+            <div class="panel panel-primary">
 
-                <?php
-                if ($newsArchive) {
+                <div class="panel-heading">
+                    <h3 class="panel-title">Newsarchiv</h3>
+                </div>
 
-                    echo '<table class="table table-condensed table-hover">';
-                    echo '<thead>';
-                    echo '<tr>';
-                    echo '<th>Datum</th>';
-                    echo '<th>Titel</th>';
-                    echo '<th></th>';
-                    echo '</tr>';
-                    echo '</thead>';
-                    echo '<tbody>';
+                <div class="panel-body">
 
-                    foreach ($newsArchive->result() as $row) {
+                    <?php
+                    if ($newsArchive) {
 
+                        echo '<table class="table table-condensed table-hover">';
+                        echo '<thead>';
                         echo '<tr>';
-                        echo '<td>' . $row->fulldate . '</td>';
-                        echo '<td>' . $row->title . '</td>';
-                        echo '<td><a href="' . base_url() . 'aktuelles/article/' . $row->id . '"><i class="icon-play"></a></td>';
+                        echo '<th>Datum</th>';
+                        echo '<th>Titel</th>';
+                        echo '<th></th>';
                         echo '</tr>';
-                    }
+                        echo '</thead>';
+                        echo '<tbody>';
 
-                    echo '</tbody>';
-                    echo '</table>';
-                } else {
+                        foreach ($newsArchive->result() as $row) {
 
-                    echo '<p>Es wurden noch keine News verfasst';
-                }
-                ?>
-
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="well">
-                <h4>Matchberichte Archiv</h4>
-
-                <?php
-                if ($matchReport) {
-
-                    echo '<table class="table table-condensed table-hover">';
-                    echo '<thead>';
-                    echo '<tr>';
-                    echo '<th>Datum</th>';
-                    echo '<th>Titel</th>';
-                    echo '<th></th>';
-                    echo '</tr>';
-                    echo '</thead>';
-                    echo '<tbody>';
-
-                    foreach ($matchReport->result() as $row) {
-
-                        echo '<tr>';
-                        echo '<td>' . $row->fulldate . '</td>';
-                        echo '<td>' . $row->title . '</td>';
-                        echo '<td><a href="' . base_url() . 'aktuelles/match/' . $row->id . '"><i class="icon-play"></a></td>';
-                        echo '</tr>';
-                    }
-
-                    echo '</tbody>';
-                    echo '</table>';
-                } else {
-
-                    echo '<p>Es wurden noch keine Matchberichte verfasst';
-                }
-                ?>
-
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="well">
-                <h4>Letzte Spiele</h4>
-
-                <?php
-
-                if ($lastMatches) {
-
-                    echo '<table class="table table-condensed table-hover">';
-
-                    foreach ($lastMatches->result() as $row) {
-
-                        $team = substr($row->name,0,4);
-
-                        echo '<tr>';
-                        if ($row->isHome == 1) {
-                            echo '<td><strong>ACR ('.$team.'.)</strong></td>';
-                            echo '<td class="text-center">'.$row->pointsHome.':'.$row->pointsAway.'</td>';
-                            echo '<td>'.$row->opponent.'</td>';
-                        } else {
-                            echo '<td>'.$row->opponent.'</td>';
-                            echo '<td class="text-center">'.$row->pointsHome.':'.$row->pointsAway.'</td>';
-                            echo '<td><strong>ACR ('.$team.'.)</strong></td>';
+                            echo '<tr>';
+                            echo '<td>' . $row->fulldate . '</td>';
+                            echo '<td>' . $row->title . '</td>';
+                            echo '<td><a href="' . base_url() . 'aktuelles/article/' . $row->id . '"><i class="icon-play"></a></td>';
+                            echo '</tr>';
                         }
-                        echo '</tr>';
 
+                        echo '</tbody>';
+                        echo '</table>';
+                    } else {
+
+                        echo '<p>Es wurden noch keine News verfasst';
+                    }
+                    ?>
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Matchberichte Archiv</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <?php
+                    if ($matchReport) {
+
+                        echo '<table class="table table-condensed table-hover">';
+                        echo '<thead>';
+                        echo '<tr>';
+                        echo '<th>Datum</th>';
+                        echo '<th>Titel</th>';
+                        echo '<th></th>';
+                        echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+
+                        foreach ($matchReport->result() as $row) {
+
+                            echo '<tr>';
+                            echo '<td>' . $row->fulldate . '</td>';
+                            echo '<td>' . $row->title . '</td>';
+                            echo '<td><a href="' . base_url() . 'aktuelles/match/' . $row->id . '"><i class="icon-play"></a></td>';
+                            echo '</tr>';
+                        }
+
+                        echo '</tbody>';
+                        echo '</table>';
+                    } else {
+
+                        echo '<p>Es wurden noch keine Matchberichte verfasst';
+                    }
+                    ?>
+                    
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Letzte Spiele</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <?php
+
+                    if ($lastMatches) {
+
+                        echo '<table class="table table-condensed table-hover">';
+
+                        foreach ($lastMatches->result() as $row) {
+
+                            $team = substr($row->name,0,4);
+
+                            echo '<tr>';
+                            if ($row->isHome == 1) {
+                                echo '<td><strong>ACR ('.$team.'.)</strong></td>';
+                                echo '<td class="text-center">'.$row->pointsHome.':'.$row->pointsAway.'</td>';
+                                echo '<td>'.$row->opponent.'</td>';
+                            } else {
+                                echo '<td>'.$row->opponent.'</td>';
+                                echo '<td class="text-center">'.$row->pointsHome.':'.$row->pointsAway.'</td>';
+                                echo '<td><strong>ACR ('.$team.'.)</strong></td>';
+                            }
+                            echo '</tr>';
+
+                        }
+
+
+                        echo '</table>';
+
+                    } else {
+
+                        echo '<p>Noch keine Spiele getätigt!';
                     }
 
-
-                    echo '</table>';
-
-                } else {
-
-                    echo '<p>Noch keine Spiele getätigt!';
-                }
-
-                ?>
+                    ?>
+                    
+                </div>
 
             </div>
         </div>

@@ -1738,7 +1738,6 @@ pre code {
 
 table {
   max-width: 100%;
-  background-color: #181818;
 }
 
 th {
@@ -1878,13 +1877,13 @@ table th[class*="col-"] {
 .table > thead > .danger > th,
 .table > tbody > .danger > th,
 .table > tfoot > .danger > th {
-  background-color: #ff8800;
+  background-color: #bf1508;
 }
 
 .table-hover > tbody > tr > .danger:hover,
 .table-hover > tbody > .danger:hover > td,
 .table-hover > tbody > .danger:hover > th {
-  background-color: #e67a00;
+  background-color: #97150B;
 }
 
 .table > thead > tr > .warning,
@@ -5259,7 +5258,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   line-height: 1.428571429;
   text-decoration: none;
   background-color: #222222;
-  border: 1px solid #282828;
+  /* border: 1px solid #282828; */
 }
 
 .pagination > li:first-child > a,
@@ -5935,7 +5934,7 @@ a.list-group-item.active:focus .list-group-item-text {
 
 .panel {
   margin-bottom: 20px;
-  background-color: #222222;
+  background-color: #151515;
   border: 1px solid transparent;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6162,21 +6161,21 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-primary {
-  border-color: #bf1508;
+  /* border-color: #282828; */
 }
 
 .panel-primary > .panel-heading {
   color: #ffffff;
   background-color: #bf1508;
-  border-color: #bf1508;
+  border-color: #282828;
 }
 
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #bf1508;
+  border-top-color: #151515;
 }
 
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #bf1508;
+  border-bottom-color: #151515;
 }
 
 .panel-success {

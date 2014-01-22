@@ -19,7 +19,7 @@
             if ((strpos($row->team,"Rossoneri")) === false) {
                 echo '<tr>';
             } else {
-                echo '<tr class="info">';
+                echo '<tr class="danger">';
             }
             echo '<td>' . $row->team . '</td>';
             echo '<td>' . $row->points . '</td>';

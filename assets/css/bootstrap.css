@@ -5888,7 +5888,7 @@ a.thumbnail.active {
 .list-group-item {
   position: relative;
   display: block;
-  padding: 10px 15px;
+  padding: 3px 15px;
   margin-bottom: -1px;
   background-color: #222222;
   border: 1px solid #282828;
@@ -5924,7 +5924,8 @@ a.list-group-item .list-group-item-heading {
 a.list-group-item:hover,
 a.list-group-item:focus {
   text-decoration: none;
-  background-color: #484848;
+  background-color: #bf1508;
+  color: #ffffff;
 }
 
 a.list-group-item.active,

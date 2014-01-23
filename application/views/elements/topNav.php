@@ -174,9 +174,43 @@ if ($this->session->userdata('is_logged_in')) {
     <div class="nav-secondary hidden-xs">
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <h3>Spielbetrieb</h3>
                     <p>S&auml;mtliche Informationen zum Spielbetrieb des AC Rossoneri</p>
+                </div>
+                <div class="col-md-6">
+                    <h4>Mannschaften</h4>
+                    <hr>
+                    <div class="col-md-6">
+                        <h5>Aktive</h5>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">1. Mannschaft</a>
+                            <a href="#" class="list-group-item">2. Mannschaft</a>
+                            <a href="#" class="list-group-item">3. Mannschaft</a>
+                            <a href="#" class="list-group-item">Senioren</a>
+                            <a href="#" class="list-group-item">Frauen</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>Kinderfussball</h5>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">Junioren Fa</a>
+                            <a href="#" class="list-group-item">Junioren Fb</a>
+                            <a href="#" class="list-group-item">Junioren G</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Diverses</h4>
+                    <hr>
+                    <div class="col-md-12">
+                        <h5>Diverses</h5>
+                        <div class="list-group">
+                            <a href="#" class="list-group-item">Sportpl&auml;tze</a>
+                            <a href="#" class="list-group-item">Schiedsrichter</a>
+                            <a href="#" class="list-group-item">Resultate</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

@@ -42,6 +42,7 @@ function menuObject($name, $url, $active = true) {
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <?php menuObject("Home", ""); ?>
+                <li><a data-toggle="collapse" data-target="#secondary-navbar">MenuTest</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">Aktuelles<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -171,7 +172,7 @@ if ($this->session->userdata('is_logged_in')) {
             <!-- /.navbar-collapse -->
     </nav>
     
-    <div class="nav-secondary hidden-xs">
+    <div class="nav-secondary collapse" id="secondary-navbar">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">

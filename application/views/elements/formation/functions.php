@@ -51,7 +51,7 @@ function resPlayer ($data) {
             $jsID = str_replace(' ','',$data->row($id)->firstName.$data->row($id)->lastName);
             
             echo '<tr>';
-            echo '<td><a href="#'.$jsID.'" class="btn btn-mini" data-toggle="modal"><i class="icon-info-sign"></a></i></td>';
+            echo '<td><button type="button" href="#'.$jsID.'" class="btn btn-primary btn-xs" data-toggle="modal"><span class="glyphicon glyphicon-info-sign"></span></button></td>';
             echo '<td>'.$data->row($id)->firstName.'</td>';
             echo '<td>'.$data->row($id)->lastName.'</td>';
             echo '</tr>';
@@ -81,7 +81,7 @@ function drawModal ($data) {
         echo '</div>';
         echo '<div class="modal-body">';
         echo '<div class="row-fluid">';
-        echo '<div class="span4">';
+        echo '<div class="col-md-4">';
         if ($data->row($id)->pictureURL) {
             echo '<img src="'.base_url().'assets/img/member/'.$data->row($id)->pictureURL.'" style="width:150px;">';
         } else {
@@ -90,7 +90,7 @@ function drawModal ($data) {
         echo '<hr>';
         echo '<a href="'.base_url().'spieler/aktiv/'.$data->row($id)->id.'" class="btn btn-info btn-small">zum Spielerprofil</a>';
         echo '</div>';
-        echo '<div class="span8">';
+        echo '<div class="col-md-8">';
         echo '<h4>'.$data->row($id)->name.'</h4>';
         echo '<h5>Pers&ouml;nliche Daten</h5>';
         echo '<table class="table table-condensed table-hover">';

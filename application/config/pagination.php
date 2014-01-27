@@ -1,8 +1,8 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
  
 // Full tags
-$config['full_tag_open'] = '<div class="pagination"><ul>';
-$config['full_tag_close'] = '</ul></div>';
+$config['full_tag_open'] = '<ul class="pagination">';
+$config['full_tag_close'] = '</ul>';
 
 // First tags and links
 $config['first_link'] = '&laquo; Erste';

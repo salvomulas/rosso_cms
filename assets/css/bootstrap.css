@@ -5029,7 +5029,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-default {
   background-color: #151515;
-  border-color: #000000;
   margin-top: 10px;
 }
 
@@ -5590,6 +5589,32 @@ a.list-group-item.active > .badge,
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.match-unit {
+  padding: 3px;
+  margin-bottom: 30px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  background: url("../img/stadium_light3.jpg");
+  background-size: 100% 100%;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.firework-unit {
+  padding: 3px;
+  margin-bottom: 30px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  background: url("../img/fireworks.png");
+  background-size: 100% 100%;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
 }
 
 .jumbotron {
@@ -6663,7 +6688,7 @@ button.close {
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
-  background-color: #181818;
+  background-color: #bf1508;
   border-bottom: 1px solid #0b0b0b;
   border-radius: 5px 5px 0 0;
 }

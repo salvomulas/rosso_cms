@@ -4,18 +4,18 @@
     
     <div class="row">
         
-        <div class="span8">
+        <div class="col-md-8">
             
             <p><?php echo $article->article; ?></p>
             
         </div>
         
-        <div class="span4">
+        <div class="col-md-4">
             
             <?php
             if ($article->pictureURL) {
                 echo '<div class="text-center">';
-                echo '<img src="'.base_url().'assets/img/articles/'.$article->pictureURL.'" alt="">';
+                echo '<img src="'.base_url().'assets/img/articles/'.$article->pictureURL.'" alt="" style="max-width: 100%;">';
                 echo '</div>';
                 echo '<hr>';
             }
@@ -38,34 +38,46 @@
 
             ?>
       
-            <div class="well">
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Infos</h3>
+                </div>
+
+                <div class="panel-body">
                 
-                <h4>Infos</h4>
-                
-                <table class="table table-condensed">
-                    <tr>
-                        <th>Autor</th>
-                        <td><?php echo $article->firstName.' '.$article->lastName; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Datum</th>
-                        <td><?php echo $article->date; ?></td>
-                    </tr>
-                    <tr>
-                        <th>Zeit</th>
-                        <td><?php echo $article->time; ?> Uhr</td>
-                    </tr>
-                    <tr>
-                        <th>Kategorie</th>
-                        <td><a href="#"><span class="label label-important"><?php echo $cat; ?></span></a></td>
-                    </tr>
-                </table>
+                    <table class="table table-condensed">
+                        <tr>
+                            <th>Autor</th>
+                            <td><?php echo $article->firstName.' '.$article->lastName; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Datum</th>
+                            <td><?php echo $article->date; ?></td>
+                        </tr>
+                        <tr>
+                            <th>Zeit</th>
+                            <td><?php echo $article->time; ?> Uhr</td>
+                        </tr>
+                        <tr>
+                            <th>Kategorie</th>
+                            <td><a href="#"><span class="label label-primary"><?php echo $cat; ?></span></a></td>
+                        </tr>
+                    </table>
+                    
+                </div>
                 
             </div>
             
-            <div class="well">
+            <div class="panel panel-primary">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">Teilen</h3>
+                </div>
+
+                <div class="panel-body">
                 
-                <h4>Teilen</h4>
+                </div>
                 
             </div>
             

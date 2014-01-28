@@ -31,5 +31,14 @@ class Verein extends MY_Controller {
         $this->load->view("pages/statuten", $data);
         $this->load->view("elements/footer");
     }
+    
+    public function geschichte() {
+        $data ['page_title'] = "Geschichte";
+        
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/geschichte", $data);
+        $this->load->view("elements/footer");
+    }
 
 }

@@ -513,6 +513,12 @@ h5,
   font-size: 14px;
 }
 
+h5.trikot {
+  color: #bf1508;
+  font-weight: bold;
+  font-family: Tahoma;
+}
+
 h6,
 .h6 {
   font-size: 12px;
@@ -5620,13 +5626,16 @@ a.list-group-item.active > .badge,
 .jumbotron {
   padding: 30px;
   margin-bottom: 30px;
+  /*
   font-size: 21px;
   font-weight: 200;
   line-height: 2.1428571435;
+  */
   color: inherit;
   background-color: #151515;
 }
 
+/*
 .jumbotron h1,
 .jumbotron .h1 {
   line-height: 1;
@@ -5636,6 +5645,7 @@ a.list-group-item.active > .badge,
 .jumbotron p {
   line-height: 1.4;
 }
+*/
 
 .container .jumbotron {
   border-radius: 6px;
@@ -5654,10 +5664,13 @@ a.list-group-item.active > .badge,
     padding-right: 60px;
     padding-left: 60px;
   }
+  
+  /*
   .jumbotron h1,
   .jumbotron .h1 {
     font-size: 63px;
   }
+  */
 }
 
 .thumbnail {
@@ -6236,7 +6249,16 @@ a.list-group-item.active:focus .list-group-item-text {
 }
 
 .panel-success {
-  border-color: #809a00;
+  border-color: #312929;
+  border-radius: 6px !important;
+}
+
+.panel-success > .panel-body:hover {
+  background-color: #2c2c2c;
+}
+
+.panel-success > .panel-body {
+    padding: 0px !important;
 }
 
 .panel-success > .panel-heading {
@@ -7616,7 +7638,7 @@ td.visible-print {
 }
 
 .table-responsive > .table {
-  background-color: #181818;
+  background-color: inherit;
 }
 
 .has-warning .help-block,

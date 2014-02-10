@@ -28,7 +28,7 @@ if ($reports->num_rows > 0) {
         }
         echo '<td>'.$row->pointsHome.':'.$row->pointsAway.'</td>';
         echo '<td>'.$row->mDate.'</td>';
-        echo '<td><a href="'.base_url().'aktuelles/match/'.$row->id.'"><i class="icon-play"></i></a></td>';
+        echo '<td><a href="'.base_url().'aktuelles/match/'.$row->id.'"><span class="glyphicon glyphicon-play"></span></a></td>';
         echo '</tr>';
 
     }

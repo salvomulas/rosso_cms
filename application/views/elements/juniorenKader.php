@@ -3,36 +3,40 @@
 function printPosition ($role, $title) {
 
     if ($role->num_rows > 0) {
-    
-        $counter = 1;
 
         echo '<h4>'.$title.'</h4>';
         echo '<hr>';
+        echo '<div class="row">';
 
         foreach ($role->result() as $row) {
 
-            if ($counter == 1 || is_int(($counter+2)/3)) {
-                echo '<div class="row-fluid">';
-            }
-
-            echo '<div class="span4 text-center">';
+            echo '<div class="col-md-4 col-sm-6 col-xs-12">';
+            
+            echo '<div class="panel panel-success">';
+            echo '<div class="panel-body">';
+            echo '<div class="row">';
+            echo '<div class="col-md-4 col-sm-4 col-xs-3">';
+            
             if ($row->pictureURL != NULL) {
-                echo '<img class="img-rounded" src="'.base_url().'assets/img/member/'.$row->pictureURL.'" style="height: 150px; width: 150px;">';
+                echo '<img class="img-rounded" src="'.base_url().'assets/img/member/'.$row->pictureURL.'" style="width: 100%;">';
             } else {
-                echo '<img class="img-rounded" src="'.base_url().'assets/img/dummy_person.jpg" style="height: 150px; width: 150px;">';
+                echo '<img class="img-rounded" src="'.base_url().'assets/img/dummy_person.jpg" style="width: 100%;">';
             }
-            echo '<h5>'.$row->firstName.' '.$row->lastName.'</h5>';
+            
             echo '</div>';
+            
+            echo '<div class="col-md-8 col-sm-8 col-xs-9">';
+            echo '<h4>'.$row->firstName.' '.$row->lastName.'</h4>';
 
-            if (is_int($counter/3) || $counter == $role->num_rows()) {
-                echo '</div>';
-            }
-
-            $counter++;
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
+            echo '</div>';
 
         }
 
-        echo '<hr>';
+        echo '</div>';
     
     } 
 

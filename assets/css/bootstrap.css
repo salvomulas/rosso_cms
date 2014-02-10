@@ -5635,6 +5635,31 @@ a.list-group-item.active > .badge,
   background-color: #151515;
 }
 
+#map-canvas {
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
+  height: 278px;
+}
+
+.map-unit {
+  padding: 60px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  opacity: 0.8;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#map-canvas img,
+.google-maps img {
+  max-width: none;
+}
+
 /*
 .jumbotron h1,
 .jumbotron .h1 {

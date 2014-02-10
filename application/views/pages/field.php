@@ -4,7 +4,7 @@
 
     <div class="row">
         
-        <div class="span8">
+        <div class="col-md-8">
             <h3>Sportanlagen</h3>
             <p>Die Sportanlage Bifang in Lausen bietet zur Zeit insgesamt 3 Fussballfelder f&uuml;r die Aus&uuml;bung des sch&ouml;nsten Hobbies der Welt.
                 Nebst der Fussballfelder, bietet die Sportanlage zwei moderne Mehrzweckhallen (Bifang und Stutz), zwei Hartpl&auml;tze, ein Beach-Volleyball-Feld und eine 400 Meter lange Finnenbahn.
@@ -15,7 +15,7 @@
             
         </div>
         
-        <div class="span4">
+        <div class="col-md-4">
             
             <div class="well">
                 <h4>Anlage Bifang</h4>
@@ -46,11 +46,11 @@
     foreach ($field->result() as $row) {
         
         echo '<div class="well">';
-        echo '<div class="row-fluid">';
-        echo '<div class="span3">';
-        echo '<img src="'.base_url().'assets/img/fields/'.$row->pictureURL.'">';
+        echo '<div class="row">';
+        echo '<div class="col-md-3">';
+        echo '<img src="'.base_url().'assets/img/fields/'.$row->pictureURL.'" style="max-width: 100%;">';
         echo '</div>';
-        echo '<div class="span9">';
+        echo '<div class="col-md-9">';
         echo '<h4>'.$row->title.'</h4>';
         echo '<table class="table table-condensed table-hover">';
         

@@ -21,6 +21,11 @@ function shortenString($string, $width) {
         $("#3").popover().on('click', function(e) {e.preventDefault(); return true;});
         $("#4").popover().on('click', function(e) {e.preventDefault(); return true;});
         $("#5").popover().on('click', function(e) {e.preventDefault(); return true;});
+        $("#fb").tooltip();
+        $("#twitter").tooltip();
+        $("#gplus").tooltip();
+        $("#youtube").tooltip();
+        $("#rss").tooltip();
     });
 
 </script>
@@ -100,7 +105,7 @@ function shortenString($string, $width) {
 
                 // Print article body
                 echo '<div class="row">';
-                echo '<div class="col-md-3">';
+                echo '<div class="col-md-3 col-sm-3 col-xs-3">';
                 echo '<a href="' . $link . '" class="thumbnail">';
                 if ($row->pictureURL) {
                     echo '<img src="'.base_url().'assets/img/articles/'.$row->pictureURL.'" alt="">';
@@ -110,36 +115,41 @@ function shortenString($string, $width) {
                 echo '</a>';
                 echo '</div>';
 
-                echo '<div class="col-md-9">';
+                echo '<div class="col-md-9 col-sm-9 col-xs-9">';
                 echo '<h4><strong><a href="' . $link . '">' . $row->title . '</a></strong></h4>';
+                
                 echo '<p>';
-                echo '<span class="label label-default">' . $row->shortdate . '</span> ';
-                echo '<a href="#"><span class="label label-primary">' . $cat . '</span></a> ';
                 echo shortenString($row->article, 300);
                 echo '</p>';
+                
+                echo '<div class="well well-sm">';
+                echo '<p class="small" style="margin-bottom: 0px;">';
+                echo '<span class="glyphicon glyphicon-user"></span> '.$row->firstName.' '.$row->lastName.' | ';
+                echo '<span class="glyphicon glyphicon-calendar"></span> '.$row->shortdate.' | ';
+                echo '<span class="glyphicon glyphicon-tag"></span> '.$cat .'</p>';
                 echo '</div>';
+                
                 echo '</div>';
-
+                
+                echo '</div>';
 
                 echo '<hr>';
             }
             ?>
             
-            <ul class="pagination">
-                <li><a href="<?php echo base_url(); ?>aktuelles">Zum Newsarchiv</a></li>
-            </ul>
+            <div class="well well-sm text-right">
+                <a href="<?php echo base_url(); ?>aktuelles" role="button" class="btn btn-default btn-xs">Zum Newsarchiv</a>
+            </div>
 
         </div>
         <div class="col-md-4">
 
-            <div class="well-small text-center">
-                <a href="https://www.facebook.com/pages/AC-Rossoneri/238296652947602" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/facebook.png"></a>
-                <a href="https://twitter.com/ACRossoneri" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/twitter.png"></a>
-                <a href="https://plus.google.com/103733298786436902225" rel="publisher" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/gplus.png"></a>
-                <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/youtube.png"></a>
-                <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/rss.png"></a>
-
-                <hr>
+            <div class="well well-sm text-center hidden-sm hidden-xs">
+                <a href="https://www.facebook.com/pages/AC-Rossoneri/238296652947602" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/facebook.png" id="fb" data-toggle="tooltip" data-placement="top" title="Folge uns auf Facebook!"></a>
+                <a href="https://twitter.com/ACRossoneri" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/twitter.png" id="twitter" data-toggle="tooltip" data-placement="top" title="Werde ein Follower auf Twitter!"></a>
+                <a href="https://plus.google.com/103733298786436902225" rel="publisher" target="_blank"><img class="social" src="<?php echo base_url(); ?>assets/img/icons/gplus.png" id="gplus" data-toggle="tooltip" data-placement="top" title="Folge uns auf Google+"></a>
+                <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/youtube.png" id="youtube" data-toggle="tooltip" data-placement="top" title="Abonniere unseren YouTube Kanal!"></a>
+                <a href=""><img class="social" src="<?php echo base_url(); ?>assets/img/icons/rss.png" id="rss" data-toggle="tooltip" data-placement="top" title="Abonniere unseren RSS Feed"></a>
 
             </div>
 
@@ -218,10 +228,10 @@ function shortenString($string, $width) {
                 <div class="panel-body">
 
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-3 col-sm-3 col-xs-3">
                             <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 76px;">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-9 col-sm-9 col-xs-9">
                         <?php
                         if ($nextMatch->num_rows > 0) {
                             foreach ($nextMatch->result() as $row) {

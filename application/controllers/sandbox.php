@@ -57,13 +57,14 @@ class Sandbox extends CI_Controller {
         echo '</div>';
 
         echo '<div class="col-md-10">';
-        echo '<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div></div>';
+        echo '<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div></div>';
         echo '</div>';
 
         echo '</div><hr>';
 
         echo '<div class="col-md-6">';
         echo '<table class="table table-condensed table-hover">';
+        echo '<h4>Ranking table</h4>';
         for ($i = 0; $i < sizeof($ranking); $i++) {
             echo '<tr>';
             for ($s = 0; $s < sizeof($ranking[$i]); $s++) {
@@ -73,7 +74,16 @@ class Sandbox extends CI_Controller {
         }
         echo '</table>';
         echo '</div>';
+
+        echo '<div class="col-md-6">';
+        echo '<div class="well">';
+        echo '<h4>$ranking dump</h4>';
+        print_r($ranking);
         echo '</div>';
+        echo '</div>';
+
+        echo '</div>';
+        echo '<hr>';
     }
 
     public function interval() {

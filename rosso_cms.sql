@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 21. Okt 2013 um 17:11
--- Server Version: 5.5.16
--- PHP-Version: 5.3.8
+-- Erstellungszeit: 11. Feb 2014 um 12:38
+-- Server Version: 5.1.44
+-- PHP-Version: 5.3.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
+CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -86,8 +88,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (145877, 2, 0, 'Meisterschaft', 1, 0, 1, 'So', '2013-10-06', '12:30:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145882, 2, 1, 'Meisterschaft', 1, 3, 1, 'Sa', '2013-10-12', '20:00:00', 'FC Wallbach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145890, 2, 0, 'Meisterschaft', 1, 0, 2, 'Sa', '2013-10-19', '19:00:00', 'FC Liestal  ', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
-(145893, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2013-10-27', '11:00:00', 'FC Diegten Eptingen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145903, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2013-11-03', '14:00:00', 'FC Zeiningen ', 'Unter Reben, Zeiningen - 1', 'Unter Reben', 'Zeiningen', '1', 'Unter Reben, Zeiningen'),
+(145893, 2, 0, 'Meisterschaft', 1, 1, 0, 'So', '2013-10-27', '11:00:00', 'FC Diegten Eptingen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145903, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-16', '14:00:00', 'FC Zeiningen ', 'Unter Reben, Zeiningen - 1', 'Unter Reben', 'Zeiningen', '1', 'Unter Reben, Zeiningen'),
 (145904, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Gelterkinden ', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
 (145915, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Eiken', 'Sportanlage Netzi, Eiken,   - 1', 'Sportanlage Netzi, Eiken', ' ', '1', 'Kultureller Saal, Eiken                     '),
 (145917, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -108,8 +110,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (146493, 1, 0, 'Meisterschaft', 1, 0, 0, 'Sa', '2013-10-05', '19:00:00', 'FC Diegten Eptingen  ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
 (146498, 1, 1, 'Meisterschaft', 1, 2, 0, 'Sa', '2013-10-12', '18:00:00', 'FC Gelterkinden b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146506, 1, 0, 'Meisterschaft', 1, 0, 3, 'Sa', '2013-10-19', '20:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146509, 1, 1, 'Meisterschaft', NULL, 0, 0, 'Sa', '2013-10-26', '18:00:00', 'FC Stein b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146519, 1, 0, 'Meisterschaft', NULL, 0, 0, 'Sa', '2013-11-02', '17:00:00', 'FC Laufenburg-Kaisten b', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
+(146509, 1, 1, 'Meisterschaft', 1, 3, 1, 'Sa', '2013-10-26', '18:00:00', 'FC Stein b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146519, 1, 0, 'Meisterschaft', 1, 0, 0, 'Sa', '2013-11-02', '17:00:00', 'FC Laufenburg-Kaisten b', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
 (146520, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-23', '00:00:00', 'SC Muenchenstein a', 'Sportplatz Au, Muenchenstein - 1', 'Sportplatz Au', 'Muenchenstein', '1', 'Sportplatz Au, Muenchenstein'),
 (146531, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Arisdorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146533, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'SV Sissach a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -126,10 +128,10 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (152024, 10, 0, 'Meisterschaft', 1, 4, 2, 'Fr', '2013-08-30', '20:30:00', 'FC Birsfelden  ', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
 (152031, 10, 1, 'Meisterschaft', 1, 1, 4, 'Sa', '2013-09-07', '16:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152035, 10, 0, 'Meisterschaft', 1, 4, 1, 'Sa', '2013-09-21', '13:00:00', 'FC Tuerkguecue Basel ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(152040, 10, 1, 'Meisterschaft', NULL, 0, 0, 'Sa', '2013-10-23', '20:15:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152040, 10, 1, 'Meisterschaft', NULL, 0, 0, 'Sa', '2014-03-29', '20:15:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152046, 10, 0, 'Meisterschaft', 1, 6, 1, 'Fr', '2013-10-11', '20:15:00', 'FC Bubendorf  ', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
 (152049, 10, 1, 'Meisterschaft', 1, 1, 7, 'Sa', '2013-10-19', '16:00:00', 'FC Dardania', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(152057, 10, 0, 'Meisterschaft', NULL, 0, 0, 'Sa', '2013-10-26', '13:00:00', 'FC Birlik', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
+(152057, 10, 0, 'Meisterschaft', 1, 3, 0, 'Sa', '2013-10-26', '13:00:00', 'FC Birlik', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
 (152058, 10, 0, 'Meisterschaft', NULL, 0, 0, 'Sa', '2014-04-05', '15:00:00', 'US Bottecchia BS', 'Sportanlage Rheinacker, Landauerstr. 45,   - Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45', ' ', 'Hauptplatz', 'Sportanlage Rheinacker, Landauerstr. 45,  '),
 (152067, 10, 0, 'Meisterschaft', NULL, 0, 0, 'Sa', '2014-04-12', '00:00:00', 'US Olympia 1963 ', 'Sportzentrum Pfaffenholz, Basel - wird vor Ort zugeteilt', 'Sportzentrum Pfaffenholz', 'Basel', 'wird vor Ort zugeteilt', 'Sportzentrum Pfaffenholz, Basel'),
 (152069, 10, 1, 'Meisterschaft', NULL, 0, 0, 'Sa', '2014-04-26', '00:00:00', 'FC Birsfelden  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -145,9 +147,9 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (153365, 15, 0, 'Meisterschaft', 1, 13, 0, 'So', '2013-09-22', '13:00:00', 'FC Telegraph BS ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
 (153367, 15, 1, 'Meisterschaft', 1, 0, 16, 'So', '2013-09-29', '13:00:00', 'FC Reinach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (153372, 15, 0, 'Meisterschaft', 1, 3, 0, 'So', '2013-10-06', '15:00:00', 'FC Laufenburg-Kaisten ', 'Hard, Kaisten - 1', 'Hard', 'Kaisten', '1', 'Turnhalle, Kaisten                           '),
-(153378, 15, 0, 'Meisterschaft', NULL, 0, 0, 'Sa', '2013-10-19', '17:30:00', 'FC Allschwil', 'Im Brueel, Allschwil,   - 2', 'Im Brueel, Allschwil', ' ', '2', 'Im Brueel, Allschwil,  '),
-(153379, 15, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2013-10-27', '13:00:00', 'FC Nordstern BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(153383, 15, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Concordia Basel ', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
+(153378, 15, 0, 'Meisterschaft', 1, 3, 0, 'Sa', '2013-10-19', '17:30:00', 'FC Allschwil', 'Im Brueel, Allschwil,   - 2', 'Im Brueel, Allschwil', ' ', '2', 'Im Brueel, Allschwil,  '),
+(153379, 15, 1, 'Meisterschaft', 1, 1, 12, 'So', '2013-10-27', '13:00:00', 'FC Nordstern BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153383, 15, 0, 'Meisterschaft', 1, 13, 0, 'So', '2013-11-03', '13:00:00', 'FC Concordia Basel ', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
 (153386, 15, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Telegraph BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (153388, 15, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'FC Reinach', 'Einschlag, Reinach - Kunstrasen (1)', 'Einschlag', 'Reinach', 'Kunstrasen (1)', 'Einschlag, Reinach'),
 (153393, 15, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -166,8 +168,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (160876, 3, 0, 'Meisterschaft', 1, 1, 5, 'So', '2013-10-06', '15:00:00', 'FC Ferad a', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
 (160881, 3, 1, 'Meisterschaft', 1, 2, 6, 'So', '2013-10-13', '14:00:00', 'FC Schwarz-Weiss', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (160889, 3, 0, 'Meisterschaft', 1, 9, 0, 'So', '2013-10-20', '13:00:00', 'FK Srbija Basel ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(160892, 3, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2013-10-27', '15:00:00', 'FC Pratteln', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(160902, 3, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2013-11-03', '13:00:00', 'FC Telegraph BS', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
+(160892, 3, 1, 'Meisterschaft', 1, 1, 8, 'So', '2013-10-27', '15:00:00', 'FC Pratteln', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(160902, 3, 0, 'Meisterschaft', 1, 2, 1, 'So', '2013-11-03', '13:00:00', 'FC Telegraph BS', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
 (160903, 3, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Xalko', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
 (160914, 3, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Amicitia Riehen ', 'Grendelmatte, Riehen - wird vor Ort zugeteilt', 'Grendelmatte', 'Riehen', 'wird vor Ort zugeteilt', 'Grendelmatte, Riehen'),
 (160916, 3, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -287,7 +289,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (103, 14, 'Argun', 'Berat', '', '0000-00-00', '', 1, 3, '00119.jpg'),
 (104, 8, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, ''),
 (109, 19, 'Hofacker', 'Sven', '', '0000-00-00', '', 1, 2, '00115.jpg'),
-(110, 4, 'Özdemir', 'Recep', '', '0000-00-00', '', 1, 2, '00123.jpg'),
+(110, 37, 'Özdemir', 'Recep', '', '0000-00-00', '', 1, 2, '00123.jpg'),
 (111, 7, 'Schmid', 'Melanie', '', '0000-00-00', '', 15, 4, '00135.jpg'),
 (112, 32, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
 (113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg'),
@@ -458,7 +460,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `formation` int(255) DEFAULT NULL,
   `playerArray` mediumtext,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
 -- Daten für Tabelle `news`
@@ -470,7 +472,6 @@ INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `ca
 (3, 'Die erste Mannschaft auf dem ersten Platz', 'Die harte Arbeit des Trainer-Trio''s und der gesamten Mannschaft hat sich nun endlich ausbezahlt! Die erste Mannschaft erreicht nach dem grandiosen Sieg von 8:0 gegen den SV Muttenz den ersten Platz. Unsere erste Mannschaft hat bisher insgesamt 6 Spiele bestritten - davon 5 Spiele gewonnen und 1 Spiel unentschieden. Eine sagenhafte Leistung!<br />\r\nAuch das Torverhältnis sieht fantastisch aus: Nach den 6 Spielen hat die erste Mannschaft bisher nur ein einziges Gegentor kassiert und konnte satte 21 Treffer erzielen - somit hat der AC Rossoneri in der gesamten 4. Liga die beste Verteidigung überhaupt (natürlich gehört die ganze Mannschaft dazu).<br />\r\nWir wünschen der ersten Mannschaft weiterhin viel Erfolg. Weiter so!', '00104.jpg', 1, '2013-09-28 21:54:47', 1, NULL, NULL, NULL),
 (9, 'Trotz unentschieden noch auf dem 1. Platz', 'Nach dem Unentschieden unserer ersten Mannschaft gegen den FC Diegten Eptingen ging die plötzliche Euphorie wieder den Bach runter. Sofort nach dem Erlangen des ersten Platzes erfasste uns die Panik, die Führung wieder abgeben zu müssen. Unsere Jungs werden in der Tabelle zur Zeit sehr dicht von Laufenburg, Gelterkinden und dem FC Stein verfolgt - einmal stolpern wäre bereits genug, um die Führung wieder zu verlieren. Das Stolpern liess nicht lange auf sich warten: Leider reichte es in Diegten trotz einer brillianten Leistung nur für ein Unentschieden.<br />\r\nDas Spiel zwischen Laufenburg und Gelterkinden endete allerdings zu unseren Gunsten ebenfalls mit einem Unentschieden. Diesbezüglich können wir weiterhin von der Tabellenspitze grüssen und bereiten uns auf ein spannendes Spiel nächsten Samstag gegen den FC Gelterkinden vor. Forza Rossoneri. ', '00105.jpg', 1, '2013-10-06 13:59:28', 1, NULL, NULL, NULL),
 (10, 'Drei direkte Begegnungen und ein Derby', 'Die Vorrunde neigt sich dem Ende zu - und was für ein Ende! Die Leistung der ersten Mannschaft kann zur Zeit nicht einmal in Worte gefasst werden. Sagenhaft, grandios, souverän! Angesichts der super Leistungen der gesamten Mannschaft inklusive Trainerstab ist dieser erste Platz hochverdient.<br />\r\nSpannend werden die letzten vier Spiele der Vorrunde: Uns erwarten nämlich drei Direktbegegnungen mit dem zweit-, dritt- und viert-Platzierten. Darüber hinaus wird es auch noch zum hochspannenden Derby mit dem FC Lausen kommen. Die Vorrunde wird in einem fussballerischen Spektakel enden. Forza Rossoneri', '00106.jpg', 1, '2013-10-11 14:16:06', 1, NULL, NULL, NULL),
-(11, 'Auch dieses Jahr: Die AC Rossoneri Silvesterparty!', 'Es ist wieder soweit, das Jahr 2013 ist schon bald zu Ende. Grund genug um erneut die Champagner-Gläser hochzuheben und gemeinsam auf das neue Jahr anzustossen. Der AC Rossoneri wird euch auch dieses Jahr mit einem grandiosen Anlass verzaubern und mit einer spektakulären Silvesterfeier unterhalten. Weitere Infos werden in Kürze auf unserer Webseite folgen. Save the date!', '00100.jpg', 1, '2013-10-10 13:47:21', 3, NULL, NULL, NULL),
 (12, 'Danke! Das Familienturnier war ein Erfolg!', 'Der AC Rossoneri möchte sich von Herzen bei allen Teilnehmerinnen und Teilnehmer unseres Familienturniers des 14. September 2013 bedanken. Die hohe Anzahl an Teilnehmer und Zuschauer für das Turnier und das anschliessende Cupspiel hat uns sehr gefreut. Es war uns eine Ehre, so viele Gäste für diese Anlässe begrüssen zu dürfen. Vielen Dank an unsere Fans und den Familien unserer Mitglieder.', '00101.jpg', 1, '2013-10-10 22:41:45', 3, NULL, NULL, NULL),
 (13, 'Ein High-Five auf die Tabellenführung', 'Mit einem Sieg, der nie in Gefahr war, eroberte die AC Rossoneri die Tabellenspitze in der 2. Gruppe der vierten Liga. Der fünffache Torschütze Maurizio Marchetta schoss den SV Muttenz beinahe im Alleingang ab.<br />\rAuch ein früher Tiefschlag konnte die extrem gefestigt wirkende Truppe der AC Rossoneri nicht aus dem Tritt bringen. Nach nur zehn gespielten Minuten musste Danilo Cordeiro verletz ausgewechselt werden. Nach einem Zweikampf bekam Cordeiro einen Schlag ins Gesicht und musste mit einer Platzwunde im Mund ins Krankenhaus. Auf diesem Weg, gute Besserung Danilo!<br />\rAls Glück im Unglück kann man diesen Spielertausch betrachten. Nur knappe zehn Minuten brauchte  Maurizio Marchetta nach seiner Hereinnahme um das erste Mal zu scoren. In der Folge vergab die AC in Form von Stefan Zimmermann, Basti Werisch und Marchetta hochkarätige Chancen. Letzterer vollendete dennoch mit dem Pausenpfiff einen schönen Konter zum 2:0.<br />\rAus einer stabilen Defensive heraus spielte Rosso die erste Hälfte souverän runter. Wenn es etwas zu bemängeln gibt, ist dies das nonchalante Umgehen mit den zahlreichen Torchancen.<br />\rDiese vermeintliche Schwäche der ersten Hälfte wurde im zweiten Abschnitt zur Stärke. Beinahe jeder Schuss schien den Weg ins Tor zu finden. Kurz nach Wiederbeginn erhöhte der starke David Prince Tettey auf 3:0. Ab Spielminute 62 klingelte es in schöner Regelmässigkeit im Tor der Gäste. Der Reihe nach trafen Zimmermann, zweimal Marchetta und nochmals Tettey. In der 72. Minute gelang Marchetta gar sein fünfter Treffer (Spielball behalten??) zum 8:0, was sogleich der Endstand war.<br />\rMit diesem zu jeder Zeit ungefährdeten Sieg übernimmt die AC die Tabellenführung, auch dank der zeitgleichen Niederlage des grössten Konkurrenten Laufenburg-Kaisten gegen den FC Diegten-Eptingen. Ein weiteres Mal in der noch jungen Saison konnte sich das Roberti-Team auf eine solide Defensive verlassen. Genau ein einziges Gegentor musste Rosso in allen bisher gespielten Partien hinnehmen – absolute Ligaspitze.', '00107.jpg', 3, '2013-09-30 21:15:59', 2, 146487, 4231, 'a:18:{i:0;i:35;i:1;i:102;i:2;i:69;i:3;i:93;i:4;i:79;i:5;i:101;i:6;i:100;i:7;i:19;i:8;i:96;i:9;i:109;i:10;i:120;i:11;i:17;i:12;i:57;i:13;i:113;i:14;i:67;i:15;i:103;i:16;i:59;i:17;i:104;}'),
 (14, 'Zurück zur Normalität?', 'Die vorgezogene Zweitrunden-Begegnung zwischen der AC Rossoneri und dem FC Eiken wurde in Extremis entschieden \rMit dem FC Eiken kam ein Sieger der ersten Spielrunde nach Lausen um sich mit der AC Rossoneri zu messen. Und der Gast war, wie zu erwarten, ein unangenehmer Gegner. Spielerisch kein Schlechter und auch harter Gegner in den Zweikämpfen. Nach einem forschen Beginn beider Teams, gelang Eiken der Führungstreffer. Nicht zwingend verdient. Die AC hatte och die eine oder andere Möglichkeit fahrlässig vergeben. Und in dieser Zeit war auch das viel zitierte Momentum nicht auf der Seite der Gastgeber. Chancen ausgelassen, Gegentreffer und ein weiterer verletzter Spieler – Captain Eggli ging frühzeitig duschen.<br />\rIm zweiten Spielabschnitt gelang rasch der Ausgleich: Ein typische Weibel-Tor. Im allgemeinen Durcheinander spedierte Weibel den Ball über die Linie. Doch nur wenig später gelang dem FCE die neuerliche Führung. Fortan spielte nur noch Rosso. Nach einem schönen Spielzug war es der interimistische Captain Shala der Sandinho mustergültig bediente und dieser nur noch einzunicken brauchte. Viertes Tor im zweiten Spiel. Der Knoten scheint gelöst. Die AC wollte jetzt mehr. Eiken wirkte platt und handlungsunfähig. Das i-Tüpfelchen gelang dem Pflichtspiel-Debütanten Stefan Kaiser. Der Eingewechselte erzielte beinahe mit dem Schlusspfiff den erlösenden Siegestreffer. <br />\rTrotz dem Punktemaximum nach zwei Spielen ist Rosso „nur“ auf Rang vier wiederzufinden. Die guten alten Strafpunkte. Ein, aller Voraussicht nach, zu unseren Ungunsten ewiger Wegbegleiter…<br />\rEin grosser Dank geht an die erste Mannschaft, die uns einmal mehr aushalf und den wiederum zahlreich erschienenen Fans. Danke!!<br /> \rP.S.: Die Ferienzeit neigt sich dem Ende zu, einige Verletzte und Militärisch-Aktive kehren Schritt für Schritt wieder zurück. Dennoch war das „Zwei“ einmal mehr auf die Hilfe der Ersten Mannschaft angewiesen um dieses Spiel zu bestreiten. Doch langsam sollte es wieder vermöglichbar sein, einen geregelten Trainingsablauf mit genügend Spielern zu gewährleisten und eine „eigene“ Mannschaft für Meisterschaftsspiele aufzubieten… Merciiiiiii<br />\r', '00113.jpg', 3, '2013-08-21 21:00:00', 2, 145849, NULL, ''),
@@ -480,7 +481,29 @@ INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `ca
 (18, 'Pech, Pech und ein weiteres Mal Pech…', 'Nach zwei deftigen Klatschen setzte es gegen den NK Pajde eine extrem unglückliche Niederlage ab. Es war ein Spiel mit Schatten- und einigen Sonnenseiten. <br />\rRehabilitation war angesagt. Nach insgesamt 14 Gegentoren in zwei Spielen sollte gegen den NK Pajde eine Leistungssteigerung her. Doch es hätte nicht schlimmer beginnen können: Nach nur wenigen gespielten Sekunden zappelte der Ball bereits zum ersten Mal im Gehäuse der Gastgeber. Ein eher harmloser Schuss rutschte Gubsi unglücklich zwischen den Beinen durch. <br />\rAber anders als noch in den Spielen zuvor liessen die AC-Spieler die Köpfe nicht hängen, sondern versuchten das Heft in die eigenen Hände zu nehmen. Aus einer (ausnahmsweise) starken Defensive heraus, spielte Rosso gefälligen Fussball. Einzig die zwingenden Chancen blieben aus. Mit dem  knappen 0:1-Rückstand ging es in die Pause. <br />\rAuch im zweiten Abschnitt dominierte Rosso das Spiel. Mit der Hereinnahme des wiedergenesenen Büsi kehrte merklich die Ruhe im Spielaufbau zurück. Die Gäste kamen kaum zu einer Tormöglichkeit. Jedoch trat erneut die Nonchalance vor dem Gäste-Gehäuse auf. Doch neben dem Auslassen der Chancen darf man die positiven Aspekte nicht vergessen: Kämpferisch top, Moral wieder gefunden und spielerisch wieder auf einem guten Niveau. <br />\rAls, wie so oft, Sandinho das Spielgerät irgendwie im Gehäuse zum Ausgleich unterbrachte, glaubten alle an einen Sieg. Eine weitere unglückliche Aktion von Gubsi später befand sich Rosso erneut im Hintertreffen. Nun lagen die Nerven hüben wie drüben blank. Es wurde pausenlos reklamiert, lamentiert und gehadert. Der masslos überforderte Schiedsrichter verteilte mehr Karten als an Weihnachten – was zu einem berechtigten Platzverweis für die Gäste führte. Nummerisch in Überzahl stürmte und drängte die AC nun vehement auf den Ausgleich. Dieser gelang dem Super-Sub Nure Shala in der zweiten Minute der Nachspielzeit. Die Freude war jedoch nur von kurzer Dauer… Eine schier endlose Fehlerkette fand seinen Abschluss mit dem erneuten Gegentor zum 2:3. Nur gefühlte zehn Sekunden nach dem Ausgleich. Bitter, einfach nur bitter. <br />\rIm Vergleich zu den letzten Spielen war eine deutliche Leistungssteigerung erkennbar. Wenn auch in Extremis  brutal verloren, lässt sich auf dieser Partie aufbauen. Vielleicht gelingt der ersehnte Befreiungsschlag schon im nächsten Spiel. Im Derby gegen den FC Lausen.\r', '00109.jpg', 3, '2013-09-29 21:30:00', 2, 145871, 442, 'a:11:{i:0;i:35;i:1;i:117;i:2;i:141;i:3;i:113;i:4;i:70;i:5;i:98;i:6;i:116;i:7;i:140;i:8;i:92;i:9;i:26;i:10;i:97;}'),
 (19, 'Nach dem Spitzenspiel ist vor dem Derby', 'Eine starke zweite Hälfte reichte Rosso um im Spitzenspiel gegen den FC Gelterkinden einen souveränen Sieg einzufahren. Die beiden Joker Maurizio Marchetta und Giovanni Bonsignore erzielten die Treffer.<br />\nEine alte Weisheit besagt: Wenn es läuft, dann läuft es. Erneut war es Super-Sub Marchetta, der die AC auf die Siegesstrasse brachte. Dieser Junge hat zurzeit einen Lauf und trifft beinahe nach Belieben. Doch für einen Sieg benötigt es mehr als nur Solisten. Und das Team funktioniert von A bis Z. Die Defensive ist seit Beginn der Saison die absolute Stärke von Rosso: Lediglich ein Gegentor musste die neuformierte Defensive hinnehmen. Auch die Offensive harmoniert meist gut zusammen.  Und von der Breite des Kaders träumen viele Konkurrenten nur. Es scheint keine unumstössliche „Erste-Elf“ zu geben, von der Bank kann das Trainerteam immer wieder die benötigten Impulse setzten und falls gewünscht rotieren. <br />\nIn der ersten Hälfte war nicht alles Gold, was glänzt. Der FCG hatte, trotz spielerischer Überlegenheit, nicht eine ernsthafte Torchance. Keeper Gubser musste sich lediglich bei Abstössen sportlich betätigen. Aber auch die AC kam in der Offensive kaum je zur Entfaltung. Als der - nicht immer auf der Höhe wirkende - Spielleiter zur zweiten Halbzeit blies, spielten die Gastgeber befreiter und inspirierter auf. Dank starkem Gegenpressing wurden Gältis Angriffsversuche im Keim erstickt und mit teils ansehnlichen Vorstössen gezielte Nadelstiche gesetzt. Aus diesen Nadelstichen resultierte auch das zu diesem Zeitpunkt verdiente Führungstor durch Marchetta. Als kurz vor dem Ende – genau in einer Druckphase der Gäste – die Neuerwerbung Bonsignore das 2:0 markierte, war der Deckel drauf. <br />\nDank diesem Sieg konnte Robertis Team einen direkten Konkurrenten um den Aufstieg entscheidend distanzieren. Doch das Restprogramm hat es in sich: Zuerst das Derby „auswärts“ beim FC Lausen,  gefolgt vom Spiel gegen den viertplatzierten FC Stein und zum Abschluss noch die Partie gegen Laufenburg-Kaisten – notabene dem Zweiten der Gruppe. Doch die Mannschaft scheint gefestigt und für die kommenden schweren Aufgaben gerüstet.', '00108.jpg', 3, '2013-10-16 19:30:00', 2, 146498, 4231, 'a:18:{i:0;i:35;i:1;i:102;i:2;i:33;i:3;i:69;i:4;i:79;i:5;i:99;i:6;i:103;i:7;i:96;i:8;i:93;i:9;i:101;i:10;i:19;i:11;i:57;i:12;i:113;i:13;i:100;i:14;i:139;i:15;i:109;i:16;i:120;i:17;i:104;}'),
 (20, 'Let it roll!', 'Mit dem 3:1-Sieg gegen Wallbach startet die AC Rossoneri eine kleine Sieges-Serie.  Kann diese auch am kommenden Weekend gegen den Lieblings-Erzrivalen Liestal anhalten?<br />\nEiner nach dem Anderen kehrt zurück. Das Team nimmt immer mehr die gewohnte, erfolgreiche Form an. Und mit der Rückkehr einiger etablierter Spieler kehren auch die positiven Resultate zurück. Mit dem Derby-Sieg im „Auswärtsspiel“ gegen den FC Lausen ist ein erster Befreiungsschlag gelungen, mit dem Sieg gegen die Freaktaler am vergangenen Samstag gar eine Mini-Serie gestartet worden. <br />\nIn einer ereignisarmen ersten Hälfte sorgte Stefan Kaiser mit dem 1:0 für erste Jubelstürme. Mit dieser knappen Führung ging die Romano-Elf in die Pause. Es wurden einige taktische Änderungen vorgenommen und weiter ging es mit Halbzeit zwei. In Durchgang zwei führte Rosso dann auch eine weitaus feinere Klinge als in den ersten 45 Minuten.<br />\nAls Sandinho alleine aufs Tor marschierte, scheiterte er zunächst noch am Gäste-Keeper. Es gelang ihm jedoch die sofortige Rückeroberung des Balles. Mit viel Übersicht legte er die Pille im 16er quer auf den heranstürmenden Michi Tanner, der mit seinem Premieren-Tor in dieser Saison das Score auf 2:0 erhöhen konnte. Nur kurze Zeit später erhöhte Sandinho auf 3:0. Jetzt waren die Fans waren nicht mehr zu halten. Sie sangen und tanzten (siehe Videos) das restliche Spiel über.<br /> \nAuch der von Langnaz unglücklich verursachte Elfmeter (diese Mal ein Handspiel, also nicht ganz typisch Langnaz-like mit beiden Beinen voraus;-) ) für die Gäste, vermochte der guten Stimmung keinen Abbruch zu tun. Beim fälligen Strafstoss hatte der interimistische Goalie Nure Shala keine Chance. Das Tor sollte ein kleiner Schönheitsfehler bleiben. In der Folge passierte nichts mehr und der starke Schiri beendete dieses Spiel. <br />\nEs ist schön zu sehen, wie vor dem wohl wichtigsten Spiel der Hinrunde der AC-Zug langsam aber sicher immer mehr ins Rollen kommt. Nur ein Gegentor in den letzten Zwei Pflichtspielen. Liestal kann also kommen. In diesem Sinne: Let it roll.', '00114.jpg', 3, '2013-10-13 21:30:00', 2, 145882, 4231, 'a:11:{i:0;i:83;i:1;i:117;i:2;i:142;i:3;i:26;i:4;i:70;i:5;i:98;i:6;i:141;i:7;i:116;i:8;i:30;i:9;i:41;i:10;i:98;}'),
-(21, 'Der Siegesmarsch geht weiter - Sieg im Derby!', 'Nach der erst kürzlich eingetroffenen Polarkälte und jeweiligem Regenschauer hat uns Mutter-Natur für das Derby plötzlich mit optimalem Fussballwetter beschenkt. Dafür hat es allerdings Vater-Fussballfeld mit den katastrophalen Platzbedingungen nicht wirklich gut mit uns gemeint. Zur Zeit müssen unsere Jungs auf einem hügeligen Acker auftreten und dabei mit vielen Fehlpässen und Probleme bei der Ballkontrolle rechnen.<br /><br />\r\n \r\nDoch der Fussballplatz und dessen Konditionen sollten uns heute nicht interessieren, das Ziel war sonnenklar: das Derby auf jeden Fall gewinnen und die drei Punkte einsacken um weiterhin von der Tabellenspitze grüssen zu dürfen.<br /><br />\r\n \r\nDer Schiri betritt das Feld, gefolgt von den Teams in zwei Reihen, beide angeführt vom jeweiligen Captain. Die Zuschauer werden von den beiden Kontrahenten begrüsst, lautes Klatschen und Jubeln unserer zahlreichen Fans, Handschlag der Kapitäne, Münzwurf und Anpfiff - das Derby geht los!<br /><br />\r\n \r\nEs vergehen nicht einmal 3 Minuten und Stefan Zimmermann erzielt den ersten Treffer für den AC Rossoneri, ein unglaublicher Start in eine sehr heikle Partie. Der Führungstreffer sorgt sofort für Jubel und Enthusiasmus, aber er wirkt gleichzeitig auch als Weckruf für unseren Gegner.<br /><br />\r\n\r\nDer FC Lausen zeigt trotz Rückstand einen enormen Siegeswillen. Immer wieder muss unsere Verteidigung harte Arbeit leisten um gefährliche Situationen zu klären. Einige Minuten werden wir unter Druck gesetzt und mangeln etwas am Spielaufbau. Viele Bälle gehen verloren und oft fehlt uns etwas Fantasie, so dass wir dem Gegner viele lange Bälle schenken und oftmals etwas zu viel unnötige Sprints von unserer Sturmspitze verlangen.<br /><br />\r\n\r\nWir wachen in der zweiten Hälfte der ersten Halbzeit wieder auf und machen unser Spiel. Der AC Rossoneri steht nun etwas kompakter und bezaubert mit schönen Spielkombinationen im Mittelfeld. Besonders kommt hier unser Aussenläufer David Tettey zum Vorschein, welcher wie besessen das ganze Spielfeld rauf- und runter läuft und wunderschöne Aktionen in die Wege leitet.<br /><br />\r\n\r\nAus dem Nichts erobert plötzlich unsere Nummer 31 Sebastian Werisch im Mittelfeld den Ball und schlängelt sich elegant durch die gesamte Verteidigung des FC Lausen. Beim Eintreffen im Strafraum wird er anschliessend vom Innenverteidiger mit unfairen Mitteln aufgehalten – der Schiri erteilt sofort den glasklaren Elfmeter.<br /><br />\r\n\r\n0:2 – Penaltyschütze Werisch trifft wie immer eiskalt von den 11 Metern.<br /><br />\r\n\r\nTrotz doppelter Führung wird es kurz vor der Pause nochmals extrem gefährlich. Der FC Lausen dringt in den Strafraum ein und der Stürmer kann den Ball in Richtung Tor befördern, doch Lukas Rickenbacher steht wie immer bereit und kann kurz vor der Linie noch klären.<br /><br />\r\n\r\nNach einer kurzen Pause und etwas Tee geht es weiter in die zweite Hälfte. Trainer Roberti verpasst seinen Jungs einen ordentlichen Motivationsschub und schickt seine Krieger zurück auf das Schlachtfeld – die Reaktion lässt sich von der ersten Minute sehen. Wir übernehmen die Kontrolle und lassen den Ball laufen.<br /><br />\r\n\r\nKurz vor Spielende verpasst Kerim Özdemir unseren Gegner den KO Schlag. Nach einem genialen Assist von unserem Torhüter befördert Kerim den Ball mit einem sagenhaften Schuss ins Netz – das dritte Tor ist gefallen. Der AC Rossoneri bezwingt den FC Lausen und ergattert weitere 3 Punkte.<br /><br />', '00115.jpg', 1, '2013-10-21 13:50:38', 2, 146506, 4231, 'a:18:{i:0;i:35;i:1;i:109;i:2;i:57;i:3;i:69;i:4;i:79;i:5;i:99;i:6;i:103;i:7;i:139;i:8;i:93;i:9;i:101;i:10;i:96;i:11;i:17;i:12;i:100;i:13;i:33;i:14;i:67;i:15;i:59;i:16;i:120;i:17;i:112;}');
+(21, 'Der Siegesmarsch geht weiter - Sieg im Derby!', 'Nach der erst kürzlich eingetroffenen Polarkälte und jeweiligem Regenschauer hat uns Mutter-Natur für das Derby plötzlich mit optimalem Fussballwetter beschenkt. Dafür hat es allerdings Vater-Fussballfeld mit den katastrophalen Platzbedingungen nicht wirklich gut mit uns gemeint. Zur Zeit müssen unsere Jungs auf einem hügeligen Acker auftreten und dabei mit vielen Fehlpässen und Probleme bei der Ballkontrolle rechnen.<br /><br />\r\n \r\nDoch der Fussballplatz und dessen Konditionen sollten uns heute nicht interessieren, das Ziel war sonnenklar: das Derby auf jeden Fall gewinnen und die drei Punkte einsacken um weiterhin von der Tabellenspitze grüssen zu dürfen.<br /><br />\r\n \r\nDer Schiri betritt das Feld, gefolgt von den Teams in zwei Reihen, beide angeführt vom jeweiligen Captain. Die Zuschauer werden von den beiden Kontrahenten begrüsst, lautes Klatschen und Jubeln unserer zahlreichen Fans, Handschlag der Kapitäne, Münzwurf und Anpfiff - das Derby geht los!<br /><br />\r\n \r\nEs vergehen nicht einmal 3 Minuten und Stefan Zimmermann erzielt den ersten Treffer für den AC Rossoneri, ein unglaublicher Start in eine sehr heikle Partie. Der Führungstreffer sorgt sofort für Jubel und Enthusiasmus, aber er wirkt gleichzeitig auch als Weckruf für unseren Gegner.<br /><br />\r\n\r\nDer FC Lausen zeigt trotz Rückstand einen enormen Siegeswillen. Immer wieder muss unsere Verteidigung harte Arbeit leisten um gefährliche Situationen zu klären. Einige Minuten werden wir unter Druck gesetzt und mangeln etwas am Spielaufbau. Viele Bälle gehen verloren und oft fehlt uns etwas Fantasie, so dass wir dem Gegner viele lange Bälle schenken und oftmals etwas zu viel unnötige Sprints von unserer Sturmspitze verlangen.<br /><br />\r\n\r\nWir wachen in der zweiten Hälfte der ersten Halbzeit wieder auf und machen unser Spiel. Der AC Rossoneri steht nun etwas kompakter und bezaubert mit schönen Spielkombinationen im Mittelfeld. Besonders kommt hier unser Aussenläufer David Tettey zum Vorschein, welcher wie besessen das ganze Spielfeld rauf- und runter läuft und wunderschöne Aktionen in die Wege leitet.<br /><br />\r\n\r\nAus dem Nichts erobert plötzlich unsere Nummer 31 Sebastian Werisch im Mittelfeld den Ball und schlängelt sich elegant durch die gesamte Verteidigung des FC Lausen. Beim Eintreffen im Strafraum wird er anschliessend vom Innenverteidiger mit unfairen Mitteln aufgehalten – der Schiri erteilt sofort den glasklaren Elfmeter.<br /><br />\r\n\r\n0:2 – Penaltyschütze Werisch trifft wie immer eiskalt von den 11 Metern.<br /><br />\r\n\r\nTrotz doppelter Führung wird es kurz vor der Pause nochmals extrem gefährlich. Der FC Lausen dringt in den Strafraum ein und der Stürmer kann den Ball in Richtung Tor befördern, doch Lukas Rickenbacher steht wie immer bereit und kann kurz vor der Linie noch klären.<br /><br />\r\n\r\nNach einer kurzen Pause und etwas Tee geht es weiter in die zweite Hälfte. Trainer Roberti verpasst seinen Jungs einen ordentlichen Motivationsschub und schickt seine Krieger zurück auf das Schlachtfeld – die Reaktion lässt sich von der ersten Minute sehen. Wir übernehmen die Kontrolle und lassen den Ball laufen.<br /><br />\r\n\r\nKurz vor Spielende verpasst Kerim Özdemir unseren Gegner den KO Schlag. Nach einem genialen Assist von unserem Torhüter befördert Kerim den Ball mit einem sagenhaften Schuss ins Netz – das dritte Tor ist gefallen. Der AC Rossoneri bezwingt den FC Lausen und ergattert weitere 3 Punkte.<br /><br />', '00115.jpg', 1, '2013-10-21 13:50:38', 2, 146506, 4231, 'a:18:{i:0;i:35;i:1;i:79;i:2;i:57;i:3;i:69;i:4;i:109;i:5;i:99;i:6;i:103;i:7;i:139;i:8;i:93;i:9;i:101;i:10;i:96;i:11;i:17;i:12;i:100;i:13;i:33;i:14;i:67;i:15;i:59;i:16;i:120;i:17;i:112;}'),
+(22, 'Jetzt anmelden! Die AC Rossoneri Silvesterparty!', 'Was ist das Beste am Jahresende? Richtig, die AC Rossoneri Silvesterparty in der Mehrzweckhalle Stutz! Wir hatten es bereits angekündigt, dass der AC Rossoneri dieser Tradition auch dieses Jahr wieder treu bleiben würde. Nun steht das Jahresende in den Startlöchern und wir haben mit der Entgegennahme der Reservierungen begonnen. Bitte reserviert frühzeitig um dabei sein zu können!<br/><br/>\nAlle Informationen betreffend der Silvesterfeier gibt es <a href="http://www.acrossoneri.ch/silvester">unter diesem Link</a>. Wir freuen uns auf eure Teilnahme!', '00100.jpg', 1, '2013-11-15 00:09:55', 3, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `ranking`
+--
+
+CREATE TABLE IF NOT EXISTS `ranking` (
+  `rankingID` int(11) NOT NULL AUTO_INCREMENT,
+  `teamName` varchar(255) DEFAULT NULL,
+  `gamesPlayed` int(11) DEFAULT NULL,
+  `gamesWon` int(11) DEFAULT NULL,
+  `gamesDraw` int(11) DEFAULT NULL,
+  `gamesLost` int(11) DEFAULT NULL,
+  `fairplay` int(11) DEFAULT NULL,
+  `goalsMade` int(11) DEFAULT NULL,
+  `goalsAgainst` int(11) DEFAULT NULL,
+  `points` int(11) DEFAULT NULL,
+  `teamID` int(11) DEFAULT NULL,
+  PRIMARY KEY (`rankingID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -530,58 +553,58 @@ CREATE TABLE IF NOT EXISTS `teams_ranking` (
 --
 
 INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUES
-(1, 'SC M&uuml;nchenstein', 9, 16, 1),
-(2, 'FC Arisdorf', 16, 11, 1),
-(3, 'FC Diegten Eptingen', 16, 12, 1),
-(4, 'SV Muttenz b', 3, 21, 1),
-(5, 'FC Oberdorf', 13, 20, 1),
-(6, 'AC Rossoneri', 23, 14, 1),
-(7, 'FC Stein b', 17, 29, 1),
-(8, 'SV Sissach a', 14, 19, 1),
-(9, 'FC Lausen 72', 1, 22, 1),
-(10, 'FC Gelterkinden b', 16, 12, 1),
-(11, 'FC Laufenburg-Kaisten b', 22, 14, 1),
-(12, 'FC Bubendorf', 6, 16, 1),
-(13, 'FC Lausen 72', 18, 6, 2),
-(14, 'Pratteln United', 19, 15, 2),
-(15, 'FC Eiken', 6, 10, 2),
-(16, 'NK Pajde', 22, 10, 2),
-(17, 'FC Liestal', 12, 7, 2),
+(1, 'SC M&uuml;nchenstein', 10, 30, 1),
+(2, 'FC Arisdorf', 22, 15, 1),
+(3, 'FC Diegten Eptingen', 22, 31, 1),
+(4, 'SV Muttenz b', 5, 36, 1),
+(5, 'FC Oberdorf', 13, 33, 1),
+(6, 'AC Rossoneri', 27, 20, 1),
+(7, 'FC Stein b', 17, 52, 1),
+(8, 'SV Sissach a', 18, 22, 1),
+(9, 'FC Lausen 72', 1, 36, 1),
+(10, 'FC Gelterkinden b', 20, 12, 1),
+(11, 'FC Laufenburg-Kaisten b', 26, 24, 1),
+(12, 'FC Bubendorf', 7, 21, 1),
+(13, 'FC Lausen 72', 22, 9, 2),
+(14, 'Pratteln United', 19, 18, 2),
+(15, 'FC Eiken', 6, 11, 2),
+(16, 'NK Pajde', 28, 13, 2),
+(17, 'FC Liestal', 19, 10, 2),
 (18, 'FC Wallbach', 6, 13, 2),
-(19, 'AC Virtus Liestal b', 18, 14, 2),
-(20, 'FC Zeiningen', 0, 17, 2),
-(21, 'AC Rossoneri a', 13, 13, 2),
-(22, 'FC Gelterkinden', 9, 24, 2),
-(23, 'FC Diegten Eptingen', 3, 20, 2),
-(24, 'FC Bubendorf', 24, 5, 2),
-(25, 'CD Espanol Basel a', 4, 10, 3),
-(26, 'SC Basel Nord a', 9, 14, 3),
-(27, 'FC Ferad a', 4, 8, 3),
-(28, 'AC Virtus Liestal a', 22, 11, 3),
-(29, 'FC Telegraph BS', 13, 22, 3),
-(30, 'FC Birsfelden', 13, 12, 3),
-(31, 'FC Schwarz-Weiss', 11, 14, 3),
-(32, 'FC Amicitia Riehen', 9, 8, 3),
-(33, 'FK Srbija Basel', 15, 18, 3),
-(34, 'FC Pratteln', 20, 24, 3),
-(35, 'AC Rossoneri b', 7, 14, 3),
-(36, 'FC Xalko', 17, 23, 3),
-(37, 'FC Dardania', 22, 4, 10),
-(38, 'FC Birlik', 9, 8, 10),
-(39, 'FC Rheinfelden', 15, 8, 10),
-(40, 'AC Rossoneri', 6, 10, 10),
-(41, 'FC Bubendorf', 13, 6, 10),
-(42, 'FC Laufenburg-Kaisten', 13, 19, 10),
-(43, 'US Olympia 1963', 1, 6, 10),
-(44, 'US Bottecchia BS', 7, 5, 10),
-(45, 'FC Türkgücü Basel', 11, 3, 10),
+(19, 'AC Virtus Liestal b', 22, 19, 2),
+(20, 'FC Zeiningen', 1, 19, 2),
+(21, 'AC Rossoneri a', 16, 21, 2),
+(22, 'FC Gelterkinden', 10, 27, 2),
+(23, 'FC Diegten Eptingen', 9, 28, 2),
+(24, 'FC Bubendorf', 25, 9, 2),
+(25, 'CD Espanol Basel a', 4, 11, 3),
+(26, 'SC Basel Nord a', 12, 16, 3),
+(27, 'FC Ferad a', 7, 10, 3),
+(28, 'AC Virtus Liestal a', 28, 25, 3),
+(29, 'FC Telegraph BS', 16, 22, 3),
+(30, 'FC Birsfelden', 20, 16, 3),
+(31, 'FC Schwarz-Weiss', 13, 17, 3),
+(32, 'FC Amicitia Riehen', 10, 10, 3),
+(33, 'FK Srbija Basel', 21, 21, 3),
+(34, 'FC Pratteln', 26, 29, 3),
+(35, 'AC Rossoneri b', 7, 16, 3),
+(36, 'FC Xalko', 23, 26, 3),
+(37, 'FC Dardania', 25, 4, 10),
+(38, 'FC Birlik', 12, 10, 10),
+(39, 'FC Rheinfelden', 21, 7, 10),
+(40, 'AC Rossoneri', 6, 24, 10),
+(41, 'FC Bubendorf', 16, 7, 10),
+(42, 'FC Laufenburg-Kaisten', 13, 20, 10),
+(43, 'US Olympia 1963', 1, 17, 10),
+(44, 'US Bottecchia BS', 10, 9, 10),
+(45, 'FC Türkgücü Basel', 11, 6, 10),
 (46, 'FC Birsfelden', 12, 12, 10),
-(47, 'FC Allschwil', 9, 0, 15),
-(48, 'FC Concordia Basel', 24, 0, 15),
-(49, 'FC Nordstern BS', 18, 1, 15),
+(47, 'FC Allschwil', 12, 0, 15),
+(48, 'FC Concordia Basel', 27, 0, 15),
+(49, 'FC Nordstern BS', 24, 1, 15),
 (50, 'FC Reinach', 12, 0, 15),
-(51, 'FC Telegraph BS', 12, 0, 15),
-(52, 'AC Rossoneri', 0, 21, 15),
+(51, 'FC Telegraph BS', 18, 0, 15),
+(52, 'AC Rossoneri', 0, 31, 15),
 (53, 'FC Laufenburg-Kaisten', 6, 0, 15);
 
 -- --------------------------------------------------------

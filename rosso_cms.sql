@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 11. Feb 2014 um 12:38
+-- Erstellungszeit: 12. Feb 2014 um 00:38
 -- Server Version: 5.1.44
 -- PHP-Version: 5.3.1
 
@@ -504,6 +504,40 @@ CREATE TABLE IF NOT EXISTS `ranking` (
   `teamID` int(11) DEFAULT NULL,
   PRIMARY KEY (`rankingID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `sponsors`
+--
+
+CREATE TABLE IF NOT EXISTS `sponsors` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `fullDesc` longtext,
+  `address` varchar(255) DEFAULT NULL,
+  `zipCity` varchar(75) DEFAULT NULL,
+  `country` varchar(45) DEFAULT NULL,
+  `pictureURL` varchar(45) DEFAULT NULL,
+  `toTeam` int(11) DEFAULT NULL,
+  `webpage` varchar(45) DEFAULT NULL,
+  `mail` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Daten für Tabelle `sponsors`
+--
+
+INSERT INTO `sponsors` (`id`, `name`, `fullDesc`, `address`, `zipCity`, `country`, `pictureURL`, `toTeam`, `webpage`, `mail`) VALUES
+(1, 'Lenkgeometrie Center & Pneuservice GmbH', NULL, 'Grüssenhölzliweg 9', '4133 Pratteln', 'Schweiz', NULL, 1, 'www.lenkgeometrie-center.ch', NULL),
+(2, 'Visam Sport', NULL, 'Poststrasse 9', '4410 Liestal', 'Schweiz', NULL, NULL, 'www.visam.ch', NULL),
+(3, 'DM Haustechnik', NULL, 'Peterhansstrasse 10b', '4415 Lausen', 'Schweiz', NULL, NULL, 'www.dmhaustechnik.ch', NULL),
+(4, 'Malergeschäft Gebr. Roberti GmbH', NULL, NULL, '4452 Itingen', 'Schweiz', NULL, NULL, NULL, NULL),
+(5, 'Coiffure Chic', NULL, 'Hauptstrasse 93', '4450 Sissach', 'Schweiz', NULL, NULL, 'www.coiffure-chic.ch', NULL),
+(6, 'Trafico Cafe Bistro', NULL, 'Bahnhofstrasse 8', '4460 Gelterkinden', 'Schweiz', NULL, NULL, 'www.trafico.ch', NULL),
+(7, 'AxaNova', NULL, 'Ottenhofenstrasse 110 ', '8738 Uetliburg', 'Schweiz', NULL, NULL, 'www.axanova.ch', NULL),
+(8, 'Mohler-Nager + Co. AG', NULL, 'Götzisbodenweg 2', '4133 Pratteln', 'Schweiz', NULL, NULL, 'www.mohlernager.ch', NULL);
 
 -- --------------------------------------------------------
 

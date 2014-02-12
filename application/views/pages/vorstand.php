@@ -1,56 +1,45 @@
-<div class="container">
-    <div class="row">
-        <div class="span9">
+<div class="container navfix">
             <h3>Vorstand</h3>
             <p>An der letzten Generalversammlung wurde folgender Vorstand gew&auml;hlt:</p>
             <hr>
 
             <?
-
-            $counter = 1;
+            
+            echo '<div class="row">';
 
             foreach ($management->result() as $row) {
 
-                if ($counter == 1 || is_int(($counter+3)/4)) {
-                    echo '<div class="row-fluid">';
-                    echo '<ul class="thumbnails">';
-                }
+                echo '<div class="col-md-4 col-sm-6 col-xs-12">';
+            
+                echo '<div class="panel panel-success">';
+                echo '<div class="panel-body">';
+                echo '<div class="row">';
+                echo '<div class="col-md-4 col-sm-4 col-xs-3">';
 
-                echo '<li class="span3">';
-                echo '<div class="thumbnail">';
                 if ($row->picURL != NULL) {
-                    echo '<img href="#" data-toggle="modal" src="'.base_url().'assets/img/management'.$row->picURL.'" style="width: 300px; height: 200px;">';
+                    echo '<a href="'.base_url().'spieler/aktiv/'.$row->id.'"><img class="img-rounded" src="'.base_url().'assets/img/management/'.$row->pictureURL.'" style="width: 100%;"></a>';
                 } else {
-                    echo '<img href="#" data-toggle="modal" src="'.base_url().'assets/img/dummy_person.jpg" style="width: 300px; height: 200px;">';
+                    echo '<a href="'.base_url().'spieler/aktiv/'.$row->id.'"><img class="img-rounded" src="'.base_url().'assets/img/dummy_person.jpg" style="width: 100%;"></a>';
                 }
-                echo '<div class="caption">';
+
+                echo '</div>';
+
+                echo '<div class="col-md-8 col-sm-8 col-xs-9">';
+                echo '<h5 class="trikot">'.$row->function.'</h5>';
                 echo '<h4><a href="#'.$row->firstName.'-'.$row->lastName.'" data-toggle="modal">'.$row->firstName.' '.$row->lastName.'</a></h4>';
-                echo '<p>'.$row->function.'</p>';
+
                 echo '</div>';
                 echo '</div>';
-                echo '</li>';
-
-                if (is_int($counter/4) || $counter == $management->num_rows()) {
-                    echo '</ul>';
-                    echo '</div>';
-                }
-
-                $counter++;
-
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                
             }
 
-            echo '<hr>';
+            echo '</div>';
 
             ?>
 
-        </div>
-        <div class="span3">
-            <div class="well">
-                <h4>Verein</h4>
-                <ul class="nav nav-list">
-                    <li class="active"><a href="#">Vorstand</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 </div>

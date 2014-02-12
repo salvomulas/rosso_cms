@@ -5639,6 +5639,24 @@ a.list-group-item.active > .badge,
   background-color: #151515;
 }
 
+.player-unit {
+  margin-bottom: 30px;
+  color: inherit;
+  background-size: 100% 100%;
+  padding-bottom: 0px;
+  position: relative;
+  height: 278px;
+}
+
+.player-box {
+  background-color: rgba(73,72,71,0.33);
+  padding-top: 15px;
+  box-shadow: 1px -3px 5px #888;
+  padding-bottom: 15px;
+  border: 1px solid #bbb9b9;
+  border-bottom: none;
+}
+
 #map-canvas {
   margin: 0;
   padding: 0;

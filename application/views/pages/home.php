@@ -30,7 +30,7 @@ function shortenString($string, $width) {
 
 </script>
 
-<div class="container">
+<div class="container navfix">
 
     <div class="row">
         <div class="col-md-8">
@@ -163,12 +163,14 @@ function shortenString($string, $width) {
 
                     <div class="tabbable">
 
-                        <ul class="pagination">
-                            <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
-                            <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
-                            <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
-                            <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
-                        </ul>
+                        <div class="text-center">
+                            <ul class="pagination">
+                                <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
+                                <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
+                                <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
+                                <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
+                            </ul>
+                        </div>
 
                         <div class="tab-content">
                             <div class="tab-pane active" id="tab1">

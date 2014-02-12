@@ -27,12 +27,41 @@ function menuList($name, $url, $active = true) {
 ?>
 
 <script>
-$(document).on('click',function(){
-    //$('#primary-navbar').collapse('hide');
-    //$('#spielbetrieb-navbar').collapse('hide');
-    //$('#verein-navbar').collapse('hide');
-});
-</script> 
+    $(function () {
+        var toggles    = $('.navbar-nav').find('a');
+
+        $(document).click(function (e) {
+            if (!$(e.target).is('.navbar-nav a') && !$(e.target).is('.nav-secondary') && $('.nav-secondary').has(e.target).length === 0) {
+                $.each(toggles, function (index, value) {
+                    var self = $(value);
+                    var target = $(this).data('target');
+                    if (self.hasClass('enabled')) {
+                        $(target).slideUp();
+                        self.removeClass('enabled');
+                    }
+                });
+            }
+        });
+
+        toggles.click(function (e) {
+            //e.preventDefault();
+
+            var toggle = $(this);
+            var target = $(this).data('target');
+            $.each(toggles, function (index, value) {
+                var self = $(value);
+                if (self.is(toggle) && !self.hasClass('enabled')) {
+                    $(target).slideDown();
+                    self.addClass('enabled');
+                } else {
+                    var container = self.data('target');
+                    $(container).slideUp();
+                    self.removeClass('enabled');
+                }
+            });
+        });
+    });
+</script>
 
 <header>
 
@@ -60,9 +89,9 @@ $(document).on('click',function(){
         <div class="collapse navbar-collapse" id="primary-navbar">
             <ul class="nav navbar-nav">
                 <?php menuObject("Home", ""); ?>
-                <li><a data-toggle="collapse" data-target="#aktuelles-navbar">Aktuelles <b class="caret"></b></a></li>
-                <li><a data-toggle="collapse" data-target="#verein-navbar">Verein <b class="caret"></b></a></li>
-                <li><a data-toggle="collapse" data-target="#spielbetrieb-navbar">Spielbetrieb <b class="caret"></b></a></li>
+                <li><a data-target="#aktuelles-navbar">Aktuelles <b class="caret"></b></a></li>
+                <li><a data-target="#verein-navbar">Verein <b class="caret"></b></a></li>
+                <li><a data-target="#spielbetrieb-navbar">Spielbetrieb <b class="caret"></b></a></li>
 
                 <?php
                 if ($this->session->userdata('is_logged_in')) {
@@ -144,7 +173,7 @@ $(document).on('click',function(){
     </nav>
 
     <!-- SPIELBETRIEB NAVIGATION -->
-    <div class="nav-secondary collapse" id="spielbetrieb-navbar">
+    <div class="nav-secondary" id="spielbetrieb-navbar">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -195,7 +224,7 @@ $(document).on('click',function(){
     <!-- ENDE SUBNAVIGATION -->
     
     <!-- VEREIN NAVIGATION -->
-    <div class="nav-secondary collapse" id="verein-navbar">
+    <div class="nav-secondary" id="verein-navbar">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
@@ -242,7 +271,7 @@ $(document).on('click',function(){
     <!-- ENDE SUBNAVIGATION -->
     
     <!-- AKTUELLES NAVIGATION -->
-    <div class="nav-secondary collapse" id="aktuelles-navbar">
+    <div class="nav-secondary" id="aktuelles-navbar">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">

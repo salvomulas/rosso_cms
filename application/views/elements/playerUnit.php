@@ -4,10 +4,10 @@ $row = $playerInfo->row();
 
 ?>
 
-<div class="hero-unit">
+<div class="jumbotron">
     <div class="container">
         <div class="row">
-            <div class="span3">
+            <div class="col-md-3">
                 <?php
                 if ($row->pictureURL != NULL) {
                     echo '<img src="'.base_url().'assets/img/member/'.$row->pictureURL.'" style="width: 240px;">';
@@ -16,27 +16,9 @@ $row = $playerInfo->row();
                 }
                 ?>
             </div>
-            <div class="span9">
+            <div class="col-md-9">
                 <h3><?php echo $row->trikot.' - '.$row->firstName.' '.$row->lastName; ?></h3>
-                <?
-                    switch ($row->toTeam) {
-                    case 1: echo '<h4>Erste Mannschaft</h4>';
-                    break;
-                    case 2: echo '<h4>Zweite Mannschaft</h4>';
-                    break;
-                    case 3: echo '<h4>Dritte Mannschaft</h4>';
-                    break;
-                    case 10: echo '<h4>Senioren</h4>';
-                    break;
-                    case 15: echo '<h4>Frauen</h4>';
-                    break;
-                    case 20: echo '<h4>Junioren G</h4>';
-                    break;
-                    case 22: echo '<h4>Junioren F</h4>';
-                    break;
-                    default: echo '<h4></h4>';
-                    }
-                ?>
+                <?php echo '<h4>'.$row->name.'</h4>'; ?>
                 <?
                     switch ($row->toPosition) {
                     case 1: echo '<p>Torwart</p>';

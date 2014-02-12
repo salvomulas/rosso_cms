@@ -83,10 +83,11 @@ class Player extends CI_Model {
 
     public function getPlayer ($playerID) {
         
-        $this->db->select('*');
-        $this->db->select("DATE_FORMAT(bDay, '%e. %M %Y') AS bDay", FALSE);
-        $this->db->from("member_active");
-        $this->db->where('id', $playerID);
+        $this->db->select('m.*,t.name');
+        $this->db->select("DATE_FORMAT(m.bDay, '%e. %M %Y') AS bDay", FALSE);
+        $this->db->from('member_active m,teams t');
+        $this->db->where('m.id', $playerID);
+        $this->db->where('m.toTeam = t.id');
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {

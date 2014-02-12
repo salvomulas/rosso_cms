@@ -15,7 +15,7 @@ function get_age($birth_date){
 
     <div class="row">
 
-        <div class="span6 pull-right">
+        <div class="col-md-6 pull-right">
 
             <div class="well">
 
@@ -87,7 +87,7 @@ function get_age($birth_date){
 
         </div>
 
-        <div class="span6">
+        <div class="col-md-6">
 
             <h4>Spielerinformationen</h4>
             <hr>
@@ -130,15 +130,15 @@ function get_age($birth_date){
             <!--
             <div class="row-fluid">
 
-                <div class="span4">
+                <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
                 </div>
 
-                <div class="span4">
+                <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
                 </div>
 
-                <div class="span4">
+                <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
                 </div>
 
@@ -148,15 +148,15 @@ function get_age($birth_date){
 
             <div class="row-fluid">
 
-                <div class="span4">
+                <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
                 </div>
 
-                <div class="span4">
+                <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
                 </div>
 
-                <div class="span4">
+                <div class="col-md-4">
                     <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
                 </div>
 

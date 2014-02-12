@@ -52,6 +52,7 @@ header {
 footer {
     background-color: #000000;
     padding: 50px;
+    border-bottom: 7px solid #bf1508;
 }
 
 a {
@@ -833,6 +834,10 @@ pre code {
 .pre-scrollable {
   max-height: 340px;
   overflow-y: scroll;
+}
+
+.navfix {
+  margin-top: 20px;
 }
 
 .container {
@@ -4562,7 +4567,6 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
   border: 1px solid transparent;
 }
 
@@ -5054,6 +5058,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-default .navbar-nav > li > a {
   color: #888888;
+  cursor: pointer;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -5591,10 +5596,9 @@ a.list-group-item.active > .badge,
     background-image: -webkit-linear-gradient(top, #151515, #2c2c2c);
     background-image: -o-linear-gradient(top, #151515, #2c2c2c);
     background-image: linear-gradient(to bottom, #151515, #2c2c2c);
-  margin-top: -20px;
-  margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  display: none;
 }
 
 .match-unit {
@@ -5637,7 +5641,6 @@ a.list-group-item.active > .badge,
 
 #map-canvas {
   margin: 0;
-  margin-top: -20px;
   padding: 0;
   height: 278px;
 }

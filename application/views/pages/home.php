@@ -65,7 +65,7 @@ function shortenString($string, $width) {
                         } else {
                             echo '<div class="item">';
                         }
-                        echo '<img src="'.base_url().'assets/img/articles/highlights/'.$row->pictureURL.'">';
+                        echo '<img class="carousel" src="'.base_url().'assets/img/articles/highlights/'.$row->pictureURL.'">';
                         echo '<div class="carousel-caption">';
                         echo '<h4><a href="'.base_url().'aktuelles/article/'.$row->id.'">'.$row->title.'</a></h4>';
                         echo '<p>'.shortenString($row->article,200).'</p>';

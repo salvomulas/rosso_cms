@@ -34,6 +34,12 @@ class MY_Controller extends CI_Controller {
         $this->load->view('elements/topNav', $data);
     }
 
+    protected function drawFooter () {
+        $this->load->model('sponsors');
+        $data ['sponsors'] = $this->sponsors->getSponsors();
+        $this->load->view('elements/footer', $data);
+    }
+
     protected function logout() {
         $this->session->sess_destroy();
         redirect("site/home");

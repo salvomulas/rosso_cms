@@ -31,7 +31,7 @@ class Spieler extends MY_Controller {
         $this->drawNavigation();
         $this->load->view("elements/playerUnit", $data);
         $this->load->view("pages/player");
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
 
 }

@@ -28,8 +28,18 @@ $row = $teamInfo->row();
                 ?>
             </div>
             <div class="col-md-3">
-                <div class="well text-center">
-                    <a href="http://www.lenkgeometrie-center.ch" target="_blank" alt="Lenkgeometrie Center GmbH"><img src="http://localhost/rosso_cms/assets/img/sponsors/lenkgeometrie.png"></a>
+
+            <?php
+
+            if ($sponsor) {
+                echo '<div class="well text-center">';
+                echo '<a href="http://'.$sponsor->webpage.'" target="_blank" alt="'.$sponsor->name.'"><img src="'.base_url().'assets/img/sponsors/'.$sponsor->pictureURL.'.png"></a>';
+                echo '';
+            }
+
+            ?>
+                
+                    
                 </div>
             </div>
         </div>

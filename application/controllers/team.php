@@ -17,6 +17,7 @@ class Team extends MY_Controller {
         $this->load->model('staff');
         $this->load->model('match');
         $this->load->model('articles');
+        $this->load->model('sponsors');
         
     }
 
@@ -53,6 +54,9 @@ class Team extends MY_Controller {
         
         // Load team reports
         $data ['reports'] = $this->articles->getMatchReportsTeam($teamID);
+
+        // Load team sponsor
+        $data ['sponsor'] = $this->sponsors->getTeamSponsor($teamID);
         
         // Set Page Title
         $data['page_title'] = $data['teamName'];
@@ -64,7 +68,7 @@ class Team extends MY_Controller {
             $this->drawNavigation();
             $this->load->view("elements/teamUnit", $data);
             $this->load->view("pages/team");
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PageNotFound");
             }
@@ -100,7 +104,7 @@ class Team extends MY_Controller {
             $this->drawNavigation();
             $this->load->view("elements/juniorenUnit", $data);
             $this->load->view("pages/junioren");
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PageNotFound");
             }

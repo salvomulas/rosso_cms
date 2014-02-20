@@ -21,7 +21,7 @@ class Silvester extends MY_Controller {
         $this->drawNavigation();
         $this->load->view("elements/silvesterUnit");
         $this->load->view("pages/silvester", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
         
     }
     

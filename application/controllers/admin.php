@@ -20,7 +20,7 @@ class Admin extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/view_profile");
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PermissionDenied");
         }
@@ -34,7 +34,7 @@ class Admin extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/view_matchReports");
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PermissionDenied");
         }
@@ -47,7 +47,7 @@ class Admin extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/view_groups");
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PermissionDenied");
         }
@@ -83,7 +83,7 @@ class Admin extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/view_spieler", $data);
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PermissionDenied");
         }
@@ -98,7 +98,7 @@ class Admin extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/view_vorstand", $data);
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PermissionDenied");
         }
@@ -111,7 +111,7 @@ class Admin extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("admin/edit_vorstand");
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PermissionDenied");
         }

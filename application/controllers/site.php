@@ -38,7 +38,7 @@ class Site extends MY_Controller {
         $this->load->view('meta/metadata', $data);
         $this->drawNavigation();
         $this->load->view('pages/home', $data);
-        $this->load->view('elements/footer');
+        $this->drawFooter();
     }
 
     public function testing() {

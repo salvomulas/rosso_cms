@@ -39,7 +39,7 @@ class Aktuelles extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/aktuelles", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
 
     }
 
@@ -57,7 +57,7 @@ class Aktuelles extends MY_Controller {
             $this->load->view("meta/metadata", $data);
             $this->drawNavigation();
             $this->load->view("pages/article", $data);
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PageNotFound");
         }
@@ -89,11 +89,22 @@ class Aktuelles extends MY_Controller {
                 $this->load->view("elements/formation/".$data['formation'], $data);
             }
             $this->load->view("pages/match", $data);
-            $this->load->view("elements/footer");
+            $this->drawFooter();
         } else {
             redirect ("error/PageNotFound");
         }
 
+
+    }
+
+    public function kalender() {
+
+        $data['page_title'] = "Kalender";
+
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/calendar", $data);
+        $this->drawFooter();
 
     }
 

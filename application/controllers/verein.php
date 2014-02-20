@@ -16,7 +16,7 @@ class Verein extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/vorstand");
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
 
     public function clubhaus() {
@@ -29,7 +29,7 @@ class Verein extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/statuten", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
     
     public function geschichte() {
@@ -38,7 +38,37 @@ class Verein extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/geschichte", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
+    }
+
+    public function organigramm() {
+        $data ['page_title'] = "Organigramm";
+        
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/organigramm", $data);
+        $this->drawFooter();
+    }
+
+    public function leitbild() {
+        $data ['page_title'] = "Leitbild";
+        
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/leitbild", $data);
+        $this->drawFooter();
+    }
+
+    public function sponsoren() {
+        $data ['page_title'] = "Sponsoren";
+
+        $this->load->model('sponsors');
+        $data ['sponsors'] = $this->sponsors->getSponsors();
+        
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/sponsoren", $data);
+        $this->drawFooter();
     }
 
 }

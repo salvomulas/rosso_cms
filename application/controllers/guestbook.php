@@ -7,7 +7,7 @@ class Guestbook extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/guestbook", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
 
 }

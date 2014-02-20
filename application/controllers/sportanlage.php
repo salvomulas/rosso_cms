@@ -22,7 +22,7 @@ class Sportanlage extends MY_Controller {
         $this->drawNavigation();
         $this->load->view("elements/mapUnit");
         $this->load->view("pages/field", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
 
     }
 	

@@ -123,7 +123,7 @@ function menuList($name, $url, $active = true) {
                 } else {
 
                     echo '<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="icon-lock"></i> Login <strong class="caret"></strong></a>';
-                    echo '<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">';
+                    echo '<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px; margin-bottom: 15px;">';
 
                     echo form_open('site/login_validation');
                     echo form_hidden('form_name', 'form_login');
@@ -138,6 +138,7 @@ function menuList($name, $url, $active = true) {
                         'name' => 'username',
                         'id' => 'username',
                         'placeholder' => 'Username',
+                        'class' => 'form-control',
                         'style' => 'margin-bottom: 15px;',
                     );
 
@@ -145,13 +146,14 @@ function menuList($name, $url, $active = true) {
                         'name' => 'password',
                         'id' => 'password',
                         'placeholder' => 'Password',
+                        'class' => 'form-control',
                         'style' => 'margin-bottom: 15px;',
                     );
 
                     $submit = array(
                         'value' => 'Login',
                         'id' => 'sign_in',
-                        'class' => 'btn btn-danger btn-block',
+                        'class' => 'btn btn-primary',
                     );
 
                     if (validation_errors()) {
@@ -238,16 +240,16 @@ function menuList($name, $url, $active = true) {
                         <h5>Verwaltung</h5>
                         <div class="list-group">
                             <?php menuList ("Vorstand","verein/vorstand"); ?>
-                            <a href="#" class="list-group-item">Organigramm</a>
+                            <?php menuList ("Organigramm","verein/organigramm"); ?>
                             <?php menuList ("Statuten","verein/statuten"); ?>
-                            <a href="#" class="list-group-item">Leitbild</a>
-                            <a href="#" class="list-group-item">Geschichte</a>
+                            <?php menuList ("Leitbild","verein/leitbild"); ?>
+                            <?php menuList ("Geschichte","verein/geschichte"); ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <h5>Supporter</h5>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">Sponsoren</a>
+                            <?php menuList ("Sponsoren","verein/sponsoren"); ?>
                             <a href="#" class="list-group-item">Sponsoringkonzept</a>
                             <a href="#" class="list-group-item">Passivmitgliedschaft</a>
                         </div>
@@ -292,7 +294,7 @@ function menuList($name, $url, $active = true) {
                         <h5>Events</h5>
                         <div class="list-group">
                             <a href="#" class="list-group-item">Anstehende Events</a>
-                            <a href="#" class="list-group-item">Kalender</a>
+                            <?php menuList ("Kalender","aktuelles/kalender"); ?>
                         </div>
                     </div>
                 </div>

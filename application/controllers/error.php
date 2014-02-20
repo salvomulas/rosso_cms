@@ -13,7 +13,7 @@ class Error extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("meta/error", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
 
     public function ValidationFailed() {
@@ -23,7 +23,7 @@ class Error extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("meta/error", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
 
     public function PermissionDenied() {
@@ -33,7 +33,7 @@ class Error extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("meta/error", $data);
-        $this->load->view("elements/footer");
+        $this->drawFooter();
     }
 
 }

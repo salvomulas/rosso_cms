@@ -108,4 +108,15 @@ class Aktuelles extends MY_Controller {
 
     }
 
+    public function sommerturnier() {
+
+        $data ['page_title'] = "Sommerturnier 2014";
+
+        $this->load->view('meta/metadata',$data);
+        $this->drawNavigation();
+        $this->load->view("pages/sommerturnier",$data);
+        $this->drawFooter();
+
+    }
+
 }

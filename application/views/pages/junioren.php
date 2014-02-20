@@ -1,15 +1,11 @@
 <div class="container">
-
     <div class="tabbable">
         <div class="tab-content">
             <div class="tab-pane active" id="tab1">
-
                 <?php
                 $data['spieler'] = $spieler;
-
                 $this->load->view('elements/juniorenKader');
                 ?>
-
             </div>
             <div class="tab-pane" id="tab2">
                 <?php

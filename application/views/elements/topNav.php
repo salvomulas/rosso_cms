@@ -251,7 +251,7 @@ function menuList($name, $url, $active = true) {
                         <div class="list-group">
                             <?php menuList ("Sponsoren","verein/sponsoren"); ?>
                             <a href="#" class="list-group-item">Sponsoringkonzept</a>
-                            <a href="#" class="list-group-item">Passivmitgliedschaft</a>
+                            <?php menuList ("Passivmitgliedschaft","verein/passivmitglied"); ?>
                         </div>
                     </div>
                 </div>

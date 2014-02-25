@@ -5,15 +5,13 @@ if (!defined('BASEPATH'))
 
 class Sandbox extends CI_Controller {
 
-    private $firstID = 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl01_tbRangliste';
-    private $secondID = 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl03_tbRangliste';
-    private $thirdID = 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl05_tbRangliste';
-    private $seniorenID = 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl07_tbRangliste';
-    private $frauenID = 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl09_tbRangliste';
+    private $rankSource = 'http://www.football.ch/fvnws/Fussballverband-Nordwestschweiz/Vereine-FVNWS/Verein-FVNWS.aspx/v-508/a-rr/';
 
     public function __construct() {
         parent::__construct();
         require_once('system/libraries/DomParser.php');
+        $this->load->model('teams');
+        $this->load->model('ranking');
     }
 
     public function index() {
@@ -21,30 +19,50 @@ class Sandbox extends CI_Controller {
         $data ['page_title'] = "FVNWS Parser";
         $this->load->view("meta/metadata", $data);
 
-        $this->parseRanking($this->firstID);
+        $this->parseRanking(1);
         //$this->parseRanking($this->secondID);
         //$this->parseRanking($this->thirdID);
         //$this->parseRanking($this->seniorenID);
         //$this->parseRanking($this->frauenID);
     }
 
-    public function parseRanking($teamID) {
+    protected function parseRanking($tID) {
 
+        $teamID = $this->teams->getParserObject($tID)->row()->parserObject;
+
+        $structure = array ("team","gamePlayed","gameWon","gameLost","gameDraw","fairplay","goalsMade","goalsAgainst","points","teamID");
+        $exception = array (0, 8, 11);
         $ranking = array();
 
         $html = new dom_parser();
-        $html->load_file('http://www.football.ch/fvnws/Fussballverband-Nordwestschweiz/Vereine-FVNWS/Verein-FVNWS.aspx/v-508/a-rr/');
+        $html->load_file($this->rankSource);
+
         $loopCounter = -1;
 
         foreach ($html->find('table[id=' . $teamID . ']') as $table) {
             foreach ($table->find('tr[class=nisRanRowSP]') as $element) {
-                array_push($ranking, array());
                 $loopCounter++;
+                $descCounter = 0;
+                $excCounter = 0;
                 foreach ($element->find('td') as $detail) {
-                    array_push($ranking[$loopCounter], $detail->plaintext);
+                    if (!in_array($excCounter,$exception)) {
+                        $content = htmlentities(trim($detail->plaintext), ENT_QUOTES, 'UTF-8');
+                        $ranking[$loopCounter][$structure[$descCounter]] = $content;
+                        $descCounter++;
+                    }
+                    $excCounter++;
                 }
+                $ranking[$loopCounter][$structure[$descCounter]] = $tID;
             }
         }
+
+        for ($i = 0; $i<sizeof($ranking);$i++) {
+            if(!is_int($ranking[$i]['fairplay'])) {
+                $ranking[$i]['fairplay'] = substr($ranking[$i]['fairplay'],1, -1);
+            }
+        }
+
+        // $this->ranking->insertTeamRanking($ranking);
 
         echo '<div class="container">';
         echo '<h1>FVNWS Ranking Parser</h1>';
@@ -57,7 +75,7 @@ class Sandbox extends CI_Controller {
         echo '</div>';
 
         echo '<div class="col-md-10">';
-        echo '<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"></div></div>';
+        echo '<div class="progress progress-striped active"><div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div></div>';
         echo '</div>';
 
         echo '</div><hr>';
@@ -65,10 +83,13 @@ class Sandbox extends CI_Controller {
         echo '<div class="col-md-6">';
         echo '<table class="table table-condensed table-hover">';
         echo '<h4>Ranking table</h4>';
+
         for ($i = 0; $i < sizeof($ranking); $i++) {
+            $desc = 0;
             echo '<tr>';
-            for ($s = 0; $s < sizeof($ranking[$i]); $s++) {
-                echo '<td>' . $ranking[$i][$s] . '</td>';
+            for ($s = 0; $s < sizeof($ranking[$i])-1; $s++) {
+                echo '<td>' . $ranking[$i][$structure[$desc]] . '</td>';
+                $desc++;
             }
             echo '</tr>';
         }
@@ -83,6 +104,7 @@ class Sandbox extends CI_Controller {
         echo '</div>';
 
         echo '</div>';
+
         echo '<hr>';
     }
 
@@ -103,6 +125,12 @@ class Sandbox extends CI_Controller {
             flush();
             ob_flush();
         }
+    }
+
+    public function delete ($teamID) {
+        $this->load->model('ranking');
+        $this->ranking->emptyTeamRanking($teamID);
+
     }
 
 }

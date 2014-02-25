@@ -66,4 +66,17 @@ class Teams extends CI_Model {
         
     }
 
+    public function getParserObject($teamID) {
+
+        $this->db
+            ->select('parserObject')
+            ->from('teams')
+            ->limit(1)
+            ->where('id', $teamID);
+        $query = $this->db->get();
+
+        return $query;
+
+    }
+
 }

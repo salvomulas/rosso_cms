@@ -33,11 +33,12 @@ class Verein extends MY_Controller {
     }
     
     public function geschichte() {
+
         $data ['page_title'] = "Geschichte";
         
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
-        $this->load->view("pages/geschichte", $data);
+        $this->load->view("pages/working", $data);
         $this->drawFooter();
     }
 
@@ -68,6 +69,15 @@ class Verein extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/sponsoren", $data);
+        $this->drawFooter();
+    }
+
+    public function passivmitglied() {
+        $data ['page_title'] = "Passivmitgliedschaft";
+
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/passivMitglied", $data);
         $this->drawFooter();
     }
 

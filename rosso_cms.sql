@@ -1,9 +1,9 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 12. Feb 2014 um 00:38
+-- Erstellungszeit: 26. Feb 2014 um 00:56
 -- Server Version: 5.1.44
 -- PHP-Version: 5.3.1
 
@@ -203,7 +203,7 @@ CREATE TABLE IF NOT EXISTS `member_active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=143 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=144 ;
 
 --
 -- Daten für Tabelle `member_active`
@@ -508,6 +508,86 @@ CREATE TABLE IF NOT EXISTS `ranking` (
 -- --------------------------------------------------------
 
 --
+-- Tabellenstruktur für Tabelle `ranking_sandbox`
+--
+
+CREATE TABLE IF NOT EXISTS `ranking_sandbox` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `team` varchar(255) NOT NULL,
+  `gamePlayed` int(255) NOT NULL,
+  `gameWon` int(255) NOT NULL,
+  `gameLost` int(255) NOT NULL,
+  `gameDraw` int(255) NOT NULL,
+  `fairplay` int(11) NOT NULL,
+  `goalsMade` int(255) NOT NULL,
+  `goalsAgainst` int(255) NOT NULL,
+  `points` int(11) NOT NULL,
+  `teamID` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
+
+--
+-- Daten für Tabelle `ranking_sandbox`
+--
+
+INSERT INTO `ranking_sandbox` (`id`, `team`, `gamePlayed`, `gameWon`, `gameLost`, `gameDraw`, `fairplay`, `goalsMade`, `goalsAgainst`, `points`, `teamID`) VALUES
+(1, 'AC Rossoneri', 11, 8, 3, 0, 20, 29, 2, 27, 1),
+(2, 'FC Laufenburg-Kaisten b', 11, 8, 2, 1, 24, 41, 11, 26, 1),
+(3, 'FC Arisdorf', 11, 7, 1, 3, 15, 30, 13, 22, 1),
+(4, 'FC Diegten Eptingen', 11, 7, 1, 3, 31, 22, 13, 22, 1),
+(5, 'FC Gelterkinden b', 11, 6, 2, 3, 12, 38, 15, 20, 1),
+(6, 'SV Sissach a', 11, 5, 3, 3, 22, 38, 17, 18, 1),
+(7, 'FC Stein b', 11, 5, 2, 4, 52, 22, 22, 17, 1),
+(8, 'FC Oberdorf', 11, 4, 1, 6, 33, 18, 40, 13, 1),
+(9, 'SC M&uuml;nchenstein a', 11, 3, 1, 7, 30, 23, 39, 10, 1),
+(10, 'FC Bubendorf', 11, 2, 1, 8, 21, 16, 35, 7, 1),
+(11, 'SV Muttenz b', 11, 1, 2, 8, 36, 14, 55, 5, 1),
+(12, 'FC Lausen 72', 11, 0, 1, 10, 36, 16, 45, 1, 1),
+(13, 'NK Pajde', 11, 9, 1, 1, 13, 43, 15, 28, 2),
+(14, 'FC Bubendorf', 11, 8, 1, 2, 9, 45, 22, 25, 2),
+(15, 'FC Lausen 72', 11, 7, 1, 3, 9, 22, 13, 22, 2),
+(16, 'AC Virtus Liestal b', 11, 6, 4, 1, 19, 47, 22, 22, 2),
+(17, 'Pratteln United', 10, 6, 1, 3, 18, 33, 22, 19, 2),
+(18, 'FC Liestal', 11, 6, 1, 4, 10, 36, 31, 19, 2),
+(19, 'AC Rossoneri a', 10, 5, 1, 4, 21, 25, 29, 16, 2),
+(20, 'FC Gelterkinden', 11, 3, 1, 7, 27, 21, 47, 10, 2),
+(21, 'FC Diegten Eptingen', 11, 3, 0, 8, 28, 18, 23, 9, 2),
+(22, 'FC Wallbach', 9, 2, 0, 7, 13, 12, 19, 6, 2),
+(23, 'FC Eiken', 10, 2, 0, 8, 11, 19, 36, 6, 2),
+(24, 'FC Zeiningen', 10, 0, 1, 9, 19, 11, 53, 1, 2),
+(25, 'AC Virtus Liestal a', 11, 9, 1, 1, 25, 31, 14, 28, 3),
+(26, 'FC Pratteln', 11, 8, 2, 1, 29, 43, 12, 26, 3),
+(27, 'FC Xalko', 11, 7, 2, 2, 26, 40, 17, 23, 3),
+(28, 'FK Srbija Basel', 11, 6, 3, 2, 21, 38, 13, 21, 3),
+(29, 'FC Birsfelden', 11, 6, 2, 3, 16, 31, 19, 20, 3),
+(30, 'FC Telegraph BS', 11, 5, 1, 5, 22, 15, 21, 16, 3),
+(31, 'FC Schwarz-Weiss', 11, 3, 4, 4, 17, 21, 17, 13, 3),
+(32, 'SC Basel Nord a', 11, 3, 3, 5, 16, 31, 27, 12, 3),
+(33, 'FC Amicitia Riehen', 11, 3, 1, 7, 10, 30, 26, 10, 3),
+(34, 'FC Ferad a', 11, 2, 1, 8, 10, 25, 55, 7, 3),
+(35, 'AC Rossoneri b', 11, 2, 1, 8, 16, 23, 49, 7, 3),
+(36, 'CD Espanol Basel a', 11, 1, 1, 9, 11, 14, 72, 4, 3),
+(37, 'FC Dardania', 9, 8, 1, 0, 4, 49, 20, 25, 10),
+(38, 'FC Rheinfelden', 8, 7, 0, 1, 7, 35, 9, 21, 10),
+(39, 'FC Bubendorf', 9, 5, 1, 3, 7, 42, 32, 16, 10),
+(40, 'FC Laufenburg-Kaisten', 9, 4, 1, 4, 20, 26, 25, 13, 10),
+(41, 'FC Birlik', 9, 3, 3, 3, 10, 22, 26, 12, 10),
+(42, 'FC Birsfelden', 9, 4, 0, 5, 12, 23, 26, 12, 10),
+(43, 'FC T&uuml;rkg&uuml;c&uuml; Basel', 9, 3, 2, 4, 6, 29, 28, 11, 10),
+(44, 'US Bottecchia BS', 9, 3, 1, 5, 9, 13, 22, 10, 10),
+(45, 'AC Rossoneri', 8, 2, 0, 6, 24, 15, 30, 6, 10),
+(46, 'US Olympia 1963', 9, 0, 1, 8, 17, 8, 44, 1, 10),
+(47, 'FC Concordia Basel', 10, 9, 0, 1, 0, 45, 6, 27, 15),
+(48, 'FC Nordstern BS', 10, 8, 0, 2, 1, 48, 17, 24, 15),
+(49, 'FC Telegraph BS', 9, 6, 0, 3, 0, 37, 9, 18, 15),
+(50, 'FC Reinach', 9, 4, 0, 5, 0, 29, 17, 12, 15),
+(51, 'FC Allschwil', 9, 4, 0, 5, 0, 25, 23, 12, 15),
+(52, 'FC Laufenburg-Kaisten', 10, 2, 0, 8, 0, 11, 45, 6, 15),
+(53, 'AC Rossoneri', 9, 0, 0, 9, 31, 1, 79, 0, 15);
+
+-- --------------------------------------------------------
+
+--
 -- Tabellenstruktur für Tabelle `sponsors`
 --
 
@@ -530,14 +610,14 @@ CREATE TABLE IF NOT EXISTS `sponsors` (
 --
 
 INSERT INTO `sponsors` (`id`, `name`, `fullDesc`, `address`, `zipCity`, `country`, `pictureURL`, `toTeam`, `webpage`, `mail`) VALUES
-(1, 'Lenkgeometrie Center & Pneuservice GmbH', NULL, 'Grüssenhölzliweg 9', '4133 Pratteln', 'Schweiz', NULL, 1, 'www.lenkgeometrie-center.ch', NULL),
-(2, 'Visam Sport', NULL, 'Poststrasse 9', '4410 Liestal', 'Schweiz', NULL, NULL, 'www.visam.ch', NULL),
-(3, 'DM Haustechnik', NULL, 'Peterhansstrasse 10b', '4415 Lausen', 'Schweiz', NULL, NULL, 'www.dmhaustechnik.ch', NULL),
-(4, 'Malergeschäft Gebr. Roberti GmbH', NULL, NULL, '4452 Itingen', 'Schweiz', NULL, NULL, NULL, NULL),
-(5, 'Coiffure Chic', NULL, 'Hauptstrasse 93', '4450 Sissach', 'Schweiz', NULL, NULL, 'www.coiffure-chic.ch', NULL),
-(6, 'Trafico Cafe Bistro', NULL, 'Bahnhofstrasse 8', '4460 Gelterkinden', 'Schweiz', NULL, NULL, 'www.trafico.ch', NULL),
-(7, 'AxaNova', NULL, 'Ottenhofenstrasse 110 ', '8738 Uetliburg', 'Schweiz', NULL, NULL, 'www.axanova.ch', NULL),
-(8, 'Mohler-Nager + Co. AG', NULL, 'Götzisbodenweg 2', '4133 Pratteln', 'Schweiz', NULL, NULL, 'www.mohlernager.ch', NULL);
+(1, 'Lenkgeometrie Center & Pneuservice GmbH', NULL, 'Grüssenhölzliweg 9', '4133 Pratteln', 'Schweiz', '00100', 1, 'www.lenkgeometrie-center.ch', NULL),
+(2, 'Visam Sport', NULL, 'Poststrasse 9', '4410 Liestal', 'Schweiz', '00101', NULL, 'www.visam.ch', NULL),
+(3, 'DM Haustechnik', NULL, 'Peterhansstrasse 10b', '4415 Lausen', 'Schweiz', '00102', NULL, 'www.dmhaustechnik.ch', NULL),
+(4, 'Malergeschäft Gebr. Roberti GmbH', NULL, NULL, '4452 Itingen', 'Schweiz', '00103', NULL, NULL, NULL),
+(5, 'Coiffure Chic', NULL, 'Hauptstrasse 93', '4450 Sissach', 'Schweiz', '00104', NULL, 'www.coiffure-chic.ch', NULL),
+(6, 'Trafico Cafe Bistro', NULL, 'Bahnhofstrasse 8', '4460 Gelterkinden', 'Schweiz', '00105', 2, 'www.trafico.ch', NULL),
+(7, 'AxaNova', NULL, 'Ottenhofenstrasse 110 ', '8738 Uetliburg', 'Schweiz', '00106', NULL, 'www.axanova.ch', NULL),
+(8, 'Mohler-Nager + Co. AG', NULL, 'Götzisbodenweg 2', '4133 Pratteln', 'Schweiz', '00107', NULL, 'www.mohlernager.ch', NULL);
 
 -- --------------------------------------------------------
 
@@ -551,6 +631,7 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `type` int(11) NOT NULL,
   `ligaDesc` varchar(255) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
+  `parserObject` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -558,14 +639,14 @@ CREATE TABLE IF NOT EXISTS `teams` (
 -- Daten für Tabelle `teams`
 --
 
-INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`) VALUES
-(1, 'Erste Mannschaft', 1, '4. Liga - Gruppe 2', '00100.jpg'),
-(2, 'Zweite Mannschaft', 1, '5. Liga - Gruppe 1', '00101.jpg'),
-(3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', ''),
-(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', '00102.jpg'),
-(15, 'Frauen', 1, 'Frauen - 4. Liga', ''),
-(20, 'Junioren G', 2, '', ''),
-(22, 'Junioren F', 2, '', '');
+INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`, `parserObject`) VALUES
+(1, 'Erste Mannschaft', 1, '4. Liga - Gruppe 2', '00100.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl01_tbRangliste'),
+(2, 'Zweite Mannschaft', 1, '5. Liga - Gruppe 1', '00101.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl03_tbRangliste'),
+(3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', '', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl05_tbRangliste'),
+(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', '00102.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl07_tbRangliste'),
+(15, 'Frauen', 1, 'Frauen - 4. Liga', '', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl09_tbRangliste'),
+(20, 'Junioren G', 2, '', '', ''),
+(22, 'Junioren F', 2, '', '', '');
 
 -- --------------------------------------------------------
 

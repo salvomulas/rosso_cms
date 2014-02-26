@@ -1,0 +1,1 @@
+SELECT * FROM member_active WHERE lastName in ("Caselle","Bürkler","Sahin")

@@ -83,6 +83,7 @@ function menuList($name, $url, $active = true) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <a class="navbar-brand visible-xs hidden-desktop" href="#">Navigation</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->

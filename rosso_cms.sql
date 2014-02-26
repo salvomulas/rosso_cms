@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 26. Feb 2014 um 00:56
--- Server Version: 5.1.44
--- PHP-Version: 5.3.1
+-- Erstellungszeit: 26. Feb 2014 um 18:44
+-- Server Version: 5.5.16
+-- PHP-Version: 5.3.8
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
-CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -483,6 +481,23 @@ INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `ca
 (20, 'Let it roll!', 'Mit dem 3:1-Sieg gegen Wallbach startet die AC Rossoneri eine kleine Sieges-Serie.  Kann diese auch am kommenden Weekend gegen den Lieblings-Erzrivalen Liestal anhalten?<br />\nEiner nach dem Anderen kehrt zurück. Das Team nimmt immer mehr die gewohnte, erfolgreiche Form an. Und mit der Rückkehr einiger etablierter Spieler kehren auch die positiven Resultate zurück. Mit dem Derby-Sieg im „Auswärtsspiel“ gegen den FC Lausen ist ein erster Befreiungsschlag gelungen, mit dem Sieg gegen die Freaktaler am vergangenen Samstag gar eine Mini-Serie gestartet worden. <br />\nIn einer ereignisarmen ersten Hälfte sorgte Stefan Kaiser mit dem 1:0 für erste Jubelstürme. Mit dieser knappen Führung ging die Romano-Elf in die Pause. Es wurden einige taktische Änderungen vorgenommen und weiter ging es mit Halbzeit zwei. In Durchgang zwei führte Rosso dann auch eine weitaus feinere Klinge als in den ersten 45 Minuten.<br />\nAls Sandinho alleine aufs Tor marschierte, scheiterte er zunächst noch am Gäste-Keeper. Es gelang ihm jedoch die sofortige Rückeroberung des Balles. Mit viel Übersicht legte er die Pille im 16er quer auf den heranstürmenden Michi Tanner, der mit seinem Premieren-Tor in dieser Saison das Score auf 2:0 erhöhen konnte. Nur kurze Zeit später erhöhte Sandinho auf 3:0. Jetzt waren die Fans waren nicht mehr zu halten. Sie sangen und tanzten (siehe Videos) das restliche Spiel über.<br /> \nAuch der von Langnaz unglücklich verursachte Elfmeter (diese Mal ein Handspiel, also nicht ganz typisch Langnaz-like mit beiden Beinen voraus;-) ) für die Gäste, vermochte der guten Stimmung keinen Abbruch zu tun. Beim fälligen Strafstoss hatte der interimistische Goalie Nure Shala keine Chance. Das Tor sollte ein kleiner Schönheitsfehler bleiben. In der Folge passierte nichts mehr und der starke Schiri beendete dieses Spiel. <br />\nEs ist schön zu sehen, wie vor dem wohl wichtigsten Spiel der Hinrunde der AC-Zug langsam aber sicher immer mehr ins Rollen kommt. Nur ein Gegentor in den letzten Zwei Pflichtspielen. Liestal kann also kommen. In diesem Sinne: Let it roll.', '00114.jpg', 3, '2013-10-13 21:30:00', 2, 145882, 4231, 'a:11:{i:0;i:83;i:1;i:117;i:2;i:142;i:3;i:26;i:4;i:70;i:5;i:98;i:6;i:141;i:7;i:116;i:8;i:30;i:9;i:41;i:10;i:98;}'),
 (21, 'Der Siegesmarsch geht weiter - Sieg im Derby!', 'Nach der erst kürzlich eingetroffenen Polarkälte und jeweiligem Regenschauer hat uns Mutter-Natur für das Derby plötzlich mit optimalem Fussballwetter beschenkt. Dafür hat es allerdings Vater-Fussballfeld mit den katastrophalen Platzbedingungen nicht wirklich gut mit uns gemeint. Zur Zeit müssen unsere Jungs auf einem hügeligen Acker auftreten und dabei mit vielen Fehlpässen und Probleme bei der Ballkontrolle rechnen.<br /><br />\r\n \r\nDoch der Fussballplatz und dessen Konditionen sollten uns heute nicht interessieren, das Ziel war sonnenklar: das Derby auf jeden Fall gewinnen und die drei Punkte einsacken um weiterhin von der Tabellenspitze grüssen zu dürfen.<br /><br />\r\n \r\nDer Schiri betritt das Feld, gefolgt von den Teams in zwei Reihen, beide angeführt vom jeweiligen Captain. Die Zuschauer werden von den beiden Kontrahenten begrüsst, lautes Klatschen und Jubeln unserer zahlreichen Fans, Handschlag der Kapitäne, Münzwurf und Anpfiff - das Derby geht los!<br /><br />\r\n \r\nEs vergehen nicht einmal 3 Minuten und Stefan Zimmermann erzielt den ersten Treffer für den AC Rossoneri, ein unglaublicher Start in eine sehr heikle Partie. Der Führungstreffer sorgt sofort für Jubel und Enthusiasmus, aber er wirkt gleichzeitig auch als Weckruf für unseren Gegner.<br /><br />\r\n\r\nDer FC Lausen zeigt trotz Rückstand einen enormen Siegeswillen. Immer wieder muss unsere Verteidigung harte Arbeit leisten um gefährliche Situationen zu klären. Einige Minuten werden wir unter Druck gesetzt und mangeln etwas am Spielaufbau. Viele Bälle gehen verloren und oft fehlt uns etwas Fantasie, so dass wir dem Gegner viele lange Bälle schenken und oftmals etwas zu viel unnötige Sprints von unserer Sturmspitze verlangen.<br /><br />\r\n\r\nWir wachen in der zweiten Hälfte der ersten Halbzeit wieder auf und machen unser Spiel. Der AC Rossoneri steht nun etwas kompakter und bezaubert mit schönen Spielkombinationen im Mittelfeld. Besonders kommt hier unser Aussenläufer David Tettey zum Vorschein, welcher wie besessen das ganze Spielfeld rauf- und runter läuft und wunderschöne Aktionen in die Wege leitet.<br /><br />\r\n\r\nAus dem Nichts erobert plötzlich unsere Nummer 31 Sebastian Werisch im Mittelfeld den Ball und schlängelt sich elegant durch die gesamte Verteidigung des FC Lausen. Beim Eintreffen im Strafraum wird er anschliessend vom Innenverteidiger mit unfairen Mitteln aufgehalten – der Schiri erteilt sofort den glasklaren Elfmeter.<br /><br />\r\n\r\n0:2 – Penaltyschütze Werisch trifft wie immer eiskalt von den 11 Metern.<br /><br />\r\n\r\nTrotz doppelter Führung wird es kurz vor der Pause nochmals extrem gefährlich. Der FC Lausen dringt in den Strafraum ein und der Stürmer kann den Ball in Richtung Tor befördern, doch Lukas Rickenbacher steht wie immer bereit und kann kurz vor der Linie noch klären.<br /><br />\r\n\r\nNach einer kurzen Pause und etwas Tee geht es weiter in die zweite Hälfte. Trainer Roberti verpasst seinen Jungs einen ordentlichen Motivationsschub und schickt seine Krieger zurück auf das Schlachtfeld – die Reaktion lässt sich von der ersten Minute sehen. Wir übernehmen die Kontrolle und lassen den Ball laufen.<br /><br />\r\n\r\nKurz vor Spielende verpasst Kerim Özdemir unseren Gegner den KO Schlag. Nach einem genialen Assist von unserem Torhüter befördert Kerim den Ball mit einem sagenhaften Schuss ins Netz – das dritte Tor ist gefallen. Der AC Rossoneri bezwingt den FC Lausen und ergattert weitere 3 Punkte.<br /><br />', '00115.jpg', 1, '2013-10-21 13:50:38', 2, 146506, 4231, 'a:18:{i:0;i:35;i:1;i:79;i:2;i:57;i:3;i:69;i:4;i:109;i:5;i:99;i:6;i:103;i:7;i:139;i:8;i:93;i:9;i:101;i:10;i:96;i:11;i:17;i:12;i:100;i:13;i:33;i:14;i:67;i:15;i:59;i:16;i:120;i:17;i:112;}'),
 (22, 'Jetzt anmelden! Die AC Rossoneri Silvesterparty!', 'Was ist das Beste am Jahresende? Richtig, die AC Rossoneri Silvesterparty in der Mehrzweckhalle Stutz! Wir hatten es bereits angekündigt, dass der AC Rossoneri dieser Tradition auch dieses Jahr wieder treu bleiben würde. Nun steht das Jahresende in den Startlöchern und wir haben mit der Entgegennahme der Reservierungen begonnen. Bitte reserviert frühzeitig um dabei sein zu können!<br/><br/>\nAlle Informationen betreffend der Silvesterfeier gibt es <a href="http://www.acrossoneri.ch/silvester">unter diesem Link</a>. Wir freuen uns auf eure Teilnahme!', '00100.jpg', 1, '2013-11-15 00:09:55', 3, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `permissions`
+--
+
+CREATE TABLE IF NOT EXISTS `permissions` (
+  `userID` int(11) NOT NULL,
+  `permVorstand` tinyint(1) NOT NULL,
+  `permPlayer` tinyint(1) NOT NULL,
+  `permTeam` tinyint(1) NOT NULL,
+  `permNews` tinyint(1) NOT NULL,
+  `permReport` tinyint(1) NOT NULL,
+  `permManagement` tinyint(1) NOT NULL,
+  PRIMARY KEY (`userID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 

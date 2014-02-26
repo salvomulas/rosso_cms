@@ -2057,9 +2057,9 @@ output {
   padding: 8px 12px;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #888888;
+  color: #ffffff;
   vertical-align: middle;
-  background-color: #ffffff;
+  background-color: #000000;
   background-image: none;
   border: 1px solid #282828;
   border-radius: 4px;
@@ -7706,12 +7706,12 @@ td.visible-print {
 
 .has-error .help-block,
 .has-error .control-label {
-  color: #ff8800;
+  color: #ff0000;
 }
 
 .has-error .form-control,
 .has-error .form-control:focus {
-  border-color: #ff8800;
+  border-color: #ff0000;
 }
 
 .has-success .help-block,

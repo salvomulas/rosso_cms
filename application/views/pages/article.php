@@ -16,6 +16,12 @@
         <div class="col-md-8">
             
             <p><?php echo $article->article; ?></p>
+
+            <hr>
+
+            <h4>Kommentar hinterlassen</h4>
+
+            <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-numposts="5" data-colorscheme="dark"></div>
             
         </div>
         
@@ -70,7 +76,7 @@
                         </tr>
                         <tr>
                             <th>Kategorie</th>
-                            <td><a href="#"><span class="label label-primary"><?php echo $cat; ?></span></a></td>
+                            <td><span class="label label-primary"><?php echo $cat; ?></span></td>
                         </tr>
                     </table>
                     

@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=1427393740832731";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container navfix">
 
     <div class="row">
@@ -51,11 +60,12 @@
                 echo shortenString($row->article, 300);
                 echo '</p>';
 
-                echo '<div class="well well-sm">';
-                echo '<p class="small" style="margin-bottom: 0px;">';
+                echo '<div class="well well-sm clearfix">';
+                echo '<p class="text-articledesc small">';
                 echo '<span class="glyphicon glyphicon-user"></span> '.$row->firstName.' '.$row->lastName.' | ';
                 echo '<span class="glyphicon glyphicon-calendar"></span> '.$row->shortdate.' | ';
                 echo '<span class="glyphicon glyphicon-tag"></span> '.$cat .'</p>';
+                echo '<div class="text-articleshare fb-share-button" data-href="'.$link.'" data-type="button"></div>';
                 echo '</div>';
 
                 echo '</div>';

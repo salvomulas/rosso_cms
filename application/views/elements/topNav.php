@@ -102,15 +102,61 @@ function menuList($name, $url, $active = true) {
         <div class="hidden-sm hidden-md hidden-lg">
             <div class="collapse navbar-collapse" id="primary-navbar">
                 <div class="row">
-                    <div class="col-xs-4">
+                    <div class="tabbable">
+                        <div class="col-xs-4">
+                            <ul class="nav navbar-nav text-left">
+                                <?php menuObject("Home", ""); ?>
+                                <li><a href="#aktuelles" data-toggle="tab">Aktuelles <b class="caret"></b></a></li>
+                                <li><a href="#verein" data-toggle="tab">Verein <b class="caret"></b></a></li>
+                                <li><a href="#spielbetrieb" data-toggle="tab">Spielbetrieb <b class="caret"></b></a></li>
+                                <li><a href="">Login</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-8 navbar-res">
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="home">
 
-                        <ul class="nav navbar-nav text-left">
-                            <?php menuObject("Home", ""); ?>
-                            <li><a>Aktuelles <b class="caret"></b></a></li>
-                            <li><a>Verein <b class="caret"></b></a></li>
-                            <li><a>Spielbetrieb <b class="caret"></b></a></li>
-                            <li><a href="">Login</a></li>
-                        </ul>
+                                </div>
+                                <div class="tab-pane" id="aktuelles">
+                                    <ul class="nav navbar-nav text-left">
+                                        <?php menuObject ("Newsarchiv","aktuelles"); ?>
+                                        <hr>
+                                        <?php menuObject ("Sommerturnier 2014","aktuelles/sommerturnier"); ?>
+                                        <?php menuObject ("Kalender","aktuelles/kalender"); ?>
+
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" id="verein">
+                                    <ul class="nav navbar-nav text-left">
+                                        <?php menuObject ("Vorstand","verein/vorstand"); ?>
+                                        <?php menuObject ("Organigramm","verein/organigramm"); ?>
+                                        <?php menuObject ("Statuten","verein/statuten"); ?>
+                                        <?php menuObject ("Leitbild","verein/leitbild"); ?>
+                                        <hr>
+                                        <?php menuObject ("Sponsoren","verein/sponsoren"); ?>
+                                        <?php /*menuObject ("Sponsoringkonzept","verein/sponsoringkonzept"); */?>
+                                        <?php menuObject ("Passivmitgliedschaft","verein/passivmitglied"); ?>
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" id="spielbetrieb">
+                                    <ul class="nav navbar-nav text-left">
+                                        <?php
+                                        foreach ($teamsActive->result() as $row) {
+                                            menuObject($row->name, 'team/aktive/'.$row->id);
+                                            //echo '<a href="' . base_url() . 'team/aktive/' . $row->id . '" class="list-group-item">' . $row->name . '</a>';
+                                        }
+                                        echo '<hr>';
+                                        foreach ($teamsKifu->result() as $row) {
+                                            menuObject($row->name, 'team/junioren/'.$row->id);
+                                            //echo '<a href="' . base_url() . 'team/aktive/' . $row->id . '" class="list-group-item">' . $row->name . '</a>';
+                                        }
+                                        echo '<hr>';
+                                        menuObject ("Sportanlage","sportanlage");
+                                        ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

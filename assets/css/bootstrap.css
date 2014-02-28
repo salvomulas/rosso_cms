@@ -600,6 +600,19 @@ cite {
   color: #e6e6e6;
 }
 
+.text-articledesc {
+  width: 75%;
+  margin-bottom: 0px;
+  float: left;
+}
+
+.text-articleshare {
+  width: 25%;
+  text-align: right;
+  float: left;
+  margin-bottom: 0px;
+}
+
 .text-left {
   text-align: left;
 }
@@ -5076,7 +5089,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: transparent;
+  background-color: #232323;
 }
 
 .navbar-default .navbar-nav > .disabled > a,
@@ -5132,6 +5145,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
     color: #888888;
     background-color: transparent;
+  }
+  .navbar-res {
+    background-color: #232323;
   }
 }
 

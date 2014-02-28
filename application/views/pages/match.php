@@ -33,6 +33,12 @@
             
             <p><?php echo $article->article; ?></p>
 
+            <hr>
+
+            <h4>Kommentar hinterlassen</h4>
+
+            <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-numposts="5" data-colorscheme="dark"></div>
+            
         </div>
         
         <div class="col-md-4">
@@ -120,7 +126,7 @@
                         </tr>
                         <tr>
                             <th>Kategorie</th>
-                            <td><a href="#"><span class="label label-important"><?php echo $cat; ?></span></a></td>
+                            <td><a href="#"><span class="label label-primary"><?php echo $cat; ?></span></a></td>
                         </tr>
                     </table>
                     

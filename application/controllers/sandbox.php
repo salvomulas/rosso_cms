@@ -14,12 +14,12 @@ class Sandbox extends CI_Controller {
         $this->load->model('ranking');
     }
 
-    public function index() {
+    public function parse ($id) {
 
         $data ['page_title'] = "FVNWS Parser";
         $this->load->view("meta/metadata", $data);
 
-        $this->parseRanking(1);
+        $this->parseRanking($id);
         //$this->parseRanking($this->secondID);
         //$this->parseRanking($this->thirdID);
         //$this->parseRanking($this->seniorenID);

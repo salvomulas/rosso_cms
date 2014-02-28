@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=1427393740832731";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container">
     
     <h3><?php echo $article->title; ?></h3>
@@ -75,8 +84,8 @@
                     <h3 class="panel-title">Teilen</h3>
                 </div>
 
-                <div class="panel-body">
-                
+                <div class="panel-body text-center">
+                    <div class="fb-share-button" data-href="<?php echo current_url(); ?>" data-type="box_count"></div>
                 </div>
                 
             </div>

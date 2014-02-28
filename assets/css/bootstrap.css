@@ -5610,13 +5610,28 @@ a.list-group-item.active > .badge,
   padding: 3px;
   margin-bottom: 30px;
   font-weight: 200;
-  line-height: 30px;
+  line-heightf: 30px;
   color: inherit;
   background: url("../img/stadium_light3.jpg");
   background-size: 100% 100%;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
+}
+
+.tournament-unit {
+    padding: 3px;
+    margin-bottom: 30px;
+    font-weight: 200;
+    line-heightf: 30px;
+    color: inherit;
+    background: url("../img/stadium_light2.jpg");
+    background-size: 100% 100%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    min-height: 200px;
+    padding-top: 20px;
 }
 
 .firework-unit {

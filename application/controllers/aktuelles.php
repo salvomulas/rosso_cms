@@ -114,6 +114,7 @@ class Aktuelles extends MY_Controller {
 
         $this->load->view('meta/metadata',$data);
         $this->drawNavigation();
+        $this->load->view('elements/tournamentUnit');
         $this->load->view("pages/sommerturnier",$data);
         $this->drawFooter();
 

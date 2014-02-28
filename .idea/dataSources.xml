@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" hash="246850791">
-    <data-source source="LOCAL" name="Rosso_CMS Database" uuid="e9c71fe9-1618-40e0-9c50-e9c560f04503">
-      <driver-ref>mysql</driver-ref>
+    <data-source source="LOCAL" name="Rosso_CMS Database" product="MySQL" version="5.1.44" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.22 ( Revision: ${bzr.revision-id} )" uuid="e9c71fe9-1618-40e0-9c50-e9c560f04503">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost/rosso_cms</jdbc-url>

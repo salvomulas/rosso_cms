@@ -37,4 +37,12 @@ class Json extends MY_Controller {
         
     }
 
+    public function facebook () {
+
+        $json = file_get_contents('https://graph.facebook.com/ACRossoneriLausen/albums/');
+        $object = json_decode($json);
+        print_r ($object->data);
+
+    }
+
 }

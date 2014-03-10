@@ -120,6 +120,7 @@ function menuList($name, $url, $active = true) {
                                 <div class="tab-pane" id="aktuelles">
                                     <ul class="nav navbar-nav text-left">
                                         <?php menuObject ("Newsarchiv","aktuelles"); ?>
+                                        <?php menuObject ("Bildergalerie","aktuelles/galerie"); ?>
                                         <hr>
                                         <?php menuObject ("Sommerturnier 2014","aktuelles/sommerturnier"); ?>
                                         <?php menuObject ("Kalender","aktuelles/kalender"); ?>
@@ -280,7 +281,7 @@ function menuList($name, $url, $active = true) {
                         <h5>Aktuelles</h5>
                         <div class="list-group">
                             <?php menuList ("Newsarchiv","aktuelles"); ?>
-                            <a href="#" class="list-group-item">Bildergalerie</a>
+                            <?php menuList ("Bildergalerie","aktuelles/galerie"); ?>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">

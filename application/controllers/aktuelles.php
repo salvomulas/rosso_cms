@@ -120,28 +120,26 @@ class Aktuelles extends MY_Controller {
 
     }
 
-    public function galerie() {
+    public function galerie($id = null) {
 
-        $json = file_get_contents('https://graph.facebook.com/ACRossoneriLausen/albums/');
-        $object = json_decode($json);
+        if (!$id) {
 
-        for ($i = 0; $i < sizeof($object->data); $i++) {
-            if (($object->data[$i]->type) != 'normal' ) {
-                unset($object->data[$i]);
-                $object->data = array_values($object->data);
-            }
+            $json = file_get_contents('https://graph.facebook.com/ACRossoneriLausen/albums/');
+            $object = json_decode($json);
+            $data['object'] = $object;
+
+            $data ['page_title'] = "Bildergalerie";
+
+            $this->load->view('meta/metadata',$data);
+            $this->drawNavigation();
+            $this->load->view("pages/galerie",$data);
+            $this->drawFooter();
+
+        } else {
+
+            echo "hey there";
+
         }
-
-        
-
-        $data['object'] = $object;
-
-        $data ['page_title'] = "Bildergalerie";
-
-        $this->load->view('meta/metadata',$data);
-        $this->drawNavigation();
-        $this->load->view("pages/galerie",$data);
-        $this->drawFooter();
 
     }
 

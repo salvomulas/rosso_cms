@@ -12,7 +12,7 @@
                 <div class="panel-body">
                     <div class="list-group">
                         <a class="list-group-item active" href="<?php echo base_url(); ?>verein/sponsoren">Sponsoren</a>
-                        <a class="list-group-item" href="<?php echo base_url(); ?>">Sponsoringkonzept</a>
+                        <!-- <a class="list-group-item" href="<?php echo base_url(); ?>">Sponsoringkonzept</a> -->
                         <a class="list-group-item" href="<?php echo base_url(); ?>verein/passivmitglied">Passivmitgliedschaft</a>
                     </div>
                 </div>

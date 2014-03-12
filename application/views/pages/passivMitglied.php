@@ -12,13 +12,21 @@
                 <div class="panel-body">
                     <div class="list-group">
                         <a class="list-group-item" href="<?php echo base_url(); ?>verein/sponsoren">Sponsoren</a>
-                        <a class="list-group-item" href="<?php echo base_url(); ?>">Sponsoringkonzept</a>
+                        <!-- <a class="list-group-item" href="<?php echo base_url(); ?>">Sponsoringkonzept</a> -->
                         <a class="list-group-item active" href="<?php echo base_url(); ?>verein/passivmitglied">Passivmitgliedschaft</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-9 col-md-pull-3">
+
+        <h5>Liebe Fussballfreunde</h5>
+        <p>Gem&auml;ss unserer Statuten werden neue Passivmitgliedschaften jeweils am Ende der Fussballsaison geschlossen.
+        Im Moment ist es leider nicht m&ouml;glich, als Passivmitglied beizutreten. Gerne nehmen wir zwischen Juli und September
+        neue Mitgliedschaften an. Der AC Rossoneri ist stets erfreut &uuml;ber neue Mitglieder.</p>
+
+
+        <!--
 
             <h5>Liebe Fussballfreunde</h5>
             <p>Jedes Jahr gewinnt der Fussball an Popularit&auml;t und Beliebtheit. Der Sport verbindet, der Sport </p>
@@ -100,6 +108,8 @@
                     </div>
                 </div>
             </div>
+
+            -->
 
         </div>
     </div>

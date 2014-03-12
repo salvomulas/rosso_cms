@@ -72,13 +72,6 @@ class Ranking extends CI_Model {
         }
 
     }
-    
-    public function getTableColors ($teamID, $up, $down) {
-        // $up = This parameter passes the number of teams going to the higher division
-        // $down = This parameter passes the number of teams going to the lower division
-        $this->db->select('*')->from('team_'.$teamID.'_ranking');
-        
-    }
 
     /**
      * @param $teamID   The teamID of the respective team from which the ranking data will be deleted
@@ -86,14 +79,14 @@ class Ranking extends CI_Model {
      */
     public function emptyTeamRanking ($teamID) {
         $this->db->where('teamID', $teamID);
-        $this->db->delete('ranking_sandbox');
+        $this->db->delete('teams_ranking');
     }
 
     /**
      * This function truncates the entire ranking data within the ranking table
      */
     public function truncateRanking () {
-        $this->db->truncate('ranking_sandbox');
+        $this->db->truncate('teams_ranking');
     }
 
     /**
@@ -102,7 +95,7 @@ class Ranking extends CI_Model {
      * inserting data to avoid double values
      */
     public function insertTeamRanking ($data) {
-        $this->db->insert_batch('ranking_sandbox',$data);
+        $this->db->insert_batch('teams_ranking',$data);
     }
 
 }

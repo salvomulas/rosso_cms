@@ -35,12 +35,12 @@
                         }
                         echo '<td>' . $count . '.</td>';
                         echo '<td>' . $row->team . '</td>';
-                        echo '<td>0</td>'; //Anzahl Spiele
-                        echo '<td>0</td>'; //Gewonnen
-                        echo '<td>0</td>'; //Unentschieden
-                        echo '<td>0</td>'; //Verloren
+                        echo '<td>' . $row->gamePlayed . '</td>'; //Anzahl Spiele
+                        echo '<td>' . $row->gameWon . '</td>'; //Gewonnen
+                        echo '<td>' . $row->gameDraw . '</td>'; //Unentschieden
+                        echo '<td>' . $row->gameLost . '</td>'; //Verloren
                         echo '<td class="text-center">(' . $row->fairplay . ')</td>';
-                        echo '<td class="text-center">0 : 0</td>';
+                        echo '<td class="text-center">' . $row->goalsMade . ' : ' . $row->goalsAgainst . '</td>';
                         echo '<td>' . $row->points . '</td>';
                         if ((strpos($row->team, "Rossoneri")) === false) {
                             if ($diffPoints > 0) {

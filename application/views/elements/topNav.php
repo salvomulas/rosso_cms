@@ -123,7 +123,7 @@ function menuList($name, $url, $active = true) {
                                         <?php menuObject ("Bildergalerie","aktuelles/galerie"); ?>
                                         <hr>
                                         <?php menuObject ("Sommerturnier 2014","aktuelles/sommerturnier"); ?>
-                                        <?php menuObject ("Kalender","aktuelles/kalender"); ?>
+                                        <?php /** menuObject ("Kalender","aktuelles/kalender"); */?>
 
                                     </ul>
                                 </div>
@@ -288,7 +288,7 @@ function menuList($name, $url, $active = true) {
                         <h5>Events</h5>
                         <div class="list-group">
                             <?php menuList ("Sommerturnier 2014","aktuelles/sommerturnier"); ?>
-                            <?php menuList ("Kalender","aktuelles/kalender"); ?>
+                            <?php /** menuList ("Kalender","aktuelles/kalender"); */ ?>
                         </div>
                     </div>
                 </div>

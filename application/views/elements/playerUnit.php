@@ -13,7 +13,7 @@ $row = $playerInfo->row();
                     if ($row->pictureURL != NULL) {
                         echo '<img src="'.base_url().'assets/img/member/'.$row->pictureURL.'" style="width: 100%;">';
                     } else {
-                        echo '<img src="'.base_url().'assets/img/dummy_person.jpg'.$row->pictureURL.'" style="width: 100%;">';
+                        echo '<img src="'.base_url().'assets/img/dummy_person.jpg" style="width: 100%;">';
                     }
                     ?>
                 </div>

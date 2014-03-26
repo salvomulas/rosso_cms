@@ -8,14 +8,40 @@ function get_age($birth_date){
 
 }
 
-
 ?>
 
-<div class="container">
+<div class="container navfix">
 
     <div class="row">
 
-        <div class="col-md-6 pull-right">
+        <div class="col-md-6 col-sm-6">
+
+            <?php
+
+            $path = base_url().'assets/img/member/fullsize/'.$row->pictureURL;
+
+            if ($row->pictureURL != NULL) {
+                if (file_exists('assets/img/member/fullsize/'.$row->pictureURL)) {
+                    echo '<img src="'.$path.'" style="width: 100%;">';
+                } else {
+                    echo '<img src="'.base_url().'assets/img/member/'.$row->pictureURL.'" style="width: 100%;">';
+                }
+            } else {
+                echo '<img src="'.base_url().'assets/img/dummy_person.jpg" style="width: 100%;">';
+            }
+            ?>
+
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+
+            <div class="well">
+
+                <h3><?php echo $row->trikot; ?> | <?php echo $row->firstName.' '.$row->lastName; ?></h3>
+
+            </div>
+
+            <hr>
 
             <div class="well">
 
@@ -85,85 +111,6 @@ function get_age($birth_date){
 
             </div>
 
-        </div>
-
-        <div class="col-md-6">
-
-            <h4>Spielerinformationen</h4>
-            <hr>
-
-            <table class="table table-condensed table-hover">
-
-                <tr>
-                    <td><strong>Beim AC Rossoneri seit</strong></td>
-                    <td>(keine Angabe)</td>
-                </tr>
-                <tr>
-                    <td><strong>Eins&auml;tze (seit Saison 13/14)</strong></td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><strong>Tore</strong></td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><strong>Assists</strong></td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><strong>Gelbe Karten</strong></td>
-                    <td>0</td>
-                </tr>
-                <tr>
-                    <td><strong>Rote Karten</strong></td>
-                    <td>0</td>
-                </tr>
-
-            </table>
-
-            <hr>
-
-            <h4><?php echo $row->firstName.' '.$row->lastName.' im Einsatz' ?></h4>
-            <hr>
-            <p><?php echo $row->firstName. ' '.$row->lastName.' ist zur Zeit auf keinem Foto zu sehen' ?></p>
-            
-            <!--
-            <div class="row-fluid">
-
-                <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
-                </div>
-
-            </div>
-
-            <hr>
-
-            <div class="row-fluid">
-
-                <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
-                </div>
-
-                <div class="col-md-4">
-                    <img src="<?php echo base_url(); ?>assets/img/dummy_person.jpg" style="width: 150px; height: 150px;">
-                </div>
-
-            </div>
-
-            <hr>
--->
         </div>
 
     </div>

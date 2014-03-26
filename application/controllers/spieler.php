@@ -28,7 +28,7 @@ class Spieler extends MY_Controller {
         // Load views with all the loaded data
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
-        $this->load->view("elements/playerUnit", $data);
+        // $this->load->view("elements/playerUnit", $data);
         $this->load->view("pages/player");
         $this->drawFooter();
     }

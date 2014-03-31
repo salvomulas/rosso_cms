@@ -93,6 +93,9 @@ class Team extends MY_Controller {
         $data['match'] = $this->match->getTeamCalendar($teamID);
         $data['matchDone'] = $this->match->getTeamCalendarPast($teamID);
         $data['nextMatch'] = $this->match->getNextGameTeam($teamID);
+
+        // Load team sponsor
+        $data ['sponsor'] = $this->sponsors->getTeamSponsor($teamID);
         
         // Set Page Title
         $data['page_title'] = $data['teamName'];

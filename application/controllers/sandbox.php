@@ -109,9 +109,9 @@ class Sandbox extends CI_Controller {
         echo '<hr>';
     }
 
-    public function delete ($teamID) {
-        $this->load->model('ranking');
-        $this->ranking->emptyTeamRanking($teamID);
+    protected function delete ($teamID) {
+        //$this->load->model('ranking');
+        //$this->ranking->emptyTeamRanking($teamID);
 
     }
 

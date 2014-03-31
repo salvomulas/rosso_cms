@@ -48,7 +48,7 @@ $row = $teamInfo->row();
                 <ul class="pagination">
                     <li class="active"><a href="#tab1" data-toggle="tab">Kader</a></li>
                     <li><a href="#tab2" data-toggle="tab">Spielerliste</a></li>
-                    <li><a href="#tab3" data-toggle="tab">Matchberichte</a></li>
+                    <li><a href="#tab3" data-toggle="tab">Staff</a></li>
                 </ul>
             </div>
         </div>

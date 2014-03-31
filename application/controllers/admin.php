@@ -7,10 +7,11 @@ class Admin extends MY_Controller {
         $this->load->model('users');
     }
     
-    public function index() 
-    {
-        $this->my_profile();
+    public function index() {
+        $this->load->view('admin/login');
     }
+
+    /*
 
     public function my_profile()
     {
@@ -116,5 +117,7 @@ class Admin extends MY_Controller {
             redirect ("error/PermissionDenied");
         }
     }
+
+    */
     
 }

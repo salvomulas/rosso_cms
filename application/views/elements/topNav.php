@@ -94,7 +94,7 @@ function menuList($name, $url, $active = true) {
                 <li><a data-target="#aktuelles-navbar">Aktuelles <b class="caret"></b></a></li>
                 <li><a data-target="#verein-navbar">Verein <b class="caret"></b></a></li>
                 <li><a data-target="#spielbetrieb-navbar">Spielbetrieb <b class="caret"></b></a></li>
-                <li><a href="">Login</a></li>
+                <li><a href="<?php echo base_url(); ?>admin">Login</a></li>
             </ul>
 
         </div>
@@ -109,7 +109,7 @@ function menuList($name, $url, $active = true) {
                                 <li><a href="#aktuelles" data-toggle="tab">Aktuelles <b class="caret"></b></a></li>
                                 <li><a href="#verein" data-toggle="tab">Verein <b class="caret"></b></a></li>
                                 <li><a href="#spielbetrieb" data-toggle="tab">Spielbetrieb <b class="caret"></b></a></li>
-                                <li><a href="">Login</a></li>
+                                <li><a href="<?php echo base_url(); ?>admin">Login</a></li>
                             </ul>
                         </div>
                         <div class="col-xs-8 navbar-res">
@@ -120,7 +120,7 @@ function menuList($name, $url, $active = true) {
                                 <div class="tab-pane" id="aktuelles">
                                     <ul class="nav navbar-nav text-left">
                                         <?php menuObject ("Newsarchiv","aktuelles"); ?>
-                                        <?php menuObject ("Bildergalerie","aktuelles/galerie"); ?>
+                                        <?php //menuObject ("Bildergalerie","aktuelles/galerie"); ?>
                                         <hr>
                                         <?php menuObject ("Sommerturnier 2014","aktuelles/sommerturnier"); ?>
                                         <?php /** menuObject ("Kalender","aktuelles/kalender"); */?>
@@ -153,6 +153,7 @@ function menuList($name, $url, $active = true) {
                                         }
                                         echo '<hr>';
                                         menuObject ("Sportanlage","sportanlage");
+                                        menuObject ("Schiedsrichter","schiedsrichter");
                                         ?>
                                     </ul>
                                 </div>
@@ -209,8 +210,8 @@ function menuList($name, $url, $active = true) {
                         <h5>Diverses</h5>
                         <div class="list-group">
                             <?php menuList ("Sportanlage","sportanlage"); ?>
-                            <a href="#" class="list-group-item">Schiedsrichter</a>
-                            <a href="#" class="list-group-item">Resultate</a>
+                            <?php menuList ("Schiedsrichter","schiedsrichter"); ?>
+                            <?php //menuList ("Resultate","resultate"); ?>
                         </div>
                     </div>
                 </div>
@@ -255,9 +256,9 @@ function menuList($name, $url, $active = true) {
                     <div class="col-md-12 col-sm-12">
                         <h5>Diverses</h5>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">Webmaster</a>
-                            <a href="#" class="list-group-item">Aktuelle OKs</a>
-                            <a href="#" class="list-group-item">Social Media</a>
+                            <?php menuList ("Webmaster","verein/wip"); ?>
+                            <?php menuList ("Aktuelle OKs","verein/wip"); ?>
+                            <?php menuList ("Social Media","verein/wip"); ?>
                         </div>
                     </div>
                 </div>
@@ -281,7 +282,7 @@ function menuList($name, $url, $active = true) {
                         <h5>Aktuelles</h5>
                         <div class="list-group">
                             <?php menuList ("Newsarchiv","aktuelles"); ?>
-                            <?php menuList ("Bildergalerie","aktuelles/galerie"); ?>
+                            <?php //menuList ("Bildergalerie","aktuelles/galerie"); ?>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-6">
@@ -298,8 +299,8 @@ function menuList($name, $url, $active = true) {
                     <div class="col-md-12 col-sm-12">
                         <h5>Links</h5>
                         <div class="list-group">
-                            <a href="#" class="list-group-item">Fussballverband NWS</a>
-                            <a href="#" class="list-group-item">ACR Facebook Timeline</a>
+                            <a href="http://www.football.ch/fvnws/Fussballverband-Nordwestschweiz/Vereine-FVNWS/Verein-FVNWS.aspx/v-508/" target="_blank" class="list-group-item">Fussballverband NWS</a>
+                            <a href="https://www.facebook.com/ACRossoneriLausen" target="_blank" class="list-group-item">ACR Facebook Timeline</a>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 26. Feb 2014 um 18:44
--- Server Version: 5.5.16
--- PHP-Version: 5.3.8
+-- Erstellungszeit: 31. Mrz 2014 um 17:42
+-- Server Version: 5.1.44
+-- PHP-Version: 5.3.1
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `rosso_cms`
 --
+CREATE DATABASE IF NOT EXISTS `rosso_cms` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `rosso_cms`;
 
 -- --------------------------------------------------------
 
@@ -35,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `fields` (
   `jahr` int(11) NOT NULL,
   `sitze` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Daten für Tabelle `fields`
@@ -44,7 +46,8 @@ CREATE TABLE IF NOT EXISTS `fields` (
 INSERT INTO `fields` (`id`, `title`, `pictureURL`, `belag`, `masse`, `jahr`, `sitze`) VALUES
 (1, 'Hauptplatz Bifang', '00100.jpg', 'Naturrasen', '101/64', 1979, 500),
 (2, 'Nebenplatz Stutz', '00101.jpg', 'Naturrasen', '90/57', 1994, 200),
-(3, 'KiFu Bifang', '00102.jpg', 'Naturrasen', '35/30', 0, 0);
+(3, 'KiFu Bifang', '00102.jpg', 'Naturrasen', '35/30', 0, 0),
+(4, 'Schelligacker', '00103.jpg', 'Naturrasen', '90/58', 2013, 300);
 
 -- --------------------------------------------------------
 
@@ -87,15 +90,15 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (145882, 2, 1, 'Meisterschaft', 1, 3, 1, 'Sa', '2013-10-12', '20:00:00', 'FC Wallbach', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145890, 2, 0, 'Meisterschaft', 1, 0, 2, 'Sa', '2013-10-19', '19:00:00', 'FC Liestal  ', 'Stadion Gitterli, Liestal - 2 (Kunstrasen)', 'Stadion Gitterli', 'Liestal', '2 (Kunstrasen)', 'Stadion Gitterli, Liestal'),
 (145893, 2, 0, 'Meisterschaft', 1, 1, 0, 'So', '2013-10-27', '11:00:00', 'FC Diegten Eptingen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145903, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-16', '14:00:00', 'FC Zeiningen ', 'Unter Reben, Zeiningen - 1', 'Unter Reben', 'Zeiningen', '1', 'Unter Reben, Zeiningen'),
-(145904, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Gelterkinden ', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
-(145915, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Eiken', 'Sportanlage Netzi, Eiken,   - 1', 'Sportanlage Netzi, Eiken', ' ', '1', 'Kultureller Saal, Eiken                     '),
-(145917, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145926, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '00:00:00', 'Pratteln United ', 'Hexmatt, Pratteln - 1', 'Hexmatt', 'Pratteln', '1', 'Hexmatt, Pratteln'),
-(145930, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-27', '00:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145937, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-04', '00:00:00', 'NK Pajde', 'Sportzentrum Steinli, Moehlin - B 02', 'Sportzentrum Steinli', 'Moehlin', 'B 02', 'Sportzentrum Steinli, Moehlin'),
-(145943, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(145948, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Wallbach', 'Sandgrube, Wallbach - 1', 'Sandgrube', 'Wallbach', '1', 'Sandgrube, Wallbach'),
+(145903, 2, 0, 'Meisterschaft', 1, 0, 4, 'So', '2014-03-19', '20:00:00', 'FC Zeiningen ', 'Unter Reben, Zeiningen - 1', 'Unter Reben', 'Zeiningen', '1', 'Unter Reben, Zeiningen'),
+(145904, 2, 0, 'Meisterschaft', 1, 3, 0, 'So', '2014-03-23', '11:00:00', 'FC Gelterkinden ', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
+(145915, 2, 0, 'Meisterschaft', 1, 1, 2, 'So', '2014-03-29', '19:30:00', 'FC Eiken', 'Sportanlage Netzi, Eiken,   - 1', 'Sportanlage Netzi, Eiken', ' ', '1', 'Kultureller Saal, Eiken                     '),
+(145917, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '11:00:00', 'AC Virtus Liestal b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145926, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '14:00:00', 'Pratteln United ', 'Hexmatt, Pratteln - 1', 'Hexmatt', 'Pratteln', '1', 'Hexmatt, Pratteln'),
+(145930, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-27', '11:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145937, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-04', '13:00:00', 'NK Pajde', 'Sportzentrum Steinli, Moehlin - B 02', 'Sportzentrum Steinli', 'Moehlin', 'B 02', 'Sportzentrum Steinli, Moehlin'),
+(145943, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-11', '11:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(145948, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-17', '18:30:00', 'FC Wallbach', 'Sandgrube, Wallbach - 1', 'Sandgrube', 'Wallbach', '1', 'Sandgrube, Wallbach'),
 (145956, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Liestal  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (145959, 2, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-06-01', '00:00:00', 'FC Diegten Eptingen ', 'Hofmatt, Diegten - 1', 'Hofmatt', 'Diegten', '1', 'Hofmatt, Diegten'),
 (145969, 2, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Zeiningen ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -110,23 +113,23 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (146506, 1, 0, 'Meisterschaft', 1, 0, 3, 'Sa', '2013-10-19', '20:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146509, 1, 1, 'Meisterschaft', 1, 3, 1, 'Sa', '2013-10-26', '18:00:00', 'FC Stein b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (146519, 1, 0, 'Meisterschaft', 1, 0, 0, 'Sa', '2013-11-02', '17:00:00', 'FC Laufenburg-Kaisten b', 'Blauen, Laufenburg - 1', 'Blauen', 'Laufenburg', '1', 'Blauen, Laufenburg'),
-(146520, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-23', '00:00:00', 'SC Muenchenstein a', 'Sportplatz Au, Muenchenstein - 1', 'Sportplatz Au', 'Muenchenstein', '1', 'Sportplatz Au, Muenchenstein'),
-(146531, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Arisdorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146533, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'SV Sissach a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146542, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Oberdorf ', 'z''Hof, Oberdorf - 1 Kunstrasen', 'z''Hof', 'Oberdorf', '1 Kunstrasen', 'z''Hof, Oberdorf'),
-(146546, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-27', '00:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146553, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-04', '00:00:00', 'SV Muttenz b', 'Sportplatz Margelacker, Muttenz - 1', 'Sportplatz Margelacker', 'Muttenz', '1', 'Sportplatz Margelacker, Muttenz'),
-(146559, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-11', '00:00:00', 'FC Diegten Eptingen  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146564, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-18', '00:00:00', 'FC Gelterkinden b', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
-(146572, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-25', '00:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
-(146575, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-06-01', '11:00:00', 'FC Stein b', 'Bustelbach, Stein - 1', 'Bustelbach', 'Stein', '1', 'Bustelbach, Stein'),
-(146585, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-06-15', '00:00:00', 'FC Laufenburg-Kaisten b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146520, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-10', '20:30:00', 'SC Muenchenstein a', 'Sportplatz Au, Muenchenstein - 1', 'Sportplatz Au', 'Muenchenstein', '1', 'Sportplatz Au, Muenchenstein'),
+(146531, 1, 1, 'Meisterschaft', 1, 2, 0, 'So', '2014-03-29', '18:00:00', 'FC Arisdorf  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146533, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-05', '18:00:00', 'SV Sissach a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146542, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '11:00:00', 'FC Oberdorf ', 'z''Hof, Oberdorf - 1 Kunstrasen', 'z''Hof', 'Oberdorf', '1 Kunstrasen', 'z''Hof, Oberdorf'),
+(146546, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-26', '18:00:00', 'FC Bubendorf', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146553, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-04', '14:30:00', 'SV Muttenz b', 'Sportplatz Margelacker, Muttenz - 1', 'Sportplatz Margelacker', 'Muttenz', '1', 'Sportplatz Margelacker, Muttenz'),
+(146559, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-10', '18:00:00', 'FC Diegten Eptingen  ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146564, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-17', '17:00:00', 'FC Gelterkinden b', 'Wolfstiege, Gelterkinden - 1', 'Wolfstiege', 'Gelterkinden', '1', 'Wolfstiege, Gelterkinden'),
+(146572, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-21', '20:00:00', 'FC Lausen 72', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(146575, 1, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-06-01', '13:30:00', 'FC Stein b', 'Bustelbach, Stein - 1', 'Bustelbach', 'Stein', '1', 'Bustelbach, Stein'),
+(146585, 1, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-06-14', '18:00:00', 'FC Laufenburg-Kaisten b', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152013, 10, 1, 'Meisterschaft', 1, 4, 1, 'Fr', '2013-08-16', '20:00:00', 'US Bottecchia BS', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152022, 10, 1, 'Meisterschaft', 1, 5, 1, 'Mi', '2013-09-04', '20:00:00', 'US Olympia 1963 ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152024, 10, 0, 'Meisterschaft', 1, 4, 2, 'Fr', '2013-08-30', '20:30:00', 'FC Birsfelden  ', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
 (152031, 10, 1, 'Meisterschaft', 1, 1, 4, 'Sa', '2013-09-07', '16:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152035, 10, 0, 'Meisterschaft', 1, 4, 1, 'Sa', '2013-09-21', '13:00:00', 'FC Tuerkguecue Basel ', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(152040, 10, 1, 'Meisterschaft', NULL, 0, 0, 'Sa', '2014-03-29', '20:15:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(152040, 10, 1, 'Meisterschaft', 1, 2, 2, 'Sa', '2014-03-28', '20:30:00', 'FC Rheinfelden', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152046, 10, 0, 'Meisterschaft', 1, 6, 1, 'Fr', '2013-10-11', '20:15:00', 'FC Bubendorf  ', 'Bruehl, Bubendorf - 1', 'Bruehl', 'Bubendorf', '1', 'Bruehl, Bubendorf'),
 (152049, 10, 1, 'Meisterschaft', 1, 1, 7, 'Sa', '2013-10-19', '16:00:00', 'FC Dardania', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (152057, 10, 0, 'Meisterschaft', 1, 3, 0, 'Sa', '2013-10-26', '13:00:00', 'FC Birlik', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
@@ -148,7 +151,7 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (153378, 15, 0, 'Meisterschaft', 1, 3, 0, 'Sa', '2013-10-19', '17:30:00', 'FC Allschwil', 'Im Brueel, Allschwil,   - 2', 'Im Brueel, Allschwil', ' ', '2', 'Im Brueel, Allschwil,  '),
 (153379, 15, 1, 'Meisterschaft', 1, 1, 12, 'So', '2013-10-27', '13:00:00', 'FC Nordstern BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (153383, 15, 0, 'Meisterschaft', 1, 13, 0, 'So', '2013-11-03', '13:00:00', 'FC Concordia Basel ', 'Sportanlagen St. Jakob, Basel - wird vor Ort zugeteilt', 'Sportanlagen St. Jakob', 'Basel', 'wird vor Ort zugeteilt', 'Sportanlagen St. Jakob, Basel'),
-(153386, 15, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Telegraph BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
+(153386, 15, 1, 'Meisterschaft', 1, 0, 7, 'So', '2014-03-30', '00:00:00', 'FC Telegraph BS ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (153388, 15, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'FC Reinach', 'Einschlag, Reinach - Kunstrasen (1)', 'Einschlag', 'Reinach', 'Kunstrasen (1)', 'Einschlag, Reinach'),
 (153393, 15, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Laufenburg-Kaisten ', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (153399, 15, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-05-04', '00:00:00', 'FC Allschwil', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -168,8 +171,8 @@ INSERT INTO `match` (`gameID`, `teamID`, `isHome`, `gameType`, `resultConfirmed`
 (160889, 3, 0, 'Meisterschaft', 1, 9, 0, 'So', '2013-10-20', '13:00:00', 'FK Srbija Basel ', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
 (160892, 3, 1, 'Meisterschaft', 1, 1, 8, 'So', '2013-10-27', '15:00:00', 'FC Pratteln', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (160902, 3, 0, 'Meisterschaft', 1, 2, 1, 'So', '2013-11-03', '13:00:00', 'FC Telegraph BS', 'Bachgraben, Allschwil - wird vor Ort zugeteilt', 'Bachgraben', 'Allschwil', 'wird vor Ort zugeteilt', 'Bachgraben, Allschwil'),
-(160903, 3, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-23', '00:00:00', 'FC Xalko', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
-(160914, 3, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-03-30', '00:00:00', 'FC Amicitia Riehen ', 'Grendelmatte, Riehen - wird vor Ort zugeteilt', 'Grendelmatte', 'Riehen', 'wird vor Ort zugeteilt', 'Grendelmatte, Riehen'),
+(160903, 3, 0, 'Meisterschaft', 1, 4, 2, 'So', '2014-03-23', '11:00:00', 'FC Xalko', 'Rankhof, Basel - wird vor Ort zugeteilt', 'Rankhof', 'Basel', 'wird vor Ort zugeteilt', 'Rankhof, Basel'),
+(160914, 3, 0, 'Meisterschaft', 1, 3, 1, 'So', '2014-03-30', '00:00:00', 'FC Amicitia Riehen ', 'Grendelmatte, Riehen - wird vor Ort zugeteilt', 'Grendelmatte', 'Riehen', 'wird vor Ort zugeteilt', 'Grendelmatte, Riehen'),
 (160916, 3, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-06', '00:00:00', 'AC Virtus Liestal a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
 (160925, 3, 0, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-13', '00:00:00', 'FC Birsfelden', 'Sternenfeld, Birsfelden - A', 'Sternenfeld', 'Birsfelden', 'A', 'Sternenfeld, Birsfelden'),
 (160929, 3, 1, 'Meisterschaft', NULL, 0, 0, 'So', '2014-04-27', '00:00:00', 'CD Espanol Basel a', 'Bifang, Lausen - 1', 'Bifang', 'Lausen', '1', 'Mehrzweckhalle Stutz'),
@@ -201,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `member_active` (
   `toPosition` int(11) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=144 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=151 ;
 
 --
 -- Daten für Tabelle `member_active`
@@ -216,7 +219,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (9, 10, 'Branca', 'Davide', '', '1994-03-05', '', 1, 3, '00109.jpg'),
 (10, 11, 'Branca', 'Sara', '', '1992-12-12', '', 15, 3, '00134.jpg'),
 (11, 22, 'Buchholz', 'Thomas', '', '1993-07-31', '', 2, 2, ''),
-(120, 93, 'Özdemir', 'Kerim', '', '0000-00-00', '', 1, 4, '00182.jpg'),
+(120, 8, 'Özdemir', 'Kerim', '', '0000-00-00', '', 1, 4, '00182.jpg'),
 (13, 3, 'Carlen', 'Nicolas', '', '1991-10-23', '', 2, 2, ''),
 (5, 10, 'Catozza', 'Francesco', '', '1975-02-23', '', 10, 4, '00170.jpg'),
 (15, 16, 'Chiriaco', 'Domenico', '', '1983-11-16', '', 1, 2, '00110.jpg'),
@@ -241,7 +244,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (44, 15, 'Kull', 'Nicolas', '', '1993-07-12', '', 2, 3, '00139.jpg'),
 (46, 5, 'La Ianca', 'Giuseppe', '', '1978-07-21', '', 10, 3, ''),
 (47, 20, 'Leanza', 'Salvatore', '', '1970-11-30', '', 10, 3, '00162.jpg'),
-(48, 33, 'Leone', 'Aron', '', '1993-04-23', '', 1, 2, '00121.jpg'),
+(48, 33, 'Leone', 'Aron', '', '1993-04-23', '', 3, 2, '00121.jpg'),
 (49, 8, 'Lupo', 'Michael', '', '1991-05-22', '', 2, 3, ''),
 (50, 22, 'Luruena Rivera', 'Santos', '', '1975-05-24', '', 10, 4, '00172.jpg'),
 (55, 2, 'Mazza', 'Antonio', '', '1976-10-17', '', 10, 2, '00163.jpg'),
@@ -260,7 +263,7 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (70, 57, 'Rieder', 'Yves', '', '1989-10-04', '', 2, 2, '00125.jpg'),
 (71, 15, 'Rosamilia', 'Nicola', '', '1975-04-07', '', 10, 3, '00164.jpg'),
 (72, 7, 'Rüedi', 'Flavio', '', '1993-03-30', '', 1, 3, '00107.jpg'),
-(73, 17, 'Sahin', 'Denis', '', '1986-08-17', '', 3, 3, '00111.jpg'),
+(147, 3, 'Lavilla', 'Carmelo', '', '1982-11-25', '', 3, 2, ''),
 (76, 10, 'Salfinger', 'Fabian', '', '1988-11-03', '', 2, 4, ''),
 (77, 5, 'Salvadori', 'Ilaria', '', '1995-02-05', '', 15, 2, ''),
 (78, 10, 'Santo', 'Deila', '', '1989-12-25', '', 15, 4, '00130.jpg'),
@@ -285,20 +288,19 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (101, 11, 'Tettey', 'David Prince', 'Dave', '0000-00-00', '', 1, 3, '00118.jpg'),
 (102, 3, 'Lo Presti', 'Luca', '', '0000-00-00', '', 1, 2, '00120.jpg'),
 (103, 14, 'Argun', 'Berat', '', '0000-00-00', '', 1, 3, '00119.jpg'),
-(104, 8, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, ''),
+(104, 17, 'Marchetta', 'Maurizio', 'Mauri', '0000-00-00', '', 1, 4, '00187.jpg'),
 (109, 19, 'Hofacker', 'Sven', '', '0000-00-00', '', 1, 2, '00115.jpg'),
 (110, 37, 'Özdemir', 'Recep', '', '0000-00-00', '', 1, 2, '00123.jpg'),
 (111, 7, 'Schmid', 'Melanie', '', '0000-00-00', '', 15, 4, '00135.jpg'),
-(112, 32, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
+(112, 4, 'Batista', 'Vedran', 'Vedi', '0000-00-00', '', 1, 2, '00116.jpg'),
 (113, 69, 'Parrillo', 'Dario', '', '0000-00-00', '', 1, 2, '00117.jpg'),
 (118, 13, 'Tomeo', 'Ferdinando', '', '0000-00-00', '', 10, 3, '00174.jpg'),
 (119, 19, 'Schreiber', 'Pascal', '', '0000-00-00', '', 10, 3, '00176.jpg'),
-(121, 1, 'Höfler', 'Alain', '', '1983-02-12', '', 3, 1, ''),
+(121, 12, 'Höfler', 'Alain', '', '1983-02-12', '', 3, 1, ''),
 (122, 2, 'Accanito', 'Luciano', '', '1981-06-07', '', 3, 2, ''),
-(123, 3, 'Caselle', 'Mirco', '', '1989-12-16', '', 3, 2, ''),
-(124, 4, 'Isone', 'Damiano', '', '1989-09-27', '', 3, 2, ''),
+(148, 19, 'Vukadin', 'Kristian', '', '1984-09-22', '', 3, 2, ''),
+(124, 4, 'Isone', 'Damiano', '', '1989-09-27', '', 3, 2, '00188.jpg'),
 (125, 5, 'Jeanneret', 'Nicolas', '', '1992-09-15', '', 3, 2, ''),
-(126, 6, 'Bürkler', 'Saverio', '', '1990-08-06', '', 3, 2, ''),
 (127, 7, 'Furler', 'Yves', '', '1993-02-05', '', 3, 3, ''),
 (128, 8, 'Russo', 'Fabio', '', '1990-07-08', '', 3, 3, ''),
 (129, 9, 'Schilt', 'Ramon', '', '1997-08-28', '', 3, 3, ''),
@@ -307,14 +309,17 @@ INSERT INTO `member_active` (`id`, `trikot`, `lastName`, `firstName`, `nickName`
 (132, 14, 'Di Benedetto', 'Samuele', '', '1992-12-22', '', 3, 3, ''),
 (133, 15, 'Schiliro', 'Vincenzo', '', '1990-11-24', '', 3, 2, ''),
 (134, 18, 'Aegerter', 'Christian', '', '1991-12-17', '', 3, 3, ''),
-(135, 19, 'Gazel', 'Onur', '', '1995-01-16', '', 3, 4, ''),
-(136, 21, 'Greco', 'Aniello', '', '1994-04-15', '', 3, 3, ''),
+(146, 1, 'Cuzzocrea', 'Domenico', '', '1998-05-08', '', 3, 1, ''),
 (137, 22, 'Spinella', 'Luigi', '', '1977-09-08', '', 3, 4, ''),
 (138, 12, 'Lopez', 'Selina', '', '1995-07-29', '', 15, 3, ''),
 (139, 30, 'Bonsignore', 'Giovanni', '', '0000-00-00', '', 1, 4, '00184.jpg'),
 (140, 11, 'Roberti', 'Alessandro', 'Ale', '1982-09-26', '', 3, 3, ''),
 (141, 88, 'Stoll', 'Philipp', '', '1988-04-27', '', 2, 3, ''),
-(142, 12, 'Docci', 'Luca', '', '1991-09-26', '', 2, 2, '');
+(142, 12, 'Docci', 'Luca', '', '1991-09-26', '', 2, 2, ''),
+(144, 88, 'Rügge', 'Marc', '', '0000-00-00', '', 1, 4, '00186.jpg'),
+(145, 24, 'Nucerito', 'Luigi', 'Lui', '0000-00-00', '', 1, 1, '00185.jpg'),
+(149, 21, 'Vukadin', 'Goran', '', '1987-01-28', '', 3, 3, ''),
+(150, 6, 'Lobsiger', 'Michel', '', '1988-06-15', '', 3, 2, '');
 
 -- --------------------------------------------------------
 
@@ -418,27 +423,28 @@ CREATE TABLE IF NOT EXISTS `member_staff` (
   `pictureURL` varchar(255) NOT NULL,
   `tel` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Daten für Tabelle `member_staff`
 --
 
 INSERT INTO `member_staff` (`id`, `firstName`, `lastName`, `bDay`, `function`, `toTeam`, `pictureURL`, `tel`) VALUES
-(1, 'Alessandro', 'Roberti', '0000-00-00', 'Trainer', 1, '', ''),
-(2, 'Pascal', 'Schreiber', '0000-00-00', 'Co-Trainer', 1, '', ''),
-(3, 'Antonio', 'Mazza', '0000-00-00', 'Torwart-Trainer', 1, '', ''),
-(4, 'Romano', 'Branca', '0000-00-00', 'Trainer', 2, '', ''),
+(1, 'Alessandro', 'Roberti', '0000-00-00', 'Trainer', 1, '00100.jpg', ''),
+(2, 'Pascal', 'Schreiber', '0000-00-00', 'Co-Trainer', 1, '00101.jpg', ''),
+(3, 'Antonio', 'Mazza', '0000-00-00', 'Torwart-Trainer', 1, '00103.jpg', ''),
+(4, 'Philip', 'Stoll', '0000-00-00', 'Trainer', 2, '', ''),
 (5, 'Luca', 'Severo', '0000-00-00', 'Trainer', 3, '', ''),
 (6, 'Luca', 'Mulas', '0000-00-00', 'Co-Trainer', 3, '', ''),
-(7, 'Daniel', 'Barca', '0000-00-00', 'Trainer', 10, '', ''),
-(8, 'Deila', 'Santo', '0000-00-00', 'Trainerin', 15, '', ''),
-(9, 'Fabrizio', 'Piras', '0000-00-00', 'Trainer', 22, '', '+41 (0)76 328 03 35'),
-(10, 'Santos', 'Luruena', '0000-00-00', 'Trainer', 22, '', '+41 (0)79 689 89 56'),
+(7, 'Daniel', 'Barca', '0000-00-00', 'Trainer', 10, '00102.jpg', ''),
+(8, 'Katia', 'Valente', '0000-00-00', 'Trainerin', 15, '', ''),
+(9, 'Fabrizio', 'Piras', '0000-00-00', 'Trainer', 22, '00105.jpg', '+41 (0)76 328 03 35'),
+(10, 'Santos', 'Luruena', '0000-00-00', 'Trainer', 22, '00107.jpg', '+41 (0)79 689 89 56'),
 (11, 'José', 'De Sousa', '0000-00-00', 'Trainer', 22, '', '+41 (0)79 257 27 25'),
-(12, 'Giuseppe', 'Roberti', '0000-00-00', 'Trainer', 20, '', '+41 (0)79 302 54 65'),
-(13, 'Mark', 'Crusi', '0000-00-00', 'Trainer', 20, '', '+41 (079 203 53 19'),
-(14, 'Gaetano', 'Ciraolo', '0000-00-00', 'Trainer', 20, '', '+41 (0)79 267 30 50');
+(12, 'Giuseppe', 'Roberti', '0000-00-00', 'Trainer', 20, '00108.jpg', '+41 (0)79 302 54 65'),
+(13, 'Mark', 'Crusi', '0000-00-00', 'Trainer', 20, '00106.jpg', '+41 (079 203 53 19'),
+(14, 'Gaetano', 'Ciraolo', '0000-00-00', 'Trainer', 20, '00104.jpg', '+41 (0)79 267 30 50'),
+(15, 'Philippe', 'Feller', '0000-00-00', 'Co-Trainer', 2, '', '');
 
 -- --------------------------------------------------------
 
@@ -458,7 +464,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `formation` int(255) DEFAULT NULL,
   `playerArray` mediumtext,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Daten für Tabelle `news`
@@ -480,7 +486,8 @@ INSERT INTO `news` (`id`, `title`, `article`, `pictureURL`, `autor`, `date`, `ca
 (19, 'Nach dem Spitzenspiel ist vor dem Derby', 'Eine starke zweite Hälfte reichte Rosso um im Spitzenspiel gegen den FC Gelterkinden einen souveränen Sieg einzufahren. Die beiden Joker Maurizio Marchetta und Giovanni Bonsignore erzielten die Treffer.<br />\nEine alte Weisheit besagt: Wenn es läuft, dann läuft es. Erneut war es Super-Sub Marchetta, der die AC auf die Siegesstrasse brachte. Dieser Junge hat zurzeit einen Lauf und trifft beinahe nach Belieben. Doch für einen Sieg benötigt es mehr als nur Solisten. Und das Team funktioniert von A bis Z. Die Defensive ist seit Beginn der Saison die absolute Stärke von Rosso: Lediglich ein Gegentor musste die neuformierte Defensive hinnehmen. Auch die Offensive harmoniert meist gut zusammen.  Und von der Breite des Kaders träumen viele Konkurrenten nur. Es scheint keine unumstössliche „Erste-Elf“ zu geben, von der Bank kann das Trainerteam immer wieder die benötigten Impulse setzten und falls gewünscht rotieren. <br />\nIn der ersten Hälfte war nicht alles Gold, was glänzt. Der FCG hatte, trotz spielerischer Überlegenheit, nicht eine ernsthafte Torchance. Keeper Gubser musste sich lediglich bei Abstössen sportlich betätigen. Aber auch die AC kam in der Offensive kaum je zur Entfaltung. Als der - nicht immer auf der Höhe wirkende - Spielleiter zur zweiten Halbzeit blies, spielten die Gastgeber befreiter und inspirierter auf. Dank starkem Gegenpressing wurden Gältis Angriffsversuche im Keim erstickt und mit teils ansehnlichen Vorstössen gezielte Nadelstiche gesetzt. Aus diesen Nadelstichen resultierte auch das zu diesem Zeitpunkt verdiente Führungstor durch Marchetta. Als kurz vor dem Ende – genau in einer Druckphase der Gäste – die Neuerwerbung Bonsignore das 2:0 markierte, war der Deckel drauf. <br />\nDank diesem Sieg konnte Robertis Team einen direkten Konkurrenten um den Aufstieg entscheidend distanzieren. Doch das Restprogramm hat es in sich: Zuerst das Derby „auswärts“ beim FC Lausen,  gefolgt vom Spiel gegen den viertplatzierten FC Stein und zum Abschluss noch die Partie gegen Laufenburg-Kaisten – notabene dem Zweiten der Gruppe. Doch die Mannschaft scheint gefestigt und für die kommenden schweren Aufgaben gerüstet.', '00108.jpg', 3, '2013-10-16 19:30:00', 2, 146498, 4231, 'a:18:{i:0;i:35;i:1;i:102;i:2;i:33;i:3;i:69;i:4;i:79;i:5;i:99;i:6;i:103;i:7;i:96;i:8;i:93;i:9;i:101;i:10;i:19;i:11;i:57;i:12;i:113;i:13;i:100;i:14;i:139;i:15;i:109;i:16;i:120;i:17;i:104;}'),
 (20, 'Let it roll!', 'Mit dem 3:1-Sieg gegen Wallbach startet die AC Rossoneri eine kleine Sieges-Serie.  Kann diese auch am kommenden Weekend gegen den Lieblings-Erzrivalen Liestal anhalten?<br />\nEiner nach dem Anderen kehrt zurück. Das Team nimmt immer mehr die gewohnte, erfolgreiche Form an. Und mit der Rückkehr einiger etablierter Spieler kehren auch die positiven Resultate zurück. Mit dem Derby-Sieg im „Auswärtsspiel“ gegen den FC Lausen ist ein erster Befreiungsschlag gelungen, mit dem Sieg gegen die Freaktaler am vergangenen Samstag gar eine Mini-Serie gestartet worden. <br />\nIn einer ereignisarmen ersten Hälfte sorgte Stefan Kaiser mit dem 1:0 für erste Jubelstürme. Mit dieser knappen Führung ging die Romano-Elf in die Pause. Es wurden einige taktische Änderungen vorgenommen und weiter ging es mit Halbzeit zwei. In Durchgang zwei führte Rosso dann auch eine weitaus feinere Klinge als in den ersten 45 Minuten.<br />\nAls Sandinho alleine aufs Tor marschierte, scheiterte er zunächst noch am Gäste-Keeper. Es gelang ihm jedoch die sofortige Rückeroberung des Balles. Mit viel Übersicht legte er die Pille im 16er quer auf den heranstürmenden Michi Tanner, der mit seinem Premieren-Tor in dieser Saison das Score auf 2:0 erhöhen konnte. Nur kurze Zeit später erhöhte Sandinho auf 3:0. Jetzt waren die Fans waren nicht mehr zu halten. Sie sangen und tanzten (siehe Videos) das restliche Spiel über.<br /> \nAuch der von Langnaz unglücklich verursachte Elfmeter (diese Mal ein Handspiel, also nicht ganz typisch Langnaz-like mit beiden Beinen voraus;-) ) für die Gäste, vermochte der guten Stimmung keinen Abbruch zu tun. Beim fälligen Strafstoss hatte der interimistische Goalie Nure Shala keine Chance. Das Tor sollte ein kleiner Schönheitsfehler bleiben. In der Folge passierte nichts mehr und der starke Schiri beendete dieses Spiel. <br />\nEs ist schön zu sehen, wie vor dem wohl wichtigsten Spiel der Hinrunde der AC-Zug langsam aber sicher immer mehr ins Rollen kommt. Nur ein Gegentor in den letzten Zwei Pflichtspielen. Liestal kann also kommen. In diesem Sinne: Let it roll.', '00114.jpg', 3, '2013-10-13 21:30:00', 2, 145882, 4231, 'a:11:{i:0;i:83;i:1;i:117;i:2;i:142;i:3;i:26;i:4;i:70;i:5;i:98;i:6;i:141;i:7;i:116;i:8;i:30;i:9;i:41;i:10;i:98;}'),
 (21, 'Der Siegesmarsch geht weiter - Sieg im Derby!', 'Nach der erst kürzlich eingetroffenen Polarkälte und jeweiligem Regenschauer hat uns Mutter-Natur für das Derby plötzlich mit optimalem Fussballwetter beschenkt. Dafür hat es allerdings Vater-Fussballfeld mit den katastrophalen Platzbedingungen nicht wirklich gut mit uns gemeint. Zur Zeit müssen unsere Jungs auf einem hügeligen Acker auftreten und dabei mit vielen Fehlpässen und Probleme bei der Ballkontrolle rechnen.<br /><br />\r\n \r\nDoch der Fussballplatz und dessen Konditionen sollten uns heute nicht interessieren, das Ziel war sonnenklar: das Derby auf jeden Fall gewinnen und die drei Punkte einsacken um weiterhin von der Tabellenspitze grüssen zu dürfen.<br /><br />\r\n \r\nDer Schiri betritt das Feld, gefolgt von den Teams in zwei Reihen, beide angeführt vom jeweiligen Captain. Die Zuschauer werden von den beiden Kontrahenten begrüsst, lautes Klatschen und Jubeln unserer zahlreichen Fans, Handschlag der Kapitäne, Münzwurf und Anpfiff - das Derby geht los!<br /><br />\r\n \r\nEs vergehen nicht einmal 3 Minuten und Stefan Zimmermann erzielt den ersten Treffer für den AC Rossoneri, ein unglaublicher Start in eine sehr heikle Partie. Der Führungstreffer sorgt sofort für Jubel und Enthusiasmus, aber er wirkt gleichzeitig auch als Weckruf für unseren Gegner.<br /><br />\r\n\r\nDer FC Lausen zeigt trotz Rückstand einen enormen Siegeswillen. Immer wieder muss unsere Verteidigung harte Arbeit leisten um gefährliche Situationen zu klären. Einige Minuten werden wir unter Druck gesetzt und mangeln etwas am Spielaufbau. Viele Bälle gehen verloren und oft fehlt uns etwas Fantasie, so dass wir dem Gegner viele lange Bälle schenken und oftmals etwas zu viel unnötige Sprints von unserer Sturmspitze verlangen.<br /><br />\r\n\r\nWir wachen in der zweiten Hälfte der ersten Halbzeit wieder auf und machen unser Spiel. Der AC Rossoneri steht nun etwas kompakter und bezaubert mit schönen Spielkombinationen im Mittelfeld. Besonders kommt hier unser Aussenläufer David Tettey zum Vorschein, welcher wie besessen das ganze Spielfeld rauf- und runter läuft und wunderschöne Aktionen in die Wege leitet.<br /><br />\r\n\r\nAus dem Nichts erobert plötzlich unsere Nummer 31 Sebastian Werisch im Mittelfeld den Ball und schlängelt sich elegant durch die gesamte Verteidigung des FC Lausen. Beim Eintreffen im Strafraum wird er anschliessend vom Innenverteidiger mit unfairen Mitteln aufgehalten – der Schiri erteilt sofort den glasklaren Elfmeter.<br /><br />\r\n\r\n0:2 – Penaltyschütze Werisch trifft wie immer eiskalt von den 11 Metern.<br /><br />\r\n\r\nTrotz doppelter Führung wird es kurz vor der Pause nochmals extrem gefährlich. Der FC Lausen dringt in den Strafraum ein und der Stürmer kann den Ball in Richtung Tor befördern, doch Lukas Rickenbacher steht wie immer bereit und kann kurz vor der Linie noch klären.<br /><br />\r\n\r\nNach einer kurzen Pause und etwas Tee geht es weiter in die zweite Hälfte. Trainer Roberti verpasst seinen Jungs einen ordentlichen Motivationsschub und schickt seine Krieger zurück auf das Schlachtfeld – die Reaktion lässt sich von der ersten Minute sehen. Wir übernehmen die Kontrolle und lassen den Ball laufen.<br /><br />\r\n\r\nKurz vor Spielende verpasst Kerim Özdemir unseren Gegner den KO Schlag. Nach einem genialen Assist von unserem Torhüter befördert Kerim den Ball mit einem sagenhaften Schuss ins Netz – das dritte Tor ist gefallen. Der AC Rossoneri bezwingt den FC Lausen und ergattert weitere 3 Punkte.<br /><br />', '00115.jpg', 1, '2013-10-21 13:50:38', 2, 146506, 4231, 'a:18:{i:0;i:35;i:1;i:79;i:2;i:57;i:3;i:69;i:4;i:109;i:5;i:99;i:6;i:103;i:7;i:139;i:8;i:93;i:9;i:101;i:10;i:96;i:11;i:17;i:12;i:100;i:13;i:33;i:14;i:67;i:15;i:59;i:16;i:120;i:17;i:112;}'),
-(22, 'Jetzt anmelden! Die AC Rossoneri Silvesterparty!', 'Was ist das Beste am Jahresende? Richtig, die AC Rossoneri Silvesterparty in der Mehrzweckhalle Stutz! Wir hatten es bereits angekündigt, dass der AC Rossoneri dieser Tradition auch dieses Jahr wieder treu bleiben würde. Nun steht das Jahresende in den Startlöchern und wir haben mit der Entgegennahme der Reservierungen begonnen. Bitte reserviert frühzeitig um dabei sein zu können!<br/><br/>\nAlle Informationen betreffend der Silvesterfeier gibt es <a href="http://www.acrossoneri.ch/silvester">unter diesem Link</a>. Wir freuen uns auf eure Teilnahme!', '00100.jpg', 1, '2013-11-15 00:09:55', 3, NULL, NULL, NULL);
+(23, 'Der AC Rossoneri sucht neue Schiedsrichter', 'Frauen und Männer mit Pfiff - wir brauchen euch!<br /><br />\r\nFussball ohne Schiedsrichter? Undenkbar! Der Spielleiter trägt eine grosse Verantwortung: er führt Regie, er diktiert die Disziplin, er trifft die Entscheidungen und zieht Konsequenzen.<br /><br />\r\nDer AC Rossoneri ist stets auf der Suche nach neuen Schiedsrichtern, welche für unseren Verein in die Rolle des Unparteiischen schlüpfen möchten. Gesucht sind motivierte Frauen und Männer, welche auf der Suche nach einer neuen Herausforderung sind – aber natürlich auch Leute mit Erfahrung.<br /><br />\r\nSelbstverständlich ist unser Verein dazu bereit, Interessierte individuell zu beraten und über die Details aufzuklären.<br /><br />\r\nHaben wir dein Interesse geweckt? Bitte kontaktiere unseren Sportchef Luca Mulas entweder per e-Mail (<a href="mailto:luca.mulas@acrossoneri.ch">luca.mulas@acrossoneri.ch</a>) oder direkt per Telefon unter der Handynummer +41 79 761 05 94. Wir freuen uns auf dich!\r\n', '00116.jpg', 1, '2014-02-13 20:06:35', 3, NULL, NULL, NULL),
+(24, 'Das AC Rossoneri Sommerturnier kehrt zurück!', 'Diesen Sommer 2014 kehrt das berühmte AC Rossoneri 11er Fussballturnier für Aktive und Senioren (zwischen 3. und 5. Liga) zurück. Das Turnier wird wie üblich auf der Sportanlage Bifang/Stutz in Lausen ausgetragen.<br/><br/>\r\nWir freuen uns jetzt schon auf diesen grandiosen Event und hoffen auf eine zahlreiche Teilnahme. Alle Informationen zum Sommerturnier findet ihr unter <a href="../../aktuelles/sommerturnier">diesem Link</a> (auch erreichbar über die Seitennavigation).<br/><br/>\r\nWir freuen uns auf das Turnier!', '00117.jpg', 1, '2014-03-31 16:56:25', 3, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -523,82 +530,24 @@ CREATE TABLE IF NOT EXISTS `ranking` (
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `ranking_sandbox`
+-- Tabellenstruktur für Tabelle `referee`
 --
 
-CREATE TABLE IF NOT EXISTS `ranking_sandbox` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `team` varchar(255) NOT NULL,
-  `gamePlayed` int(255) NOT NULL,
-  `gameWon` int(255) NOT NULL,
-  `gameLost` int(255) NOT NULL,
-  `gameDraw` int(255) NOT NULL,
-  `fairplay` int(11) NOT NULL,
-  `goalsMade` int(255) NOT NULL,
-  `goalsAgainst` int(255) NOT NULL,
-  `points` int(11) NOT NULL,
-  `teamID` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `referee` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `firstName` varchar(255) NOT NULL DEFAULT '',
+  `lastName` varchar(255) NOT NULL DEFAULT '',
+  `pictureURL` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
--- Daten für Tabelle `ranking_sandbox`
+-- Daten für Tabelle `referee`
 --
 
-INSERT INTO `ranking_sandbox` (`id`, `team`, `gamePlayed`, `gameWon`, `gameLost`, `gameDraw`, `fairplay`, `goalsMade`, `goalsAgainst`, `points`, `teamID`) VALUES
-(1, 'AC Rossoneri', 11, 8, 3, 0, 20, 29, 2, 27, 1),
-(2, 'FC Laufenburg-Kaisten b', 11, 8, 2, 1, 24, 41, 11, 26, 1),
-(3, 'FC Arisdorf', 11, 7, 1, 3, 15, 30, 13, 22, 1),
-(4, 'FC Diegten Eptingen', 11, 7, 1, 3, 31, 22, 13, 22, 1),
-(5, 'FC Gelterkinden b', 11, 6, 2, 3, 12, 38, 15, 20, 1),
-(6, 'SV Sissach a', 11, 5, 3, 3, 22, 38, 17, 18, 1),
-(7, 'FC Stein b', 11, 5, 2, 4, 52, 22, 22, 17, 1),
-(8, 'FC Oberdorf', 11, 4, 1, 6, 33, 18, 40, 13, 1),
-(9, 'SC M&uuml;nchenstein a', 11, 3, 1, 7, 30, 23, 39, 10, 1),
-(10, 'FC Bubendorf', 11, 2, 1, 8, 21, 16, 35, 7, 1),
-(11, 'SV Muttenz b', 11, 1, 2, 8, 36, 14, 55, 5, 1),
-(12, 'FC Lausen 72', 11, 0, 1, 10, 36, 16, 45, 1, 1),
-(13, 'NK Pajde', 11, 9, 1, 1, 13, 43, 15, 28, 2),
-(14, 'FC Bubendorf', 11, 8, 1, 2, 9, 45, 22, 25, 2),
-(15, 'FC Lausen 72', 11, 7, 1, 3, 9, 22, 13, 22, 2),
-(16, 'AC Virtus Liestal b', 11, 6, 4, 1, 19, 47, 22, 22, 2),
-(17, 'Pratteln United', 10, 6, 1, 3, 18, 33, 22, 19, 2),
-(18, 'FC Liestal', 11, 6, 1, 4, 10, 36, 31, 19, 2),
-(19, 'AC Rossoneri a', 10, 5, 1, 4, 21, 25, 29, 16, 2),
-(20, 'FC Gelterkinden', 11, 3, 1, 7, 27, 21, 47, 10, 2),
-(21, 'FC Diegten Eptingen', 11, 3, 0, 8, 28, 18, 23, 9, 2),
-(22, 'FC Wallbach', 9, 2, 0, 7, 13, 12, 19, 6, 2),
-(23, 'FC Eiken', 10, 2, 0, 8, 11, 19, 36, 6, 2),
-(24, 'FC Zeiningen', 10, 0, 1, 9, 19, 11, 53, 1, 2),
-(25, 'AC Virtus Liestal a', 11, 9, 1, 1, 25, 31, 14, 28, 3),
-(26, 'FC Pratteln', 11, 8, 2, 1, 29, 43, 12, 26, 3),
-(27, 'FC Xalko', 11, 7, 2, 2, 26, 40, 17, 23, 3),
-(28, 'FK Srbija Basel', 11, 6, 3, 2, 21, 38, 13, 21, 3),
-(29, 'FC Birsfelden', 11, 6, 2, 3, 16, 31, 19, 20, 3),
-(30, 'FC Telegraph BS', 11, 5, 1, 5, 22, 15, 21, 16, 3),
-(31, 'FC Schwarz-Weiss', 11, 3, 4, 4, 17, 21, 17, 13, 3),
-(32, 'SC Basel Nord a', 11, 3, 3, 5, 16, 31, 27, 12, 3),
-(33, 'FC Amicitia Riehen', 11, 3, 1, 7, 10, 30, 26, 10, 3),
-(34, 'FC Ferad a', 11, 2, 1, 8, 10, 25, 55, 7, 3),
-(35, 'AC Rossoneri b', 11, 2, 1, 8, 16, 23, 49, 7, 3),
-(36, 'CD Espanol Basel a', 11, 1, 1, 9, 11, 14, 72, 4, 3),
-(37, 'FC Dardania', 9, 8, 1, 0, 4, 49, 20, 25, 10),
-(38, 'FC Rheinfelden', 8, 7, 0, 1, 7, 35, 9, 21, 10),
-(39, 'FC Bubendorf', 9, 5, 1, 3, 7, 42, 32, 16, 10),
-(40, 'FC Laufenburg-Kaisten', 9, 4, 1, 4, 20, 26, 25, 13, 10),
-(41, 'FC Birlik', 9, 3, 3, 3, 10, 22, 26, 12, 10),
-(42, 'FC Birsfelden', 9, 4, 0, 5, 12, 23, 26, 12, 10),
-(43, 'FC T&uuml;rkg&uuml;c&uuml; Basel', 9, 3, 2, 4, 6, 29, 28, 11, 10),
-(44, 'US Bottecchia BS', 9, 3, 1, 5, 9, 13, 22, 10, 10),
-(45, 'AC Rossoneri', 8, 2, 0, 6, 24, 15, 30, 6, 10),
-(46, 'US Olympia 1963', 9, 0, 1, 8, 17, 8, 44, 1, 10),
-(47, 'FC Concordia Basel', 10, 9, 0, 1, 0, 45, 6, 27, 15),
-(48, 'FC Nordstern BS', 10, 8, 0, 2, 1, 48, 17, 24, 15),
-(49, 'FC Telegraph BS', 9, 6, 0, 3, 0, 37, 9, 18, 15),
-(50, 'FC Reinach', 9, 4, 0, 5, 0, 29, 17, 12, 15),
-(51, 'FC Allschwil', 9, 4, 0, 5, 0, 25, 23, 12, 15),
-(52, 'FC Laufenburg-Kaisten', 10, 2, 0, 8, 0, 11, 45, 6, 15),
-(53, 'AC Rossoneri', 9, 0, 0, 9, 31, 1, 79, 0, 15);
+INSERT INTO `referee` (`id`, `firstName`, `lastName`, `pictureURL`) VALUES
+(1, 'Giuseppe', 'Minio', NULL),
+(2, 'Ralph', 'Tschudin', NULL);
 
 -- --------------------------------------------------------
 
@@ -614,7 +563,6 @@ CREATE TABLE IF NOT EXISTS `sponsors` (
   `zipCity` varchar(75) DEFAULT NULL,
   `country` varchar(45) DEFAULT NULL,
   `pictureURL` varchar(45) DEFAULT NULL,
-  `toTeam` int(11) DEFAULT NULL,
   `webpage` varchar(45) DEFAULT NULL,
   `mail` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -624,15 +572,15 @@ CREATE TABLE IF NOT EXISTS `sponsors` (
 -- Daten für Tabelle `sponsors`
 --
 
-INSERT INTO `sponsors` (`id`, `name`, `fullDesc`, `address`, `zipCity`, `country`, `pictureURL`, `toTeam`, `webpage`, `mail`) VALUES
-(1, 'Lenkgeometrie Center & Pneuservice GmbH', NULL, 'Grüssenhölzliweg 9', '4133 Pratteln', 'Schweiz', '00100', 1, 'www.lenkgeometrie-center.ch', NULL),
-(2, 'Visam Sport', NULL, 'Poststrasse 9', '4410 Liestal', 'Schweiz', '00101', NULL, 'www.visam.ch', NULL),
-(3, 'DM Haustechnik', NULL, 'Peterhansstrasse 10b', '4415 Lausen', 'Schweiz', '00102', NULL, 'www.dmhaustechnik.ch', NULL),
-(4, 'Malergeschäft Gebr. Roberti GmbH', NULL, NULL, '4452 Itingen', 'Schweiz', '00103', NULL, NULL, NULL),
-(5, 'Coiffure Chic', NULL, 'Hauptstrasse 93', '4450 Sissach', 'Schweiz', '00104', NULL, 'www.coiffure-chic.ch', NULL),
-(6, 'Trafico Cafe Bistro', NULL, 'Bahnhofstrasse 8', '4460 Gelterkinden', 'Schweiz', '00105', 2, 'www.trafico.ch', NULL),
-(7, 'AxaNova', NULL, 'Ottenhofenstrasse 110 ', '8738 Uetliburg', 'Schweiz', '00106', NULL, 'www.axanova.ch', NULL),
-(8, 'Mohler-Nager + Co. AG', NULL, 'Götzisbodenweg 2', '4133 Pratteln', 'Schweiz', '00107', NULL, 'www.mohlernager.ch', NULL);
+INSERT INTO `sponsors` (`id`, `name`, `fullDesc`, `address`, `zipCity`, `country`, `pictureURL`, `webpage`, `mail`) VALUES
+(1, 'Lenkgeometrie Center & Pneuservice GmbH', NULL, 'Grüssenhölzliweg 9', '4133 Pratteln', 'Schweiz', '00100', 'www.lenkgeometrie-center.ch', NULL),
+(2, 'Visam Sport', NULL, 'Poststrasse 9', '4410 Liestal', 'Schweiz', '00101', 'www.visam.ch', NULL),
+(3, 'DM Haustechnik', NULL, 'Peterhansstrasse 10b', '4415 Lausen', 'Schweiz', '00102', 'www.dmhaustechnik.ch', NULL),
+(4, 'Malergeschäft Gebr. Roberti GmbH', NULL, NULL, '4452 Itingen', 'Schweiz', '00103', NULL, NULL),
+(5, 'Coiffure Chic', NULL, 'Hauptstrasse 93', '4450 Sissach', 'Schweiz', '00104', 'www.coiffure-chic.ch', NULL),
+(6, 'Trafico Cafe Bistro', NULL, 'Bahnhofstrasse 8', '4460 Gelterkinden', 'Schweiz', '00105', 'www.trafico.ch', NULL),
+(7, 'AxaNova', NULL, 'Ottenhofenstrasse 110 ', '8738 Uetliburg', 'Schweiz', '00106', 'www.axanova.ch', NULL),
+(8, 'Mohler-Nager + Co. AG', NULL, 'Götzisbodenweg 2', '4133 Pratteln', 'Schweiz', '00107', 'www.mohlernager.ch', NULL);
 
 -- --------------------------------------------------------
 
@@ -647,6 +595,7 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `ligaDesc` varchar(255) NOT NULL,
   `pictureURL` varchar(255) NOT NULL,
   `parserObject` varchar(255) NOT NULL,
+  `toSponsor` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -654,14 +603,14 @@ CREATE TABLE IF NOT EXISTS `teams` (
 -- Daten für Tabelle `teams`
 --
 
-INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`, `parserObject`) VALUES
-(1, 'Erste Mannschaft', 1, '4. Liga - Gruppe 2', '00100.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl01_tbRangliste'),
-(2, 'Zweite Mannschaft', 1, '5. Liga - Gruppe 1', '00101.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl03_tbRangliste'),
-(3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', '', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl05_tbRangliste'),
-(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', '00102.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl07_tbRangliste'),
-(15, 'Frauen', 1, 'Frauen - 4. Liga', '', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl09_tbRangliste'),
-(20, 'Junioren G', 2, '', '', ''),
-(22, 'Junioren F', 2, '', '', '');
+INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`, `parserObject`, `toSponsor`) VALUES
+(1, 'Erste Mannschaft', 1, '4. Liga - Gruppe 2', '00100.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl01_tbRangliste', 1),
+(2, 'Zweite Mannschaft', 1, '5. Liga - Gruppe 1', '00101.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl03_tbRangliste', 6),
+(3, 'Dritte Mannschaft', 1, '5. Liga - Gruppe 2', '', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl05_tbRangliste', 2),
+(10, 'Senioren', 1, 'Senioren Promotion - Gruppe 1', '00102.jpg', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl07_tbRangliste', 0),
+(15, 'Frauen', 1, 'Frauen - 4. Liga', '', 'ctl01_ctl00_ctl00_sfvVereinRanglisten_ctl09_tbRangliste', 1),
+(20, 'Junioren G', 2, '', '', '', 8),
+(22, 'Junioren F', 2, '', '', '', 8);
 
 -- --------------------------------------------------------
 
@@ -670,72 +619,78 @@ INSERT INTO `teams` (`id`, `name`, `type`, `ligaDesc`, `pictureURL`, `parserObje
 --
 
 CREATE TABLE IF NOT EXISTS `teams_ranking` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `team` varchar(255) NOT NULL,
-  `points` int(11) NOT NULL,
+  `gamePlayed` int(255) NOT NULL,
+  `gameWon` int(255) NOT NULL,
+  `gameLost` int(255) NOT NULL,
+  `gameDraw` int(255) NOT NULL,
   `fairplay` int(11) NOT NULL,
+  `goalsMade` int(255) NOT NULL,
+  `goalsAgainst` int(255) NOT NULL,
+  `points` int(11) NOT NULL,
   `teamID` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=54 ;
 
 --
 -- Daten für Tabelle `teams_ranking`
 --
 
-INSERT INTO `teams_ranking` (`id`, `team`, `points`, `fairplay`, `teamID`) VALUES
-(1, 'SC M&uuml;nchenstein', 10, 30, 1),
-(2, 'FC Arisdorf', 22, 15, 1),
-(3, 'FC Diegten Eptingen', 22, 31, 1),
-(4, 'SV Muttenz b', 5, 36, 1),
-(5, 'FC Oberdorf', 13, 33, 1),
-(6, 'AC Rossoneri', 27, 20, 1),
-(7, 'FC Stein b', 17, 52, 1),
-(8, 'SV Sissach a', 18, 22, 1),
-(9, 'FC Lausen 72', 1, 36, 1),
-(10, 'FC Gelterkinden b', 20, 12, 1),
-(11, 'FC Laufenburg-Kaisten b', 26, 24, 1),
-(12, 'FC Bubendorf', 7, 21, 1),
-(13, 'FC Lausen 72', 22, 9, 2),
-(14, 'Pratteln United', 19, 18, 2),
-(15, 'FC Eiken', 6, 11, 2),
-(16, 'NK Pajde', 28, 13, 2),
-(17, 'FC Liestal', 19, 10, 2),
-(18, 'FC Wallbach', 6, 13, 2),
-(19, 'AC Virtus Liestal b', 22, 19, 2),
-(20, 'FC Zeiningen', 1, 19, 2),
-(21, 'AC Rossoneri a', 16, 21, 2),
-(22, 'FC Gelterkinden', 10, 27, 2),
-(23, 'FC Diegten Eptingen', 9, 28, 2),
-(24, 'FC Bubendorf', 25, 9, 2),
-(25, 'CD Espanol Basel a', 4, 11, 3),
-(26, 'SC Basel Nord a', 12, 16, 3),
-(27, 'FC Ferad a', 7, 10, 3),
-(28, 'AC Virtus Liestal a', 28, 25, 3),
-(29, 'FC Telegraph BS', 16, 22, 3),
-(30, 'FC Birsfelden', 20, 16, 3),
-(31, 'FC Schwarz-Weiss', 13, 17, 3),
-(32, 'FC Amicitia Riehen', 10, 10, 3),
-(33, 'FK Srbija Basel', 21, 21, 3),
-(34, 'FC Pratteln', 26, 29, 3),
-(35, 'AC Rossoneri b', 7, 16, 3),
-(36, 'FC Xalko', 23, 26, 3),
-(37, 'FC Dardania', 25, 4, 10),
-(38, 'FC Birlik', 12, 10, 10),
-(39, 'FC Rheinfelden', 21, 7, 10),
-(40, 'AC Rossoneri', 6, 24, 10),
-(41, 'FC Bubendorf', 16, 7, 10),
-(42, 'FC Laufenburg-Kaisten', 13, 20, 10),
-(43, 'US Olympia 1963', 1, 17, 10),
-(44, 'US Bottecchia BS', 10, 9, 10),
-(45, 'FC Türkgücü Basel', 11, 6, 10),
-(46, 'FC Birsfelden', 12, 12, 10),
-(47, 'FC Allschwil', 12, 0, 15),
-(48, 'FC Concordia Basel', 27, 0, 15),
-(49, 'FC Nordstern BS', 24, 1, 15),
-(50, 'FC Reinach', 12, 0, 15),
-(51, 'FC Telegraph BS', 18, 0, 15),
-(52, 'AC Rossoneri', 0, 31, 15),
-(53, 'FC Laufenburg-Kaisten', 6, 0, 15);
+INSERT INTO `teams_ranking` (`id`, `team`, `gamePlayed`, `gameWon`, `gameLost`, `gameDraw`, `fairplay`, `goalsMade`, `goalsAgainst`, `points`, `teamID`) VALUES
+(1, 'FC Laufenburg-Kaisten b', 13, 10, 2, 1, 26, 52, 14, 32, 1),
+(2, 'AC Rossoneri', 12, 9, 3, 0, 20, 31, 2, 30, 1),
+(3, 'FC Diegten Eptingen', 13, 8, 1, 4, 33, 27, 16, 25, 1),
+(4, 'FC Gelterkinden b', 13, 7, 3, 3, 16, 42, 18, 24, 1),
+(5, 'FC Arisdorf', 13, 7, 1, 5, 15, 30, 19, 22, 1),
+(6, 'FC Stein b', 12, 6, 2, 4, 52, 26, 25, 20, 1),
+(7, 'SV Sissach a', 12, 5, 3, 4, 22, 41, 24, 18, 1),
+(8, 'FC Oberdorf', 13, 4, 2, 7, 34, 24, 47, 14, 1),
+(9, 'SC M&uuml;nchenstein a', 12, 4, 1, 7, 30, 26, 41, 13, 1),
+(10, 'FC Bubendorf', 13, 3, 1, 9, 24, 21, 39, 10, 1),
+(11, 'SV Muttenz b', 13, 1, 3, 9, 37, 16, 60, 6, 1),
+(12, 'FC Lausen 72', 13, 0, 2, 11, 38, 21, 52, 2, 1),
+(13, 'NK Pajde', 13, 10, 1, 2, 13, 51, 18, 31, 2),
+(14, 'FC Lausen 72', 13, 9, 1, 3, 9, 27, 15, 28, 2),
+(15, 'Pratteln United', 13, 9, 1, 3, 19, 52, 23, 28, 2),
+(16, 'AC Virtus Liestal b', 13, 8, 4, 1, 20, 66, 24, 28, 2),
+(17, 'FC Bubendorf', 13, 8, 1, 4, 9, 47, 28, 25, 2),
+(18, 'FC Liestal', 13, 7, 1, 5, 10, 40, 37, 22, 2),
+(19, 'AC Rossoneri a', 13, 7, 1, 5, 25, 31, 33, 22, 2),
+(20, 'FC Gelterkinden', 13, 4, 1, 8, 31, 24, 49, 13, 2),
+(21, 'FC Wallbach', 13, 4, 0, 9, 14, 18, 35, 12, 2),
+(22, 'FC Eiken', 13, 3, 0, 10, 13, 24, 41, 9, 2),
+(23, 'FC Diegten Eptingen', 13, 3, 0, 10, 29, 19, 34, 9, 2),
+(24, 'FC Zeiningen', 13, 0, 1, 12, 21, 12, 74, 1, 2),
+(25, 'AC Virtus Liestal a', 13, 10, 2, 1, 26, 34, 16, 32, 3),
+(26, 'FC Xalko', 13, 9, 2, 2, 27, 49, 22, 29, 3),
+(27, 'FC Pratteln', 13, 9, 2, 2, 30, 48, 14, 29, 3),
+(28, 'FK Srbija Basel', 13, 8, 3, 2, 21, 49, 13, 27, 3),
+(29, 'FC Birsfelden', 13, 6, 2, 5, 16, 32, 29, 20, 3),
+(30, 'FC Schwarz-Weiss', 13, 5, 4, 4, 20, 25, 18, 19, 3),
+(31, 'FC Telegraph BS', 13, 5, 2, 6, 30, 17, 26, 17, 3),
+(32, 'FC Amicitia Riehen', 13, 5, 1, 7, 10, 36, 27, 16, 3),
+(33, 'SC Basel Nord a', 13, 4, 3, 6, 16, 37, 30, 15, 3),
+(34, 'FC Ferad a', 13, 2, 1, 10, 10, 29, 66, 7, 3),
+(35, 'AC Rossoneri b', 13, 2, 1, 10, 16, 26, 56, 7, 3),
+(36, 'CD Espanol Basel a', 13, 1, 1, 11, 12, 15, 80, 4, 3),
+(37, 'FC Dardania', 9, 8, 1, 0, 4, 49, 20, 25, 10),
+(38, 'FC Rheinfelden', 9, 7, 1, 1, 7, 37, 11, 22, 10),
+(39, 'FC Bubendorf', 9, 5, 1, 3, 7, 42, 32, 16, 10),
+(40, 'FC Laufenburg-Kaisten', 9, 4, 1, 4, 20, 26, 25, 13, 10),
+(41, 'FC Birlik', 9, 3, 3, 3, 10, 22, 26, 12, 10),
+(42, 'FC Birsfelden', 9, 4, 0, 5, 12, 23, 26, 12, 10),
+(43, 'FC T&uuml;rkg&uuml;c&uuml; Basel', 9, 3, 2, 4, 6, 29, 28, 11, 10),
+(44, 'US Bottecchia BS', 9, 3, 1, 5, 9, 13, 22, 10, 10),
+(45, 'AC Rossoneri', 9, 2, 1, 6, 24, 17, 32, 7, 10),
+(46, 'US Olympia 1963', 9, 0, 1, 8, 17, 8, 44, 1, 10),
+(47, 'FC Concordia Basel', 11, 10, 0, 1, 0, 48, 6, 30, 15),
+(48, 'FC Nordstern BS', 10, 8, 0, 2, 1, 48, 17, 24, 15),
+(49, 'FC Telegraph BS', 10, 7, 0, 3, 0, 44, 9, 21, 15),
+(50, 'FC Reinach', 10, 5, 0, 5, 0, 33, 17, 15, 15),
+(51, 'FC Allschwil', 10, 4, 0, 6, 0, 25, 26, 12, 15),
+(52, 'FC Laufenburg-Kaisten', 11, 2, 0, 9, 0, 11, 49, 6, 15),
+(53, 'AC Rossoneri', 10, 0, 0, 10, 31, 1, 86, 0, 15);
 
 -- --------------------------------------------------------
 

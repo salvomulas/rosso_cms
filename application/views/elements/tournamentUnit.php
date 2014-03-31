@@ -22,10 +22,10 @@
         <div class="row">
             <div class="col-md-12 text-center">
                     <ul class="pagination">
-                        <li class="active"><a href="#">Allgemeines</a></li>
-                        <li><a href="#">Anmeldung</a></li>
-                        <li><a href="">Turnierreglement</a></li>
-                        <li><a href="#">Turnierprogramm</a></li>
+                        <li class="active"><a href="#tab1" data-toggle="tab">Allgemeines</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Anmeldung</a></li>
+                        <li><a href="#tab3" data-toggle="tab">Turnierreglement</a></li>
+                        <li><a href="#tab4" data-toggle="tab">Turnierprogramm</a></li>
                     </ul>
             </div>
         </div>

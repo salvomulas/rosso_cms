@@ -95,7 +95,7 @@ $pos = array('TW','LV','IV','IV','RV','LM','ZM','ZM','RM','MS','ST');
 
 </div>
 
-<div class="container hidden-desktop">
+<div class="container hidden-md hidden-lg">
 
     <div class="well">
 

@@ -25,9 +25,10 @@ class Sponsors extends CI_Model {
     public function getTeamSponsor ($teamID) {
 
         $this->db
-            ->select('*')
-            ->from('sponsors')
-            ->where('toTeam',$teamID);
+            ->select('s.*,t.toSponsor')
+            ->from('sponsors s, teams t')
+            ->where('t.toSponsor = s.id')
+            ->where('t.id',$teamID);
         $query = $this->db->get();
 
     if ($query->num_rows() > 0) {

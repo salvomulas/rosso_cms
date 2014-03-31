@@ -74,13 +74,15 @@ function drawModal ($data) {
         
         $jsID = str_replace(' ','',$data->row($id)->firstName.$data->row($id)->lastName);
 
-        echo '<div id="'.$jsID.'" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+        echo '<div class="modal fade" id="'.$jsID.'" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">';
+        echo '<div class="modal-dialog">';
+        echo '<div class="modal-content">';
         echo '<div class="modal-header">';
         echo '<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>';
         echo '<h3 id="myModalLabel">'.$data->row($id)->firstName.' '.$data->row($id)->lastName.'</h3>';
         echo '</div>';
         echo '<div class="modal-body">';
-        echo '<div class="row-fluid">';
+        echo '<div class="row">';
         echo '<div class="col-md-4">';
         if ($data->row($id)->pictureURL) {
             echo '<img src="'.base_url().'assets/img/member/'.$data->row($id)->pictureURL.'" style="width:150px;">';
@@ -88,7 +90,7 @@ function drawModal ($data) {
             echo '<img src="'.base_url().'assets/img/dummy_person.jpg" style="width:150px;">';
         }
         echo '<hr>';
-        echo '<a href="'.base_url().'spieler/aktiv/'.$data->row($id)->id.'" class="btn btn-info btn-small">zum Spielerprofil</a>';
+        echo '<a href="'.base_url().'spieler/aktiv/'.$data->row($id)->id.'" class="btn btn-default btn-small">zum Spielerprofil</a>';
         echo '</div>';
         echo '<div class="col-md-8">';
         echo '<h4>'.$data->row($id)->name.'</h4>';
@@ -138,7 +140,9 @@ function drawModal ($data) {
         echo '</div>';
         echo '</div>';
         echo '<div class="modal-footer">';
-        echo '<button class="btn" data-dismiss="modal" aria-hidden="true">Schliessen</button>';
+        echo '<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Schliessen</button>';
+        echo '</div>';
+        echo '</div>';
         echo '</div>';
         echo '</div>';
 

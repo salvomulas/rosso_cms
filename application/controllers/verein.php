@@ -15,7 +15,7 @@ class Verein extends MY_Controller {
         // Load views with all the loaded data
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
-        $this->load->view("pages/vorstand");
+        $this->load->view("pages/vorstand", $data);
         $this->drawFooter();
     }
 
@@ -78,6 +78,16 @@ class Verein extends MY_Controller {
         $this->load->view("meta/metadata", $data);
         $this->drawNavigation();
         $this->load->view("pages/passivMitglied", $data);
+        $this->drawFooter();
+    }
+
+    public function wip() {
+
+        $data ['page_title'] = "Work in progress";
+
+        $this->load->view("meta/metadata", $data);
+        $this->drawNavigation();
+        $this->load->view("pages/working", $data);
         $this->drawFooter();
     }
 

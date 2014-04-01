@@ -30,7 +30,7 @@ class Sandbox extends CI_Controller {
 
         $teamID = $this->teams->getParserObject($tID)->row()->parserObject;
 
-        $structure = array ("team","gamePlayed","gameWon","gameLost","gameDraw","fairplay","goalsMade","goalsAgainst","points","teamID");
+        $structure = array ("team","gamePlayed","gameWon","gameDraw","gameLost","fairplay","goalsMade","goalsAgainst","points","teamID");
         $exception = array (0, 8, 11);
         $ranking = array();
 

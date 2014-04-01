@@ -113,7 +113,7 @@ function shortenString($string, $width) {
 
                 // Print article body
                 echo '<div class="row">';
-                echo '<div class="col-md-3 col-sm-3 col-xs-3">';
+                echo '<div class="col-md-3 col-sm-3 hidden-xs">';
                 echo '<a href="' . $link . '" class="thumbnail">';
                 if ($row->pictureURL) {
                     echo '<img src="'.base_url().'assets/img/articles/'.$row->pictureURL.'" alt="">';
@@ -123,7 +123,7 @@ function shortenString($string, $width) {
                 echo '</a>';
                 echo '</div>';
 
-                echo '<div class="col-md-9 col-sm-9 col-xs-9">';
+                echo '<div class="col-md-9 col-sm-9 col-xs-12">';
                 echo '<h4><strong><a href="' . $link . '">' . $row->title . '</a></strong></h4>';
                 
                 echo '<p>';
@@ -149,6 +149,7 @@ function shortenString($string, $width) {
             <div class="well well-sm text-right">
                 <a href="<?php echo base_url(); ?>aktuelles" role="button" class="btn btn-default btn-xs">Zum Newsarchiv</a>
             </div>
+            <hr>
 
         </div>
         <div class="col-md-4">

@@ -7,9 +7,11 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="container">
-    
-    <h3><?php echo $article->title; ?></h3>
+<div class="navfix container">
+
+    <h2 class="text-center"><?php echo $article->title; ?></h2>
+    <h4 class="text-center">von <?php echo $article->firstName.' '.$article->lastName; ?> | <div class="fb-share-button" data-href="<?php echo current_url(); ?>" data-type="button"></div></h4>
+    <hr>
     
     <div class="row">
         
@@ -25,7 +27,7 @@
             
         </div>
         
-        <div class="col-md-4">
+        <div class="col-md-4 hidden-sm hidden-xs">
             
             <?php
             if ($article->pictureURL) {
@@ -80,18 +82,6 @@
                         </tr>
                     </table>
                     
-                </div>
-                
-            </div>
-            
-            <div class="panel panel-primary">
-
-                <div class="panel-heading">
-                    <h3 class="panel-title">Teilen</h3>
-                </div>
-
-                <div class="panel-body text-center">
-                    <div class="fb-share-button" data-href="<?php echo current_url(); ?>" data-type="box_count"></div>
                 </div>
                 
             </div>

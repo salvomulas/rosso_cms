@@ -13,7 +13,25 @@ function showPlayer ($data, $id) {
 }
 
 function showPlayerMobile ($data, $pos) {
-    
+
+    ?>
+
+    <div class="container navfix hidden-sm hidden-md hidden-lg">
+
+        <div class="well">
+
+            <table class="table table-condensed table-hover">
+                <thead>
+                <tr>
+                    <th>Pos</th>
+                    <th>Vorname</th>
+                    <th>Name</th>
+                </tr>
+                </thead>
+                <tbody>
+
+    <?php
+
     for ($index=0;$index<11;$index++) {
                     
                     echo '<tr>';
@@ -23,7 +41,18 @@ function showPlayerMobile ($data, $pos) {
                     echo '</tr>';
                     
                 }
-    
+
+    ?>
+
+                    </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+    <?php
+
 }
 
 function writeJS () {
@@ -83,7 +112,7 @@ function drawModal ($data) {
         echo '</div>';
         echo '<div class="modal-body">';
         echo '<div class="row">';
-        echo '<div class="col-md-4">';
+        echo '<div class="col-md-4 col-sm-5">';
         if ($data->row($id)->pictureURL) {
             echo '<img src="'.base_url().'assets/img/member/'.$data->row($id)->pictureURL.'" style="width:150px;">';
         } else {
@@ -92,7 +121,7 @@ function drawModal ($data) {
         echo '<hr>';
         echo '<a href="'.base_url().'spieler/aktiv/'.$data->row($id)->id.'" class="btn btn-default btn-small">zum Spielerprofil</a>';
         echo '</div>';
-        echo '<div class="col-md-8">';
+        echo '<div class="col-md-8 col-sm-7">';
         echo '<h4>'.$data->row($id)->name.'</h4>';
         echo '<h5>Pers&ouml;nliche Daten</h5>';
         echo '<table class="table table-condensed table-hover">';

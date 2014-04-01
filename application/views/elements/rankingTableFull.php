@@ -70,10 +70,10 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-3">
-                        <img src="<?php echo base_url(); ?>assets/img/wappen.png" style="width: 100%;">
+                    <div class="col-md-3 col-sm-3 col-xs-3">
+                        <img src="<?php echo base_url(); ?>assets/img/wappen.png" class="img-responsive">
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-9 col-sm-9 col-xs-9">
                         <?php
                         if ($nextMatch->num_rows > 0) {
                             foreach ($nextMatch->result() as $row) {

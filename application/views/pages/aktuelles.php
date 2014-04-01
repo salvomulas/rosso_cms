@@ -44,7 +44,7 @@
                 // Print article body
                 echo '<div class="row">';
 
-                echo '<div class="col-md-3 col-sm-3 col-xs-3">';
+                echo '<div class="col-md-3 col-sm-3 hidden-xs">';
                 echo '<a href="' . $link . '" class="thumbnail">';
                 if ($row->pictureURL) {
                     echo '<img src="' . base_url() . 'assets/img/articles/' . $row->pictureURL . '" alt="">';
@@ -54,7 +54,7 @@
                 echo '</a>';
                 echo '</div>';
 
-                echo '<div class="col-md-9 col-sm-9 col-xs-9">';
+                echo '<div class="col-md-9 col-sm-9 col-xs-12">';
                 echo '<h4><strong><a href="' . $link . '">' . $row->title . '</a></strong></h4>';
                 echo '<p>';
                 echo shortenString($row->article, 300);
@@ -86,7 +86,7 @@
             ?>
 
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 hidden-xs">
 
             <div class="panel panel-primary">
 

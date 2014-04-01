@@ -4405,6 +4405,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .nav-tabs {
   border-bottom: 1px solid #282828;
+  background-color: #151515;
 }
 
 .nav-tabs > li {
@@ -5624,6 +5625,8 @@ a.list-group-item.active > .badge,
 
 .match-unit {
   padding: 3px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-bottom: 30px;
   font-weight: 200;
   line-heightf: 30px;

@@ -14,6 +14,14 @@ class Sandbox extends CI_Controller {
         $this->load->model('ranking');
     }
 
+    public function playerarray () {
+
+        $play = array (35,99,69,112,101,8,93,9,96,144,120,17,110,103,33,139,109,104);
+
+        echo serialize($play);
+
+    }
+
     public function parse ($id) {
 
         $data ['page_title'] = "FVNWS Parser";

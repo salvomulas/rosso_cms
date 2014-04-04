@@ -601,13 +601,13 @@ cite {
 }
 
 .text-articledesc {
-  width: 75%;
+  width: 90%;
   margin-bottom: 0px;
   float: left;
 }
 
 .text-articleshare {
-  width: 25%;
+  width: 10%;
   text-align: right;
   float: left;
   margin-bottom: 0px;

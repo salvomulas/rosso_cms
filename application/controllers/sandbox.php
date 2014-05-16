@@ -16,7 +16,7 @@ class Sandbox extends CI_Controller {
 
     public function playerarray () {
 
-        $play = array (35,99,69,112,101,8,93,9,96,144,120,17,110,103,33,139,109,104);
+        $play = array (35,99,69,33,101,19,103,9,96,144,120,17,112,57,79,8,109,104);
 
         echo serialize($play);
 

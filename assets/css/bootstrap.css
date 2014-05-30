@@ -521,8 +521,14 @@ h5,
 
 h5.trikot {
   color: #bf1508;
-  font-weight: bold;
   font-family: Tahoma;
+  font-size: 30px;
+}
+
+h5.funktion {
+  color: #bf1508;
+  font-family: Tahoma;
+  font-size: 20px;
 }
 
 h6,

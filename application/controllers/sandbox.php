@@ -71,7 +71,7 @@ class Sandbox extends CI_Controller {
         }
 
         //$this->ranking->truncateRanking();
-        //$this->ranking->insertTeamRanking($ranking);
+        $this->ranking->insertTeamRanking($ranking);
 
         echo '<div class="container">';
         echo '<h1>FVNWS Ranking Parser</h1>';

@@ -27,7 +27,7 @@ function printPosition ($role, $title) {
             
             echo '<div class="col-md-8 col-sm-8 col-xs-9">';
             echo '<h5 class="trikot">'.$row->trikot.'</h5>';
-            echo '<h4>'.$row->firstName.' '.$row->lastName.'</h4>';
+            echo '<h4>'.$row->firstName.' <strong>'.$row->lastName.'</strong></h4>';
 
             echo '</div>';
             echo '</div>';

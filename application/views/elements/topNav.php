@@ -68,8 +68,8 @@ function menuList($name, $url, $active = true) {
 
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <img src="<?php echo base_url(); ?>assets/img/wappen.png" alt="AC Rossoneri" style="width: 150px; height: 150px;">
+            <div class="col-md-12">
+                <img src="<?php echo base_url(); ?>assets/img/wappen.png" alt="AC Rossoneri" class="img-header">
             </div>
         </div>
     </div>

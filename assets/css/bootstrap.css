@@ -370,6 +370,13 @@ img.social {
     max-width: none;
 }
 
+.img-header {
+  position: absolute;
+  z-index: 1000;
+  width: 150px;
+  height: 150px;
+}
+
 .img-responsive {
   display: block;
   height: auto;
@@ -4779,7 +4786,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
   .navbar-collapse.collapse {
     display: block !important;
-    height: auto !important;
+    /* height: auto !important; */
+    height: 50px;
     padding-bottom: 0;
     overflow: visible !important;
   }
@@ -5063,8 +5071,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default {
-  background-color: #151515;
-  margin-top: 10px;
+  margin-top: 110px;
+  font-variant: small-caps;
+  font-size: 1.2em;
+  border-bottom: 3px solid #bf1508;
+  border-top: 1px solid #2c2c2c;
 }
 
 .navbar-default .navbar-brand {
@@ -5089,7 +5100,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #ffffff;
-  background-color: #222222;
+  background-color: #bf1508;
+  border-top-left-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
 }
 
 .navbar-default .navbar-nav > .active > a,

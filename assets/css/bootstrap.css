@@ -5111,7 +5111,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #ffffff;
-  background-color: #232323;
+  background-color: #bf1508;
+  border-top-left-radius: 6px;
+  -webkit-border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
 }
 
 .navbar-default .navbar-nav > .disabled > a,

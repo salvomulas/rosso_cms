@@ -5076,6 +5076,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   font-size: 1.2em;
   border-bottom: 3px solid #bf1508;
   border-top: 1px solid #2c2c2c;
+  background-color: #000000;
 }
 
 .navbar-default .navbar-brand {
@@ -5646,6 +5647,21 @@ a.list-group-item.active > .badge,
   padding-top: 10px;
   padding-bottom: 10px;
   display: none;
+}
+
+.breadcrumb-unit {
+    padding: 3px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #060606;
+    background-image: -moz-linear-gradient(top, #060606, #2e1010);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#060606), to(#2e1010));
+    background-image: -webkit-linear-gradient(top, #060606, #2e1010);
+    background-image: -o-linear-gradient(top, #060606, #2e1010);
+    background-image: linear-gradient(to bottom, #060606, #2e1010);
+    border-bottom: 1px solid #411b18;
 }
 
 .match-unit {

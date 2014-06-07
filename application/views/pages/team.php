@@ -5,20 +5,24 @@
             <div class="tab-pane active" id="tab1">
 
                 <?php
+                $row = $teamInfo->row();
+                if ($row->pictureURL != NULL) {
+                    echo '<img src="'.base_url().'assets/img/team/'.$row->pictureURL.'" style="width: 100%;">';
+                } else {
+                    echo "Leider ist noch kein Bild vorhanden";
+                }
+                ?>
+                <hr>
+
+            </div>
+            <div class="tab-pane" id="tab2">
+                <?php
                 $data['goalkeeper'] = $goalkeeper;
                 $data['defense'] = $defense;
                 $data['midfield'] = $midfield;
                 $data['striker'] = $striker;
 
                 $this->load->view('elements/kaderTable');
-                ?>
-
-            </div>
-            <div class="tab-pane" id="tab2">
-                <?php
-                $data['teamNumber'] = $teamID;
-                $data['spieler'] = $spieler;
-                $this->load->view('elements/playerTable', $data);
                 ?>
             </div>
             <div class="tab-pane" id="tab3">

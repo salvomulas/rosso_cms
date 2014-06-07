@@ -4,45 +4,19 @@ $row = $teamInfo->row();
 
 ?>
 
-<div class="match-unit">
+<div class="breadcrumb-unit">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 
                 <h3><?php echo $row->name; ?></h3>
                 <p><?php echo $row->ligaDesc; ?></p>
-                <hr>
 
             </div>
-            
-            <div class="col-md-6">
-                <?php
-                    if ($row->pictureURL != NULL) {
-                        echo '<img src="'.base_url().'assets/img/team/'.$row->pictureURL.'" style="width: 100%;">';
-                    } else {
-                        echo "Leider ist noch kein Bild vorhanden";
-                    }
-                ?>
-            </div>
-            <div class="col-md-3">
-
-                <?php
-
-                if ($sponsor) {
-                    echo '<div class="well text-center">';
-                    echo '<a href="http://'.$sponsor->webpage.'" target="_blank" alt="'.$sponsor->name.'"><img src="'.base_url().'assets/img/sponsors/'.$sponsor->pictureURL.'.png"></a>';
-                    echo '</div>';
-                } else {
-                    echo '<hr>';
-                }
-
-                ?>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 text-center hidden-xs">
+            <div class="col-md-8 text-right hidden-xs">
                 <ul class="pagination">
-                    <li class="active"><a href="#tab1" data-toggle="tab">Kader</a></li>
+                    <li class="active"><a href="#tab1" data-toggle="tab">Team</a></li>
+                    <li><a href="#tab2" data-toggle="tab">Kader</a></li>
                     <li><a href="#tab3" data-toggle="tab">Staff</a></li>
                     <li><a href="#tab4" data-toggle="tab">Rangliste</a></li>
                     <li><a href="#tab5" data-toggle="tab">Spielkalender</a></li>
@@ -51,7 +25,8 @@ $row = $teamInfo->row();
             </div>
             <div class="col-xs-12 text-center visible-xs">
                 <ul class="nav nav-tabs nav-stacked">
-                    <li class="active"><a href="#tab1" data-toggle="tab">Kader</a></li>
+                    <li class="active"><a href="#tab1" data-toggle="tab">Team</a></li>
+                    <li><a href="#tab2" data-toggle="tab">Kader</a></li>
                     <li><a href="#tab3" data-toggle="tab">Staff</a></li>
                     <li><a href="#tab4" data-toggle="tab">Rangliste</a></li>
                     <li><a href="#tab5" data-toggle="tab">Spielkalender</a></li>

@@ -3,17 +3,11 @@
     <div class="tabbable">
         <div class="tab-content">
             <div class="tab-pane active" id="tab1">
-
                 <?php
-                $row = $teamInfo->row();
-                if ($row->pictureURL != NULL) {
-                    echo '<img src="'.base_url().'assets/img/team/'.$row->pictureURL.'" style="width: 100%;">';
-                } else {
-                    echo "Leider ist noch kein Bild vorhanden";
-                }
-                ?>
-                <hr>
+                $data['teamInfo'] = $teamInfo;
 
+                $this->load->view('elements/teamTable');
+                ?>
             </div>
             <div class="tab-pane" id="tab2">
                 <?php

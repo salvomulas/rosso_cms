@@ -37,33 +37,25 @@ function get_age($birth_date){
 
             <div class="well">
 
-                <h3><?php echo $row->trikot; ?> | <?php echo $row->firstName.' '.$row->lastName; ?></h3>
-
-            </div>
-
-            <hr>
-
-            <div class="well">
-
                 <h4>Biographische Daten</h4>
 
                 <table class="table table-condensed table-hover">
 
                     <tr>
                         <td><strong>Vorname</strong></td>
-                        <td><? echo $row->firstName; ?></td>
+                        <td><?php echo $row->firstName; ?></td>
                     </tr>
                     <tr>
                         <td><strong>Nachname</strong></td>
-                        <td><? echo $row->lastName; ?></td>
+                        <td><?php echo $row->lastName; ?></td>
                     </tr>
                     <tr>
                         <td><strong>Spitzname</strong></td>
-                        <td><? echo $row->nickName; ?></td>
+                        <td><?php echo $row->nickName; ?></td>
                     </tr>
                     <tr>
                         <td><strong>Geburtsdatum</strong></td>
-                        <td><? if ($row->bDay != 0) { echo $row->bDay; } else { echo ""; } ?></td>
+                        <td><?php if ($row->bDay != 0) { echo $row->bDay; } else { echo ""; } ?></td>
                     </tr>
                     <tr>
                         <td><strong>Alter</strong></td>

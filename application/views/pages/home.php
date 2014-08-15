@@ -175,7 +175,7 @@ function shortenString($string, $width) {
 
                         <div class="text-center">
                             <ul class="pagination">
-                                <li class="active"><a href="#tab1" data-toggle="tab">4. Liga</a></li>
+                                <li class="active"><a href="#tab1" data-toggle="tab">3. Liga</a></li>
                                 <li><a href="#tab2" data-toggle="tab">5. Liga (a)</a></li>
                                 <li><a href="#tab3" data-toggle="tab">5. Liga (b)</a></li>
                                 <li><a href="#tab4" data-toggle="tab">Senioren</a></li>
@@ -307,6 +307,8 @@ function shortenString($string, $width) {
                             case 3: $team = "Dritte";
                             break;
                             case 10: $team = "Senioren";
+                            break;
+                            case 11: $team = "Veteranen";
                             break;
                             case 15: $team = "Frauen";
                             break;

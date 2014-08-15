@@ -24,7 +24,7 @@ class Teams extends CI_Model {
 
     public function getTeamsType($type) {
 
-        $this->db->select('*')->from('teams')->where('type',$type);
+        $this->db->select('*')->from('teams')->where('type',$type)->order_by('id','asc');
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {

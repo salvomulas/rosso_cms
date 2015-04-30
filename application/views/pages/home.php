@@ -196,7 +196,7 @@ function shortenString($string, $width) {
                             <div class="tab-pane" id="tab2">
 
                             <?php
-                            $data['teamNumber'] = 2;
+                            $data['teamNumber'] = 3;
                             $data['rankTables'] = $rankTables;
                             $data['teamScores'] = $teamScores;
                             $this->load->view('elements/rankingTable', $data);
@@ -206,7 +206,7 @@ function shortenString($string, $width) {
                             <div class="tab-pane" id="tab3">
 
                             <?php
-                            $data['teamNumber'] = 3;
+                            $data['teamNumber'] = 2;
                             $data['rankTables'] = $rankTables;
                             $data['teamScores'] = $teamScores;
                             $this->load->view('elements/rankingTable', $data);

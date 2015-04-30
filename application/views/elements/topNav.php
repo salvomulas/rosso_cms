@@ -288,7 +288,7 @@ function menuList($name, $url, $active = true) {
                     <div class="col-md-6 col-sm-6">
                         <h5>Events</h5>
                         <div class="list-group">
-                            <?php menuList ("Sommerturnier 2014","aktuelles/sommerturnier"); ?>
+                            <?php menuList ("Sommerturnier 2015","aktuelles/sommerturnier"); ?>
                             <?php /** menuList ("Kalender","aktuelles/kalender"); */ ?>
                         </div>
                     </div>

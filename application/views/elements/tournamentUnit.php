@@ -11,8 +11,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-push-8">
-                <h2 class="text-right">Sommerturnier 2014</h2>
-                <h4 class="text-right">Das AC Rossoneri 11er Turnier kehrt zur&uuml;ck</h4>
+                <h2 class="text-right">Sommerturnier 2015</h2>
+                <h4 class="text-right">Das AC Rossoneri Sommerturnier kehrt zur&uuml;ck</h4>
                 <hr>
                 <div class="text-right">
                     <div class="fb-like" data-href="https://facebook.com/ACRossoneriLausen" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>

@@ -10,7 +10,7 @@
                 </div>
                 <div class="panel-body">
                     <p class="text-center">Freitag bis Sonntag</p>
-                    <h4 class="text-center">20. - 22. Juni 2014</h4>
+                    <h4 class="text-center">19. - 21. Juni 2015</h4>
                     <p class="text-center">in Lausen</p>
                 </div>
             </div>
@@ -29,12 +29,7 @@
                         <hr>
 
                         <h4>Liebe Fussballfreunde und Trainer</h4>
-                        <p>Diesen Sommer kehrt das ber&uuml;hmte AC Rossoneri 11er Fussballturnier f&uuml;r Aktive und Senioren
-                            (zwischen 3. und 5. Liga) zur&uuml;ck. Das Turnier wird wie &uuml;blich auf der Sportanlage Bifang/Stutz in
-                            Lausen ausgetragen.<br/><br/>
-                            Das Turnier ist in zwei "Teilturniere" aufgeteilt: Als Erstes wird das Seniorenturnier am Freitag, den 20. Juni 2014
-                            ausgetragen. Anschliessend findet von Samstag bis Sonntag das Turnier f&uuml;r Aktive statt (3. - 5. Liga Teams).<br/><br/>
-                            Mehr Informationen k&ouml;nnen unter dem Link "Anmeldung" entnommen werden.
+                        <p>Diesen Sommer 2015 findet das berühmte AC Rossoneri 11er Fussballturnier für Aktive (2. – 5. Liga) und Senioren (30+ und 40+) statt. Nebst den Aktiven und Senioren werden wir dieses Jahr auch ein Juniorenturnier (F + G) durchführen. Diese Veranstaltung wird wie üblich auf der Sportanlage Bifang, Stutz und Schelligacker in Lausen ausgetragen.
                         </p>
 
                     </div>
@@ -44,10 +39,9 @@
                         <h3>Anmeldung</h3>
                         <hr>
 
-                        <h4>Formular zur Anmeldung an das Sommerturnier 2014</h4>
+                        <h4>Formular zur Anmeldung an das Sommerturnier 2015</h4>
                         <p>Lust an unserem Turnier teilzunehmen? Wunderbar! Wir freuen uns extrem &uuml;ber eine zahlreiche Teilnahme! Bitte lest vor der
-                        Anmeldung auf jeden Fall den Begleitbrief zur Anmeldung durch, das ausgef&uuml;llte Formular muss anschliessend unserem Sportchef
-                        zugesandt werden.<br/><br/>
+                        Anmeldung auf jeden Fall den Begleitbrief zur Anmeldung durch.<br/><br/>
                         Alle Informationen sind den beiden Dateien zu entnehmen!</p>
 
                         <div class="well">

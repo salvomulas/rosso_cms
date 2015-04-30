@@ -22,17 +22,28 @@ class Sandbox extends CI_Controller {
 
     }
 
-    public function parse ($id) {
+    /*
+
+    public function parse () {
 
         $data ['page_title'] = "FVNWS Parser";
         $this->load->view("meta/metadata", $data);
 
-        $this->parseRanking($id);
+        $teamArray = array(1,2,3,10,11);
+
+        $this->ranking->truncateRanking();
+        foreach ($teamArray as $tID) {
+            $this->parseRanking($tID);
+        }
+
+        //$this->parseRanking($id);
         //$this->parseRanking($this->secondID);
         //$this->parseRanking($this->thirdID);
         //$this->parseRanking($this->seniorenID);
         //$this->parseRanking($this->frauenID);
     }
+
+    */
 
     protected function parseRanking($tID) {
 

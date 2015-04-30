@@ -17,6 +17,7 @@ class Player extends CI_Model {
                 ->select("DATE_FORMAT(bDay, '%e. %M %Y') AS bDay", FALSE)
                 ->from('member_active')
                 ->where('toTeam',$teamID)
+                ->where('active',!null)
                 ->order_by('trikot', 'asc');
         $query = $this->db->get();
         
@@ -74,6 +75,7 @@ class Player extends CI_Model {
                 ->from('member_active')
                 ->where('toTeam', $teamID)
                 ->where('toPosition', $positionID)
+                ->where('active', !null)
                 ->order_by('trikot', 'asc');
         $query =$this->db->get();
 
